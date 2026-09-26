@@ -1,5 +1,7 @@
 # tajziya (تجزیہ)
 
+DOI: [10.5281/zenodo.22982238](https://doi.org/10.5281/zenodo.22982238)
+
 Parsers for the classical languages of the human written corpus, grouped by family and built on
 the dhancha spine.
 
