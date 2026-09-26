@@ -1,0 +1,19 @@
+{
+    "_type": "https://in-toto.io/Statement/v1",
+    "predicateType": "https://project-ilm.org/attestations/candor/v1",
+    "subject": [
+        {
+            "name": "zistgah/tajziya",
+            "digest": {
+                "gitCommit": "8b41d0589351781f55ce1170e3ec6d52ae7ebfd8"
+            }
+        }
+    ],
+    "predicate": {
+        "action": "MINT",
+        "reason": "seed",
+        "utc": "20260926T193440Z",
+        "host": "ilm01-lin",
+        "note": "10.5281/zenodo.22982238"
+    }
+}
