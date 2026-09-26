@@ -1,0 +1,13 @@
+{
+ "file": "sutras_1.1-1.3.json",
+ "sha256": "6d952a605d026fb7313901de3898d4da62c93b7a454103c4faed36ca2da31c8d",
+ "entries": 152,
+ "range": "1.1.1 to 1.3.4",
+ "source": "https://sanskritdocuments.org/learning_tools/ashtadhyayi/",
+ "compiled_by": "Sai Susarla, Sanskrit Documents, as stated in the upstream README",
+ "terms": "The source site states that its texts are volunteer-prepared, meant for personal study and research, and not to be reposted without permission.",
+ "terms_checked": "2026-09-26",
+ "held_as": "not redistributed; a local copy whose sha256 matches is used when present",
+ "local_path": "vendor/sanskrit_parser/data/sutras_1.1-1.3.json",
+ "import_verb": "data import"
+}

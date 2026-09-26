@@ -1,0 +1,334 @@
+{
+ "schema": "tajziya.families/1",
+ "copyright": "© 1993–2026 Abhishek Choudhary. All rights reserved. AyeAI.",
+ "license": "CC0-1.0",
+ "rule": "Families and lineages are genealogical. The posters group languages areally and historically; that grouping is kept on each node as poster_section and is not a family.",
+ "typology_provenance": "general typological description; a citable source per lineage is package P-SRC-01",
+ "families": [
+  {
+   "id": "indo_european",
+   "name": "Indo-European",
+   "kind": "family"
+  },
+  {
+   "id": "afroasiatic",
+   "name": "Afroasiatic",
+   "kind": "family"
+  },
+  {
+   "id": "dravidian",
+   "name": "Dravidian",
+   "kind": "family"
+  },
+  {
+   "id": "sino_tibetan",
+   "name": "Sino-Tibetan",
+   "kind": "family"
+  },
+  {
+   "id": "turkic",
+   "name": "Turkic",
+   "kind": "family"
+  },
+  {
+   "id": "japonic",
+   "name": "Japonic",
+   "kind": "family"
+  },
+  {
+   "id": "koreanic",
+   "name": "Koreanic",
+   "kind": "family"
+  },
+  {
+   "id": "kartvelian",
+   "name": "Kartvelian",
+   "kind": "family"
+  },
+  {
+   "id": "hurro_urartian",
+   "name": "Hurro-Urartian",
+   "kind": "family"
+  },
+  {
+   "id": "isolate",
+   "name": "Language isolates",
+   "kind": "not_a_family"
+  },
+  {
+   "id": "undeciphered",
+   "name": "Undeciphered corpora",
+   "kind": "no_family_assigned"
+  }
+ ],
+ "lineages": [
+  {
+   "id": "indo_aryan",
+   "name": "Indo-Aryan",
+   "family": "indo_european",
+   "path": [
+    "indo_european",
+    "indo_iranian",
+    "indo_aryan"
+   ],
+   "language_engines": [
+    "juncture",
+    "paradigm",
+    "compounding"
+   ],
+   "morphological_type": "fusional"
+  },
+  {
+   "id": "iranian",
+   "name": "Iranian",
+   "family": "indo_european",
+   "path": [
+    "indo_european",
+    "indo_iranian",
+    "iranian"
+   ],
+   "language_engines": [
+    "paradigm"
+   ],
+   "morphological_type": "fusional"
+  },
+  {
+   "id": "anatolian",
+   "name": "Anatolian",
+   "family": "indo_european",
+   "path": [
+    "indo_european",
+    "anatolian"
+   ],
+   "language_engines": [
+    "paradigm"
+   ],
+   "morphological_type": "fusional"
+  },
+  {
+   "id": "hellenic",
+   "name": "Hellenic",
+   "family": "indo_european",
+   "path": [
+    "indo_european",
+    "hellenic"
+   ],
+   "language_engines": [
+    "paradigm"
+   ],
+   "morphological_type": "fusional"
+  },
+  {
+   "id": "italic",
+   "name": "Italic",
+   "family": "indo_european",
+   "path": [
+    "indo_european",
+    "italic"
+   ],
+   "language_engines": [
+    "paradigm"
+   ],
+   "morphological_type": "fusional"
+  },
+  {
+   "id": "germanic",
+   "name": "Germanic",
+   "family": "indo_european",
+   "path": [
+    "indo_european",
+    "germanic"
+   ],
+   "language_engines": [
+    "paradigm",
+    "compounding"
+   ],
+   "morphological_type": "fusional"
+  },
+  {
+   "id": "balto_slavic",
+   "name": "Balto-Slavic",
+   "family": "indo_european",
+   "path": [
+    "indo_european",
+    "balto_slavic"
+   ],
+   "language_engines": [
+    "paradigm"
+   ],
+   "morphological_type": "fusional"
+  },
+  {
+   "id": "armenian",
+   "name": "Armenian",
+   "family": "indo_european",
+   "path": [
+    "indo_european",
+    "armenian"
+   ],
+   "language_engines": [
+    "paradigm"
+   ],
+   "morphological_type": "fusional"
+  },
+  {
+   "id": "semitic",
+   "name": "Semitic",
+   "family": "afroasiatic",
+   "path": [
+    "afroasiatic",
+    "semitic"
+   ],
+   "language_engines": [
+    "root_pattern"
+   ],
+   "morphological_type": "templatic"
+  },
+  {
+   "id": "egyptian",
+   "name": "Egyptian",
+   "family": "afroasiatic",
+   "path": [
+    "afroasiatic",
+    "egyptian"
+   ],
+   "language_engines": [
+    "root_pattern"
+   ],
+   "morphological_type": "templatic, partial and stage-dependent"
+  },
+  {
+   "id": "dravidian",
+   "name": "Dravidian",
+   "family": "dravidian",
+   "path": [
+    "dravidian"
+   ],
+   "language_engines": [
+    "affix_chain",
+    "juncture"
+   ],
+   "morphological_type": "agglutinative"
+  },
+  {
+   "id": "sinitic",
+   "name": "Sinitic",
+   "family": "sino_tibetan",
+   "path": [
+    "sino_tibetan",
+    "sinitic"
+   ],
+   "language_engines": [],
+   "morphological_type": "isolating"
+  },
+  {
+   "id": "bodish",
+   "name": "Bodish",
+   "family": "sino_tibetan",
+   "path": [
+    "sino_tibetan",
+    "bodish"
+   ],
+   "language_engines": [
+    "affix_chain"
+   ],
+   "morphological_type": "agglutinative"
+  },
+  {
+   "id": "turkic",
+   "name": "Turkic",
+   "family": "turkic",
+   "path": [
+    "turkic"
+   ],
+   "language_engines": [
+    "affix_chain"
+   ],
+   "morphological_type": "agglutinative"
+  },
+  {
+   "id": "japonic",
+   "name": "Japonic",
+   "family": "japonic",
+   "path": [
+    "japonic"
+   ],
+   "language_engines": [
+    "affix_chain"
+   ],
+   "morphological_type": "agglutinative"
+  },
+  {
+   "id": "koreanic",
+   "name": "Koreanic",
+   "family": "koreanic",
+   "path": [
+    "koreanic"
+   ],
+   "language_engines": [
+    "affix_chain"
+   ],
+   "morphological_type": "agglutinative"
+  },
+  {
+   "id": "kartvelian",
+   "name": "Kartvelian",
+   "family": "kartvelian",
+   "path": [
+    "kartvelian"
+   ],
+   "language_engines": [
+    "affix_chain"
+   ],
+   "morphological_type": "agglutinative"
+  },
+  {
+   "id": "hurro_urartian",
+   "name": "Hurro-Urartian",
+   "family": "hurro_urartian",
+   "path": [
+    "hurro_urartian"
+   ],
+   "language_engines": [
+    "affix_chain"
+   ],
+   "morphological_type": "agglutinative"
+  },
+  {
+   "id": "sumerian",
+   "name": "Sumerian",
+   "family": "isolate",
+   "path": [
+    "isolate",
+    "sumerian"
+   ],
+   "language_engines": [
+    "affix_chain"
+   ],
+   "morphological_type": "agglutinative"
+  },
+  {
+   "id": "elamite",
+   "name": "Elamite",
+   "family": "isolate",
+   "path": [
+    "isolate",
+    "elamite"
+   ],
+   "language_engines": [
+    "affix_chain"
+   ],
+   "morphological_type": "agglutinative"
+  },
+  {
+   "id": "undeciphered",
+   "name": "Undeciphered",
+   "family": "undeciphered",
+   "path": [
+    "undeciphered"
+   ],
+   "language_engines": [],
+   "morphological_type": "not established"
+  }
+ ]
+}

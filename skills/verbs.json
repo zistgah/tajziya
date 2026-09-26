@@ -1,0 +1,114 @@
+{
+ "schema": "tajziya.verbs/1",
+ "rule": "One verb table; every surface is generated from it. No verb here is gated.",
+ "verbs": [
+  {
+   "id": "doctor",
+   "args": [],
+   "returns": "problem list; exit 1 on any",
+   "preconditions": [
+    "the repository tree"
+   ],
+   "gated": false
+  },
+  {
+   "id": "nodes",
+   "args": [
+    "--lineage",
+    "--status"
+   ],
+   "returns": "one line per node",
+   "preconditions": [],
+   "gated": false
+  },
+  {
+   "id": "lineages",
+   "args": [],
+   "returns": "lineages with family path and engines",
+   "preconditions": [],
+   "gated": false
+  },
+  {
+   "id": "commonalities",
+   "args": [
+    "--json"
+   ],
+   "returns": "engines by reach across lineages",
+   "preconditions": [],
+   "gated": false
+  },
+  {
+   "id": "segment",
+   "args": [
+    "--node",
+    "--conllu",
+    "text"
+   ],
+   "returns": "every reading, or a refusal naming packages (exit 3)",
+   "preconditions": [
+    "a bound node"
+   ],
+   "gated": false
+  },
+  {
+   "id": "layers",
+   "args": [
+    "--node"
+   ],
+   "returns": "layer states and the packages each refusal names",
+   "preconditions": [],
+   "gated": false
+  },
+  {
+   "id": "eliminate",
+   "args": [
+    "--json"
+   ],
+   "returns": "L, S, G, C and why the minimum is or is not certified",
+   "preconditions": [
+    "registry/coverage.json"
+   ],
+   "gated": false
+  },
+  {
+   "id": "conformance",
+   "args": [
+    "--json"
+   ],
+   "returns": "harness findings over every bound node; exit 1 on a failure",
+   "preconditions": [],
+   "gated": false
+  },
+  {
+   "id": "reconcile",
+   "args": [
+    "--json"
+   ],
+   "returns": "the 30 Aug template against this registry",
+   "preconditions": [
+    "registry/prior/"
+   ],
+   "gated": false
+  },
+  {
+   "id": "rules",
+   "args": [
+    "--node"
+   ],
+   "returns": "the sutra count, or Unknown naming where it looked (exit 3)",
+   "preconditions": [],
+   "gated": false
+  },
+  {
+   "id": "data import",
+   "args": [
+    "source"
+   ],
+   "returns": "writes the pinned compilation locally after a SHA-256 match; refuses otherwise",
+   "preconditions": [
+    "a local copy the operator holds"
+   ],
+   "gated": false
+  }
+ ]
+}

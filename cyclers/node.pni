@@ -1,0 +1,83 @@
+REM node.pni: one sourced batch for one node, after the Sanskrit parser's own workflow.
+REM © 1993–2026 Abhishek Choudhary. All rights reserved. AyeAI.
+
+CYCLER NODE
+  TITLE   "One batch, sourced to tested"
+  SCRIPT  "تجزیہ"
+  OUTPUT  RESEARCH
+  UNIT    "batch"
+  PURPOSE "Bring one coherent batch of rules for one node from a citable source into tested code."
+
+  CONTRACT
+    REFUSE    "a rule without a source"
+    REFUSE    "a disagreement between sources resolved without a record"
+    INVARIANT "the Python and JavaScript ports stay behaviour-identical"
+    EVIDENCE  "the source URL, retrieval date and SHA-256 of what was retrieved"
+  END CONTRACT
+
+  STAGE CONCEPT
+    RESOLUTION EASY
+    VERB   CREATE
+    EXPECT JSON
+    INTO   batch
+    ASK
+      I am adding one batch of rules to one tajziya node. Reply with only this JSON:
+      {"node":"registry id","stage":"...","script":"ISO 15924 code","batch":"one section or one rule type","engine":"an id from registry/engines.json"}
+      What I have so far:
+      {seed}
+    END ASK
+    VALIDATE HAS(batch, "engine")
+    ON FAIL CLARIFY
+  END STAGE
+
+  STAGE SOURCE
+    RESOLUTION MID
+    VERB   VERIFY
+    EXPECT JSON
+    FROM   batch
+    INTO   batch.source
+    ASK
+      Take the batch from a real, citable edition. Record the URL, the retrieval date, an
+      archived copy, the SHA-256 of what was retrieved, and the licence or terms.
+    END ASK
+  END STAGE
+
+  STAGE CROSSCHECK
+    RESOLUTION MID
+    VERB   VERIFY
+    EXPECT JSON
+    FROM   batch
+    INTO   batch.disagreements
+    ASK
+      Where more than one source covers these rules, list every disagreement in numbering,
+      wording or classification. Record both readings and state which one the node follows,
+      with the reason.
+    END ASK
+  END STAGE
+
+  STAGE IMPLEMENT
+    RESOLUTION PRO
+    VERB   CREATE
+    EXPECT TEXT
+    FROM   batch
+    INTO   batch.change
+    ASK
+      Add the data in the existing schema and implement the batch in the node's port. If the
+      node has a JavaScript twin, port the change there in the same batch.
+    END ASK
+  END STAGE
+
+  STAGE TEST
+    RESOLUTION PRO
+    VERB   EXECUTE
+    EXPECT TEXT
+    FROM   batch
+    INTO   batch.tests
+    ASK
+      Test against attested examples from the source, not only against the code's own output.
+      Run python3 tests/parity.py where there is a JavaScript twin, then bash ops/verify.sh,
+      and paste the outputs verbatim.
+    END ASK
+    GATE   HUMAN "BATCH accepted"
+  END STAGE
+END CYCLER

@@ -1,0 +1,32 @@
+{
+ "schema": "tajziya.milestones/1",
+ "milestones": [
+  {
+   "id": "M1",
+   "title": "A second built node",
+   "packages": [
+    "P-LIN-dravidian",
+    "P-ENG-01"
+   ],
+   "done_when": "two nodes carry L3s built and share the extracted juncture engine"
+  },
+  {
+   "id": "M2",
+   "title": "One script engine serving several lineages",
+   "packages": [
+    "P-ENG-06",
+    "P-ENG-07"
+   ],
+   "done_when": "logogram and syllabary engines are bound for at least two cuneiform lineages"
+  },
+  {
+   "id": "M3",
+   "title": "The minimum can be computed",
+   "packages": [
+    "P-COV-01",
+    "P-POS-01"
+   ],
+   "done_when": "eliminate reports tested nodes and no conflict is unruled"
+  }
+ ]
+}

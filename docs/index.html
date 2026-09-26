@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tajziya · parsers for the classical languages, by family</title>
+<meta name="description" content="Parsers for the classical languages of the human corpus, grouped by family. Classical Sanskrit parses; every other language refuses by name and points to the work that would build it.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;1,400&family=Noto+Nastaliq+Urdu:wght@500&display=swap" rel="stylesheet">
+<!-- © 1993–2026 Abhishek Choudhary. All rights reserved. AyeAI. -->
+<style>
+:root{--ink:#0a0e27;--gold:#d4a843;--paper:#fbf6e9;--rule:#e6dcc3;--mute:#5a5f78;
+--I:#2e7d4f;--P:#a87b0a;--U:#6a4c93;--S:#2f6ea5;--C:#b23a48;--card:#fffdf7}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.55 "Noto Serif",Georgia,"Times New Roman",serif}
+main{max-width:1080px;margin:0 auto;padding:0 20px 64px}
+header{background:var(--ink);color:var(--paper);padding:40px 20px 34px}
+header .in{max-width:1080px;margin:0 auto}
+.mark{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap}
+h1{font-size:44px;line-height:1.1;margin:0;font-weight:600;letter-spacing:.01em}
+.ur{font-family:"Noto Nastaliq Urdu",serif;font-size:34px;color:var(--gold);line-height:1.6}
+header p{max-width:680px;margin:14px 0 0;color:#d9d4c4}
+.counts{margin-top:18px;font-size:15px;color:var(--gold)}
+h2{font-size:26px;margin:52px 0 6px;font-weight:600}
+.lede{color:var(--mute);margin:0 0 18px;max-width:720px}
+.key{display:flex;flex-wrap:wrap;gap:14px;font-size:14px;margin:0 0 18px;color:var(--mute)}
+.key span::before{content:"";display:inline-block;width:10px;height:10px;margin-right:6px;border-radius:2px;background:var(--c)}
+.fam{border-top:1px solid var(--rule);padding:14px 0 6px}
+.fam h3{font-size:18px;margin:0 0 8px;font-weight:600}
+.lin{display:grid;grid-template-columns:150px 1fr;gap:10px;align-items:start;margin:6px 0 10px}
+.lin .ln{font-size:14px;color:var(--mute);padding-top:5px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font:inherit;font-size:14px;line-height:1.2;background:var(--card);color:var(--ink);border:1px solid var(--rule);border-left:4px solid var(--c);border-radius:4px;padding:5px 9px;cursor:pointer}
+.chip:hover,.chip[aria-pressed=true]{border-color:var(--c);box-shadow:0 0 0 1px var(--c) inset}
+.chip b{font-weight:600;color:var(--c);margin-right:5px}
+.chip.parses{background:#fff4d6}
+.chip:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+#detail{background:var(--card);border:1px solid var(--rule);border-radius:6px;padding:16px 18px;margin:18px 0 0;min-height:64px}
+#detail h4{margin:0 0 4px;font-size:19px}
+#detail .meta{font-size:14px;color:var(--mute);margin-bottom:8px}
+.layers{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:6px;margin:10px 0 0;font-size:14px}
+.layers div{border:1px solid var(--rule);border-radius:4px;padding:6px 8px;background:var(--paper)}
+.layers .built{border-color:var(--I);color:var(--I)}
+.layers .wired_unproven{border-color:var(--S);color:var(--S)}
+.try{background:var(--ink);color:var(--paper);border-radius:8px;padding:22px;margin-top:10px}
+.try form{display:flex;gap:8px;flex-wrap:wrap}
+.try input{flex:1 1 260px;font:inherit;font-size:20px;padding:10px 12px;border-radius:5px;border:1px solid #3a3f5c;background:#141936;color:var(--paper)}
+.try button{font:inherit;padding:10px 18px;border-radius:5px;border:0;background:var(--gold);color:var(--ink);font-weight:600;cursor:pointer}
+.ex{margin:12px 0 0;display:flex;gap:6px;flex-wrap:wrap;font-size:14px}
+.ex button{background:transparent;color:var(--gold);border:1px solid #3a3f5c;padding:4px 10px;font-weight:400}
+#out{margin-top:16px;font-size:18px}
+#out .r{padding:6px 0;border-top:1px solid #262b4a}
+#out .w{color:var(--gold)}
+#out .n{color:#b9b4a4;font-size:14px}
+.small{font-size:14px;color:#b9b4a4;margin-top:12px}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font-weight:600;font-size:14px;color:var(--mute)}
+.bar{height:10px;background:var(--gold);border-radius:2px}
+.axis{font-size:12px;padding:1px 6px;border-radius:3px;border:1px solid var(--rule);color:var(--mute)}
+.axis.script{border-color:var(--S);color:var(--S)}
+.axis.language{border-color:var(--I);color:var(--I)}
+.m4{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.m4 div{background:var(--card);border:1px solid var(--rule);border-radius:6px;padding:12px 14px}
+.m4 strong{display:block;font-size:30px;line-height:1.1}
+.cert{margin-top:12px;border-left:4px solid var(--C);padding:8px 12px;background:var(--card)}
+.conf li{margin:6px 0}
+footer{border-top:1px solid var(--rule);margin-top:56px;padding-top:16px;font-size:14px;color:var(--mute)}
+@media (max-width:640px){h1{font-size:34px}.lin{grid-template-columns:1fr}.lin .ln{padding-top:0}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+<script type="importmap">{"imports":{"./vendor/rules.js":"./vendor/rules.browser.js"}}</script>
+</head>
+<body>
+<header><div class="in">
+  <div class="mark"><h1>tajziya</h1><span class="ur" lang="ur" dir="rtl">تجزیہ</span></div>
+  <p>Parsers for the classical languages of the human written corpus, grouped by family. One language parses today. Every other one is bound, answers what it can, and refuses the rest by name.</p>
+  <div class="counts" id="counts">Loading the registry.</div>
+</div></header>
+<main>
+  <h2>The candidate languages, by family</h2>
+  <p class="lede">Every row of the candidate language matrix, as a node: a language at a stage, in declared scripts, holding a declared corpus. The colour is the matrix's own status. Select one to see its layers and what it would take to build them.</p>
+  <div class="key">
+    <span style="--c:var(--I)">I irreducible</span><span style="--c:var(--P)">P provisional</span><span style="--c:var(--U)">U undeciphered</span><span style="--c:var(--S)">S stage</span><span style="--c:var(--C)">C compression candidate</span>
+  </div>
+  <div id="tree"></div>
+  <div id="detail" aria-live="polite"><span class="lede">Select a language.</span></div>
+
+  <h2>Try the Sanskrit segmenter</h2>
+  <p class="lede">The author's parser, running in this page. It undoes vowel sandhi against a twelve-word placeholder lexicon and returns every reading the rules admit.</p>
+  <div class="try">
+    <form id="f"><input id="q" value="tatraiva" aria-label="Sanskrit text in IAST" autocomplete="off" spellcheck="false"><button>Segment</button></form>
+    <div class="ex" id="ex"></div>
+    <div id="out"></div>
+    <p class="small" id="lex"></p>
+  </div>
+
+  <h2>What the families share</h2>
+  <p class="lede">Families are shared by descent. The engines that do the parsing are shared by phenomenon: a node needs the engines of its lineage and of its scripts. Bars count the lineages each engine serves.</p>
+  <table><thead><tr><th>Engine</th><th>Axis</th><th style="width:38%">Lineages</th><th>Nodes</th></tr></thead><tbody id="eng"></tbody></table>
+
+  <h2>Where the minimum stands</h2>
+  <p class="lede">The matrix's rule, U<sub>i</sub> = K<sub>i</sub> minus Recover(K<sub>not i</sub>, R, X), run on the coverage recorded so far. Translation never counts as recovery.</p>
+  <div class="m4" id="min"></div>
+  <div class="cert" id="cert"></div>
+
+  <h2>Held, not resolved</h2>
+  <p class="lede">Where the posters disagree with themselves, the registry records both readings and waits for the author's ruling.</p>
+  <ul class="conf" id="conf"></ul>
+
+  <footer>© 1993–2026 Abhishek Choudhary. All rights reserved. AyeAI. Code GPL-3.0-or-later; the Sanskrit parser MIT; documents CC-BY-SA-4.0; registry CC0-1.0. Machine entry: <a href="data/registry.json">data/registry.json</a>.</footer>
+</main>
+<script type="module">
+const $ = (id) => document.getElementById(id);
+const el = (tag, attrs = {}, ...kids) => { const e = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) { if (k === "style") e.style.cssText = v; else e.setAttribute(k, v); }
+  for (const k of kids) e.append(k); return e; };
+const LAYER = {L0:"phonology",L1:"script pivot",L2:"orthography",L3s:"segmentation",L3m:"morphology",L4:"syntax"};
+let data;
+try { data = await (await fetch("data/registry.json")).json(); }
+catch (e) { $("counts").textContent = "The registry could not be loaded."; throw e; }
+const c = data.counts;
+$("counts").textContent = `${c.nodes} language and stage nodes · ${c.lineages} lineages · ${c.scripts} scripts · ${c.engines} engines · parsing: ${c.parsing.join(", ")}`;
+const byLin = {}; for (const n of data.nodes) (byLin[n.lineage] ??= []).push(n);
+const tree = $("tree"); let pressed = null;
+for (const fam of data.families) {
+  const lins = data.lineages.filter((l) => l.family === fam.id && byLin[l.id]);
+  if (!lins.length) continue;
+  const box = el("div", {class: "fam"}, el("h3", {}, fam.name));
+  for (const l of lins) {
+    const chips = el("div", {class: "chips"});
+    for (const n of byLin[l.id]) {
+      const b = el("button", {class: "chip" + (n.layers.L3s === "built" ? " parses" : ""), style: `--c:var(--${n.status.poster})`, "aria-pressed": "false", type: "button"}, el("b", {}, n.status.poster), n.name);
+      b.onclick = () => { if (pressed) pressed.setAttribute("aria-pressed", "false"); b.setAttribute("aria-pressed", "true"); pressed = b; show(n, l); };
+      chips.append(b);
+    }
+    box.append(el("div", {class: "lin"}, el("div", {class: "ln"}, l.name), chips));
+  }
+  tree.append(box);
+}
+function show(n, l) {
+  const d = $("detail"); d.replaceChildren();
+  d.append(el("h4", {}, `${n.name}`), el("div", {class: "meta"},
+    `${n.id} · ${l.path.join(" › ")} · ${n.iso639_3.length ? "ISO 639-3 " + n.iso639_3.join(", ") : "no language assigned"} · scripts ${n.scripts.join(", ")} · ${n.status.source}`));
+  d.append(el("div", {}, n.corpus));
+  if (n.note) d.append(el("div", {class: "meta", style: "margin-top:8px"}, n.note));
+  const g = el("div", {class: "layers"});
+  for (const [k, v] of Object.entries(n.layers)) g.append(el("div", {class: v}, `${k} ${LAYER[k]}: ${v.replace("_", " ")}`));
+  d.append(g, el("div", {class: "meta", style: "margin-top:10px"}, `Engines it needs: ${[...new Set(n.needs)].join(", ") || "none named"}`));
+  if (n.scope_excludes) d.append(el("div", {class: "meta"}, `Does not yet cover: ${n.scope_excludes.join("; ")}`));
+}
+const eng = $("eng"); const max = Math.max(...data.engines.engines.map((e) => e.reach.lineages), 1);
+for (const e of data.engines.engines) eng.append(el("tr", {}, el("td", {}, e.id), el("td", {}, el("span", {class: "axis " + e.axis}, e.axis)),
+  el("td", {}, el("div", {class: "bar", style: `width:${Math.max(4, 100 * e.reach.lineages / max)}%`, title: e.lineages.join(", ")}), el("span", {class: "meta"}, `${e.reach.lineages}`)),
+  el("td", {}, String(e.reach.nodes))));
+const m = data.minimum;
+for (const [v, t] of [[m.L, "candidate language nodes retained"], [m.S, "stage nodes retained"], [m.G.length, "scripts needed"], [m.C.length, "corpus classes"]])
+  $("min").append(el("div", {}, el("strong", {}, String(v)), t));
+$("cert").textContent = m.certified ? "Certified, relative to the declared universe and loss function." : `Not certified: ${m.reasons.join("; ")}.`;
+for (const x of data.conflicts) $("conf").append(el("li", {}, el("b", {}, `${x.id} `), `${x.where}. ${x.reads} ${x.against} Held: ${x.held_as}`));
+
+const { Segmenter } = await import("./vendor/pipeline.js");
+const { TOY_LEXICON } = await import("./vendor/lexicon.js");
+const seg = new Segmenter([], TOY_LEXICON);
+$("lex").textContent = "Lexicon: " + [...TOY_LEXICON].sort().join(", ") + ". Consonant and visarga sandhi, morphology and syntax are not built.";
+for (const x of ["neti", "tatraiva", "gurūpadeśa", "sīteva", "neti tatraiva"]) {
+  const b = el("button", {type: "button"}, x); b.onclick = () => { $("q").value = x; run(); }; $("ex").append(b);
+}
+function run() {
+  const out = $("out"); out.replaceChildren();
+  const text = $("q").value.normalize("NFC").trim();
+  if (!text) return;
+  if (/[\u0900-\u097F]/.test(text)) { out.append(el("div", {class: "r n"}, "Devanagari needs the script pivot, which is not bound yet (package P-SAN-01). Type IAST.")); return; }
+  for (const tok of text.split(/\s+/)) {
+    const sols = seg.segment(tok);
+    if (!sols.length) { out.append(el("div", {class: "r"}, el("span", {class: "n"}, `${tok}: no reading in the lexicon`))); continue; }
+    sols.forEach((s, i) => out.append(el("div", {class: "r"}, el("span", {class: "n"}, `${tok} · reading ${i + 1} of ${sols.length} · `), el("span", {class: "w"}, s.map((x) => x.text).join(" + ")))));
+  }
+}
+$("f").onsubmit = (ev) => { ev.preventDefault(); run(); };
+run();
+</script>
+</body>
+</html>

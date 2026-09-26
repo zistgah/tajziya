@@ -1,0 +1,15 @@
+element: tajziya
+script: تجزیہ
+gloss: analysis; resolving a whole into its parts
+class: library
+estate: zistgah
+author: Abhishek Choudhary
+affiliation: AyeAI
+orcid: 0009-0002-0684-8320
+copyright: "© 1993–2026 Abhishek Choudhary. All rights reserved."
+version: 0.1.0
+status: incubating
+doi: null            # recorded back by the seeder after the MINT gate
+siblings:
+  - dhancha          # the spine whose ten invariants this element satisfies
+  - humanesque       # holds the 30 Aug ILM template this registry reconciles

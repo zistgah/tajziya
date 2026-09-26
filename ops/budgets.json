@@ -1,0 +1,26 @@
+{
+ "schema": "tajziya.budgets/1",
+ "rule": "A count or a coverage figure is claimed only with the command that measures it.",
+ "budgets": [
+  {
+   "claim": "node, lineage, script, engine and package counts",
+   "measured_by": "PYTHONPATH=src python3 -m tajziya doctor"
+  },
+  {
+   "claim": "every not_built layer refuses by name",
+   "measured_by": "PYTHONPATH=src python3 -m tajziya conformance"
+  },
+  {
+   "claim": "Python and JavaScript agree",
+   "measured_by": "python3 tests/parity.py"
+  },
+  {
+   "claim": "engine reach across lineages",
+   "measured_by": "PYTHONPATH=src python3 -m tajziya commonalities"
+  },
+  {
+   "claim": "the minimum is not certified",
+   "measured_by": "PYTHONPATH=src python3 -m tajziya eliminate"
+  }
+ ]
+}

@@ -1,0 +1,88 @@
+{
+ "schema": "tajziya.conflicts/1",
+ "copyright": "© 1993–2026 Abhishek Choudhary. All rights reserved. AyeAI.",
+ "license": "CC0-1.0",
+ "rule": "A conflict in the source is recorded and held. The machine does not resolve it; the author rules.",
+ "conflicts": [
+  {
+   "id": "C-01",
+   "where": "poster I §14, first row",
+   "reads": "The row is labelled Ge'ez; its corpus is the Orkhon inscriptions.",
+   "against": "Poster III L14 lists Old Turkic.",
+   "held_as": "Held as node otk (Old Turkic). The label is not corrected on the author's behalf.",
+   "ruled": false
+  },
+  {
+   "id": "C-02",
+   "where": "poster I §5 and §19",
+   "reads": "Gāndhārī is P in §5.",
+   "against": "§19 lists Gāndhārī among the irreducible or near-irreducible.",
+   "held_as": "Held at the §5 row status, P.",
+   "ruled": false
+  },
+  {
+   "id": "C-03",
+   "where": "poster I §5 and §19",
+   "reads": "The Prakrits are P in §5.",
+   "against": "§19 lists Major Prakrit streams among the irreducible or near-irreducible.",
+   "held_as": "Held at the §5 row status, P.",
+   "ruled": false
+  },
+  {
+   "id": "C-04",
+   "where": "poster I §10 and §19",
+   "reads": "Ge'ez is P in §10.",
+   "against": "§19 lists Ge'ez among the irreducible or near-irreducible.",
+   "held_as": "Held at the §10 row status, P.",
+   "ruled": false
+  },
+  {
+   "id": "C-05",
+   "where": "poster I §14 and §19",
+   "reads": "Ottoman Turkish is I in §14.",
+   "against": "§19 lists Ottoman Turkish among the strong provisional candidates.",
+   "held_as": "Held at the §14 row status, I.",
+   "ruled": false
+  },
+  {
+   "id": "C-06",
+   "where": "poster I §17 and §19",
+   "reads": "Konkani is P in §17.",
+   "against": "§19 does not list Konkani.",
+   "held_as": "Held as a node at P.",
+   "ruled": false
+  },
+  {
+   "id": "C-07",
+   "where": "poster I §19 and poster III L1",
+   "reads": "Elamite appears in the §19 provisional list and in poster III L1.",
+   "against": "No row in poster I §1 to §18 carries Elamite.",
+   "held_as": "Held as node elx at P, corpus not stated.",
+   "ruled": false
+  },
+  {
+   "id": "C-08",
+   "where": "poster III L10",
+   "reads": "Armenian and Georgian share one group.",
+   "against": "Armenian is Indo-European and Georgian Kartvelian.",
+   "held_as": "The group is kept as the poster's areal grouping; lineages are genealogical.",
+   "ruled": false
+  },
+  {
+   "id": "C-09",
+   "where": "poster I §4 and §19",
+   "reads": "§4 has four Iranian rows with different statuses.",
+   "against": "§19 names Avestan and Persian only.",
+   "held_as": "Rows are held at their §4 statuses.",
+   "ruled": false
+  },
+  {
+   "id": "C-10",
+   "where": "ISO 639-3 and posters I and III",
+   "reads": "ISO 639-3 carries xiv, Indus Valley Language.",
+   "against": "Both posters hold the underlying language unresolved.",
+   "held_as": "Held as und-Inds with no language code.",
+   "ruled": false
+  }
+ ]
+}

@@ -1,0 +1,36 @@
+{
+ "schema": "tajziya.epistemic/1",
+ "copyright": "© 1993–2026 Abhishek Choudhary. All rights reserved. AyeAI.",
+ "license": "CC0-1.0",
+ "source": "poster II, Epistemic Status Model",
+ "states": [
+  {
+   "id": "E0",
+   "name": "Directly attested"
+  },
+  {
+   "id": "E1",
+   "name": "Documented but incomplete"
+  },
+  {
+   "id": "E2",
+   "name": "Reconstructed (strong evidence)"
+  },
+  {
+   "id": "E3",
+   "name": "Probabilistic reconstruction"
+  },
+  {
+   "id": "E4",
+   "name": "Hypothesis"
+  },
+  {
+   "id": "E5",
+   "name": "Unknown or undeciphered"
+  },
+  {
+   "id": "E6",
+   "name": "Contested interpretation"
+  }
+ ]
+}

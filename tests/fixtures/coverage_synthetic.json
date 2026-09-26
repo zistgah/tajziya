@@ -1,0 +1,14 @@
+{"note": "Synthetic nodes x-a to x-i exercise the rule. They are not claims about any language.",
+ "frozen": {"universe": false, "loss_function": false},
+ "rows": [
+  {"id": "R1", "cells": {"x-a": {"relation": "original", "evidence": "fixture"}}},
+  {"id": "R2", "cells": {"x-b": {"relation": "original", "evidence": "fixture"},
+                         "x-c": {"relation": "translation", "loss": [], "evidence": "fixture"}}},
+  {"id": "R3", "cells": {"x-d": {"relation": "original", "evidence": "fixture"},
+                         "x-e": {"relation": "original", "loss": [], "evidence": "fixture"}}},
+  {"id": "R4", "cells": {"x-f": {"relation": "unknown"}}},
+  {"id": "R5", "cells": {"x-h": {"relation": "original", "evidence": "fixture"},
+                         "x-i": {"relation": "original", "loss": ["metre"], "evidence": "fixture"}}},
+  {"id": "R6", "cells": {"x-j": {"relation": "original", "evidence": "fixture"},
+                         "x-k": {"relation": "original", "loss": []}}}
+ ]}

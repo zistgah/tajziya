@@ -1,0 +1,703 @@
+{
+ "schema": "tajziya.packages/1",
+ "copyright": "© 1993–2026 Abhishek Choudhary. All rights reserved. AyeAI.",
+ "license": "CC0-1.0",
+ "rule": "A package is done when its acceptance command passes. Labels are capabilities, never a model name.",
+ "packages": [
+  {
+   "id": "P-SAN-01",
+   "title": "Classical Sanskrit: Devanagari input through the Romenagri tables to the segmenter's internal form",
+   "labels": [
+    "needs:code"
+   ],
+   "deps": [],
+   "owns": [
+    "src/tajziya/ports/sanskrit_paninian_v0/"
+   ],
+   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_san_01 && bash ops/verify.sh",
+   "state": "open"
+  },
+  {
+   "id": "P-SAN-02",
+   "title": "Classical Sanskrit: e and o before a vowel other than a, which raises today",
+   "labels": [
+    "needs:code"
+   ],
+   "deps": [
+    "P-SAN-03"
+   ],
+   "owns": [
+    "vendor/sanskrit_parser/python/sandhi.py",
+    "vendor/sanskrit_parser/js/sandhi.js"
+   ],
+   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_san_02 && bash ops/verify.sh",
+   "state": "open"
+  },
+  {
+   "id": "P-SAN-03",
+   "title": "Source the Adhyaya 6.1 and 8 sandhi sutras from an openly licensed edition, with provenance",
+   "labels": [
+    "needs:proof"
+   ],
+   "deps": [],
+   "owns": [
+    "vendor/sanskrit_parser/data/"
+   ],
+   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_san_03 && bash ops/verify.sh",
+   "state": "open"
+  },
+  {
+   "id": "P-SAN-04",
+   "title": "A Sanskrit lexicon from an openly licensed source, licence recorded",
+   "labels": [
+    "needs:proof",
+    "needs:legal"
+   ],
+   "deps": [],
+   "owns": [
+    "vendor/sanskrit_parser/data/"
+   ],
+   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_san_04 && bash ops/verify.sh",
+   "state": "open"
+  },
+  {
+   "id": "P-SAN-05",
+   "title": "Classical Sanskrit morphology against sourced vibhakti rules",
+   "labels": [
+    "needs:code"
+   ],
+   "deps": [
+    "P-SAN-03",
+    "P-SAN-04"
+   ],
+   "owns": [
+    "src/tajziya/ports/sanskrit_paninian_v0/"
+   ],
+   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_san_05 && bash ops/verify.sh",
+   "state": "open"
+  },
+  {
+   "id": "P-SAN-06",
+   "title": "Karaka relations for Classical Sanskrit",
+   "labels": [
+    "needs:code"
+   ],
+   "deps": [
+    "P-SAN-05",
+    "P-L4-01"
+   ],
+   "owns": [
+    "src/tajziya/ports/sanskrit_paninian_v0/"
+   ],
+   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_san_06 && bash ops/verify.sh",
+   "state": "open"
+  },
+  {
+   "id": "P-SAN-07",
+   "title": "A segmentation ranking that orders readings without discarding any",
+   "labels": [
+    "needs:code"
+   ],
+   "deps": [
+    "P-SAN-04"
+   ],
+   "owns": [
+    "src/tajziya/ports/sanskrit_paninian_v0/"
+   ],
+   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_san_07 && bash ops/verify.sh",
+   "state": "open"
+  },
+  {
+   "id": "P-SAN-08",
+   "title": "Validate the vowel-junction segmenter on Vedic and Epic text before binding it to those stages",
+   "labels": [
+    "needs:proof"
+   ],
+   "deps": [
+    "P-SAN-04"
+   ],
+   "owns": [
+    "registry/bindings.json"
+   ],
+   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_san_08 && bash ops/verify.sh",
+   "state": "open"
+  },
+  {
+   "id": "P-LEG-01",
+   "title": "Permission from Sanskrit Documents for the 152-sutra compilation, or the text re-sourced from an openly licensed edition",
+   "labels": [
+    "needs:legal",
+    "needs:human"
+   ],
+   "deps": [],
+   "owns": [
+    "vendor/sanskrit_parser/data/SOURCE.json"
+   ],
+   "acceptance": "vendor/sanskrit_parser/data/SOURCE.json records the permission or the replacement source, and bash ops/verify.sh passes",
+   "state": "open"
+  },
+  {
+   "id": "P-COV-01",
+   "title": "First coverage rows, each with evidence, for the elimination rule",
+   "labels": [
+    "needs:human",
+    "needs:proof"
+   ],
+   "deps": [],
+   "owns": [
+    "registry/coverage.json"
+   ],
+   "acceptance": "PYTHONPATH=src python3 -m tajziya eliminate reports at least one tested node, and bash ops/verify.sh passes",
+   "state": "open"
+  },
+  {
+   "id": "P-POS-01",
+   "title": "The author rules on each poster conflict",
+   "labels": [
+    "needs:human"
+   ],
+   "deps": [],
+   "owns": [
+    "registry/conflicts.json"
+   ],
+   "acceptance": "every entry in registry/conflicts.json carries ruled true, and bash ops/verify.sh passes",
+   "state": "open"
+  },
+  {
+   "id": "P-SRC-01",
+   "title": "Each lineage's typology and each node's own grammatical tradition, with a citable edition",
+   "labels": [
+    "needs:proof"
+   ],
+   "deps": [],
+   "owns": [
+    "registry/families.json",
+    "registry/nodes.json"
+   ],
+   "acceptance": "every lineage names a source, and bash ops/verify.sh passes",
+   "state": "open"
+  },
+  {
+   "id": "P-L0-01",
+   "title": "A phonological base per node (ILM layer L0), reconstructed values tagged E2 or E3",
+   "labels": [
+    "needs:proof",
+    "needs:code"
+   ],
+   "deps": [],
+   "owns": [
+    "src/tajziya/phonology/"
+   ],
+   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_l0_01 && bash ops/verify.sh",
+   "state": "open"
+  },
+  {
+   "id": "P-L1-01",
+   "title": "A script pivot for scripts without a Romenagri table",
+   "labels": [
+    "needs:code"
+   ],
+   "deps": [],
+   "owns": [
+    "src/tajziya/pivot/"
+   ],
+   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_l1_01 && bash ops/verify.sh",
+   "state": "open"
+  },
+  {
+   "id": "P-L4-01",
+   "title": "Dependency relations with Universal Dependencies labels",
+   "labels": [
+    "needs:code"
+   ],
+   "deps": [],
+   "owns": [
+    "src/tajziya/syntax/"
+   ],
+   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_l4_01 && bash ops/verify.sh",
+   "state": "open"
+  },
+  {
+   "id": "P-UD-01",
+   "title": "Validate the CoNLL-U output with the Universal Dependencies validator",
+   "labels": [
+    "needs:testing"
+   ],
+   "deps": [],
+   "owns": [
+    "tests/"
+   ],
+   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_ud_01 && bash ops/verify.sh",
+   "state": "open"
+  },
+  {
+   "id": "P-SPINE-01",
+   "title": "dhancha declares this descriptor and the reverse correlation edge",
+   "labels": [
+    "needs:code"
+   ],
+   "deps": [],
+   "owns": [
+    "zistgah/dhancha descriptors/tajziya.json"
+   ],
+   "acceptance": "spine_validate and spine_leak in zistgah/dhancha pass with this descriptor present",
+   "state": "open"
+  },
+  {
+   "id": "P-ILM-01",
+   "title": "The ILM layer repositories declare their correspondence to layers L0 to L4 here",
+   "labels": [
+    "needs:code"
+   ],
+   "deps": [],
+   "owns": [
+    "project-ilm/ilm-phonology",
+    "project-ilm/ilm-transliteration",
+    "project-ilm/ilm-orthography",
+    "project-ilm/ilm-lexicon",
+    "project-ilm/ilm-syntax-semantics"
+   ],
+   "acceptance": "each of the five READMEs names this repository and its layer",
+   "state": "open"
+  },
+  {
+   "id": "P-ENG-01",
+   "title": "Extract the juncture search from the Sanskrit node once a second language needs it",
+   "labels": [
+    "needs:code"
+   ],
+   "deps": [
+    "P-LIN-dravidian"
+   ],
+   "owns": [
+    "src/tajziya/engines/juncture.py"
+   ],
+   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_eng_01 && bash ops/verify.sh",
+   "state": "open"
+  },
+  {
+   "id": "P-ENG-02",
+   "title": "Engine: paradigm. Analyse fusional inflection against stem and ending paradigms.",
+   "labels": [
+    "needs:code"
+   ],
+   "deps": [],
+   "owns": [
+    "src/tajziya/engines/paradigm.py"
+   ],
+   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_eng_02 && bash ops/verify.sh",
+   "state": "open"
+  },
+  {
+   "id": "P-ENG-03",
+   "title": "Engine: compounding. Split and classify compounds.",
+   "labels": [
+    "needs:code"
+   ],
+   "deps": [],
+   "owns": [
+    "src/tajziya/engines/compounding.py"
+   ],
+   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_eng_03 && bash ops/verify.sh",
+   "state": "open"
+  },
+  {
+   "id": "P-ENG-04",
+   "title": "Engine: root_pattern. Extract consonantal roots and match vocalic and affixal templates.",
+   "labels": [
+    "needs:code"
+   ],
+   "deps": [],
+   "owns": [
+    "src/tajziya/engines/root_pattern.py"
+   ],
+   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_eng_04 && bash ops/verify.sh",
+   "state": "open"
+  },
+  {
+   "id": "P-ENG-05",
+   "title": "Engine: affix_chain. Peel ordered affix chains, applying harmony where the language has it.",
+   "labels": [
+    "needs:code"
+   ],
+   "deps": [],
+   "owns": [
+    "src/tajziya/engines/affix_chain.py"
+   ],
+   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_eng_05 && bash ops/verify.sh",
+   "state": "open"
+  },
+  {
+   "id": "P-ENG-06",
+   "title": "Engine: logogram. Resolve logograms, heterograms and determinatives to readings.",
+   "labels": [
+    "needs:code"
+   ],
+   "deps": [],
+   "owns": [
+    "src/tajziya/engines/logogram.py"
+   ],
+   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_eng_06 && bash ops/verify.sh",
+   "state": "open"
+  },
+  {
+   "id": "P-ENG-07",
+   "title": "Engine: syllabary. Map syllabic signs to values and keep every reading of a polyphonous sign.",
+   "labels": [
+    "needs:code"
+   ],
+   "deps": [],
+   "owns": [
+    "src/tajziya/engines/syllabary.py"
+   ],
+   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_eng_07 && bash ops/verify.sh",
+   "state": "open"
+  },
+  {
+   "id": "P-ENG-08",
+   "title": "Engine: vocalisation. Restore vowels the script leaves unwritten, returning every admissible reading.",
+   "labels": [
+    "needs:code"
+   ],
+   "deps": [],
+   "owns": [
+    "src/tajziya/engines/vocalisation.py"
+   ],
+   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_eng_08 && bash ops/verify.sh",
+   "state": "open"
+  },
+  {
+   "id": "P-ENG-09",
+   "title": "Engine: abugida. Resolve inherent vowels, conjuncts and vowel signs, through the Romenagri script tables.",
+   "labels": [
+    "needs:code"
+   ],
+   "deps": [],
+   "owns": [
+    "src/tajziya/engines/abugida.py"
+   ],
+   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_eng_09 && bash ops/verify.sh",
+   "state": "open"
+  },
+  {
+   "id": "P-ENG-10",
+   "title": "Engine: unspaced. Find word boundaries in text the script does not divide into words.",
+   "labels": [
+    "needs:code"
+   ],
+   "deps": [],
+   "owns": [
+    "src/tajziya/engines/unspaced.py"
+   ],
+   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_eng_10 && bash ops/verify.sh",
+   "state": "open"
+  },
+  {
+   "id": "P-ENG-11",
+   "title": "Engine: sign_sequence. Tokenise and count signs of an undeciphered or proto-writing corpus without assigning a language.",
+   "labels": [
+    "needs:code"
+   ],
+   "deps": [],
+   "owns": [
+    "src/tajziya/engines/sign_sequence.py"
+   ],
+   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_eng_11 && bash ops/verify.sh",
+   "state": "open"
+  },
+  {
+   "id": "P-LIN-indo_aryan",
+   "title": "A second Indo-Aryan node (Pali or a Prakrit): its junction table sourced and bound",
+   "labels": [
+    "needs:proof",
+    "needs:code"
+   ],
+   "deps": [],
+   "owns": [
+    "src/tajziya/ports/indo_aryan_*"
+   ],
+   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_lin_indo_aryan && bash ops/verify.sh",
+   "state": "open"
+  },
+  {
+   "id": "P-LIN-iranian",
+   "title": "First Iranian node: one sourced batch of rules and a lexicon under an open licence, bound through the registry",
+   "labels": [
+    "needs:proof",
+    "needs:code"
+   ],
+   "deps": [],
+   "owns": [
+    "src/tajziya/ports/iranian_*"
+   ],
+   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_lin_iranian && bash ops/verify.sh",
+   "state": "open"
+  },
+  {
+   "id": "P-LIN-anatolian",
+   "title": "First Anatolian node: one sourced batch of rules and a lexicon under an open licence, bound through the registry",
+   "labels": [
+    "needs:proof",
+    "needs:code"
+   ],
+   "deps": [],
+   "owns": [
+    "src/tajziya/ports/anatolian_*"
+   ],
+   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_lin_anatolian && bash ops/verify.sh",
+   "state": "open"
+  },
+  {
+   "id": "P-LIN-hellenic",
+   "title": "First Hellenic node: one sourced batch of rules and a lexicon under an open licence, bound through the registry",
+   "labels": [
+    "needs:proof",
+    "needs:code"
+   ],
+   "deps": [],
+   "owns": [
+    "src/tajziya/ports/hellenic_*"
+   ],
+   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_lin_hellenic && bash ops/verify.sh",
+   "state": "open"
+  },
+  {
+   "id": "P-LIN-italic",
+   "title": "First Italic node: one sourced batch of rules and a lexicon under an open licence, bound through the registry",
+   "labels": [
+    "needs:proof",
+    "needs:code"
+   ],
+   "deps": [],
+   "owns": [
+    "src/tajziya/ports/italic_*"
+   ],
+   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_lin_italic && bash ops/verify.sh",
+   "state": "open"
+  },
+  {
+   "id": "P-LIN-germanic",
+   "title": "First Germanic node: one sourced batch of rules and a lexicon under an open licence, bound through the registry",
+   "labels": [
+    "needs:proof",
+    "needs:code"
+   ],
+   "deps": [],
+   "owns": [
+    "src/tajziya/ports/germanic_*"
+   ],
+   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_lin_germanic && bash ops/verify.sh",
+   "state": "open"
+  },
+  {
+   "id": "P-LIN-balto_slavic",
+   "title": "First Balto-Slavic node: one sourced batch of rules and a lexicon under an open licence, bound through the registry",
+   "labels": [
+    "needs:proof",
+    "needs:code"
+   ],
+   "deps": [],
+   "owns": [
+    "src/tajziya/ports/balto_slavic_*"
+   ],
+   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_lin_balto_slavic && bash ops/verify.sh",
+   "state": "open"
+  },
+  {
+   "id": "P-LIN-armenian",
+   "title": "First Armenian node: one sourced batch of rules and a lexicon under an open licence, bound through the registry",
+   "labels": [
+    "needs:proof",
+    "needs:code"
+   ],
+   "deps": [],
+   "owns": [
+    "src/tajziya/ports/armenian_*"
+   ],
+   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_lin_armenian && bash ops/verify.sh",
+   "state": "open"
+  },
+  {
+   "id": "P-LIN-semitic",
+   "title": "First Semitic node: one sourced batch of rules and a lexicon under an open licence, bound through the registry",
+   "labels": [
+    "needs:proof",
+    "needs:code"
+   ],
+   "deps": [],
+   "owns": [
+    "src/tajziya/ports/semitic_*"
+   ],
+   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_lin_semitic && bash ops/verify.sh",
+   "state": "open"
+  },
+  {
+   "id": "P-LIN-egyptian",
+   "title": "First Egyptian node: one sourced batch of rules and a lexicon under an open licence, bound through the registry",
+   "labels": [
+    "needs:proof",
+    "needs:code"
+   ],
+   "deps": [],
+   "owns": [
+    "src/tajziya/ports/egyptian_*"
+   ],
+   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_lin_egyptian && bash ops/verify.sh",
+   "state": "open"
+  },
+  {
+   "id": "P-LIN-dravidian",
+   "title": "First Dravidian node: one sourced batch of rules and a lexicon under an open licence, bound through the registry",
+   "labels": [
+    "needs:proof",
+    "needs:code"
+   ],
+   "deps": [],
+   "owns": [
+    "src/tajziya/ports/dravidian_*"
+   ],
+   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_lin_dravidian && bash ops/verify.sh",
+   "state": "open"
+  },
+  {
+   "id": "P-LIN-sinitic",
+   "title": "First Sinitic node: one sourced batch of rules and a lexicon under an open licence, bound through the registry",
+   "labels": [
+    "needs:proof",
+    "needs:code"
+   ],
+   "deps": [],
+   "owns": [
+    "src/tajziya/ports/sinitic_*"
+   ],
+   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_lin_sinitic && bash ops/verify.sh",
+   "state": "open"
+  },
+  {
+   "id": "P-LIN-bodish",
+   "title": "First Bodish node: one sourced batch of rules and a lexicon under an open licence, bound through the registry",
+   "labels": [
+    "needs:proof",
+    "needs:code"
+   ],
+   "deps": [],
+   "owns": [
+    "src/tajziya/ports/bodish_*"
+   ],
+   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_lin_bodish && bash ops/verify.sh",
+   "state": "open"
+  },
+  {
+   "id": "P-LIN-turkic",
+   "title": "First Turkic node: one sourced batch of rules and a lexicon under an open licence, bound through the registry",
+   "labels": [
+    "needs:proof",
+    "needs:code"
+   ],
+   "deps": [],
+   "owns": [
+    "src/tajziya/ports/turkic_*"
+   ],
+   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_lin_turkic && bash ops/verify.sh",
+   "state": "open"
+  },
+  {
+   "id": "P-LIN-japonic",
+   "title": "First Japonic node: one sourced batch of rules and a lexicon under an open licence, bound through the registry",
+   "labels": [
+    "needs:proof",
+    "needs:code"
+   ],
+   "deps": [],
+   "owns": [
+    "src/tajziya/ports/japonic_*"
+   ],
+   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_lin_japonic && bash ops/verify.sh",
+   "state": "open"
+  },
+  {
+   "id": "P-LIN-koreanic",
+   "title": "First Koreanic node: one sourced batch of rules and a lexicon under an open licence, bound through the registry",
+   "labels": [
+    "needs:proof",
+    "needs:code"
+   ],
+   "deps": [],
+   "owns": [
+    "src/tajziya/ports/koreanic_*"
+   ],
+   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_lin_koreanic && bash ops/verify.sh",
+   "state": "open"
+  },
+  {
+   "id": "P-LIN-kartvelian",
+   "title": "First Kartvelian node: one sourced batch of rules and a lexicon under an open licence, bound through the registry",
+   "labels": [
+    "needs:proof",
+    "needs:code"
+   ],
+   "deps": [],
+   "owns": [
+    "src/tajziya/ports/kartvelian_*"
+   ],
+   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_lin_kartvelian && bash ops/verify.sh",
+   "state": "open"
+  },
+  {
+   "id": "P-LIN-hurro_urartian",
+   "title": "First Hurro-Urartian node: one sourced batch of rules and a lexicon under an open licence, bound through the registry",
+   "labels": [
+    "needs:proof",
+    "needs:code"
+   ],
+   "deps": [],
+   "owns": [
+    "src/tajziya/ports/hurro_urartian_*"
+   ],
+   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_lin_hurro_urartian && bash ops/verify.sh",
+   "state": "open"
+  },
+  {
+   "id": "P-LIN-sumerian",
+   "title": "First Sumerian node: one sourced batch of rules and a lexicon under an open licence, bound through the registry",
+   "labels": [
+    "needs:proof",
+    "needs:code"
+   ],
+   "deps": [],
+   "owns": [
+    "src/tajziya/ports/sumerian_*"
+   ],
+   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_lin_sumerian && bash ops/verify.sh",
+   "state": "open"
+  },
+  {
+   "id": "P-LIN-elamite",
+   "title": "First Elamite node: one sourced batch of rules and a lexicon under an open licence, bound through the registry",
+   "labels": [
+    "needs:proof",
+    "needs:code"
+   ],
+   "deps": [],
+   "owns": [
+    "src/tajziya/ports/elamite_*"
+   ],
+   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_lin_elamite && bash ops/verify.sh",
+   "state": "open"
+  },
+  {
+   "id": "P-LIN-undeciphered",
+   "title": "Sign inventories for the Indus and Proto-Elamite corpora as corpus objects, with provenance and no language assigned",
+   "labels": [
+    "needs:proof",
+    "needs:code"
+   ],
+   "deps": [],
+   "owns": [
+    "src/tajziya/ports/undeciphered_*"
+   ],
+   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_lin_undeciphered && bash ops/verify.sh",
+   "state": "open"
+  }
+ ]
+}

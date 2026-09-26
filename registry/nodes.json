@@ -1,0 +1,2361 @@
+{
+ "schema": "tajziya.nodes/1",
+ "copyright": "© 1993–2026 Abhishek Choudhary. All rights reserved. AyeAI.",
+ "license": "CC0-1.0",
+ "source": "Candidate Language x Unique Corpus Matrix v0.1 (poster I) and A Four-Axis Solution (poster III), supplied by the author on 26 Sep 2026. Corpus text is transcribed from poster I.",
+ "keys": "A node is a language at a stage, written in declared scripts, holding a declared corpus. A name alone never identifies a node.",
+ "status_key": {
+  "I": "irreducible",
+  "P": "provisional",
+  "U": "undeciphered or unknown",
+  "S": "stage, not a separate language",
+  "C": "candidate for compression"
+ },
+ "layer_key": {
+  "L0": "phonology",
+  "L1": "script pivot",
+  "L2": "orthography",
+  "L3s": "segmentation",
+  "L3m": "morphology",
+  "L4": "syntax"
+ },
+ "stage_trees": {
+  "Egyptian": {
+   "stages": [
+    "Old",
+    "Middle",
+    "Late",
+    "Demotic",
+    "Coptic"
+   ],
+   "nodes": [
+    "egy"
+   ],
+   "source": "poster III Axis II"
+  },
+  "Akkadian": {
+   "stages": [
+    "Old",
+    "Babylonian/Assyrian stages"
+   ],
+   "nodes": [
+    "akk"
+   ],
+   "source": "poster III Axis II"
+  },
+  "Sanskrit": {
+   "stages": [
+    "Vedic",
+    "Epic",
+    "Classical",
+    "later"
+   ],
+   "nodes": [
+    "vsn",
+    "san-epic",
+    "cls"
+   ],
+   "source": "poster III Axis II"
+  },
+  "Chinese": {
+   "stages": [
+    "Early",
+    "Old",
+    "Classical",
+    "Middle",
+    "later"
+   ],
+   "nodes": [
+    "och",
+    "lzh",
+    "ltc",
+    "zho-later"
+   ],
+   "source": "poster III Axis II"
+  },
+  "Greek": {
+   "stages": [
+    "Mycenaean",
+    "Archaic",
+    "Classical",
+    "Koine",
+    "Byzantine",
+    "Modern"
+   ],
+   "nodes": [
+    "gmy",
+    "grc",
+    "grc-koine",
+    "grc-byz"
+   ],
+   "source": "poster III Axis II"
+  },
+  "Latin": {
+   "stages": [
+    "Archaic",
+    "Classical",
+    "Late",
+    "Medieval",
+    "Neo-Latin"
+   ],
+   "nodes": [
+    "lat"
+   ],
+   "source": "poster III Axis II"
+  },
+  "Persian": {
+   "stages": [
+    "Old",
+    "Middle",
+    "New"
+   ],
+   "nodes": [
+    "peo",
+    "pal",
+    "fas"
+   ],
+   "source": "poster III Axis II"
+  },
+  "Arabic": {
+   "stages": [
+    "Early",
+    "Classical",
+    "Medieval",
+    "Modern"
+   ],
+   "nodes": [
+    "ara-early",
+    "ara-cla",
+    "ara-med",
+    "arb"
+   ],
+   "source": "poster III Axis II"
+  },
+  "Tamil": {
+   "stages": [
+    "Old",
+    "Classical/Medieval",
+    "Modern"
+   ],
+   "nodes": [
+    "tam"
+   ],
+   "source": "poster III Axis II"
+  },
+  "English": {
+   "stages": [
+    "Old",
+    "Middle",
+    "Early Modern",
+    "Modern"
+   ],
+   "nodes": [
+    "eng"
+   ],
+   "source": "poster III Axis II"
+  },
+  "German": {
+   "stages": [
+    "Old High",
+    "Middle High",
+    "Early New High",
+    "Modern"
+   ],
+   "nodes": [
+    "deu"
+   ],
+   "source": "poster III Axis II"
+  }
+ },
+ "nodes": [
+  {
+   "id": "sux",
+   "name": "Sumerian",
+   "lineage": "sumerian",
+   "iso639_3": [
+    "sux"
+   ],
+   "language": "Sumerian",
+   "stage": null,
+   "scripts": [
+    "Xsux"
+   ],
+   "status": {
+    "poster": "I",
+    "source": "poster I §1"
+   },
+   "corpus": "Earliest written tradition; administrative texts; royal inscriptions; legal material; hymns; myths; epics; lexical lists; religious texts; mathematics; literary compositions. Cannot be replaced by Akkadian.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "akk",
+   "name": "Akkadian",
+   "lineage": "semitic",
+   "iso639_3": [
+    "akk"
+   ],
+   "language": "Akkadian",
+   "stage": null,
+   "scripts": [
+    "Xsux"
+   ],
+   "status": {
+    "poster": "I",
+    "source": "poster I §1"
+   },
+   "corpus": "Babylonian and Assyrian literature; royal correspondence; legal texts; diplomatic material; mathematics; medicine; divination; astronomy; mythology; administrative records. Cannot be replaced by Sumerian.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "egy",
+   "name": "Egyptian",
+   "lineage": "egyptian",
+   "iso639_3": [
+    "egy",
+    "cop"
+   ],
+   "language": "Egyptian",
+   "stage": null,
+   "scripts": [
+    "Egyp",
+    "Egyh",
+    "Egyd",
+    "Copt"
+   ],
+   "status": {
+    "poster": "I",
+    "source": "poster I §1"
+   },
+   "corpus": "Royal and administrative texts; religious texts; funerary literature; mythology; medicine; mathematics; astronomy; magical texts; law; letters; narrative literature; inscriptions.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "und-Pelm",
+   "name": "Proto-Elamite corpus",
+   "lineage": "undeciphered",
+   "iso639_3": [],
+   "language": "Proto-Elamite",
+   "stage": null,
+   "scripts": [
+    "Pelm"
+   ],
+   "status": {
+    "poster": "U",
+    "source": "poster I §1"
+   },
+   "corpus": "Early writing system; administrative and accounting material; substantial archaeological corpus. Underlying language unresolved.",
+   "epistemic": "E5",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "not_built",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "und-Inds",
+   "name": "Indus/Harappan corpus",
+   "lineage": "undeciphered",
+   "iso639_3": [],
+   "language": "Indus/Harappan",
+   "stage": null,
+   "scripts": [
+    "Inds"
+   ],
+   "status": {
+    "poster": "U",
+    "source": "poster I §1"
+   },
+   "corpus": "Seals; sealings; tablets; pottery; other inscribed objects; recurring sign sequences; archaeological context. Underlying language unresolved.",
+   "epistemic": "E5",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "not_built",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   },
+   "note": "ISO 639-3 carries xiv, Indus Valley Language. A code does not establish a language; poster III retains this corpus without assigning one, so xiv is not adopted."
+  },
+  {
+   "id": "hit",
+   "name": "Hittite",
+   "lineage": "anatolian",
+   "iso639_3": [
+    "hit"
+   ],
+   "language": "Hittite",
+   "stage": null,
+   "scripts": [
+    "Xsux"
+   ],
+   "status": {
+    "poster": "I",
+    "source": "poster I §2"
+   },
+   "corpus": "Royal archives; treaties; laws; administrative texts; rituals; mythology; diplomatic correspondence; historical narratives. Cannot be reconstructed from Sanskrit, Greek, Akkadian or Luwian.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "xlu",
+   "name": "Luwian",
+   "lineage": "anatolian",
+   "iso639_3": [
+    "xlu",
+    "hlu"
+   ],
+   "language": "Luwian",
+   "stage": null,
+   "scripts": [
+    "Xsux",
+    "Hluw"
+   ],
+   "status": {
+    "poster": "P",
+    "source": "poster I §2"
+   },
+   "corpus": "Anatolian hieroglyphic inscriptions; royal inscriptions; political and geographical material; Late Bronze and Iron Age evidence. Keep provisionally.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "xhu",
+   "name": "Hurrian",
+   "lineage": "hurro_urartian",
+   "iso639_3": [
+    "xhu"
+   ],
+   "language": "Hurrian",
+   "stage": null,
+   "scripts": [
+    "Xsux"
+   ],
+   "status": {
+    "poster": "P",
+    "source": "poster I §2"
+   },
+   "corpus": "Hurrian religious material; rituals; mythology; bilingual material; Mitanni documentation. Not Indo-European, Semitic, Sumerian or Egyptian. Keep pending analysis.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "uga",
+   "name": "Ugaritic",
+   "lineage": "semitic",
+   "iso639_3": [
+    "uga"
+   ],
+   "language": "Ugaritic",
+   "stage": null,
+   "scripts": [
+    "Ugar"
+   ],
+   "status": {
+    "poster": "I",
+    "source": "poster I §2"
+   },
+   "corpus": "Mythological texts; religious literature; administrative material; correspondence; alphabetic Bronze Age Semitic evidence. Cannot be recovered from Biblical Hebrew.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "hbo",
+   "name": "Hebrew",
+   "lineage": "semitic",
+   "iso639_3": [
+    "hbo"
+   ],
+   "language": "Hebrew",
+   "stage": null,
+   "scripts": [
+    "Hebr",
+    "Phnx"
+   ],
+   "status": {
+    "poster": "I",
+    "source": "poster I §3"
+   },
+   "corpus": "Hebrew Bible; inscriptions; Second Temple material; rabbinic Hebrew; medieval philosophy; poetry; later Jewish intellectual corpus. Historical stages matter.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   },
+   "note": "Paleo-Hebrew is encoded under Phnx in Unicode."
+  },
+  {
+   "id": "arc",
+   "name": "Aramaic",
+   "lineage": "semitic",
+   "iso639_3": [
+    "oar",
+    "arc",
+    "syc"
+   ],
+   "language": "Aramaic",
+   "stage": null,
+   "scripts": [
+    "Armi",
+    "Hebr",
+    "Syrc"
+   ],
+   "status": {
+    "poster": "I",
+    "source": "poster I §3"
+   },
+   "corpus": "Imperial Aramaic; Jewish Aramaic; Christian Aramaic; Syriac; administrative and diplomatic material; religious and philosophical literature. Model Aramaic to Syriac as a continuum.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "phn",
+   "name": "Phoenician/Punic",
+   "lineage": "semitic",
+   "iso639_3": [
+    "phn",
+    "xpu"
+   ],
+   "language": "Phoenician/Punic",
+   "stage": null,
+   "scripts": [
+    "Phnx"
+   ],
+   "status": {
+    "poster": "P",
+    "source": "poster I §3"
+   },
+   "corpus": "Phoenician inscriptions; Punic inscriptions; North African material; colonial Mediterranean evidence. Potential compression with the wider family.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "ave",
+   "name": "Avestan",
+   "lineage": "iranian",
+   "iso639_3": [
+    "ave"
+   ],
+   "language": "Avestan",
+   "stage": null,
+   "scripts": [
+    "Avst"
+   ],
+   "status": {
+    "poster": "I",
+    "source": "poster I §4"
+   },
+   "corpus": "Avesta; Zoroastrian liturgical language; archaic Iranian religious vocabulary.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "peo",
+   "name": "Old Persian",
+   "lineage": "iranian",
+   "iso639_3": [
+    "peo"
+   ],
+   "language": "Persian",
+   "stage": "Old",
+   "scripts": [
+    "Xpeo"
+   ],
+   "status": {
+    "poster": "P",
+    "source": "poster I §4"
+   },
+   "corpus": "Achaemenid royal inscriptions; imperial titulature; political ideology; administrative terminology.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "pal",
+   "name": "Middle Persian",
+   "lineage": "iranian",
+   "iso639_3": [
+    "pal"
+   ],
+   "language": "Persian",
+   "stage": "Middle",
+   "scripts": [
+    "Phli",
+    "Phlp",
+    "Phlv"
+   ],
+   "status": {
+    "poster": "I",
+    "source": "poster I §4"
+   },
+   "corpus": "Sasanian material; Zoroastrian literature; Pahlavi texts; legal, religious and philosophical material.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "fas",
+   "name": "New Persian",
+   "lineage": "iranian",
+   "iso639_3": [
+    "fas"
+   ],
+   "language": "Persian",
+   "stage": "New",
+   "scripts": [
+    "Arab"
+   ],
+   "status": {
+    "poster": "I",
+    "source": "poster I §4"
+   },
+   "corpus": "Medieval philosophy; poetry; historiography; science; administration; literature; political thought. Arabic cannot replace the Persian corpus.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "vsn",
+   "name": "Vedic Sanskrit",
+   "lineage": "indo_aryan",
+   "iso639_3": [
+    "vsn"
+   ],
+   "language": "Sanskrit",
+   "stage": "Vedic",
+   "scripts": [
+    "Deva"
+   ],
+   "status": {
+    "poster": "I",
+    "source": "poster I §5"
+   },
+   "corpus": "Vedic Saṃhitās; Brāhmaṇas; Āraṇyakas; Upaniṣadic material; ritual and philosophical vocabulary.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "san-epic",
+   "name": "Epic Sanskrit",
+   "lineage": "indo_aryan",
+   "iso639_3": [
+    "san"
+   ],
+   "language": "Sanskrit",
+   "stage": "Epic",
+   "scripts": [
+    "Deva"
+   ],
+   "status": {
+    "poster": "P",
+    "source": "poster I §5"
+   },
+   "corpus": "Mahābhārata; Rāmāyaṇa; associated traditions. Do not delete the stage.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "cls",
+   "name": "Classical Sanskrit",
+   "lineage": "indo_aryan",
+   "iso639_3": [
+    "cls"
+   ],
+   "language": "Sanskrit",
+   "stage": "Classical",
+   "scripts": [
+    "Deva",
+    "Shrd",
+    "Gran",
+    "Sidd"
+   ],
+   "status": {
+    "poster": "I",
+    "source": "poster I §5"
+   },
+   "corpus": "Śāstra literature; philosophy; grammar; poetics; law; medicine; mathematics; astronomy; literature; political thought; religious and philosophical systems.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   },
+   "scope_excludes": [
+    "consonant sandhi",
+    "visarga sandhi",
+    "e and o before a vowel other than a",
+    "compounds",
+    "any word outside a 12-word placeholder lexicon",
+    "Devanagari input (script pivot not bound)"
+   ]
+  },
+  {
+   "id": "pli",
+   "name": "Pāli",
+   "lineage": "indo_aryan",
+   "iso639_3": [
+    "pli"
+   ],
+   "language": "Pāli",
+   "stage": null,
+   "scripts": [
+    "Sinh",
+    "Mymr",
+    "Thai",
+    "Latn"
+   ],
+   "status": {
+    "poster": "I",
+    "source": "poster I §5"
+   },
+   "corpus": "Buddhist canon; commentarial literature; chronicles; philosophical and ethical literature.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "pgd",
+   "name": "Gāndhārī",
+   "lineage": "indo_aryan",
+   "iso639_3": [
+    "pgd"
+   ],
+   "language": "Gāndhārī",
+   "stage": null,
+   "scripts": [
+    "Khar"
+   ],
+   "status": {
+    "poster": "P",
+    "source": "poster I §5"
+   },
+   "corpus": "Early Buddhist manuscripts; inscriptions; coins; Central Asian documents.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "prakrit",
+   "name": "Prakrits",
+   "lineage": "indo_aryan",
+   "iso639_3": [
+    "pka",
+    "pmh",
+    "psu"
+   ],
+   "language": "Prakrits",
+   "stage": null,
+   "scripts": [
+    "Brah",
+    "Deva"
+   ],
+   "status": {
+    "poster": "P",
+    "source": "poster I §5"
+   },
+   "corpus": "Ardhamāgadhī; Māhārāṣṭrī; Śaurasenī; Māgadhī; other major Prakrit streams.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   },
+   "note": "Māgadhī has no ISO 639-3 code; pra is an ISO 639-2 collective code and is not used."
+  },
+  {
+   "id": "tam",
+   "name": "Tamil",
+   "lineage": "dravidian",
+   "iso639_3": [
+    "tam",
+    "oty"
+   ],
+   "language": "Tamil",
+   "stage": null,
+   "scripts": [
+    "Taml",
+    "Brah"
+   ],
+   "status": {
+    "poster": "I",
+    "source": "poster I §6"
+   },
+   "corpus": "Sangam literature; classical poetry; grammar; ethics; devotional literature; inscriptions; scientific and religious traditions.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "kan",
+   "name": "Kannada",
+   "lineage": "dravidian",
+   "iso639_3": [
+    "kan"
+   ],
+   "language": "Kannada",
+   "stage": null,
+   "scripts": [
+    "Knda"
+   ],
+   "status": {
+    "poster": "P",
+    "source": "poster I §6"
+   },
+   "corpus": "Early inscriptions; classical literature; Jain literature; medieval philosophical and religious literature.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "tel",
+   "name": "Telugu",
+   "lineage": "dravidian",
+   "iso639_3": [
+    "tel"
+   ],
+   "language": "Telugu",
+   "stage": null,
+   "scripts": [
+    "Telu"
+   ],
+   "status": {
+    "poster": "P",
+    "source": "poster I §6"
+   },
+   "corpus": "Inscriptions; classical literature; devotional literature; court literature; scientific and religious traditions.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "mal",
+   "name": "Malayalam",
+   "lineage": "dravidian",
+   "iso639_3": [
+    "mal"
+   ],
+   "language": "Malayalam",
+   "stage": null,
+   "scripts": [
+    "Mlym"
+   ],
+   "status": {
+    "poster": "P",
+    "source": "poster I §6"
+   },
+   "corpus": "Medieval literature; regional literature; intellectual and religious traditions; later corpus.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "gmy",
+   "name": "Mycenaean Greek",
+   "lineage": "hellenic",
+   "iso639_3": [
+    "gmy"
+   ],
+   "language": "Greek",
+   "stage": "Mycenaean",
+   "scripts": [
+    "Linb"
+   ],
+   "status": {
+    "poster": "S",
+    "source": "poster I §7"
+   },
+   "corpus": "Linear B tablets; Bronze Age administrative vocabulary.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "grc",
+   "name": "Archaic/Classical Greek",
+   "lineage": "hellenic",
+   "iso639_3": [
+    "grc"
+   ],
+   "language": "Greek",
+   "stage": "Archaic/Classical",
+   "scripts": [
+    "Grek"
+   ],
+   "status": {
+    "poster": "I",
+    "source": "poster I §7"
+   },
+   "corpus": "Philosophy; mathematics; political theory; drama; history; medicine; science; literature.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "grc-koine",
+   "name": "Koine Greek",
+   "lineage": "hellenic",
+   "iso639_3": [
+    "grc"
+   ],
+   "language": "Greek",
+   "stage": "Koine",
+   "scripts": [
+    "Grek"
+   ],
+   "status": {
+    "poster": "S",
+    "source": "poster I §7"
+   },
+   "corpus": "Hellenistic intellectual and religious corpus; Septuagint; New Testament; scientific and administrative material.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "grc-byz",
+   "name": "Byzantine Greek",
+   "lineage": "hellenic",
+   "iso639_3": [
+    "grc"
+   ],
+   "language": "Greek",
+   "stage": "Byzantine",
+   "scripts": [
+    "Grek"
+   ],
+   "status": {
+    "poster": "S",
+    "source": "poster I §7"
+   },
+   "corpus": "Byzantine philosophy; theology; historiography; science; administration.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "lat",
+   "name": "Latin",
+   "lineage": "italic",
+   "iso639_3": [
+    "lat"
+   ],
+   "language": "Latin",
+   "stage": null,
+   "scripts": [
+    "Latn"
+   ],
+   "status": {
+    "poster": "I",
+    "source": "poster I §7"
+   },
+   "corpus": "Roman law; philosophy; history; administration; Christian Latin; medieval scholarship; early modern science; European intellectual literature.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "och",
+   "name": "Early/Old Chinese",
+   "lineage": "sinitic",
+   "iso639_3": [
+    "och"
+   ],
+   "language": "Chinese",
+   "stage": "Early/Old",
+   "scripts": [
+    "Hani"
+   ],
+   "status": {
+    "poster": "I",
+    "source": "poster I §8"
+   },
+   "corpus": "Oracle-bone inscriptions; bronze inscriptions; early historical texts.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "lzh",
+   "name": "Classical Chinese",
+   "lineage": "sinitic",
+   "iso639_3": [
+    "lzh"
+   ],
+   "language": "Chinese",
+   "stage": "Classical",
+   "scripts": [
+    "Hani"
+   ],
+   "status": {
+    "poster": "I",
+    "source": "poster I §8"
+   },
+   "corpus": "Confucianism; Daoism; Mohism; Legalism; historiography; mathematics; medicine; political thought; literature.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "ltc",
+   "name": "Middle Chinese",
+   "lineage": "sinitic",
+   "iso639_3": [
+    "ltc"
+   ],
+   "language": "Chinese",
+   "stage": "Middle",
+   "scripts": [
+    "Hani"
+   ],
+   "status": {
+    "poster": "S",
+    "source": "poster I §8"
+   },
+   "corpus": "Phonological reconstruction; dictionaries; Buddhist translation; historical linguistics.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   },
+   "note": "ISO 639-3 ltc is Late Middle Chinese; Early Middle Chinese has no code."
+  },
+  {
+   "id": "zho-later",
+   "name": "Later Chinese",
+   "lineage": "sinitic",
+   "iso639_3": [
+    "zho"
+   ],
+   "language": "Chinese",
+   "stage": "Later",
+   "scripts": [
+    "Hani"
+   ],
+   "status": {
+    "poster": "S",
+    "source": "poster I §8"
+   },
+   "corpus": "Later literary and vernacular Chinese.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "ara-early",
+   "name": "Early Arabic",
+   "lineage": "semitic",
+   "iso639_3": [
+    "ara"
+   ],
+   "language": "Arabic",
+   "stage": "Early",
+   "scripts": [
+    "Arab"
+   ],
+   "status": {
+    "poster": "S",
+    "source": "poster I §9"
+   },
+   "corpus": "Historical stage.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "ara-cla",
+   "name": "Classical Arabic",
+   "lineage": "semitic",
+   "iso639_3": [
+    "ara"
+   ],
+   "language": "Arabic",
+   "stage": "Classical",
+   "scripts": [
+    "Arab"
+   ],
+   "status": {
+    "poster": "I",
+    "source": "poster I §9"
+   },
+   "corpus": "Qur'ānic tradition; hadith; theology; philosophy; mathematics; astronomy; law; linguistics.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "ara-med",
+   "name": "Medieval Arabic",
+   "lineage": "semitic",
+   "iso639_3": [
+    "ara"
+   ],
+   "language": "Arabic",
+   "stage": "Medieval",
+   "scripts": [
+    "Arab"
+   ],
+   "status": {
+    "poster": "I",
+    "source": "poster I §9"
+   },
+   "corpus": "Literature; science; philosophy; administration.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "arb",
+   "name": "Modern Standard Arabic",
+   "lineage": "semitic",
+   "iso639_3": [
+    "arb"
+   ],
+   "language": "Arabic",
+   "stage": "Modern",
+   "scripts": [
+    "Arab"
+   ],
+   "status": {
+    "poster": "I",
+    "source": "poster I §9"
+   },
+   "corpus": "Modern intellectual and literary corpus.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "ara-vern",
+   "name": "Arabic vernaculars",
+   "lineage": "semitic",
+   "iso639_3": [
+    "ara"
+   ],
+   "language": "Arabic",
+   "stage": "Vernacular",
+   "scripts": [
+    "Arab"
+   ],
+   "status": {
+    "poster": "P",
+    "source": "poster I §9"
+   },
+   "corpus": "Selected vernaculars with unique corpora.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "gez",
+   "name": "Ge'ez",
+   "lineage": "semitic",
+   "iso639_3": [
+    "gez"
+   ],
+   "language": "Ge'ez",
+   "stage": null,
+   "scripts": [
+    "Ethi"
+   ],
+   "status": {
+    "poster": "P",
+    "source": "poster I §10"
+   },
+   "corpus": "Ethiopian Christian literature; biblical translations; theology; historiography; inscriptions.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "amh",
+   "name": "Modern Ethiopian",
+   "lineage": "semitic",
+   "iso639_3": [
+    "amh",
+    "tir"
+   ],
+   "language": "Modern Ethiopian",
+   "stage": "Modern",
+   "scripts": [
+    "Ethi"
+   ],
+   "status": {
+    "poster": "P",
+    "source": "poster I §10"
+   },
+   "corpus": "Modern Amharic and others need independent testing.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "xcl",
+   "name": "Armenian",
+   "lineage": "armenian",
+   "iso639_3": [
+    "xcl",
+    "hye"
+   ],
+   "language": "Armenian",
+   "stage": null,
+   "scripts": [
+    "Armn"
+   ],
+   "status": {
+    "poster": "I",
+    "source": "poster I §11"
+   },
+   "corpus": "Historiography; theology; literature; manuscript tradition.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "kat",
+   "name": "Georgian",
+   "lineage": "kartvelian",
+   "iso639_3": [
+    "oge",
+    "kat"
+   ],
+   "language": "Georgian",
+   "stage": null,
+   "scripts": [
+    "Geor"
+   ],
+   "status": {
+    "poster": "P",
+    "source": "poster I §12"
+   },
+   "corpus": "Literature; Christian theology; historiography; regional intellectual traditions.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "xct",
+   "name": "Tibetan",
+   "lineage": "bodish",
+   "iso639_3": [
+    "xct",
+    "bod"
+   ],
+   "language": "Tibetan",
+   "stage": null,
+   "scripts": [
+    "Tibt"
+   ],
+   "status": {
+    "poster": "I",
+    "source": "poster I §13"
+   },
+   "corpus": "Buddhist philosophy; canonical translations; indigenous literature; medicine; history; religious literature.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "otk",
+   "name": "Old Turkic",
+   "lineage": "turkic",
+   "iso639_3": [
+    "otk"
+   ],
+   "language": "Old Turkic",
+   "stage": "Old",
+   "scripts": [
+    "Orkh"
+   ],
+   "status": {
+    "poster": "P",
+    "source": "poster I §14"
+   },
+   "corpus": "Orkhon inscriptions; early political and social terminology.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   },
+   "note": "The poster labels this row Ge'ez; see registry/conflicts.json C-01."
+  },
+  {
+   "id": "chg",
+   "name": "Chagatai",
+   "lineage": "turkic",
+   "iso639_3": [
+    "chg"
+   ],
+   "language": "Chagatai",
+   "stage": null,
+   "scripts": [
+    "Arab"
+   ],
+   "status": {
+    "poster": "P",
+    "source": "poster I §14"
+   },
+   "corpus": "Central Asian literary and philosophical corpus.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "ota",
+   "name": "Ottoman Turkish",
+   "lineage": "turkic",
+   "iso639_3": [
+    "ota"
+   ],
+   "language": "Ottoman Turkish",
+   "stage": null,
+   "scripts": [
+    "Arab"
+   ],
+   "status": {
+    "poster": "I",
+    "source": "poster I §14"
+   },
+   "corpus": "Administration; law; literature; historiography; science; political thought.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "tur",
+   "name": "Modern Turkish",
+   "lineage": "turkic",
+   "iso639_3": [
+    "tur"
+   ],
+   "language": "Modern Turkish",
+   "stage": "Modern",
+   "scripts": [
+    "Latn"
+   ],
+   "status": {
+    "poster": "P",
+    "source": "poster I §14"
+   },
+   "corpus": "Modern corpus.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "ojp",
+   "name": "Old/Classical Japanese",
+   "lineage": "japonic",
+   "iso639_3": [
+    "ojp"
+   ],
+   "language": "Japanese",
+   "stage": "Old/Classical",
+   "scripts": [
+    "Hani",
+    "Hira",
+    "Kana"
+   ],
+   "status": {
+    "poster": "I",
+    "source": "poster I §15"
+   },
+   "corpus": "Early poetry; chronicles; court literature; Shinto-related material.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "jpn-med",
+   "name": "Medieval Japanese",
+   "lineage": "japonic",
+   "iso639_3": [
+    "jpn"
+   ],
+   "language": "Japanese",
+   "stage": "Medieval",
+   "scripts": [
+    "Hani",
+    "Hira",
+    "Kana"
+   ],
+   "status": {
+    "poster": "P",
+    "source": "poster I §15"
+   },
+   "corpus": "Medieval literature.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "jpn-emod",
+   "name": "Early Modern Japanese",
+   "lineage": "japonic",
+   "iso639_3": [
+    "jpn"
+   ],
+   "language": "Japanese",
+   "stage": "Early Modern",
+   "scripts": [
+    "Hani",
+    "Hira",
+    "Kana"
+   ],
+   "status": {
+    "poster": "P",
+    "source": "poster I §15"
+   },
+   "corpus": "Early modern corpus.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "jpn",
+   "name": "Modern Japanese",
+   "lineage": "japonic",
+   "iso639_3": [
+    "jpn"
+   ],
+   "language": "Japanese",
+   "stage": "Modern",
+   "scripts": [
+    "Hani",
+    "Hira",
+    "Kana"
+   ],
+   "status": {
+    "poster": "I",
+    "source": "poster I §15"
+   },
+   "corpus": "Modern literature and intellectual corpus.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "oko",
+   "name": "Historical Korean",
+   "lineage": "koreanic",
+   "iso639_3": [
+    "oko"
+   ],
+   "language": "Korean",
+   "stage": "Historical",
+   "scripts": [
+    "Hani"
+   ],
+   "status": {
+    "poster": "P",
+    "source": "poster I §16"
+   },
+   "corpus": "Early material.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "okm",
+   "name": "Middle Korean",
+   "lineage": "koreanic",
+   "iso639_3": [
+    "okm"
+   ],
+   "language": "Korean",
+   "stage": "Middle",
+   "scripts": [
+    "Hang",
+    "Hani"
+   ],
+   "status": {
+    "poster": "I",
+    "source": "poster I §16"
+   },
+   "corpus": "Literary and historical material.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "kor",
+   "name": "Modern Korean",
+   "lineage": "koreanic",
+   "iso639_3": [
+    "kor"
+   ],
+   "language": "Korean",
+   "stage": "Modern",
+   "scripts": [
+    "Hang",
+    "Hani"
+   ],
+   "status": {
+    "poster": "I",
+    "source": "poster I §16"
+   },
+   "corpus": "Modern intellectual corpus.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "hin",
+   "name": "Hindi/Hindavi",
+   "lineage": "indo_aryan",
+   "iso639_3": [
+    "hin"
+   ],
+   "language": "Hindi/Hindavi",
+   "stage": null,
+   "scripts": [
+    "Deva"
+   ],
+   "status": {
+    "poster": "P",
+    "source": "poster I §17"
+   },
+   "corpus": "Retained if unique philosophical, literary or scientific traditions exist only in it; the minimum test is corpus-based.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "urd",
+   "name": "Urdu",
+   "lineage": "indo_aryan",
+   "iso639_3": [
+    "urd"
+   ],
+   "language": "Urdu",
+   "stage": null,
+   "scripts": [
+    "Arab"
+   ],
+   "status": {
+    "poster": "P",
+    "source": "poster I §17"
+   },
+   "corpus": "Retained if unique philosophical, literary or scientific traditions exist only in it; the minimum test is corpus-based.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "ben",
+   "name": "Bengali",
+   "lineage": "indo_aryan",
+   "iso639_3": [
+    "ben"
+   ],
+   "language": "Bengali",
+   "stage": null,
+   "scripts": [
+    "Beng"
+   ],
+   "status": {
+    "poster": "P",
+    "source": "poster I §17"
+   },
+   "corpus": "Retained if unique philosophical, literary or scientific traditions exist only in it; the minimum test is corpus-based.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "mar",
+   "name": "Marathi",
+   "lineage": "indo_aryan",
+   "iso639_3": [
+    "mar"
+   ],
+   "language": "Marathi",
+   "stage": null,
+   "scripts": [
+    "Deva",
+    "Modi"
+   ],
+   "status": {
+    "poster": "P",
+    "source": "poster I §17"
+   },
+   "corpus": "Retained if unique philosophical, literary or scientific traditions exist only in it; the minimum test is corpus-based.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "guj",
+   "name": "Gujarati",
+   "lineage": "indo_aryan",
+   "iso639_3": [
+    "guj"
+   ],
+   "language": "Gujarati",
+   "stage": null,
+   "scripts": [
+    "Gujr"
+   ],
+   "status": {
+    "poster": "P",
+    "source": "poster I §17"
+   },
+   "corpus": "Retained if unique philosophical, literary or scientific traditions exist only in it; the minimum test is corpus-based.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "pan",
+   "name": "Punjabi",
+   "lineage": "indo_aryan",
+   "iso639_3": [
+    "pan"
+   ],
+   "language": "Punjabi",
+   "stage": null,
+   "scripts": [
+    "Guru",
+    "Arab"
+   ],
+   "status": {
+    "poster": "P",
+    "source": "poster I §17"
+   },
+   "corpus": "Retained if unique philosophical, literary or scientific traditions exist only in it; the minimum test is corpus-based.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "asm",
+   "name": "Assamese",
+   "lineage": "indo_aryan",
+   "iso639_3": [
+    "asm"
+   ],
+   "language": "Assamese",
+   "stage": null,
+   "scripts": [
+    "Beng"
+   ],
+   "status": {
+    "poster": "P",
+    "source": "poster I §17"
+   },
+   "corpus": "Retained if unique philosophical, literary or scientific traditions exist only in it; the minimum test is corpus-based.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "ory",
+   "name": "Odia",
+   "lineage": "indo_aryan",
+   "iso639_3": [
+    "ory"
+   ],
+   "language": "Odia",
+   "stage": null,
+   "scripts": [
+    "Orya"
+   ],
+   "status": {
+    "poster": "P",
+    "source": "poster I §17"
+   },
+   "corpus": "Retained if unique philosophical, literary or scientific traditions exist only in it; the minimum test is corpus-based.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "npi",
+   "name": "Nepali",
+   "lineage": "indo_aryan",
+   "iso639_3": [
+    "npi"
+   ],
+   "language": "Nepali",
+   "stage": null,
+   "scripts": [
+    "Deva"
+   ],
+   "status": {
+    "poster": "P",
+    "source": "poster I §17"
+   },
+   "corpus": "Retained if unique philosophical, literary or scientific traditions exist only in it; the minimum test is corpus-based.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "sin",
+   "name": "Sinhala",
+   "lineage": "indo_aryan",
+   "iso639_3": [
+    "sin"
+   ],
+   "language": "Sinhala",
+   "stage": null,
+   "scripts": [
+    "Sinh"
+   ],
+   "status": {
+    "poster": "P",
+    "source": "poster I §17"
+   },
+   "corpus": "Retained if unique philosophical, literary or scientific traditions exist only in it; the minimum test is corpus-based.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "snd",
+   "name": "Sindhi",
+   "lineage": "indo_aryan",
+   "iso639_3": [
+    "snd"
+   ],
+   "language": "Sindhi",
+   "stage": null,
+   "scripts": [
+    "Arab",
+    "Deva",
+    "Sind"
+   ],
+   "status": {
+    "poster": "P",
+    "source": "poster I §17"
+   },
+   "corpus": "Retained if unique philosophical, literary or scientific traditions exist only in it; the minimum test is corpus-based.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "kas",
+   "name": "Kashmiri",
+   "lineage": "indo_aryan",
+   "iso639_3": [
+    "kas"
+   ],
+   "language": "Kashmiri",
+   "stage": null,
+   "scripts": [
+    "Arab",
+    "Deva",
+    "Shrd"
+   ],
+   "status": {
+    "poster": "P",
+    "source": "poster I §17"
+   },
+   "corpus": "Retained if unique philosophical, literary or scientific traditions exist only in it; the minimum test is corpus-based.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "kok",
+   "name": "Konkani",
+   "lineage": "indo_aryan",
+   "iso639_3": [
+    "kok"
+   ],
+   "language": "Konkani",
+   "stage": null,
+   "scripts": [
+    "Deva",
+    "Latn",
+    "Knda"
+   ],
+   "status": {
+    "poster": "P",
+    "source": "poster I §17"
+   },
+   "corpus": "Retained if unique philosophical, literary or scientific traditions exist only in it; the minimum test is corpus-based.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "ita",
+   "name": "Italian",
+   "lineage": "italic",
+   "iso639_3": [
+    "ita"
+   ],
+   "language": "Italian",
+   "stage": null,
+   "scripts": [
+    "Latn"
+   ],
+   "status": {
+    "poster": "P",
+    "source": "poster I §18"
+   },
+   "corpus": "Renaissance; philosophy; literature; science; political thought.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "fra",
+   "name": "French",
+   "lineage": "italic",
+   "iso639_3": [
+    "fra"
+   ],
+   "language": "French",
+   "stage": null,
+   "scripts": [
+    "Latn"
+   ],
+   "status": {
+    "poster": "I",
+    "source": "poster I §18"
+   },
+   "corpus": "Enlightenment; philosophy; mathematics; science; political theory; literature.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "deu",
+   "name": "German",
+   "lineage": "germanic",
+   "iso639_3": [
+    "deu"
+   ],
+   "language": "German",
+   "stage": null,
+   "scripts": [
+    "Latn"
+   ],
+   "status": {
+    "poster": "I",
+    "source": "poster I §18"
+   },
+   "corpus": "Kant, Hegel, Marx, Nietzsche; phenomenology; science; economics.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "eng",
+   "name": "English",
+   "lineage": "germanic",
+   "iso639_3": [
+    "eng"
+   ],
+   "language": "English",
+   "stage": null,
+   "scripts": [
+    "Latn"
+   ],
+   "status": {
+    "poster": "I",
+    "source": "poster I §18"
+   },
+   "corpus": "Modern science; philosophy; political theory; economics; literature.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "spa",
+   "name": "Spanish",
+   "lineage": "italic",
+   "iso639_3": [
+    "spa"
+   ],
+   "language": "Spanish",
+   "stage": null,
+   "scripts": [
+    "Latn"
+   ],
+   "status": {
+    "poster": "P",
+    "source": "poster I §18"
+   },
+   "corpus": "Not stated per language; the poster applies the same corpus test to every European language.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "por",
+   "name": "Portuguese",
+   "lineage": "italic",
+   "iso639_3": [
+    "por"
+   ],
+   "language": "Portuguese",
+   "stage": null,
+   "scripts": [
+    "Latn"
+   ],
+   "status": {
+    "poster": "P",
+    "source": "poster I §18"
+   },
+   "corpus": "Not stated per language; the poster applies the same corpus test to every European language.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "nld",
+   "name": "Dutch",
+   "lineage": "germanic",
+   "iso639_3": [
+    "nld"
+   ],
+   "language": "Dutch",
+   "stage": null,
+   "scripts": [
+    "Latn"
+   ],
+   "status": {
+    "poster": "P",
+    "source": "poster I §18"
+   },
+   "corpus": "Not stated per language; the poster applies the same corpus test to every European language.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "rus",
+   "name": "Russian",
+   "lineage": "balto_slavic",
+   "iso639_3": [
+    "rus"
+   ],
+   "language": "Russian",
+   "stage": null,
+   "scripts": [
+    "Cyrl"
+   ],
+   "status": {
+    "poster": "I",
+    "source": "poster I §18"
+   },
+   "corpus": "Not stated per language; the poster applies the same corpus test to every European language.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "pol",
+   "name": "Polish",
+   "lineage": "balto_slavic",
+   "iso639_3": [
+    "pol"
+   ],
+   "language": "Polish",
+   "stage": null,
+   "scripts": [
+    "Latn"
+   ],
+   "status": {
+    "poster": "P",
+    "source": "poster I §18"
+   },
+   "corpus": "Not stated per language; the poster applies the same corpus test to every European language.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  },
+  {
+   "id": "elx",
+   "name": "Elamite",
+   "lineage": "elamite",
+   "iso639_3": [
+    "elx"
+   ],
+   "language": "Elamite",
+   "stage": null,
+   "scripts": [
+    "Xsux"
+   ],
+   "status": {
+    "poster": "P",
+    "source": "poster I §19; poster III L1"
+   },
+   "corpus": "Not stated on the posters' language rows.",
+   "epistemic": "E0",
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3s": "not_built",
+    "L3m": "not_built",
+    "L4": "not_built"
+   }
+  }
+ ]
+}

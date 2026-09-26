@@ -1,0 +1,730 @@
+{
+ "schema": "tajziya.scripts/1",
+ "copyright": "© 1993–2026 Abhishek Choudhary. All rights reserved. AyeAI.",
+ "license": "CC0-1.0",
+ "standard": "ISO 15924, codes verified against iso-codes as shipped in pycountry 26.2.16",
+ "rule": "A script's engines follow from its mechanism and word division, not from any language written in it.",
+ "scripts": [
+  {
+   "code": "Pcun",
+   "name": "Proto-Cuneiform",
+   "mechanism": "proto_writing",
+   "word_division": "none",
+   "engines": [
+    "sign_sequence"
+   ],
+   "unicode_name_prefixes": [],
+   "encoded": false,
+   "romenagri_table": null
+  },
+  {
+   "code": "Xsux",
+   "name": "Cuneiform, Sumero-Akkadian",
+   "mechanism": "logosyllabic",
+   "word_division": "none",
+   "engines": [
+    "logogram",
+    "syllabary",
+    "unspaced"
+   ],
+   "unicode_name_prefixes": [
+    "CUNEIFORM"
+   ],
+   "encoded": true,
+   "romenagri_table": null
+  },
+  {
+   "code": "Egyp",
+   "name": "Egyptian hieroglyphs",
+   "mechanism": "logoconsonantal",
+   "word_division": "none",
+   "engines": [
+    "logogram",
+    "vocalisation",
+    "unspaced"
+   ],
+   "unicode_name_prefixes": [
+    "EGYPTIAN HIEROGLYPH"
+   ],
+   "encoded": true,
+   "romenagri_table": null
+  },
+  {
+   "code": "Egyh",
+   "name": "Egyptian hieratic",
+   "mechanism": "logoconsonantal",
+   "word_division": "none",
+   "engines": [
+    "logogram",
+    "vocalisation",
+    "unspaced"
+   ],
+   "unicode_name_prefixes": [],
+   "encoded": false,
+   "romenagri_table": null
+  },
+  {
+   "code": "Egyd",
+   "name": "Egyptian demotic",
+   "mechanism": "logoconsonantal",
+   "word_division": "none",
+   "engines": [
+    "logogram",
+    "vocalisation",
+    "unspaced"
+   ],
+   "unicode_name_prefixes": [],
+   "encoded": false,
+   "romenagri_table": null
+  },
+  {
+   "code": "Copt",
+   "name": "Coptic",
+   "mechanism": "alphabet",
+   "word_division": "spaced",
+   "engines": [],
+   "unicode_name_prefixes": [
+    "COPTIC"
+   ],
+   "encoded": true,
+   "romenagri_table": null
+  },
+  {
+   "code": "Pelm",
+   "name": "Proto-Elamite",
+   "mechanism": "undeciphered",
+   "word_division": "none",
+   "engines": [
+    "sign_sequence"
+   ],
+   "unicode_name_prefixes": [],
+   "encoded": false,
+   "romenagri_table": null
+  },
+  {
+   "code": "Inds",
+   "name": "Indus (Harappan)",
+   "mechanism": "undeciphered",
+   "word_division": "none",
+   "engines": [
+    "sign_sequence"
+   ],
+   "unicode_name_prefixes": [],
+   "encoded": false,
+   "romenagri_table": null
+  },
+  {
+   "code": "Hluw",
+   "name": "Anatolian Hieroglyphs (Luwian Hieroglyphs, Hittite Hieroglyphs)",
+   "mechanism": "logosyllabic",
+   "word_division": "dividers",
+   "engines": [
+    "logogram",
+    "syllabary"
+   ],
+   "unicode_name_prefixes": [
+    "ANATOLIAN HIEROGLYPH"
+   ],
+   "encoded": true,
+   "romenagri_table": null
+  },
+  {
+   "code": "Ugar",
+   "name": "Ugaritic",
+   "mechanism": "abjad",
+   "word_division": "dividers",
+   "engines": [
+    "vocalisation"
+   ],
+   "unicode_name_prefixes": [
+    "UGARITIC"
+   ],
+   "encoded": true,
+   "romenagri_table": null
+  },
+  {
+   "code": "Phnx",
+   "name": "Phoenician",
+   "mechanism": "abjad",
+   "word_division": "dividers",
+   "engines": [
+    "vocalisation"
+   ],
+   "unicode_name_prefixes": [
+    "PHOENICIAN"
+   ],
+   "encoded": true,
+   "romenagri_table": null
+  },
+  {
+   "code": "Hebr",
+   "name": "Hebrew",
+   "mechanism": "abjad",
+   "word_division": "spaced",
+   "engines": [
+    "vocalisation"
+   ],
+   "unicode_name_prefixes": [
+    "HEBREW"
+   ],
+   "encoded": true,
+   "romenagri_table": null
+  },
+  {
+   "code": "Armi",
+   "name": "Imperial Aramaic",
+   "mechanism": "abjad",
+   "word_division": "spaced",
+   "engines": [
+    "vocalisation"
+   ],
+   "unicode_name_prefixes": [
+    "IMPERIAL ARAMAIC"
+   ],
+   "encoded": true,
+   "romenagri_table": null
+  },
+  {
+   "code": "Syrc",
+   "name": "Syriac",
+   "mechanism": "abjad",
+   "word_division": "spaced",
+   "engines": [
+    "vocalisation"
+   ],
+   "unicode_name_prefixes": [
+    "SYRIAC"
+   ],
+   "encoded": true,
+   "romenagri_table": null
+  },
+  {
+   "code": "Avst",
+   "name": "Avestan",
+   "mechanism": "alphabet",
+   "word_division": "dividers",
+   "engines": [],
+   "unicode_name_prefixes": [
+    "AVESTAN"
+   ],
+   "encoded": true,
+   "romenagri_table": null
+  },
+  {
+   "code": "Xpeo",
+   "name": "Old Persian",
+   "mechanism": "syllabary",
+   "word_division": "dividers",
+   "engines": [
+    "syllabary"
+   ],
+   "unicode_name_prefixes": [
+    "OLD PERSIAN"
+   ],
+   "encoded": true,
+   "romenagri_table": null
+  },
+  {
+   "code": "Phli",
+   "name": "Inscriptional Pahlavi",
+   "mechanism": "abjad_heterographic",
+   "word_division": "spaced",
+   "engines": [
+    "vocalisation",
+    "logogram"
+   ],
+   "unicode_name_prefixes": [
+    "INSCRIPTIONAL PAHLAVI"
+   ],
+   "encoded": true,
+   "romenagri_table": null
+  },
+  {
+   "code": "Phlp",
+   "name": "Psalter Pahlavi",
+   "mechanism": "abjad_heterographic",
+   "word_division": "spaced",
+   "engines": [
+    "vocalisation",
+    "logogram"
+   ],
+   "unicode_name_prefixes": [
+    "PSALTER PAHLAVI"
+   ],
+   "encoded": true,
+   "romenagri_table": null
+  },
+  {
+   "code": "Phlv",
+   "name": "Book Pahlavi",
+   "mechanism": "abjad_heterographic",
+   "word_division": "spaced",
+   "engines": [
+    "vocalisation",
+    "logogram"
+   ],
+   "unicode_name_prefixes": [],
+   "encoded": false,
+   "romenagri_table": null
+  },
+  {
+   "code": "Arab",
+   "name": "Arabic",
+   "mechanism": "abjad",
+   "word_division": "spaced",
+   "engines": [
+    "vocalisation"
+   ],
+   "unicode_name_prefixes": [
+    "ARABIC"
+   ],
+   "encoded": true,
+   "romenagri_table": null
+  },
+  {
+   "code": "Deva",
+   "name": "Devanagari (Nagari)",
+   "mechanism": "abugida",
+   "word_division": "spaced",
+   "engines": [
+    "abugida"
+   ],
+   "unicode_name_prefixes": [
+    "DEVANAGARI",
+    "VEDIC"
+   ],
+   "encoded": true,
+   "romenagri_table": "project-ilm/romenagri@ef57fa4 tables/devanagari_to_deva.tsv"
+  },
+  {
+   "code": "Brah",
+   "name": "Brahmi",
+   "mechanism": "abugida",
+   "word_division": "none",
+   "engines": [
+    "abugida",
+    "unspaced"
+   ],
+   "unicode_name_prefixes": [
+    "BRAHMI"
+   ],
+   "encoded": true,
+   "romenagri_table": "project-ilm/romenagri@ef57fa4 tables/brahmi_to_deva.tsv"
+  },
+  {
+   "code": "Khar",
+   "name": "Kharoshthi",
+   "mechanism": "abugida",
+   "word_division": "none",
+   "engines": [
+    "abugida",
+    "unspaced"
+   ],
+   "unicode_name_prefixes": [
+    "KHAROSHTHI"
+   ],
+   "encoded": true,
+   "romenagri_table": "project-ilm/romenagri@ef57fa4 tables/kharoshthi_to_deva.tsv"
+  },
+  {
+   "code": "Shrd",
+   "name": "Sharada, Śāradā",
+   "mechanism": "abugida",
+   "word_division": "spaced",
+   "engines": [
+    "abugida"
+   ],
+   "unicode_name_prefixes": [
+    "SHARADA"
+   ],
+   "encoded": true,
+   "romenagri_table": "project-ilm/romenagri@ef57fa4 tables/sharada_to_deva.tsv"
+  },
+  {
+   "code": "Gran",
+   "name": "Grantha",
+   "mechanism": "abugida",
+   "word_division": "spaced",
+   "engines": [
+    "abugida"
+   ],
+   "unicode_name_prefixes": [
+    "GRANTHA"
+   ],
+   "encoded": true,
+   "romenagri_table": "project-ilm/romenagri@ef57fa4 tables/grantha_to_deva.tsv"
+  },
+  {
+   "code": "Sidd",
+   "name": "Siddham, Siddhaṃ, Siddhamātṛkā",
+   "mechanism": "abugida",
+   "word_division": "spaced",
+   "engines": [
+    "abugida"
+   ],
+   "unicode_name_prefixes": [
+    "SIDDHAM"
+   ],
+   "encoded": true,
+   "romenagri_table": "project-ilm/romenagri@ef57fa4 tables/siddham_to_deva.tsv"
+  },
+  {
+   "code": "Sinh",
+   "name": "Sinhala",
+   "mechanism": "abugida",
+   "word_division": "spaced",
+   "engines": [
+    "abugida"
+   ],
+   "unicode_name_prefixes": [
+    "SINHALA"
+   ],
+   "encoded": true,
+   "romenagri_table": "project-ilm/romenagri@ef57fa4 tables/sinhala_to_deva.tsv"
+  },
+  {
+   "code": "Mymr",
+   "name": "Myanmar (Burmese)",
+   "mechanism": "abugida",
+   "word_division": "none",
+   "engines": [
+    "abugida",
+    "unspaced"
+   ],
+   "unicode_name_prefixes": [
+    "MYANMAR"
+   ],
+   "encoded": true,
+   "romenagri_table": "project-ilm/romenagri@ef57fa4 tables/myanmar_to_deva.tsv"
+  },
+  {
+   "code": "Thai",
+   "name": "Thai",
+   "mechanism": "abugida",
+   "word_division": "none",
+   "engines": [
+    "abugida",
+    "unspaced"
+   ],
+   "unicode_name_prefixes": [
+    "THAI"
+   ],
+   "encoded": true,
+   "romenagri_table": "project-ilm/romenagri@ef57fa4 tables/thai_to_deva.tsv"
+  },
+  {
+   "code": "Taml",
+   "name": "Tamil",
+   "mechanism": "abugida",
+   "word_division": "spaced",
+   "engines": [
+    "abugida"
+   ],
+   "unicode_name_prefixes": [
+    "TAMIL"
+   ],
+   "encoded": true,
+   "romenagri_table": "project-ilm/romenagri@ef57fa4 tables/tamil_to_deva.tsv"
+  },
+  {
+   "code": "Knda",
+   "name": "Kannada",
+   "mechanism": "abugida",
+   "word_division": "spaced",
+   "engines": [
+    "abugida"
+   ],
+   "unicode_name_prefixes": [
+    "KANNADA"
+   ],
+   "encoded": true,
+   "romenagri_table": "project-ilm/romenagri@ef57fa4 tables/kannada_to_deva.tsv"
+  },
+  {
+   "code": "Telu",
+   "name": "Telugu",
+   "mechanism": "abugida",
+   "word_division": "spaced",
+   "engines": [
+    "abugida"
+   ],
+   "unicode_name_prefixes": [
+    "TELUGU"
+   ],
+   "encoded": true,
+   "romenagri_table": "project-ilm/romenagri@ef57fa4 tables/telugu_to_deva.tsv"
+  },
+  {
+   "code": "Mlym",
+   "name": "Malayalam",
+   "mechanism": "abugida",
+   "word_division": "spaced",
+   "engines": [
+    "abugida"
+   ],
+   "unicode_name_prefixes": [
+    "MALAYALAM"
+   ],
+   "encoded": true,
+   "romenagri_table": "project-ilm/romenagri@ef57fa4 tables/malayalam_to_deva.tsv"
+  },
+  {
+   "code": "Beng",
+   "name": "Bengali (Bangla)",
+   "mechanism": "abugida",
+   "word_division": "spaced",
+   "engines": [
+    "abugida"
+   ],
+   "unicode_name_prefixes": [
+    "BENGALI"
+   ],
+   "encoded": true,
+   "romenagri_table": "project-ilm/romenagri@ef57fa4 tables/bengali_to_deva.tsv"
+  },
+  {
+   "code": "Gujr",
+   "name": "Gujarati",
+   "mechanism": "abugida",
+   "word_division": "spaced",
+   "engines": [
+    "abugida"
+   ],
+   "unicode_name_prefixes": [
+    "GUJARATI"
+   ],
+   "encoded": true,
+   "romenagri_table": "project-ilm/romenagri@ef57fa4 tables/gujarati_to_deva.tsv"
+  },
+  {
+   "code": "Guru",
+   "name": "Gurmukhi",
+   "mechanism": "abugida",
+   "word_division": "spaced",
+   "engines": [
+    "abugida"
+   ],
+   "unicode_name_prefixes": [
+    "GURMUKHI"
+   ],
+   "encoded": true,
+   "romenagri_table": "project-ilm/romenagri@ef57fa4 tables/gurmukhi_to_deva.tsv"
+  },
+  {
+   "code": "Orya",
+   "name": "Oriya (Odia)",
+   "mechanism": "abugida",
+   "word_division": "spaced",
+   "engines": [
+    "abugida"
+   ],
+   "unicode_name_prefixes": [
+    "ORIYA"
+   ],
+   "encoded": true,
+   "romenagri_table": "project-ilm/romenagri@ef57fa4 tables/oriya_to_deva.tsv"
+  },
+  {
+   "code": "Tibt",
+   "name": "Tibetan",
+   "mechanism": "abugida",
+   "word_division": "none",
+   "engines": [
+    "abugida",
+    "unspaced"
+   ],
+   "unicode_name_prefixes": [
+    "TIBETAN"
+   ],
+   "encoded": true,
+   "romenagri_table": "project-ilm/romenagri@ef57fa4 tables/tibetan_to_deva.tsv"
+  },
+  {
+   "code": "Modi",
+   "name": "Modi, Moḍī",
+   "mechanism": "abugida",
+   "word_division": "spaced",
+   "engines": [
+    "abugida"
+   ],
+   "unicode_name_prefixes": [
+    "MODI"
+   ],
+   "encoded": true,
+   "romenagri_table": "project-ilm/romenagri@ef57fa4 tables/modi_to_deva.tsv"
+  },
+  {
+   "code": "Sind",
+   "name": "Khudawadi, Sindhi",
+   "mechanism": "abugida",
+   "word_division": "spaced",
+   "engines": [
+    "abugida"
+   ],
+   "unicode_name_prefixes": [
+    "KHUDAWADI"
+   ],
+   "encoded": true,
+   "romenagri_table": "project-ilm/romenagri@ef57fa4 tables/khudawadi_to_deva.tsv"
+  },
+  {
+   "code": "Ethi",
+   "name": "Ethiopic (Geʻez)",
+   "mechanism": "abugida",
+   "word_division": "dividers",
+   "engines": [
+    "abugida"
+   ],
+   "unicode_name_prefixes": [
+    "ETHIOPIC"
+   ],
+   "encoded": true,
+   "romenagri_table": null
+  },
+  {
+   "code": "Linb",
+   "name": "Linear B",
+   "mechanism": "logosyllabic",
+   "word_division": "dividers",
+   "engines": [
+    "logogram",
+    "syllabary"
+   ],
+   "unicode_name_prefixes": [
+    "LINEAR B"
+   ],
+   "encoded": true,
+   "romenagri_table": null
+  },
+  {
+   "code": "Grek",
+   "name": "Greek",
+   "mechanism": "alphabet",
+   "word_division": "spaced",
+   "engines": [],
+   "unicode_name_prefixes": [
+    "GREEK"
+   ],
+   "encoded": true,
+   "romenagri_table": null
+  },
+  {
+   "code": "Latn",
+   "name": "Latin",
+   "mechanism": "alphabet",
+   "word_division": "spaced",
+   "engines": [],
+   "unicode_name_prefixes": [
+    "LATIN"
+   ],
+   "encoded": true,
+   "romenagri_table": null
+  },
+  {
+   "code": "Cyrl",
+   "name": "Cyrillic",
+   "mechanism": "alphabet",
+   "word_division": "spaced",
+   "engines": [],
+   "unicode_name_prefixes": [
+    "CYRILLIC"
+   ],
+   "encoded": true,
+   "romenagri_table": null
+  },
+  {
+   "code": "Armn",
+   "name": "Armenian",
+   "mechanism": "alphabet",
+   "word_division": "spaced",
+   "engines": [],
+   "unicode_name_prefixes": [
+    "ARMENIAN"
+   ],
+   "encoded": true,
+   "romenagri_table": null
+  },
+  {
+   "code": "Geor",
+   "name": "Georgian (Mkhedruli and Mtavruli)",
+   "mechanism": "alphabet",
+   "word_division": "spaced",
+   "engines": [],
+   "unicode_name_prefixes": [
+    "GEORGIAN"
+   ],
+   "encoded": true,
+   "romenagri_table": null
+  },
+  {
+   "code": "Orkh",
+   "name": "Old Turkic, Orkhon Runic",
+   "mechanism": "alphabet",
+   "word_division": "dividers",
+   "engines": [],
+   "unicode_name_prefixes": [
+    "OLD TURKIC"
+   ],
+   "encoded": true,
+   "romenagri_table": null
+  },
+  {
+   "code": "Hani",
+   "name": "Han (Hanzi, Kanji, Hanja)",
+   "mechanism": "logographic",
+   "word_division": "none",
+   "engines": [
+    "logogram",
+    "unspaced"
+   ],
+   "unicode_name_prefixes": [
+    "CJK UNIFIED IDEOGRAPH",
+    "CJK COMPATIBILITY IDEOGRAPH"
+   ],
+   "encoded": true,
+   "romenagri_table": null
+  },
+  {
+   "code": "Hira",
+   "name": "Hiragana",
+   "mechanism": "syllabary",
+   "word_division": "none",
+   "engines": [
+    "syllabary",
+    "unspaced"
+   ],
+   "unicode_name_prefixes": [
+    "HIRAGANA"
+   ],
+   "encoded": true,
+   "romenagri_table": null
+  },
+  {
+   "code": "Kana",
+   "name": "Katakana",
+   "mechanism": "syllabary",
+   "word_division": "none",
+   "engines": [
+    "syllabary",
+    "unspaced"
+   ],
+   "unicode_name_prefixes": [
+    "KATAKANA"
+   ],
+   "encoded": true,
+   "romenagri_table": null
+  },
+  {
+   "code": "Hang",
+   "name": "Hangul (Hangŭl, Hangeul)",
+   "mechanism": "featural",
+   "word_division": "spaced",
+   "engines": [],
+   "unicode_name_prefixes": [
+    "HANGUL"
+   ],
+   "encoded": true,
+   "romenagri_table": null
+  }
+ ]
+}

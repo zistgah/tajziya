@@ -1,0 +1,54 @@
+{
+ "schema": "tajziya.corpus_classes/1",
+ "copyright": "© 1993–2026 Abhishek Choudhary. All rights reserved. AyeAI.",
+ "license": "CC0-1.0",
+ "source": "poster III Axis IV",
+ "out_of_scope": "C0 natural archives is outside this repository.",
+ "classes": [
+  {
+   "id": "C1",
+   "name": "Archaeological",
+   "covers": "Artifacts, settlements, landscapes"
+  },
+  {
+   "id": "C2",
+   "name": "Oral/embodied",
+   "covers": "Folklore, ritual, oral history, craft"
+  },
+  {
+   "id": "C3",
+   "name": "Proto-writing",
+   "covers": "Tokens, sealings, undeciphered systems"
+  },
+  {
+   "id": "C4",
+   "name": "Primary written",
+   "covers": "Inscriptions; scientific, technical and historical texts"
+  },
+  {
+   "id": "C5",
+   "name": "Translation",
+   "covers": "Preserves lost originals, terminology, alternative readings, conceptual change"
+  },
+  {
+   "id": "C6",
+   "name": "Commentary",
+   "covers": "Philosophical, grammatical, legal, scientific, theological"
+  },
+  {
+   "id": "C7",
+   "name": "Manuscript",
+   "covers": "Manuscripts, recensions, variants, marginalia, colophons"
+  },
+  {
+   "id": "C8",
+   "name": "Modern intellectual",
+   "covers": "Philosophy, science, law, literature, politics, economics, in the original language"
+  },
+  {
+   "id": "C9",
+   "name": "Digital",
+   "covers": "Books, datasets, source code, websites, audiovisual records, born-digital content"
+  }
+ ]
+}

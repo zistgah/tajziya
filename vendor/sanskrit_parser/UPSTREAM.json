@@ -1,0 +1,136 @@
+{
+ "archive": {
+  "sha256": "f319e1c9cf4d1af2d057f0ebdc75494e2d580e2fac37a1cceb69b0b2c7c2b245",
+  "root": "sanskrit_parser"
+ },
+ "files": [
+  {
+   "file": "README.md",
+   "upstream_sha256": "c31c6c978ffb86c1d0a027aaa104c8528faf32ba31c624532a5c98781ef07146",
+   "vendored_sha256": "4486bb006d9d7fb15aaad0002b68a9a9c89ca03da5ab63684479a56d99e13578",
+   "changed": true
+  },
+  {
+   "file": "CONTRIBUTING.md",
+   "upstream_sha256": "8120b7712fe16797aa1ee0572e7f1065ac4319084b0239bf9a9ece2042a5bb0c",
+   "vendored_sha256": "05b1bbb9873062475ffc6776854757bde7aea163e537af39eadd1e898cfb27b7",
+   "changed": true
+  },
+  {
+   "file": "LICENSE",
+   "upstream_sha256": "2919ab8da22e7b84021e8757159f04553bd15f9f5afebd45546c9d1ceb53455f",
+   "vendored_sha256": "2a46b3ed626743aee52057aab7dbe66be7b7c560029a4cd0d2d18df38251ed8a",
+   "changed": true
+  },
+  {
+   "file": ".gitignore",
+   "upstream_sha256": "36fbdf7206a150d3294d1e0f0cf53942456d561347f180d71bc386b19c68f400",
+   "vendored_sha256": "36fbdf7206a150d3294d1e0f0cf53942456d561347f180d71bc386b19c68f400",
+   "changed": false
+  },
+  {
+   "file": "python/rules.py",
+   "upstream_sha256": "d09c0d6638f6361865d07334c38d95d14b1b7562266fc52051d2d8a159d88466",
+   "vendored_sha256": "745b57e668d03560999df9e3df5438d47032772f441596e9f0ee48ba7a2aa9be",
+   "changed": true
+  },
+  {
+   "file": "python/sandhi.py",
+   "upstream_sha256": "92a56280e501de4e69fc23679763912c9d81cdcf989555d78db8ae97a63daf56",
+   "vendored_sha256": "df546461fd899e2957d0ab56ffd023e6ef8edf9daec2659eccabaf04bb6e2fcc",
+   "changed": true
+  },
+  {
+   "file": "python/lexicon.py",
+   "upstream_sha256": "4f1a39a438a66a084affa1db27cca51f3b1f53914b739550d6fb7cd7809c4ac9",
+   "vendored_sha256": "bcd84959f44f8303a8ceaf5879216093132293992f67fd4ecce830a33738072e",
+   "changed": true
+  },
+  {
+   "file": "python/pipeline.py",
+   "upstream_sha256": "a515f18927222fe4749ea0184c9d27b667d769decc845bb42b55148575e3a8e1",
+   "vendored_sha256": "18603035238d750587bf5483423821d9f785ec376eca5c880625daa629f73b74",
+   "changed": true
+  },
+  {
+   "file": "js/rules.js",
+   "upstream_sha256": "8fd849ad4df3dfa17e6740f3378f2349699066db0faa2ccc354090ef2b58d743",
+   "vendored_sha256": "1ec7e89b62142bb33c0d393b6b5505428403036514f30325388f3ad4aa0422be",
+   "changed": true
+  },
+  {
+   "file": "js/sandhi.js",
+   "upstream_sha256": "763c7542e6be9b964555585ae2003e0d686eb25900bfdb2ed949e719b4b146ca",
+   "vendored_sha256": "43fd084ffb0559d3c1cae5dbdb0a643eb7ed5dec755ab5141dd7e96a4ca08f43",
+   "changed": true
+  },
+  {
+   "file": "js/lexicon.js",
+   "upstream_sha256": "972a5cb4e9bc7f2128957d3a470333e8794d906aa6888422365d42f065e27bf2",
+   "vendored_sha256": "6e88d151b39cfe6c08b198218d24aa3609313aaca175ff12d579667700c6effe",
+   "changed": true
+  },
+  {
+   "file": "js/pipeline.js",
+   "upstream_sha256": "c23788641efccb0eec37e73ebeb9357f58847b9c13d79d1a9836b02f84209dd2",
+   "vendored_sha256": "5796c17cf04f4cbfe0030a83c560b49647a72fa8dc81043fdc01fc032dd7cf9d",
+   "changed": true
+  },
+  {
+   "file": "js/package.json",
+   "upstream_sha256": "341089ebc323d17e23824a741eb171b836b29e501d077077a2288ecd895fa1fa",
+   "vendored_sha256": "341089ebc323d17e23824a741eb171b836b29e501d077077a2288ecd895fa1fa",
+   "changed": false
+  }
+ ],
+ "patches": [
+  {
+   "file": "LICENSE",
+   "reason": "holder name misspelt; estate copyright line applied"
+  },
+  {
+   "file": "js/sandhi.js",
+   "reason": "module threw ReferenceError on `process` when evaluated in a browser"
+  },
+  {
+   "file": "js/pipeline.js",
+   "reason": "module threw ReferenceError on `process` when evaluated in a browser"
+  },
+  {
+   "file": "js/rules.js",
+   "reason": "module threw ReferenceError on `process` when evaluated in a browser"
+  },
+  {
+   "file": "README.md",
+   "reason": "a claim of free reuse contradicted by the source site's own stated terms"
+  },
+  {
+   "file": "README.md",
+   "reason": "conversational text addressed to a chat, not to a reader"
+  },
+  {
+   "file": "README.md",
+   "reason": "conversational text addressed to a chat, not to a reader"
+  },
+  {
+   "file": "README.md",
+   "reason": "an undated, unverifiable time-bound claim"
+  },
+  {
+   "file": "README.md",
+   "reason": "conversational text addressed to a chat, not to a reader"
+  },
+  {
+   "file": "CONTRIBUTING.md",
+   "reason": "minting a third party's compilation would contradict its stated terms"
+  }
+ ],
+ "headers": "estate copyright and SPDX-License-Identifier: MIT prepended to every .py and .js",
+ "withheld": [
+  {
+   "file": "data/sutras_1.1-1.3.json",
+   "upstream_sha256": "6d952a605d026fb7313901de3898d4da62c93b7a454103c4faed36ca2da31c8d",
+   "reason": "third-party compilation; source terms do not permit reposting"
+  }
+ ]
+}

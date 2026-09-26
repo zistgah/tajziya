@@ -1,0 +1,85 @@
+{
+ "schema": "tajziya.tracks/1",
+ "tracks": [
+  {
+   "id": "T-SAN",
+   "title": "The Classical Sanskrit node",
+   "packages": [
+    "P-SAN-01",
+    "P-SAN-02",
+    "P-SAN-03",
+    "P-SAN-04",
+    "P-SAN-05",
+    "P-SAN-06",
+    "P-SAN-07",
+    "P-SAN-08"
+   ]
+  },
+  {
+   "id": "T-ENG",
+   "title": "Shared engines",
+   "packages": [
+    "P-ENG-01",
+    "P-ENG-02",
+    "P-ENG-03",
+    "P-ENG-04",
+    "P-ENG-05",
+    "P-ENG-06",
+    "P-ENG-07",
+    "P-ENG-08",
+    "P-ENG-09",
+    "P-ENG-10",
+    "P-ENG-11"
+   ]
+  },
+  {
+   "id": "T-LIN",
+   "title": "One node per lineage",
+   "packages": [
+    "P-LIN-indo_aryan",
+    "P-LIN-iranian",
+    "P-LIN-anatolian",
+    "P-LIN-hellenic",
+    "P-LIN-italic",
+    "P-LIN-germanic",
+    "P-LIN-balto_slavic",
+    "P-LIN-armenian",
+    "P-LIN-semitic",
+    "P-LIN-egyptian",
+    "P-LIN-dravidian",
+    "P-LIN-sinitic",
+    "P-LIN-bodish",
+    "P-LIN-turkic",
+    "P-LIN-japonic",
+    "P-LIN-koreanic",
+    "P-LIN-kartvelian",
+    "P-LIN-hurro_urartian",
+    "P-LIN-sumerian",
+    "P-LIN-elamite",
+    "P-LIN-undeciphered"
+   ]
+  },
+  {
+   "id": "T-GOV",
+   "title": "Sources, rulings and the minimum",
+   "packages": [
+    "P-LEG-01",
+    "P-COV-01",
+    "P-POS-01",
+    "P-SRC-01",
+    "P-SPINE-01",
+    "P-ILM-01",
+    "P-UD-01"
+   ]
+  },
+  {
+   "id": "T-ILM",
+   "title": "ILM layers",
+   "packages": [
+    "P-L0-01",
+    "P-L1-01",
+    "P-L4-01"
+   ]
+  }
+ ]
+}

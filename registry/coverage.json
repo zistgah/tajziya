@@ -1,0 +1,31 @@
+{
+ "schema": "tajziya.coverage/1",
+ "copyright": "© 1993–2026 Abhishek Choudhary. All rights reserved. AyeAI.",
+ "license": "CC0-1.0",
+ "rule": "U_i = K_i minus Recover(K_not_i, R, X). A row records who holds a corpus and how. Translation is never recovery. An empty loss list needs evidence.",
+ "relations": [
+  "original",
+  "translation",
+  "stage_of",
+  "absent",
+  "unknown"
+ ],
+ "loss_vocabulary": [
+  "terminology",
+  "wordplay",
+  "etymology",
+  "metre",
+  "grammar",
+  "conceptual_history",
+  "technical_vocabulary",
+  "cultural_reference",
+  "ambiguity",
+  "intertextuality"
+ ],
+ "loss_source": "poster III, Why this matters",
+ "frozen": {
+  "universe": false,
+  "loss_function": false
+ },
+ "rows": []
+}

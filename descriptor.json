@@ -1,0 +1,249 @@
+{
+ "id": "tajziya",
+ "name": "classical-language parsing",
+ "script": "تجزیہ",
+ "gloss": "analysis; resolving a whole into its parts",
+ "fakir": {
+  "isic": [
+   "M72 scientific research and development"
+  ],
+  "isco": [
+   "2643 translators, interpreters and other linguists"
+  ],
+  "isced": [
+   "0232 literature and linguistics"
+  ],
+  "agi_layers": [],
+  "agi_layers_note": "not established; the ILM linguistic layers L0 to L4 used here are not the AGI layer axis",
+  "ilm_languages": [
+   "akk",
+   "amh",
+   "ara",
+   "arb",
+   "arc",
+   "asm",
+   "ave",
+   "ben",
+   "bod",
+   "chg",
+   "cls",
+   "cop",
+   "deu",
+   "egy",
+   "elx",
+   "eng",
+   "fas",
+   "fra",
+   "gez",
+   "gmy",
+   "grc",
+   "guj",
+   "hbo",
+   "hin",
+   "hit",
+   "hlu",
+   "hye",
+   "ita",
+   "jpn",
+   "kan",
+   "kas",
+   "kat",
+   "kok",
+   "kor",
+   "lat",
+   "ltc",
+   "lzh",
+   "mal",
+   "mar",
+   "nld",
+   "npi",
+   "oar",
+   "och",
+   "oge",
+   "ojp",
+   "okm",
+   "oko",
+   "ory",
+   "ota",
+   "otk",
+   "oty",
+   "pal",
+   "pan",
+   "peo",
+   "pgd",
+   "phn",
+   "pka",
+   "pli",
+   "pmh",
+   "pol",
+   "por",
+   "psu",
+   "rus",
+   "san",
+   "sin",
+   "snd",
+   "spa",
+   "sux",
+   "syc",
+   "tam",
+   "tel",
+   "tir",
+   "tur",
+   "uga",
+   "urd",
+   "vsn",
+   "xcl",
+   "xct",
+   "xhu",
+   "xlu",
+   "xpu",
+   "zho"
+  ]
+ },
+ "interface": "src/tajziya/interface.py",
+ "registry": "src/tajziya/registry.py",
+ "implementations": [
+  "sanskrit_paninian_v0",
+  "frame_family"
+ ],
+ "ports": [
+  "mock",
+  "template",
+  "sanskrit_paninian_v0",
+  "frame_family"
+ ],
+ "conformance": [
+  {
+   "id": "TJZ-C1",
+   "condition": "every not_built layer refuses by name",
+   "criterion": "share of not_built layers, across all nodes, that raise NotBuilt naming at least one existing package, equal to 100",
+   "unit": "percent",
+   "unit_ucum": "%"
+  },
+  {
+   "id": "TJZ-C2",
+   "condition": "no not_built layer returns a value",
+   "criterion": "count of not_built layers that returned a value, equal to 0",
+   "unit": "count",
+   "unit_ucum": "{count}"
+  },
+  {
+   "id": "TJZ-C3",
+   "condition": "ambiguity is returned whole",
+   "criterion": "share of reference inputs whose every expected reading is returned, equal to 100",
+   "unit": "percent",
+   "unit_ucum": "%"
+  },
+  {
+   "id": "TJZ-C4",
+   "condition": "every reading joins back to its input",
+   "criterion": "share of returned readings that join back through join, equal to 100",
+   "unit": "percent",
+   "unit_ucum": "%"
+  },
+  {
+   "id": "TJZ-C5",
+   "condition": "the Python and JavaScript ports of the parser agree",
+   "criterion": "share of vowel pairs, reverse junctions and reference inputs answered identically, equal to 100",
+   "unit": "percent",
+   "unit_ucum": "%"
+  },
+  {
+   "id": "TJZ-C6",
+   "condition": "CoNLL-U output is structurally valid",
+   "criterion": "share of emitted sentences with ten fields on every word line, equal to 100",
+   "unit": "percent",
+   "unit_ucum": "%"
+  },
+  {
+   "id": "TJZ-C7",
+   "condition": "segmentation accuracy against a gold corpus",
+   "criterion": "not established",
+   "unit": "not established",
+   "unit_ucum": "not established"
+  },
+  {
+   "id": "TJZ-C8",
+   "condition": "coverage of attested vocabulary",
+   "criterion": "not established",
+   "unit": "not established",
+   "unit_ucum": "not established"
+  }
+ ],
+ "verbs": "skills/verbs.json",
+ "attachment_points": [
+  "SCRIPT: the Romenagri script tables, read as files",
+  "CORPUS: a text or CoNLL-U file supplied by the operator",
+  "LEXICON: a lexicon resource file whose licence is recorded",
+  "DOOR: the verbs of skills/verbs.json, served by darwaza"
+ ],
+ "state": "wired_unproven",
+ "distinctive_nouns": [
+  "sandhi",
+  "sutra",
+  "karaka",
+  "padaccheda",
+  "lemma",
+  "treebank",
+  "juncture",
+  "vocalisation",
+  "logogram",
+  "syllabary"
+ ],
+ "correlates": [
+  {
+   "with": "dhancha",
+   "kind": "consumes",
+   "shared": "the ten invariants; core.unknown vendored verbatim"
+  },
+  {
+   "with": "romenagri",
+   "kind": "consumes",
+   "shared": "the script pivot for Brahmic scripts, through its tables"
+  },
+  {
+   "with": "ilm",
+   "kind": "supplies",
+   "shared": "content for the ILM linguistic layers L0 to L4, whose repositories are scaffolds"
+  },
+  {
+   "with": "humanesque",
+   "kind": "consumes",
+   "shared": "the 30 Aug ILM template, reconciled rather than copied"
+  },
+  {
+   "with": "panini",
+   "kind": "consumes",
+   "shared": "the cycler language through which packages reach any model"
+  },
+  {
+   "with": "hindawi",
+   "kind": "co_located",
+   "shared": "the rule that script, language and standard are separate axes"
+  },
+  {
+   "with": "darwaza",
+   "kind": "supplies",
+   "shared": "verbs from skills/verbs.json, none of them gated"
+  },
+  {
+   "with": "mez",
+   "kind": "mounts_in",
+   "shared": "a panel on the desk; runs without it"
+  },
+  {
+   "with": "fakir",
+   "kind": "same_lattice_point",
+   "shared": "ISIC M72 x ISCO 2643 x ISCED 0232"
+  }
+ ],
+ "vendors_verbatim": [
+  {
+   "primitive": "core.unknown",
+   "path": "src/tajziya/_vendor/unknown.py",
+   "from": "zistgah/dhancha@e312d3960c5eb3572fd5975faf7767ba41d0d5a4 core/unknown.py",
+   "sha256": "2c68a58d1a6d98add86c06ba8ce3c7454b561964a06a182e8b07e8d2282bc09a",
+   "why": "a sovereign element cannot import another repository at run time, so it vendors byte for byte and the gate compares"
+  }
+ ]
+}

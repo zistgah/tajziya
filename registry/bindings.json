@@ -1,0 +1,324 @@
+{
+ "schema": "tajziya.bindings/1",
+ "copyright": "© 1993–2026 Abhishek Choudhary. All rights reserved. AyeAI.",
+ "license": "CC0-1.0",
+ "rule": "Callers name a node, never an implementation. This file is the only place an implementation is chosen.",
+ "bindings": {
+  "sux": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "akk": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "egy": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "und-Pelm": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "und-Inds": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "hit": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "xlu": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "xhu": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "uga": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "hbo": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "arc": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "phn": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "ave": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "peo": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "pal": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "fas": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "vsn": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "san-epic": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "cls": {
+   "kind": "port",
+   "implementation": "sanskrit_paninian_v0"
+  },
+  "pli": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "pgd": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "prakrit": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "tam": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "kan": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "tel": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "mal": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "gmy": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "grc": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "grc-koine": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "grc-byz": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "lat": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "och": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "lzh": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "ltc": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "zho-later": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "ara-early": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "ara-cla": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "ara-med": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "arb": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "ara-vern": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "gez": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "amh": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "xcl": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "kat": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "xct": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "otk": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "chg": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "ota": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "tur": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "ojp": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "jpn-med": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "jpn-emod": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "jpn": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "oko": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "okm": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "kor": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "hin": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "urd": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "ben": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "mar": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "guj": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "pan": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "asm": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "ory": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "npi": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "sin": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "snd": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "kas": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "kok": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "ita": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "fra": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "deu": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "eng": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "spa": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "por": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "nld": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "rus": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "pol": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  },
+  "elx": {
+   "kind": "frame",
+   "implementation": "frame_family"
+  }
+ }
+}

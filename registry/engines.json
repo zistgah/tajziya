@@ -1,0 +1,96 @@
+{
+ "schema": "tajziya.engines/1",
+ "copyright": "© 1993–2026 Abhishek Choudhary. All rights reserved. AyeAI.",
+ "license": "CC0-1.0",
+ "rule": "An engine is shared by phenomenon. A node needs the engines of its lineage and of its scripts.",
+ "engines": [
+  {
+   "id": "juncture",
+   "axis": "language",
+   "does": "Undo sound change at word and morpheme boundaries to recover the joined units.",
+   "state": "not_built",
+   "note": "A working instance exists in the Classical Sanskrit node (vowel junctions). Extraction waits for a second language to need it.",
+   "package": "P-ENG-01"
+  },
+  {
+   "id": "paradigm",
+   "axis": "language",
+   "does": "Analyse fusional inflection against stem and ending paradigms.",
+   "state": "not_built",
+   "note": null,
+   "package": "P-ENG-02"
+  },
+  {
+   "id": "compounding",
+   "axis": "language",
+   "does": "Split and classify compounds.",
+   "state": "not_built",
+   "note": null,
+   "package": "P-ENG-03"
+  },
+  {
+   "id": "root_pattern",
+   "axis": "language",
+   "does": "Extract consonantal roots and match vocalic and affixal templates.",
+   "state": "not_built",
+   "note": null,
+   "package": "P-ENG-04"
+  },
+  {
+   "id": "affix_chain",
+   "axis": "language",
+   "does": "Peel ordered affix chains, applying harmony where the language has it.",
+   "state": "not_built",
+   "note": null,
+   "package": "P-ENG-05"
+  },
+  {
+   "id": "logogram",
+   "axis": "script",
+   "does": "Resolve logograms, heterograms and determinatives to readings.",
+   "state": "not_built",
+   "note": null,
+   "package": "P-ENG-06"
+  },
+  {
+   "id": "syllabary",
+   "axis": "script",
+   "does": "Map syllabic signs to values and keep every reading of a polyphonous sign.",
+   "state": "not_built",
+   "note": null,
+   "package": "P-ENG-07"
+  },
+  {
+   "id": "vocalisation",
+   "axis": "script",
+   "does": "Restore vowels the script leaves unwritten, returning every admissible reading.",
+   "state": "not_built",
+   "note": null,
+   "package": "P-ENG-08"
+  },
+  {
+   "id": "abugida",
+   "axis": "script",
+   "does": "Resolve inherent vowels, conjuncts and vowel signs, through the Romenagri script tables.",
+   "state": "not_built",
+   "note": null,
+   "package": "P-ENG-09"
+  },
+  {
+   "id": "unspaced",
+   "axis": "script",
+   "does": "Find word boundaries in text the script does not divide into words.",
+   "state": "not_built",
+   "note": null,
+   "package": "P-ENG-10"
+  },
+  {
+   "id": "sign_sequence",
+   "axis": "script",
+   "does": "Tokenise and count signs of an undeciphered or proto-writing corpus without assigning a language.",
+   "state": "not_built",
+   "note": null,
+   "package": "P-ENG-11"
+  }
+ ]
+}

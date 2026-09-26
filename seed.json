@@ -1,0 +1,8 @@
+{
+ "slug": "tajziya",
+ "org": "zistgah",
+ "pages_path": "/docs",
+ "metadata": "misty.json",
+ "gate": "ops/verify.sh",
+ "description": "tajziya (تجزیہ): parsers for 79 language and stage nodes of the classical corpus, by family. Sanskrit parses; the rest refuse by name."
+}

@@ -1,0 +1,116 @@
+REM tajziya.pni: take one package from roadmap/packages.json to a proof.
+REM © 1993–2026 Abhishek Choudhary. All rights reserved. AyeAI.
+REM A cycler is a sequence of prompts and the outputs they produce. Edit it; it is not code.
+
+CYCLER TAJZIYA
+  TITLE   "One package, one proof"
+  SCRIPT  "تجزیہ"
+  OUTPUT  RESEARCH
+  UNIT    "package"
+  PURPOSE "Take one roadmap package for a classical-language node from open to proved."
+
+  CONTRACT
+    REFUSE    "rule text written from memory"
+    REFUSE    "a reading chosen silently where the rules admit several"
+    REFUSE    "a layer that answers before it is built"
+    INVARIANT "a node is named by its registry id, never by a language name alone"
+    EVIDENCE  "the acceptance command's output, pasted verbatim"
+    EVIDENCE  "bash ops/verify.sh, pasted verbatim"
+  END CONTRACT
+
+  STAGE CONCEPT
+    RESOLUTION EASY
+    VERB   CREATE
+    EXPECT JSON
+    INTO   work
+    ASK
+      I am taking one package from roadmap/packages.json in the tajziya repository.
+      Reply with only this JSON:
+      {"package":"P-...","nodes":["registry node ids"],"true_when_done":"one sentence"}
+      A node is a language at a stage, in declared scripts, holding a declared corpus, so
+      name nodes by their registry id and never by a language name alone.
+      What I have so far:
+      {seed}
+    END ASK
+    VALIDATE HAS(work, "package")
+    ON FAIL CLARIFY
+  END STAGE
+
+  STAGE SOURCE
+    RESOLUTION MID
+    VERB   VERIFY
+    EXPECT JSON
+    FROM   work
+    INTO   work.sources
+    ASK
+      For every rule, table or word list this package brings in, give the source URL, the
+      retrieval date, the SHA-256 of the bytes retrieved, and the terms under which they may be
+      redistributed. Rule text from memory is not a source, however standard it looks.
+      Material whose terms forbid reposting stays out of the tree; only its pin goes in.
+    END ASK
+  END STAGE
+
+  STAGE BOUNDS
+    RESOLUTION MID
+    VERB   MEASURE
+    EXPECT JSON
+    FROM   work
+    INTO   work.bounds
+    ASK
+      List the conformance conditions in descriptor.json that this package touches, with each
+      criterion copied verbatim. A condition that reads not established stays so unless it is
+      measured here, and the measurement names its command.
+    END ASK
+  END STAGE
+
+  STAGE IMPLEMENT
+    RESOLUTION PRO
+    VERB   CREATE
+    EXPECT TEXT
+    FROM   work
+    INTO   work.change
+    ASK
+      Write only inside the paths the package owns. A layer left unfinished still raises
+      NotBuilt naming its package. Return every reading the rules admit and choose none.
+      Where another package's paths are needed, stop and name that package instead.
+    END ASK
+  END STAGE
+
+  STAGE RUN
+    RESOLUTION PRO
+    VERB   EXECUTE
+    EXPECT TEXT
+    FROM   work
+    INTO   work.run
+    ASK
+      Run the package's acceptance command exactly as written, then bash ops/verify.sh, and
+      paste both outputs verbatim, failures included. A command that was not run is reported
+      as not run.
+    END ASK
+  END STAGE
+
+  STAGE BREAK
+    RESOLUTION PRO
+    VERB   FALSIFY
+    EXPECT TEXT
+    FROM   work
+    INTO   work.falsify
+    ASK
+      Give one input on which this work would be wrong, and say whether it was run. Name any
+      assumption carried over from another language or another stage without a source.
+    END ASK
+  END STAGE
+
+  STAGE ATTACH
+    RESOLUTION PRO
+    VERB   INTEGRATE
+    EXPECT TEXT
+    FROM   work
+    INTO   work.attach
+    ASK
+      Name which of the four attachment points in INTEGRATION.md this work crossed. If it
+      needed a fifth, say so plainly: that is a contract question, not settled here.
+    END ASK
+    GATE   HUMAN "PROOF accepted"
+  END STAGE
+END CYCLER

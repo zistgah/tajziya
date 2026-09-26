@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.deps/
+logs/
+tests/.scratch/
+vendor/sanskrit_parser/data/sutras_*.json

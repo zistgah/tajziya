@@ -1,0 +1,3994 @@
+{
+ "conflicts": [
+  {
+   "against": "Poster III L14 lists Old Turkic.",
+   "held_as": "Held as node otk (Old Turkic). The label is not corrected on the author's behalf.",
+   "id": "C-01",
+   "reads": "The row is labelled Ge'ez; its corpus is the Orkhon inscriptions.",
+   "ruled": false,
+   "where": "poster I §14, first row"
+  },
+  {
+   "against": "§19 lists Gāndhārī among the irreducible or near-irreducible.",
+   "held_as": "Held at the §5 row status, P.",
+   "id": "C-02",
+   "reads": "Gāndhārī is P in §5.",
+   "ruled": false,
+   "where": "poster I §5 and §19"
+  },
+  {
+   "against": "§19 lists Major Prakrit streams among the irreducible or near-irreducible.",
+   "held_as": "Held at the §5 row status, P.",
+   "id": "C-03",
+   "reads": "The Prakrits are P in §5.",
+   "ruled": false,
+   "where": "poster I §5 and §19"
+  },
+  {
+   "against": "§19 lists Ge'ez among the irreducible or near-irreducible.",
+   "held_as": "Held at the §10 row status, P.",
+   "id": "C-04",
+   "reads": "Ge'ez is P in §10.",
+   "ruled": false,
+   "where": "poster I §10 and §19"
+  },
+  {
+   "against": "§19 lists Ottoman Turkish among the strong provisional candidates.",
+   "held_as": "Held at the §14 row status, I.",
+   "id": "C-05",
+   "reads": "Ottoman Turkish is I in §14.",
+   "ruled": false,
+   "where": "poster I §14 and §19"
+  },
+  {
+   "against": "§19 does not list Konkani.",
+   "held_as": "Held as a node at P.",
+   "id": "C-06",
+   "reads": "Konkani is P in §17.",
+   "ruled": false,
+   "where": "poster I §17 and §19"
+  },
+  {
+   "against": "No row in poster I §1 to §18 carries Elamite.",
+   "held_as": "Held as node elx at P, corpus not stated.",
+   "id": "C-07",
+   "reads": "Elamite appears in the §19 provisional list and in poster III L1.",
+   "ruled": false,
+   "where": "poster I §19 and poster III L1"
+  },
+  {
+   "against": "Armenian is Indo-European and Georgian Kartvelian.",
+   "held_as": "The group is kept as the poster's areal grouping; lineages are genealogical.",
+   "id": "C-08",
+   "reads": "Armenian and Georgian share one group.",
+   "ruled": false,
+   "where": "poster III L10"
+  },
+  {
+   "against": "§19 names Avestan and Persian only.",
+   "held_as": "Rows are held at their §4 statuses.",
+   "id": "C-09",
+   "reads": "§4 has four Iranian rows with different statuses.",
+   "ruled": false,
+   "where": "poster I §4 and §19"
+  },
+  {
+   "against": "Both posters hold the underlying language unresolved.",
+   "held_as": "Held as und-Inds with no language code.",
+   "id": "C-10",
+   "reads": "ISO 639-3 carries xiv, Indus Valley Language.",
+   "ruled": false,
+   "where": "ISO 639-3 and posters I and III"
+  }
+ ],
+ "conformance": {
+  "failed": 0,
+  "findings": 486,
+  "nodes": 79
+ },
+ "counts": {
+  "engines": 11,
+  "families": 11,
+  "lineages": 21,
+  "nodes": 79,
+  "packages": 50,
+  "parsing": [
+   "cls"
+  ],
+  "scripts": 52
+ },
+ "cuneiform": {
+  "all": {
+   "lineages": [
+    "anatolian",
+    "elamite",
+    "hurro_urartian",
+    "iranian",
+    "semitic",
+    "sumerian"
+   ],
+   "nodes": [
+    "sux",
+    "akk",
+    "hit",
+    "xlu",
+    "xhu",
+    "uga",
+    "peo",
+    "elx"
+   ],
+   "scripts": [
+    "Xsux",
+    "Xpeo",
+    "Ugar"
+   ]
+  },
+  "sumero_akkadian": {
+   "lineages": [
+    "anatolian",
+    "elamite",
+    "hurro_urartian",
+    "semitic",
+    "sumerian"
+   ],
+   "nodes": [
+    "sux",
+    "akk",
+    "hit",
+    "xlu",
+    "xhu",
+    "elx"
+   ],
+   "scripts": [
+    "Xsux"
+   ]
+  }
+ },
+ "engines": {
+  "by_axis": {
+   "language": {
+    "common": 5,
+    "engines": 5
+   },
+   "script": {
+    "common": 5,
+    "engines": 6
+   }
+  },
+  "engines": [
+   {
+    "axis": "script",
+    "common": true,
+    "families": [
+     "isolate",
+     "afroasiatic",
+     "indo_european",
+     "hurro_urartian",
+     "dravidian",
+     "sino_tibetan",
+     "japonic",
+     "koreanic"
+    ],
+    "id": "unspaced",
+    "lineages": [
+     "sumerian",
+     "semitic",
+     "egyptian",
+     "anatolian",
+     "hurro_urartian",
+     "indo_aryan",
+     "dravidian",
+     "sinitic",
+     "bodish",
+     "japonic",
+     "koreanic",
+     "elamite"
+    ],
+    "nodes": [
+     "sux",
+     "akk",
+     "egy",
+     "hit",
+     "xlu",
+     "xhu",
+     "pli",
+     "pgd",
+     "prakrit",
+     "tam",
+     "och",
+     "lzh",
+     "ltc",
+     "zho-later",
+     "xct",
+     "ojp",
+     "jpn-med",
+     "jpn-emod",
+     "jpn",
+     "oko",
+     "okm",
+     "kor",
+     "elx"
+    ],
+    "package": "P-ENG-10",
+    "reach": {
+     "families": 8,
+     "lineages": 12,
+     "nodes": 23
+    }
+   },
+   {
+    "axis": "script",
+    "common": true,
+    "families": [
+     "isolate",
+     "afroasiatic",
+     "indo_european",
+     "hurro_urartian",
+     "sino_tibetan",
+     "japonic",
+     "koreanic"
+    ],
+    "id": "logogram",
+    "lineages": [
+     "sumerian",
+     "semitic",
+     "egyptian",
+     "anatolian",
+     "hurro_urartian",
+     "iranian",
+     "hellenic",
+     "sinitic",
+     "japonic",
+     "koreanic",
+     "elamite"
+    ],
+    "nodes": [
+     "sux",
+     "akk",
+     "egy",
+     "hit",
+     "xlu",
+     "xhu",
+     "pal",
+     "gmy",
+     "och",
+     "lzh",
+     "ltc",
+     "zho-later",
+     "ojp",
+     "jpn-med",
+     "jpn-emod",
+     "jpn",
+     "oko",
+     "okm",
+     "kor",
+     "elx"
+    ],
+    "package": "P-ENG-06",
+    "reach": {
+     "families": 7,
+     "lineages": 11,
+     "nodes": 20
+    }
+   },
+   {
+    "axis": "language",
+    "common": true,
+    "families": [
+     "isolate",
+     "hurro_urartian",
+     "dravidian",
+     "kartvelian",
+     "sino_tibetan",
+     "turkic",
+     "japonic",
+     "koreanic"
+    ],
+    "id": "affix_chain",
+    "lineages": [
+     "sumerian",
+     "hurro_urartian",
+     "dravidian",
+     "kartvelian",
+     "bodish",
+     "turkic",
+     "japonic",
+     "koreanic",
+     "elamite"
+    ],
+    "nodes": [
+     "sux",
+     "xhu",
+     "tam",
+     "kan",
+     "tel",
+     "mal",
+     "kat",
+     "xct",
+     "otk",
+     "chg",
+     "ota",
+     "tur",
+     "ojp",
+     "jpn-med",
+     "jpn-emod",
+     "jpn",
+     "oko",
+     "okm",
+     "kor",
+     "elx"
+    ],
+    "package": "P-ENG-05",
+    "reach": {
+     "families": 8,
+     "lineages": 9,
+     "nodes": 20
+    }
+   },
+   {
+    "axis": "language",
+    "common": true,
+    "families": [
+     "indo_european"
+    ],
+    "id": "paradigm",
+    "lineages": [
+     "anatolian",
+     "iranian",
+     "indo_aryan",
+     "hellenic",
+     "italic",
+     "armenian",
+     "germanic",
+     "balto_slavic"
+    ],
+    "nodes": [
+     "hit",
+     "xlu",
+     "ave",
+     "peo",
+     "pal",
+     "fas",
+     "vsn",
+     "san-epic",
+     "cls",
+     "pli",
+     "pgd",
+     "prakrit",
+     "gmy",
+     "grc",
+     "grc-koine",
+     "grc-byz",
+     "lat",
+     "xcl",
+     "hin",
+     "urd",
+     "ben",
+     "mar",
+     "guj",
+     "pan",
+     "asm",
+     "ory",
+     "npi",
+     "sin",
+     "snd",
+     "kas",
+     "kok",
+     "ita",
+     "fra",
+     "deu",
+     "eng",
+     "spa",
+     "por",
+     "nld",
+     "rus",
+     "pol"
+    ],
+    "package": "P-ENG-02",
+    "reach": {
+     "families": 1,
+     "lineages": 8,
+     "nodes": 40
+    }
+   },
+   {
+    "axis": "script",
+    "common": true,
+    "families": [
+     "isolate",
+     "afroasiatic",
+     "indo_european",
+     "hurro_urartian",
+     "japonic"
+    ],
+    "id": "syllabary",
+    "lineages": [
+     "sumerian",
+     "semitic",
+     "anatolian",
+     "hurro_urartian",
+     "iranian",
+     "hellenic",
+     "japonic",
+     "elamite"
+    ],
+    "nodes": [
+     "sux",
+     "akk",
+     "hit",
+     "xlu",
+     "xhu",
+     "peo",
+     "gmy",
+     "ojp",
+     "jpn-med",
+     "jpn-emod",
+     "jpn",
+     "elx"
+    ],
+    "package": "P-ENG-07",
+    "reach": {
+     "families": 5,
+     "lineages": 8,
+     "nodes": 12
+    }
+   },
+   {
+    "axis": "script",
+    "common": true,
+    "families": [
+     "afroasiatic",
+     "indo_european",
+     "turkic"
+    ],
+    "id": "vocalisation",
+    "lineages": [
+     "egyptian",
+     "semitic",
+     "iranian",
+     "turkic",
+     "indo_aryan"
+    ],
+    "nodes": [
+     "egy",
+     "uga",
+     "hbo",
+     "arc",
+     "phn",
+     "pal",
+     "fas",
+     "ara-early",
+     "ara-cla",
+     "ara-med",
+     "arb",
+     "ara-vern",
+     "chg",
+     "ota",
+     "urd",
+     "pan",
+     "snd",
+     "kas"
+    ],
+    "package": "P-ENG-08",
+    "reach": {
+     "families": 3,
+     "lineages": 5,
+     "nodes": 18
+    }
+   },
+   {
+    "axis": "script",
+    "common": true,
+    "families": [
+     "indo_european",
+     "dravidian",
+     "afroasiatic",
+     "sino_tibetan"
+    ],
+    "id": "abugida",
+    "lineages": [
+     "indo_aryan",
+     "dravidian",
+     "semitic",
+     "bodish"
+    ],
+    "nodes": [
+     "vsn",
+     "san-epic",
+     "cls",
+     "pli",
+     "pgd",
+     "prakrit",
+     "tam",
+     "kan",
+     "tel",
+     "mal",
+     "gez",
+     "amh",
+     "xct",
+     "hin",
+     "ben",
+     "mar",
+     "guj",
+     "pan",
+     "asm",
+     "ory",
+     "npi",
+     "sin",
+     "snd",
+     "kas",
+     "kok"
+    ],
+    "package": "P-ENG-09",
+    "reach": {
+     "families": 4,
+     "lineages": 4,
+     "nodes": 25
+    }
+   },
+   {
+    "axis": "language",
+    "common": true,
+    "families": [
+     "indo_european",
+     "dravidian"
+    ],
+    "id": "juncture",
+    "lineages": [
+     "indo_aryan",
+     "dravidian"
+    ],
+    "nodes": [
+     "vsn",
+     "san-epic",
+     "cls",
+     "pli",
+     "pgd",
+     "prakrit",
+     "tam",
+     "kan",
+     "tel",
+     "mal",
+     "hin",
+     "urd",
+     "ben",
+     "mar",
+     "guj",
+     "pan",
+     "asm",
+     "ory",
+     "npi",
+     "sin",
+     "snd",
+     "kas",
+     "kok"
+    ],
+    "package": "P-ENG-01",
+    "reach": {
+     "families": 2,
+     "lineages": 2,
+     "nodes": 23
+    }
+   },
+   {
+    "axis": "language",
+    "common": true,
+    "families": [
+     "indo_european"
+    ],
+    "id": "compounding",
+    "lineages": [
+     "indo_aryan",
+     "germanic"
+    ],
+    "nodes": [
+     "vsn",
+     "san-epic",
+     "cls",
+     "pli",
+     "pgd",
+     "prakrit",
+     "hin",
+     "urd",
+     "ben",
+     "mar",
+     "guj",
+     "pan",
+     "asm",
+     "ory",
+     "npi",
+     "sin",
+     "snd",
+     "kas",
+     "kok",
+     "deu",
+     "eng",
+     "nld"
+    ],
+    "package": "P-ENG-03",
+    "reach": {
+     "families": 1,
+     "lineages": 2,
+     "nodes": 22
+    }
+   },
+   {
+    "axis": "language",
+    "common": true,
+    "families": [
+     "afroasiatic"
+    ],
+    "id": "root_pattern",
+    "lineages": [
+     "semitic",
+     "egyptian"
+    ],
+    "nodes": [
+     "akk",
+     "egy",
+     "uga",
+     "hbo",
+     "arc",
+     "phn",
+     "ara-early",
+     "ara-cla",
+     "ara-med",
+     "arb",
+     "ara-vern",
+     "gez",
+     "amh"
+    ],
+    "package": "P-ENG-04",
+    "reach": {
+     "families": 1,
+     "lineages": 2,
+     "nodes": 13
+    }
+   },
+   {
+    "axis": "script",
+    "common": false,
+    "families": [
+     "undeciphered"
+    ],
+    "id": "sign_sequence",
+    "lineages": [
+     "undeciphered"
+    ],
+    "nodes": [
+     "und-Pelm",
+     "und-Inds"
+    ],
+    "package": "P-ENG-11",
+    "reach": {
+     "families": 1,
+     "lineages": 1,
+     "nodes": 2
+    }
+   }
+  ]
+ },
+ "families": [
+  {
+   "id": "indo_european",
+   "kind": "family",
+   "name": "Indo-European"
+  },
+  {
+   "id": "afroasiatic",
+   "kind": "family",
+   "name": "Afroasiatic"
+  },
+  {
+   "id": "dravidian",
+   "kind": "family",
+   "name": "Dravidian"
+  },
+  {
+   "id": "sino_tibetan",
+   "kind": "family",
+   "name": "Sino-Tibetan"
+  },
+  {
+   "id": "turkic",
+   "kind": "family",
+   "name": "Turkic"
+  },
+  {
+   "id": "japonic",
+   "kind": "family",
+   "name": "Japonic"
+  },
+  {
+   "id": "koreanic",
+   "kind": "family",
+   "name": "Koreanic"
+  },
+  {
+   "id": "kartvelian",
+   "kind": "family",
+   "name": "Kartvelian"
+  },
+  {
+   "id": "hurro_urartian",
+   "kind": "family",
+   "name": "Hurro-Urartian"
+  },
+  {
+   "id": "isolate",
+   "kind": "not_a_family",
+   "name": "Language isolates"
+  },
+  {
+   "id": "undeciphered",
+   "kind": "no_family_assigned",
+   "name": "Undeciphered corpora"
+  }
+ ],
+ "generated_from": [
+  {
+   "file": "registry/families.json",
+   "sha256": "c570a52a507ea5e0a61c3336b293dbb84ef03d3841cea2e0cf03bacb5466fb23"
+  },
+  {
+   "file": "registry/nodes.json",
+   "sha256": "4e60d8b183cf6f384b7311e0b1632f185509c8e82f7bcf5e968aa442f7aaa182"
+  },
+  {
+   "file": "registry/scripts.json",
+   "sha256": "b7ea61729195ec88db978cb5d239627e2d3e87f43c1c72217c86c57373cbc942"
+  },
+  {
+   "file": "registry/engines.json",
+   "sha256": "96c4636575127d7e1416602654f6f5cad4ab17d3d18ea30af76a1f88ffd600f1"
+  },
+  {
+   "file": "registry/bindings.json",
+   "sha256": "b2bcde672089378f431cca6965b6b8cfc19bbd148b6f1c15f5c9e7aafcbc2fb3"
+  },
+  {
+   "file": "registry/conflicts.json",
+   "sha256": "b8a4abfbcea2a775a7d1076d923b93b57d5929ed5fb747ac85dbbc26c13499d5"
+  },
+  {
+   "file": "registry/coverage.json",
+   "sha256": "3e366e462a9f16941a23b4d9379db70348291ae107d40e94e849c476201b0a3a"
+  },
+  {
+   "file": "registry/corpus_classes.json",
+   "sha256": "b9e6b2586409781b1c6460c4c722e759e6e13a6130cb01bab70a1b8f9bae558b"
+  },
+  {
+   "file": "roadmap/packages.json",
+   "sha256": "a348181082d61cb75628a17fb15fbf34329d9b142c516e3e07cd56d084f6aa88"
+  }
+ ],
+ "lineages": [
+  {
+   "family": "indo_european",
+   "id": "indo_aryan",
+   "language_engines": [
+    "juncture",
+    "paradigm",
+    "compounding"
+   ],
+   "morphological_type": "fusional",
+   "name": "Indo-Aryan",
+   "path": [
+    "indo_european",
+    "indo_iranian",
+    "indo_aryan"
+   ]
+  },
+  {
+   "family": "indo_european",
+   "id": "iranian",
+   "language_engines": [
+    "paradigm"
+   ],
+   "morphological_type": "fusional",
+   "name": "Iranian",
+   "path": [
+    "indo_european",
+    "indo_iranian",
+    "iranian"
+   ]
+  },
+  {
+   "family": "indo_european",
+   "id": "anatolian",
+   "language_engines": [
+    "paradigm"
+   ],
+   "morphological_type": "fusional",
+   "name": "Anatolian",
+   "path": [
+    "indo_european",
+    "anatolian"
+   ]
+  },
+  {
+   "family": "indo_european",
+   "id": "hellenic",
+   "language_engines": [
+    "paradigm"
+   ],
+   "morphological_type": "fusional",
+   "name": "Hellenic",
+   "path": [
+    "indo_european",
+    "hellenic"
+   ]
+  },
+  {
+   "family": "indo_european",
+   "id": "italic",
+   "language_engines": [
+    "paradigm"
+   ],
+   "morphological_type": "fusional",
+   "name": "Italic",
+   "path": [
+    "indo_european",
+    "italic"
+   ]
+  },
+  {
+   "family": "indo_european",
+   "id": "germanic",
+   "language_engines": [
+    "paradigm",
+    "compounding"
+   ],
+   "morphological_type": "fusional",
+   "name": "Germanic",
+   "path": [
+    "indo_european",
+    "germanic"
+   ]
+  },
+  {
+   "family": "indo_european",
+   "id": "balto_slavic",
+   "language_engines": [
+    "paradigm"
+   ],
+   "morphological_type": "fusional",
+   "name": "Balto-Slavic",
+   "path": [
+    "indo_european",
+    "balto_slavic"
+   ]
+  },
+  {
+   "family": "indo_european",
+   "id": "armenian",
+   "language_engines": [
+    "paradigm"
+   ],
+   "morphological_type": "fusional",
+   "name": "Armenian",
+   "path": [
+    "indo_european",
+    "armenian"
+   ]
+  },
+  {
+   "family": "afroasiatic",
+   "id": "semitic",
+   "language_engines": [
+    "root_pattern"
+   ],
+   "morphological_type": "templatic",
+   "name": "Semitic",
+   "path": [
+    "afroasiatic",
+    "semitic"
+   ]
+  },
+  {
+   "family": "afroasiatic",
+   "id": "egyptian",
+   "language_engines": [
+    "root_pattern"
+   ],
+   "morphological_type": "templatic, partial and stage-dependent",
+   "name": "Egyptian",
+   "path": [
+    "afroasiatic",
+    "egyptian"
+   ]
+  },
+  {
+   "family": "dravidian",
+   "id": "dravidian",
+   "language_engines": [
+    "affix_chain",
+    "juncture"
+   ],
+   "morphological_type": "agglutinative",
+   "name": "Dravidian",
+   "path": [
+    "dravidian"
+   ]
+  },
+  {
+   "family": "sino_tibetan",
+   "id": "sinitic",
+   "language_engines": [],
+   "morphological_type": "isolating",
+   "name": "Sinitic",
+   "path": [
+    "sino_tibetan",
+    "sinitic"
+   ]
+  },
+  {
+   "family": "sino_tibetan",
+   "id": "bodish",
+   "language_engines": [
+    "affix_chain"
+   ],
+   "morphological_type": "agglutinative",
+   "name": "Bodish",
+   "path": [
+    "sino_tibetan",
+    "bodish"
+   ]
+  },
+  {
+   "family": "turkic",
+   "id": "turkic",
+   "language_engines": [
+    "affix_chain"
+   ],
+   "morphological_type": "agglutinative",
+   "name": "Turkic",
+   "path": [
+    "turkic"
+   ]
+  },
+  {
+   "family": "japonic",
+   "id": "japonic",
+   "language_engines": [
+    "affix_chain"
+   ],
+   "morphological_type": "agglutinative",
+   "name": "Japonic",
+   "path": [
+    "japonic"
+   ]
+  },
+  {
+   "family": "koreanic",
+   "id": "koreanic",
+   "language_engines": [
+    "affix_chain"
+   ],
+   "morphological_type": "agglutinative",
+   "name": "Koreanic",
+   "path": [
+    "koreanic"
+   ]
+  },
+  {
+   "family": "kartvelian",
+   "id": "kartvelian",
+   "language_engines": [
+    "affix_chain"
+   ],
+   "morphological_type": "agglutinative",
+   "name": "Kartvelian",
+   "path": [
+    "kartvelian"
+   ]
+  },
+  {
+   "family": "hurro_urartian",
+   "id": "hurro_urartian",
+   "language_engines": [
+    "affix_chain"
+   ],
+   "morphological_type": "agglutinative",
+   "name": "Hurro-Urartian",
+   "path": [
+    "hurro_urartian"
+   ]
+  },
+  {
+   "family": "isolate",
+   "id": "sumerian",
+   "language_engines": [
+    "affix_chain"
+   ],
+   "morphological_type": "agglutinative",
+   "name": "Sumerian",
+   "path": [
+    "isolate",
+    "sumerian"
+   ]
+  },
+  {
+   "family": "isolate",
+   "id": "elamite",
+   "language_engines": [
+    "affix_chain"
+   ],
+   "morphological_type": "agglutinative",
+   "name": "Elamite",
+   "path": [
+    "isolate",
+    "elamite"
+   ]
+  },
+  {
+   "family": "undeciphered",
+   "id": "undeciphered",
+   "language_engines": [],
+   "morphological_type": "not established",
+   "name": "Undeciphered",
+   "path": [
+    "undeciphered"
+   ]
+  }
+ ],
+ "minimum": {
+  "C": [
+   "C1",
+   "C2",
+   "C3",
+   "C4",
+   "C5",
+   "C6",
+   "C7",
+   "C8",
+   "C9"
+  ],
+  "G": [
+   "Arab",
+   "Armi",
+   "Armn",
+   "Avst",
+   "Beng",
+   "Brah",
+   "Copt",
+   "Cyrl",
+   "Deva",
+   "Egyd",
+   "Egyh",
+   "Egyp",
+   "Ethi",
+   "Geor",
+   "Gran",
+   "Grek",
+   "Gujr",
+   "Guru",
+   "Hang",
+   "Hani",
+   "Hebr",
+   "Hira",
+   "Hluw",
+   "Inds",
+   "Kana",
+   "Khar",
+   "Knda",
+   "Latn",
+   "Linb",
+   "Mlym",
+   "Modi",
+   "Mymr",
+   "Orkh",
+   "Orya",
+   "Pelm",
+   "Phli",
+   "Phlp",
+   "Phlv",
+   "Phnx",
+   "Shrd",
+   "Sidd",
+   "Sind",
+   "Sinh",
+   "Syrc",
+   "Taml",
+   "Telu",
+   "Thai",
+   "Tibt",
+   "Ugar",
+   "Xpeo",
+   "Xsux"
+  ],
+  "L": 71,
+  "S": 6,
+  "certified": false,
+  "comparison": {
+   "agrees": 0,
+   "differs": 0,
+   "unevidenced": 71
+  },
+  "corpus_objects": 2,
+  "reasons": [
+   "the corpus universe is not frozen",
+   "the loss function is not frozen",
+   "71 of 71 candidate nodes are untested"
+  ]
+ },
+ "nodes": [
+  {
+   "corpus": "Earliest written tradition; administrative texts; royal inscriptions; legal material; hymns; myths; epics; lexical lists; religious texts; mathematics; literary compositions. Cannot be replaced by Akkadian.",
+   "id": "sux",
+   "iso639_3": [
+    "sux"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "sumerian",
+   "name": "Sumerian",
+   "needs": [
+    "affix_chain",
+    "logogram",
+    "syllabary",
+    "unspaced"
+   ],
+   "scripts": [
+    "Xsux"
+   ],
+   "stage": null,
+   "status": {
+    "poster": "I",
+    "source": "poster I §1"
+   }
+  },
+  {
+   "corpus": "Babylonian and Assyrian literature; royal correspondence; legal texts; diplomatic material; mathematics; medicine; divination; astronomy; mythology; administrative records. Cannot be replaced by Sumerian.",
+   "id": "akk",
+   "iso639_3": [
+    "akk"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "semitic",
+   "name": "Akkadian",
+   "needs": [
+    "root_pattern",
+    "logogram",
+    "syllabary",
+    "unspaced"
+   ],
+   "scripts": [
+    "Xsux"
+   ],
+   "stage": null,
+   "status": {
+    "poster": "I",
+    "source": "poster I §1"
+   }
+  },
+  {
+   "corpus": "Royal and administrative texts; religious texts; funerary literature; mythology; medicine; mathematics; astronomy; magical texts; law; letters; narrative literature; inscriptions.",
+   "id": "egy",
+   "iso639_3": [
+    "egy",
+    "cop"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "egyptian",
+   "name": "Egyptian",
+   "needs": [
+    "root_pattern",
+    "logogram",
+    "vocalisation",
+    "unspaced"
+   ],
+   "scripts": [
+    "Egyp",
+    "Egyh",
+    "Egyd",
+    "Copt"
+   ],
+   "stage": null,
+   "status": {
+    "poster": "I",
+    "source": "poster I §1"
+   }
+  },
+  {
+   "corpus": "Early writing system; administrative and accounting material; substantial archaeological corpus. Underlying language unresolved.",
+   "id": "und-Pelm",
+   "iso639_3": [],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "not_built",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "undeciphered",
+   "name": "Proto-Elamite corpus",
+   "needs": [
+    "sign_sequence"
+   ],
+   "scripts": [
+    "Pelm"
+   ],
+   "stage": null,
+   "status": {
+    "poster": "U",
+    "source": "poster I §1"
+   }
+  },
+  {
+   "corpus": "Seals; sealings; tablets; pottery; other inscribed objects; recurring sign sequences; archaeological context. Underlying language unresolved.",
+   "id": "und-Inds",
+   "iso639_3": [],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "not_built",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "undeciphered",
+   "name": "Indus/Harappan corpus",
+   "needs": [
+    "sign_sequence"
+   ],
+   "note": "ISO 639-3 carries xiv, Indus Valley Language. A code does not establish a language; poster III retains this corpus without assigning one, so xiv is not adopted.",
+   "scripts": [
+    "Inds"
+   ],
+   "stage": null,
+   "status": {
+    "poster": "U",
+    "source": "poster I §1"
+   }
+  },
+  {
+   "corpus": "Royal archives; treaties; laws; administrative texts; rituals; mythology; diplomatic correspondence; historical narratives. Cannot be reconstructed from Sanskrit, Greek, Akkadian or Luwian.",
+   "id": "hit",
+   "iso639_3": [
+    "hit"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "anatolian",
+   "name": "Hittite",
+   "needs": [
+    "paradigm",
+    "logogram",
+    "syllabary",
+    "unspaced"
+   ],
+   "scripts": [
+    "Xsux"
+   ],
+   "stage": null,
+   "status": {
+    "poster": "I",
+    "source": "poster I §2"
+   }
+  },
+  {
+   "corpus": "Anatolian hieroglyphic inscriptions; royal inscriptions; political and geographical material; Late Bronze and Iron Age evidence. Keep provisionally.",
+   "id": "xlu",
+   "iso639_3": [
+    "xlu",
+    "hlu"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "anatolian",
+   "name": "Luwian",
+   "needs": [
+    "paradigm",
+    "logogram",
+    "syllabary",
+    "unspaced"
+   ],
+   "scripts": [
+    "Xsux",
+    "Hluw"
+   ],
+   "stage": null,
+   "status": {
+    "poster": "P",
+    "source": "poster I §2"
+   }
+  },
+  {
+   "corpus": "Hurrian religious material; rituals; mythology; bilingual material; Mitanni documentation. Not Indo-European, Semitic, Sumerian or Egyptian. Keep pending analysis.",
+   "id": "xhu",
+   "iso639_3": [
+    "xhu"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "hurro_urartian",
+   "name": "Hurrian",
+   "needs": [
+    "affix_chain",
+    "logogram",
+    "syllabary",
+    "unspaced"
+   ],
+   "scripts": [
+    "Xsux"
+   ],
+   "stage": null,
+   "status": {
+    "poster": "P",
+    "source": "poster I §2"
+   }
+  },
+  {
+   "corpus": "Mythological texts; religious literature; administrative material; correspondence; alphabetic Bronze Age Semitic evidence. Cannot be recovered from Biblical Hebrew.",
+   "id": "uga",
+   "iso639_3": [
+    "uga"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "semitic",
+   "name": "Ugaritic",
+   "needs": [
+    "root_pattern",
+    "vocalisation"
+   ],
+   "scripts": [
+    "Ugar"
+   ],
+   "stage": null,
+   "status": {
+    "poster": "I",
+    "source": "poster I §2"
+   }
+  },
+  {
+   "corpus": "Hebrew Bible; inscriptions; Second Temple material; rabbinic Hebrew; medieval philosophy; poetry; later Jewish intellectual corpus. Historical stages matter.",
+   "id": "hbo",
+   "iso639_3": [
+    "hbo"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "semitic",
+   "name": "Hebrew",
+   "needs": [
+    "root_pattern",
+    "vocalisation"
+   ],
+   "note": "Paleo-Hebrew is encoded under Phnx in Unicode.",
+   "scripts": [
+    "Hebr",
+    "Phnx"
+   ],
+   "stage": null,
+   "status": {
+    "poster": "I",
+    "source": "poster I §3"
+   }
+  },
+  {
+   "corpus": "Imperial Aramaic; Jewish Aramaic; Christian Aramaic; Syriac; administrative and diplomatic material; religious and philosophical literature. Model Aramaic to Syriac as a continuum.",
+   "id": "arc",
+   "iso639_3": [
+    "oar",
+    "arc",
+    "syc"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "semitic",
+   "name": "Aramaic",
+   "needs": [
+    "root_pattern",
+    "vocalisation"
+   ],
+   "scripts": [
+    "Armi",
+    "Hebr",
+    "Syrc"
+   ],
+   "stage": null,
+   "status": {
+    "poster": "I",
+    "source": "poster I §3"
+   }
+  },
+  {
+   "corpus": "Phoenician inscriptions; Punic inscriptions; North African material; colonial Mediterranean evidence. Potential compression with the wider family.",
+   "id": "phn",
+   "iso639_3": [
+    "phn",
+    "xpu"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "semitic",
+   "name": "Phoenician/Punic",
+   "needs": [
+    "root_pattern",
+    "vocalisation"
+   ],
+   "scripts": [
+    "Phnx"
+   ],
+   "stage": null,
+   "status": {
+    "poster": "P",
+    "source": "poster I §3"
+   }
+  },
+  {
+   "corpus": "Avesta; Zoroastrian liturgical language; archaic Iranian religious vocabulary.",
+   "id": "ave",
+   "iso639_3": [
+    "ave"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "iranian",
+   "name": "Avestan",
+   "needs": [
+    "paradigm"
+   ],
+   "scripts": [
+    "Avst"
+   ],
+   "stage": null,
+   "status": {
+    "poster": "I",
+    "source": "poster I §4"
+   }
+  },
+  {
+   "corpus": "Achaemenid royal inscriptions; imperial titulature; political ideology; administrative terminology.",
+   "id": "peo",
+   "iso639_3": [
+    "peo"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "iranian",
+   "name": "Old Persian",
+   "needs": [
+    "paradigm",
+    "syllabary"
+   ],
+   "scripts": [
+    "Xpeo"
+   ],
+   "stage": "Old",
+   "status": {
+    "poster": "P",
+    "source": "poster I §4"
+   }
+  },
+  {
+   "corpus": "Sasanian material; Zoroastrian literature; Pahlavi texts; legal, religious and philosophical material.",
+   "id": "pal",
+   "iso639_3": [
+    "pal"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "iranian",
+   "name": "Middle Persian",
+   "needs": [
+    "paradigm",
+    "vocalisation",
+    "logogram"
+   ],
+   "scripts": [
+    "Phli",
+    "Phlp",
+    "Phlv"
+   ],
+   "stage": "Middle",
+   "status": {
+    "poster": "I",
+    "source": "poster I §4"
+   }
+  },
+  {
+   "corpus": "Medieval philosophy; poetry; historiography; science; administration; literature; political thought. Arabic cannot replace the Persian corpus.",
+   "id": "fas",
+   "iso639_3": [
+    "fas"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "iranian",
+   "name": "New Persian",
+   "needs": [
+    "paradigm",
+    "vocalisation"
+   ],
+   "scripts": [
+    "Arab"
+   ],
+   "stage": "New",
+   "status": {
+    "poster": "I",
+    "source": "poster I §4"
+   }
+  },
+  {
+   "corpus": "Vedic Saṃhitās; Brāhmaṇas; Āraṇyakas; Upaniṣadic material; ritual and philosophical vocabulary.",
+   "id": "vsn",
+   "iso639_3": [
+    "vsn"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "indo_aryan",
+   "name": "Vedic Sanskrit",
+   "needs": [
+    "juncture",
+    "paradigm",
+    "compounding",
+    "abugida"
+   ],
+   "scripts": [
+    "Deva"
+   ],
+   "stage": "Vedic",
+   "status": {
+    "poster": "I",
+    "source": "poster I §5"
+   }
+  },
+  {
+   "corpus": "Mahābhārata; Rāmāyaṇa; associated traditions. Do not delete the stage.",
+   "id": "san-epic",
+   "iso639_3": [
+    "san"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "indo_aryan",
+   "name": "Epic Sanskrit",
+   "needs": [
+    "juncture",
+    "paradigm",
+    "compounding",
+    "abugida"
+   ],
+   "scripts": [
+    "Deva"
+   ],
+   "stage": "Epic",
+   "status": {
+    "poster": "P",
+    "source": "poster I §5"
+   }
+  },
+  {
+   "corpus": "Śāstra literature; philosophy; grammar; poetics; law; medicine; mathematics; astronomy; literature; political thought; religious and philosophical systems.",
+   "id": "cls",
+   "iso639_3": [
+    "cls"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "built",
+    "L4": "not_built"
+   },
+   "lineage": "indo_aryan",
+   "name": "Classical Sanskrit",
+   "needs": [
+    "juncture",
+    "paradigm",
+    "compounding",
+    "abugida"
+   ],
+   "scope_excludes": [
+    "consonant sandhi",
+    "visarga sandhi",
+    "e and o before a vowel other than a",
+    "compounds",
+    "any word outside a 12-word placeholder lexicon",
+    "Devanagari input (script pivot not bound)"
+   ],
+   "scripts": [
+    "Deva",
+    "Shrd",
+    "Gran",
+    "Sidd"
+   ],
+   "stage": "Classical",
+   "status": {
+    "poster": "I",
+    "source": "poster I §5"
+   }
+  },
+  {
+   "corpus": "Buddhist canon; commentarial literature; chronicles; philosophical and ethical literature.",
+   "id": "pli",
+   "iso639_3": [
+    "pli"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "indo_aryan",
+   "name": "Pāli",
+   "needs": [
+    "juncture",
+    "paradigm",
+    "compounding",
+    "abugida",
+    "unspaced"
+   ],
+   "scripts": [
+    "Sinh",
+    "Mymr",
+    "Thai",
+    "Latn"
+   ],
+   "stage": null,
+   "status": {
+    "poster": "I",
+    "source": "poster I §5"
+   }
+  },
+  {
+   "corpus": "Early Buddhist manuscripts; inscriptions; coins; Central Asian documents.",
+   "id": "pgd",
+   "iso639_3": [
+    "pgd"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "indo_aryan",
+   "name": "Gāndhārī",
+   "needs": [
+    "juncture",
+    "paradigm",
+    "compounding",
+    "abugida",
+    "unspaced"
+   ],
+   "scripts": [
+    "Khar"
+   ],
+   "stage": null,
+   "status": {
+    "poster": "P",
+    "source": "poster I §5"
+   }
+  },
+  {
+   "corpus": "Ardhamāgadhī; Māhārāṣṭrī; Śaurasenī; Māgadhī; other major Prakrit streams.",
+   "id": "prakrit",
+   "iso639_3": [
+    "pka",
+    "pmh",
+    "psu"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "indo_aryan",
+   "name": "Prakrits",
+   "needs": [
+    "juncture",
+    "paradigm",
+    "compounding",
+    "abugida",
+    "unspaced"
+   ],
+   "note": "Māgadhī has no ISO 639-3 code; pra is an ISO 639-2 collective code and is not used.",
+   "scripts": [
+    "Brah",
+    "Deva"
+   ],
+   "stage": null,
+   "status": {
+    "poster": "P",
+    "source": "poster I §5"
+   }
+  },
+  {
+   "corpus": "Sangam literature; classical poetry; grammar; ethics; devotional literature; inscriptions; scientific and religious traditions.",
+   "id": "tam",
+   "iso639_3": [
+    "tam",
+    "oty"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "dravidian",
+   "name": "Tamil",
+   "needs": [
+    "affix_chain",
+    "juncture",
+    "abugida",
+    "unspaced"
+   ],
+   "scripts": [
+    "Taml",
+    "Brah"
+   ],
+   "stage": null,
+   "status": {
+    "poster": "I",
+    "source": "poster I §6"
+   }
+  },
+  {
+   "corpus": "Early inscriptions; classical literature; Jain literature; medieval philosophical and religious literature.",
+   "id": "kan",
+   "iso639_3": [
+    "kan"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "dravidian",
+   "name": "Kannada",
+   "needs": [
+    "affix_chain",
+    "juncture",
+    "abugida"
+   ],
+   "scripts": [
+    "Knda"
+   ],
+   "stage": null,
+   "status": {
+    "poster": "P",
+    "source": "poster I §6"
+   }
+  },
+  {
+   "corpus": "Inscriptions; classical literature; devotional literature; court literature; scientific and religious traditions.",
+   "id": "tel",
+   "iso639_3": [
+    "tel"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "dravidian",
+   "name": "Telugu",
+   "needs": [
+    "affix_chain",
+    "juncture",
+    "abugida"
+   ],
+   "scripts": [
+    "Telu"
+   ],
+   "stage": null,
+   "status": {
+    "poster": "P",
+    "source": "poster I §6"
+   }
+  },
+  {
+   "corpus": "Medieval literature; regional literature; intellectual and religious traditions; later corpus.",
+   "id": "mal",
+   "iso639_3": [
+    "mal"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "dravidian",
+   "name": "Malayalam",
+   "needs": [
+    "affix_chain",
+    "juncture",
+    "abugida"
+   ],
+   "scripts": [
+    "Mlym"
+   ],
+   "stage": null,
+   "status": {
+    "poster": "P",
+    "source": "poster I §6"
+   }
+  },
+  {
+   "corpus": "Linear B tablets; Bronze Age administrative vocabulary.",
+   "id": "gmy",
+   "iso639_3": [
+    "gmy"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "hellenic",
+   "name": "Mycenaean Greek",
+   "needs": [
+    "paradigm",
+    "logogram",
+    "syllabary"
+   ],
+   "scripts": [
+    "Linb"
+   ],
+   "stage": "Mycenaean",
+   "status": {
+    "poster": "S",
+    "source": "poster I §7"
+   }
+  },
+  {
+   "corpus": "Philosophy; mathematics; political theory; drama; history; medicine; science; literature.",
+   "id": "grc",
+   "iso639_3": [
+    "grc"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "hellenic",
+   "name": "Archaic/Classical Greek",
+   "needs": [
+    "paradigm"
+   ],
+   "scripts": [
+    "Grek"
+   ],
+   "stage": "Archaic/Classical",
+   "status": {
+    "poster": "I",
+    "source": "poster I §7"
+   }
+  },
+  {
+   "corpus": "Hellenistic intellectual and religious corpus; Septuagint; New Testament; scientific and administrative material.",
+   "id": "grc-koine",
+   "iso639_3": [
+    "grc"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "hellenic",
+   "name": "Koine Greek",
+   "needs": [
+    "paradigm"
+   ],
+   "scripts": [
+    "Grek"
+   ],
+   "stage": "Koine",
+   "status": {
+    "poster": "S",
+    "source": "poster I §7"
+   }
+  },
+  {
+   "corpus": "Byzantine philosophy; theology; historiography; science; administration.",
+   "id": "grc-byz",
+   "iso639_3": [
+    "grc"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "hellenic",
+   "name": "Byzantine Greek",
+   "needs": [
+    "paradigm"
+   ],
+   "scripts": [
+    "Grek"
+   ],
+   "stage": "Byzantine",
+   "status": {
+    "poster": "S",
+    "source": "poster I §7"
+   }
+  },
+  {
+   "corpus": "Roman law; philosophy; history; administration; Christian Latin; medieval scholarship; early modern science; European intellectual literature.",
+   "id": "lat",
+   "iso639_3": [
+    "lat"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "italic",
+   "name": "Latin",
+   "needs": [
+    "paradigm"
+   ],
+   "scripts": [
+    "Latn"
+   ],
+   "stage": null,
+   "status": {
+    "poster": "I",
+    "source": "poster I §7"
+   }
+  },
+  {
+   "corpus": "Oracle-bone inscriptions; bronze inscriptions; early historical texts.",
+   "id": "och",
+   "iso639_3": [
+    "och"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "sinitic",
+   "name": "Early/Old Chinese",
+   "needs": [
+    "logogram",
+    "unspaced"
+   ],
+   "scripts": [
+    "Hani"
+   ],
+   "stage": "Early/Old",
+   "status": {
+    "poster": "I",
+    "source": "poster I §8"
+   }
+  },
+  {
+   "corpus": "Confucianism; Daoism; Mohism; Legalism; historiography; mathematics; medicine; political thought; literature.",
+   "id": "lzh",
+   "iso639_3": [
+    "lzh"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "sinitic",
+   "name": "Classical Chinese",
+   "needs": [
+    "logogram",
+    "unspaced"
+   ],
+   "scripts": [
+    "Hani"
+   ],
+   "stage": "Classical",
+   "status": {
+    "poster": "I",
+    "source": "poster I §8"
+   }
+  },
+  {
+   "corpus": "Phonological reconstruction; dictionaries; Buddhist translation; historical linguistics.",
+   "id": "ltc",
+   "iso639_3": [
+    "ltc"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "sinitic",
+   "name": "Middle Chinese",
+   "needs": [
+    "logogram",
+    "unspaced"
+   ],
+   "note": "ISO 639-3 ltc is Late Middle Chinese; Early Middle Chinese has no code.",
+   "scripts": [
+    "Hani"
+   ],
+   "stage": "Middle",
+   "status": {
+    "poster": "S",
+    "source": "poster I §8"
+   }
+  },
+  {
+   "corpus": "Later literary and vernacular Chinese.",
+   "id": "zho-later",
+   "iso639_3": [
+    "zho"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "sinitic",
+   "name": "Later Chinese",
+   "needs": [
+    "logogram",
+    "unspaced"
+   ],
+   "scripts": [
+    "Hani"
+   ],
+   "stage": "Later",
+   "status": {
+    "poster": "S",
+    "source": "poster I §8"
+   }
+  },
+  {
+   "corpus": "Historical stage.",
+   "id": "ara-early",
+   "iso639_3": [
+    "ara"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "semitic",
+   "name": "Early Arabic",
+   "needs": [
+    "root_pattern",
+    "vocalisation"
+   ],
+   "scripts": [
+    "Arab"
+   ],
+   "stage": "Early",
+   "status": {
+    "poster": "S",
+    "source": "poster I §9"
+   }
+  },
+  {
+   "corpus": "Qur'ānic tradition; hadith; theology; philosophy; mathematics; astronomy; law; linguistics.",
+   "id": "ara-cla",
+   "iso639_3": [
+    "ara"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "semitic",
+   "name": "Classical Arabic",
+   "needs": [
+    "root_pattern",
+    "vocalisation"
+   ],
+   "scripts": [
+    "Arab"
+   ],
+   "stage": "Classical",
+   "status": {
+    "poster": "I",
+    "source": "poster I §9"
+   }
+  },
+  {
+   "corpus": "Literature; science; philosophy; administration.",
+   "id": "ara-med",
+   "iso639_3": [
+    "ara"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "semitic",
+   "name": "Medieval Arabic",
+   "needs": [
+    "root_pattern",
+    "vocalisation"
+   ],
+   "scripts": [
+    "Arab"
+   ],
+   "stage": "Medieval",
+   "status": {
+    "poster": "I",
+    "source": "poster I §9"
+   }
+  },
+  {
+   "corpus": "Modern intellectual and literary corpus.",
+   "id": "arb",
+   "iso639_3": [
+    "arb"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "semitic",
+   "name": "Modern Standard Arabic",
+   "needs": [
+    "root_pattern",
+    "vocalisation"
+   ],
+   "scripts": [
+    "Arab"
+   ],
+   "stage": "Modern",
+   "status": {
+    "poster": "I",
+    "source": "poster I §9"
+   }
+  },
+  {
+   "corpus": "Selected vernaculars with unique corpora.",
+   "id": "ara-vern",
+   "iso639_3": [
+    "ara"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "semitic",
+   "name": "Arabic vernaculars",
+   "needs": [
+    "root_pattern",
+    "vocalisation"
+   ],
+   "scripts": [
+    "Arab"
+   ],
+   "stage": "Vernacular",
+   "status": {
+    "poster": "P",
+    "source": "poster I §9"
+   }
+  },
+  {
+   "corpus": "Ethiopian Christian literature; biblical translations; theology; historiography; inscriptions.",
+   "id": "gez",
+   "iso639_3": [
+    "gez"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "semitic",
+   "name": "Ge'ez",
+   "needs": [
+    "root_pattern",
+    "abugida"
+   ],
+   "scripts": [
+    "Ethi"
+   ],
+   "stage": null,
+   "status": {
+    "poster": "P",
+    "source": "poster I §10"
+   }
+  },
+  {
+   "corpus": "Modern Amharic and others need independent testing.",
+   "id": "amh",
+   "iso639_3": [
+    "amh",
+    "tir"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "semitic",
+   "name": "Modern Ethiopian",
+   "needs": [
+    "root_pattern",
+    "abugida"
+   ],
+   "scripts": [
+    "Ethi"
+   ],
+   "stage": "Modern",
+   "status": {
+    "poster": "P",
+    "source": "poster I §10"
+   }
+  },
+  {
+   "corpus": "Historiography; theology; literature; manuscript tradition.",
+   "id": "xcl",
+   "iso639_3": [
+    "xcl",
+    "hye"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "armenian",
+   "name": "Armenian",
+   "needs": [
+    "paradigm"
+   ],
+   "scripts": [
+    "Armn"
+   ],
+   "stage": null,
+   "status": {
+    "poster": "I",
+    "source": "poster I §11"
+   }
+  },
+  {
+   "corpus": "Literature; Christian theology; historiography; regional intellectual traditions.",
+   "id": "kat",
+   "iso639_3": [
+    "oge",
+    "kat"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "kartvelian",
+   "name": "Georgian",
+   "needs": [
+    "affix_chain"
+   ],
+   "scripts": [
+    "Geor"
+   ],
+   "stage": null,
+   "status": {
+    "poster": "P",
+    "source": "poster I §12"
+   }
+  },
+  {
+   "corpus": "Buddhist philosophy; canonical translations; indigenous literature; medicine; history; religious literature.",
+   "id": "xct",
+   "iso639_3": [
+    "xct",
+    "bod"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "bodish",
+   "name": "Tibetan",
+   "needs": [
+    "affix_chain",
+    "abugida",
+    "unspaced"
+   ],
+   "scripts": [
+    "Tibt"
+   ],
+   "stage": null,
+   "status": {
+    "poster": "I",
+    "source": "poster I §13"
+   }
+  },
+  {
+   "corpus": "Orkhon inscriptions; early political and social terminology.",
+   "id": "otk",
+   "iso639_3": [
+    "otk"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "turkic",
+   "name": "Old Turkic",
+   "needs": [
+    "affix_chain"
+   ],
+   "note": "The poster labels this row Ge'ez; see registry/conflicts.json C-01.",
+   "scripts": [
+    "Orkh"
+   ],
+   "stage": "Old",
+   "status": {
+    "poster": "P",
+    "source": "poster I §14"
+   }
+  },
+  {
+   "corpus": "Central Asian literary and philosophical corpus.",
+   "id": "chg",
+   "iso639_3": [
+    "chg"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "turkic",
+   "name": "Chagatai",
+   "needs": [
+    "affix_chain",
+    "vocalisation"
+   ],
+   "scripts": [
+    "Arab"
+   ],
+   "stage": null,
+   "status": {
+    "poster": "P",
+    "source": "poster I §14"
+   }
+  },
+  {
+   "corpus": "Administration; law; literature; historiography; science; political thought.",
+   "id": "ota",
+   "iso639_3": [
+    "ota"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "turkic",
+   "name": "Ottoman Turkish",
+   "needs": [
+    "affix_chain",
+    "vocalisation"
+   ],
+   "scripts": [
+    "Arab"
+   ],
+   "stage": null,
+   "status": {
+    "poster": "I",
+    "source": "poster I §14"
+   }
+  },
+  {
+   "corpus": "Modern corpus.",
+   "id": "tur",
+   "iso639_3": [
+    "tur"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "turkic",
+   "name": "Modern Turkish",
+   "needs": [
+    "affix_chain"
+   ],
+   "scripts": [
+    "Latn"
+   ],
+   "stage": "Modern",
+   "status": {
+    "poster": "P",
+    "source": "poster I §14"
+   }
+  },
+  {
+   "corpus": "Early poetry; chronicles; court literature; Shinto-related material.",
+   "id": "ojp",
+   "iso639_3": [
+    "ojp"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "japonic",
+   "name": "Old/Classical Japanese",
+   "needs": [
+    "affix_chain",
+    "logogram",
+    "unspaced",
+    "syllabary"
+   ],
+   "scripts": [
+    "Hani",
+    "Hira",
+    "Kana"
+   ],
+   "stage": "Old/Classical",
+   "status": {
+    "poster": "I",
+    "source": "poster I §15"
+   }
+  },
+  {
+   "corpus": "Medieval literature.",
+   "id": "jpn-med",
+   "iso639_3": [
+    "jpn"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "japonic",
+   "name": "Medieval Japanese",
+   "needs": [
+    "affix_chain",
+    "logogram",
+    "unspaced",
+    "syllabary"
+   ],
+   "scripts": [
+    "Hani",
+    "Hira",
+    "Kana"
+   ],
+   "stage": "Medieval",
+   "status": {
+    "poster": "P",
+    "source": "poster I §15"
+   }
+  },
+  {
+   "corpus": "Early modern corpus.",
+   "id": "jpn-emod",
+   "iso639_3": [
+    "jpn"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "japonic",
+   "name": "Early Modern Japanese",
+   "needs": [
+    "affix_chain",
+    "logogram",
+    "unspaced",
+    "syllabary"
+   ],
+   "scripts": [
+    "Hani",
+    "Hira",
+    "Kana"
+   ],
+   "stage": "Early Modern",
+   "status": {
+    "poster": "P",
+    "source": "poster I §15"
+   }
+  },
+  {
+   "corpus": "Modern literature and intellectual corpus.",
+   "id": "jpn",
+   "iso639_3": [
+    "jpn"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "japonic",
+   "name": "Modern Japanese",
+   "needs": [
+    "affix_chain",
+    "logogram",
+    "unspaced",
+    "syllabary"
+   ],
+   "scripts": [
+    "Hani",
+    "Hira",
+    "Kana"
+   ],
+   "stage": "Modern",
+   "status": {
+    "poster": "I",
+    "source": "poster I §15"
+   }
+  },
+  {
+   "corpus": "Early material.",
+   "id": "oko",
+   "iso639_3": [
+    "oko"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "koreanic",
+   "name": "Historical Korean",
+   "needs": [
+    "affix_chain",
+    "logogram",
+    "unspaced"
+   ],
+   "scripts": [
+    "Hani"
+   ],
+   "stage": "Historical",
+   "status": {
+    "poster": "P",
+    "source": "poster I §16"
+   }
+  },
+  {
+   "corpus": "Literary and historical material.",
+   "id": "okm",
+   "iso639_3": [
+    "okm"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "koreanic",
+   "name": "Middle Korean",
+   "needs": [
+    "affix_chain",
+    "logogram",
+    "unspaced"
+   ],
+   "scripts": [
+    "Hang",
+    "Hani"
+   ],
+   "stage": "Middle",
+   "status": {
+    "poster": "I",
+    "source": "poster I §16"
+   }
+  },
+  {
+   "corpus": "Modern intellectual corpus.",
+   "id": "kor",
+   "iso639_3": [
+    "kor"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "koreanic",
+   "name": "Modern Korean",
+   "needs": [
+    "affix_chain",
+    "logogram",
+    "unspaced"
+   ],
+   "scripts": [
+    "Hang",
+    "Hani"
+   ],
+   "stage": "Modern",
+   "status": {
+    "poster": "I",
+    "source": "poster I §16"
+   }
+  },
+  {
+   "corpus": "Retained if unique philosophical, literary or scientific traditions exist only in it; the minimum test is corpus-based.",
+   "id": "hin",
+   "iso639_3": [
+    "hin"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "indo_aryan",
+   "name": "Hindi/Hindavi",
+   "needs": [
+    "juncture",
+    "paradigm",
+    "compounding",
+    "abugida"
+   ],
+   "scripts": [
+    "Deva"
+   ],
+   "stage": null,
+   "status": {
+    "poster": "P",
+    "source": "poster I §17"
+   }
+  },
+  {
+   "corpus": "Retained if unique philosophical, literary or scientific traditions exist only in it; the minimum test is corpus-based.",
+   "id": "urd",
+   "iso639_3": [
+    "urd"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "indo_aryan",
+   "name": "Urdu",
+   "needs": [
+    "juncture",
+    "paradigm",
+    "compounding",
+    "vocalisation"
+   ],
+   "scripts": [
+    "Arab"
+   ],
+   "stage": null,
+   "status": {
+    "poster": "P",
+    "source": "poster I §17"
+   }
+  },
+  {
+   "corpus": "Retained if unique philosophical, literary or scientific traditions exist only in it; the minimum test is corpus-based.",
+   "id": "ben",
+   "iso639_3": [
+    "ben"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "indo_aryan",
+   "name": "Bengali",
+   "needs": [
+    "juncture",
+    "paradigm",
+    "compounding",
+    "abugida"
+   ],
+   "scripts": [
+    "Beng"
+   ],
+   "stage": null,
+   "status": {
+    "poster": "P",
+    "source": "poster I §17"
+   }
+  },
+  {
+   "corpus": "Retained if unique philosophical, literary or scientific traditions exist only in it; the minimum test is corpus-based.",
+   "id": "mar",
+   "iso639_3": [
+    "mar"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "indo_aryan",
+   "name": "Marathi",
+   "needs": [
+    "juncture",
+    "paradigm",
+    "compounding",
+    "abugida"
+   ],
+   "scripts": [
+    "Deva",
+    "Modi"
+   ],
+   "stage": null,
+   "status": {
+    "poster": "P",
+    "source": "poster I §17"
+   }
+  },
+  {
+   "corpus": "Retained if unique philosophical, literary or scientific traditions exist only in it; the minimum test is corpus-based.",
+   "id": "guj",
+   "iso639_3": [
+    "guj"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "indo_aryan",
+   "name": "Gujarati",
+   "needs": [
+    "juncture",
+    "paradigm",
+    "compounding",
+    "abugida"
+   ],
+   "scripts": [
+    "Gujr"
+   ],
+   "stage": null,
+   "status": {
+    "poster": "P",
+    "source": "poster I §17"
+   }
+  },
+  {
+   "corpus": "Retained if unique philosophical, literary or scientific traditions exist only in it; the minimum test is corpus-based.",
+   "id": "pan",
+   "iso639_3": [
+    "pan"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "indo_aryan",
+   "name": "Punjabi",
+   "needs": [
+    "juncture",
+    "paradigm",
+    "compounding",
+    "abugida",
+    "vocalisation"
+   ],
+   "scripts": [
+    "Guru",
+    "Arab"
+   ],
+   "stage": null,
+   "status": {
+    "poster": "P",
+    "source": "poster I §17"
+   }
+  },
+  {
+   "corpus": "Retained if unique philosophical, literary or scientific traditions exist only in it; the minimum test is corpus-based.",
+   "id": "asm",
+   "iso639_3": [
+    "asm"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "indo_aryan",
+   "name": "Assamese",
+   "needs": [
+    "juncture",
+    "paradigm",
+    "compounding",
+    "abugida"
+   ],
+   "scripts": [
+    "Beng"
+   ],
+   "stage": null,
+   "status": {
+    "poster": "P",
+    "source": "poster I §17"
+   }
+  },
+  {
+   "corpus": "Retained if unique philosophical, literary or scientific traditions exist only in it; the minimum test is corpus-based.",
+   "id": "ory",
+   "iso639_3": [
+    "ory"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "indo_aryan",
+   "name": "Odia",
+   "needs": [
+    "juncture",
+    "paradigm",
+    "compounding",
+    "abugida"
+   ],
+   "scripts": [
+    "Orya"
+   ],
+   "stage": null,
+   "status": {
+    "poster": "P",
+    "source": "poster I §17"
+   }
+  },
+  {
+   "corpus": "Retained if unique philosophical, literary or scientific traditions exist only in it; the minimum test is corpus-based.",
+   "id": "npi",
+   "iso639_3": [
+    "npi"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "indo_aryan",
+   "name": "Nepali",
+   "needs": [
+    "juncture",
+    "paradigm",
+    "compounding",
+    "abugida"
+   ],
+   "scripts": [
+    "Deva"
+   ],
+   "stage": null,
+   "status": {
+    "poster": "P",
+    "source": "poster I §17"
+   }
+  },
+  {
+   "corpus": "Retained if unique philosophical, literary or scientific traditions exist only in it; the minimum test is corpus-based.",
+   "id": "sin",
+   "iso639_3": [
+    "sin"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "indo_aryan",
+   "name": "Sinhala",
+   "needs": [
+    "juncture",
+    "paradigm",
+    "compounding",
+    "abugida"
+   ],
+   "scripts": [
+    "Sinh"
+   ],
+   "stage": null,
+   "status": {
+    "poster": "P",
+    "source": "poster I §17"
+   }
+  },
+  {
+   "corpus": "Retained if unique philosophical, literary or scientific traditions exist only in it; the minimum test is corpus-based.",
+   "id": "snd",
+   "iso639_3": [
+    "snd"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "indo_aryan",
+   "name": "Sindhi",
+   "needs": [
+    "juncture",
+    "paradigm",
+    "compounding",
+    "vocalisation",
+    "abugida"
+   ],
+   "scripts": [
+    "Arab",
+    "Deva",
+    "Sind"
+   ],
+   "stage": null,
+   "status": {
+    "poster": "P",
+    "source": "poster I §17"
+   }
+  },
+  {
+   "corpus": "Retained if unique philosophical, literary or scientific traditions exist only in it; the minimum test is corpus-based.",
+   "id": "kas",
+   "iso639_3": [
+    "kas"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "indo_aryan",
+   "name": "Kashmiri",
+   "needs": [
+    "juncture",
+    "paradigm",
+    "compounding",
+    "vocalisation",
+    "abugida"
+   ],
+   "scripts": [
+    "Arab",
+    "Deva",
+    "Shrd"
+   ],
+   "stage": null,
+   "status": {
+    "poster": "P",
+    "source": "poster I §17"
+   }
+  },
+  {
+   "corpus": "Retained if unique philosophical, literary or scientific traditions exist only in it; the minimum test is corpus-based.",
+   "id": "kok",
+   "iso639_3": [
+    "kok"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "indo_aryan",
+   "name": "Konkani",
+   "needs": [
+    "juncture",
+    "paradigm",
+    "compounding",
+    "abugida"
+   ],
+   "scripts": [
+    "Deva",
+    "Latn",
+    "Knda"
+   ],
+   "stage": null,
+   "status": {
+    "poster": "P",
+    "source": "poster I §17"
+   }
+  },
+  {
+   "corpus": "Renaissance; philosophy; literature; science; political thought.",
+   "id": "ita",
+   "iso639_3": [
+    "ita"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "italic",
+   "name": "Italian",
+   "needs": [
+    "paradigm"
+   ],
+   "scripts": [
+    "Latn"
+   ],
+   "stage": null,
+   "status": {
+    "poster": "P",
+    "source": "poster I §18"
+   }
+  },
+  {
+   "corpus": "Enlightenment; philosophy; mathematics; science; political theory; literature.",
+   "id": "fra",
+   "iso639_3": [
+    "fra"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "italic",
+   "name": "French",
+   "needs": [
+    "paradigm"
+   ],
+   "scripts": [
+    "Latn"
+   ],
+   "stage": null,
+   "status": {
+    "poster": "I",
+    "source": "poster I §18"
+   }
+  },
+  {
+   "corpus": "Kant, Hegel, Marx, Nietzsche; phenomenology; science; economics.",
+   "id": "deu",
+   "iso639_3": [
+    "deu"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "germanic",
+   "name": "German",
+   "needs": [
+    "paradigm",
+    "compounding"
+   ],
+   "scripts": [
+    "Latn"
+   ],
+   "stage": null,
+   "status": {
+    "poster": "I",
+    "source": "poster I §18"
+   }
+  },
+  {
+   "corpus": "Modern science; philosophy; political theory; economics; literature.",
+   "id": "eng",
+   "iso639_3": [
+    "eng"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "germanic",
+   "name": "English",
+   "needs": [
+    "paradigm",
+    "compounding"
+   ],
+   "scripts": [
+    "Latn"
+   ],
+   "stage": null,
+   "status": {
+    "poster": "I",
+    "source": "poster I §18"
+   }
+  },
+  {
+   "corpus": "Not stated per language; the poster applies the same corpus test to every European language.",
+   "id": "spa",
+   "iso639_3": [
+    "spa"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "italic",
+   "name": "Spanish",
+   "needs": [
+    "paradigm"
+   ],
+   "scripts": [
+    "Latn"
+   ],
+   "stage": null,
+   "status": {
+    "poster": "P",
+    "source": "poster I §18"
+   }
+  },
+  {
+   "corpus": "Not stated per language; the poster applies the same corpus test to every European language.",
+   "id": "por",
+   "iso639_3": [
+    "por"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "italic",
+   "name": "Portuguese",
+   "needs": [
+    "paradigm"
+   ],
+   "scripts": [
+    "Latn"
+   ],
+   "stage": null,
+   "status": {
+    "poster": "P",
+    "source": "poster I §18"
+   }
+  },
+  {
+   "corpus": "Not stated per language; the poster applies the same corpus test to every European language.",
+   "id": "nld",
+   "iso639_3": [
+    "nld"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "germanic",
+   "name": "Dutch",
+   "needs": [
+    "paradigm",
+    "compounding"
+   ],
+   "scripts": [
+    "Latn"
+   ],
+   "stage": null,
+   "status": {
+    "poster": "P",
+    "source": "poster I §18"
+   }
+  },
+  {
+   "corpus": "Not stated per language; the poster applies the same corpus test to every European language.",
+   "id": "rus",
+   "iso639_3": [
+    "rus"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "balto_slavic",
+   "name": "Russian",
+   "needs": [
+    "paradigm"
+   ],
+   "scripts": [
+    "Cyrl"
+   ],
+   "stage": null,
+   "status": {
+    "poster": "I",
+    "source": "poster I §18"
+   }
+  },
+  {
+   "corpus": "Not stated per language; the poster applies the same corpus test to every European language.",
+   "id": "pol",
+   "iso639_3": [
+    "pol"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "balto_slavic",
+   "name": "Polish",
+   "needs": [
+    "paradigm"
+   ],
+   "scripts": [
+    "Latn"
+   ],
+   "stage": null,
+   "status": {
+    "poster": "P",
+    "source": "poster I §18"
+   }
+  },
+  {
+   "corpus": "Not stated on the posters' language rows.",
+   "id": "elx",
+   "iso639_3": [
+    "elx"
+   ],
+   "layers": {
+    "L0": "not_built",
+    "L1": "not_built",
+    "L2": "wired_unproven",
+    "L3m": "not_built",
+    "L3s": "not_built",
+    "L4": "not_built"
+   },
+   "lineage": "elamite",
+   "name": "Elamite",
+   "needs": [
+    "affix_chain",
+    "logogram",
+    "syllabary",
+    "unspaced"
+   ],
+   "scripts": [
+    "Xsux"
+   ],
+   "stage": null,
+   "status": {
+    "poster": "P",
+    "source": "poster I §19; poster III L1"
+   }
+  }
+ ],
+ "packages": [
+  {
+   "deps": [],
+   "id": "P-SAN-01",
+   "labels": [
+    "needs:code"
+   ],
+   "title": "Classical Sanskrit: Devanagari input through the Romenagri tables to the segmenter's internal form"
+  },
+  {
+   "deps": [
+    "P-SAN-03"
+   ],
+   "id": "P-SAN-02",
+   "labels": [
+    "needs:code"
+   ],
+   "title": "Classical Sanskrit: e and o before a vowel other than a, which raises today"
+  },
+  {
+   "deps": [],
+   "id": "P-SAN-03",
+   "labels": [
+    "needs:proof"
+   ],
+   "title": "Source the Adhyaya 6.1 and 8 sandhi sutras from an openly licensed edition, with provenance"
+  },
+  {
+   "deps": [],
+   "id": "P-SAN-04",
+   "labels": [
+    "needs:proof",
+    "needs:legal"
+   ],
+   "title": "A Sanskrit lexicon from an openly licensed source, licence recorded"
+  },
+  {
+   "deps": [
+    "P-SAN-03",
+    "P-SAN-04"
+   ],
+   "id": "P-SAN-05",
+   "labels": [
+    "needs:code"
+   ],
+   "title": "Classical Sanskrit morphology against sourced vibhakti rules"
+  },
+  {
+   "deps": [
+    "P-SAN-05",
+    "P-L4-01"
+   ],
+   "id": "P-SAN-06",
+   "labels": [
+    "needs:code"
+   ],
+   "title": "Karaka relations for Classical Sanskrit"
+  },
+  {
+   "deps": [
+    "P-SAN-04"
+   ],
+   "id": "P-SAN-07",
+   "labels": [
+    "needs:code"
+   ],
+   "title": "A segmentation ranking that orders readings without discarding any"
+  },
+  {
+   "deps": [
+    "P-SAN-04"
+   ],
+   "id": "P-SAN-08",
+   "labels": [
+    "needs:proof"
+   ],
+   "title": "Validate the vowel-junction segmenter on Vedic and Epic text before binding it to those stages"
+  },
+  {
+   "deps": [],
+   "id": "P-LEG-01",
+   "labels": [
+    "needs:legal",
+    "needs:human"
+   ],
+   "title": "Permission from Sanskrit Documents for the 152-sutra compilation, or the text re-sourced from an openly licensed edition"
+  },
+  {
+   "deps": [],
+   "id": "P-COV-01",
+   "labels": [
+    "needs:human",
+    "needs:proof"
+   ],
+   "title": "First coverage rows, each with evidence, for the elimination rule"
+  },
+  {
+   "deps": [],
+   "id": "P-POS-01",
+   "labels": [
+    "needs:human"
+   ],
+   "title": "The author rules on each poster conflict"
+  },
+  {
+   "deps": [],
+   "id": "P-SRC-01",
+   "labels": [
+    "needs:proof"
+   ],
+   "title": "Each lineage's typology and each node's own grammatical tradition, with a citable edition"
+  },
+  {
+   "deps": [],
+   "id": "P-L0-01",
+   "labels": [
+    "needs:proof",
+    "needs:code"
+   ],
+   "title": "A phonological base per node (ILM layer L0), reconstructed values tagged E2 or E3"
+  },
+  {
+   "deps": [],
+   "id": "P-L1-01",
+   "labels": [
+    "needs:code"
+   ],
+   "title": "A script pivot for scripts without a Romenagri table"
+  },
+  {
+   "deps": [],
+   "id": "P-L4-01",
+   "labels": [
+    "needs:code"
+   ],
+   "title": "Dependency relations with Universal Dependencies labels"
+  },
+  {
+   "deps": [],
+   "id": "P-UD-01",
+   "labels": [
+    "needs:testing"
+   ],
+   "title": "Validate the CoNLL-U output with the Universal Dependencies validator"
+  },
+  {
+   "deps": [],
+   "id": "P-SPINE-01",
+   "labels": [
+    "needs:code"
+   ],
+   "title": "dhancha declares this descriptor and the reverse correlation edge"
+  },
+  {
+   "deps": [],
+   "id": "P-ILM-01",
+   "labels": [
+    "needs:code"
+   ],
+   "title": "The ILM layer repositories declare their correspondence to layers L0 to L4 here"
+  },
+  {
+   "deps": [
+    "P-LIN-dravidian"
+   ],
+   "id": "P-ENG-01",
+   "labels": [
+    "needs:code"
+   ],
+   "title": "Extract the juncture search from the Sanskrit node once a second language needs it"
+  },
+  {
+   "deps": [],
+   "id": "P-ENG-02",
+   "labels": [
+    "needs:code"
+   ],
+   "title": "Engine: paradigm. Analyse fusional inflection against stem and ending paradigms."
+  },
+  {
+   "deps": [],
+   "id": "P-ENG-03",
+   "labels": [
+    "needs:code"
+   ],
+   "title": "Engine: compounding. Split and classify compounds."
+  },
+  {
+   "deps": [],
+   "id": "P-ENG-04",
+   "labels": [
+    "needs:code"
+   ],
+   "title": "Engine: root_pattern. Extract consonantal roots and match vocalic and affixal templates."
+  },
+  {
+   "deps": [],
+   "id": "P-ENG-05",
+   "labels": [
+    "needs:code"
+   ],
+   "title": "Engine: affix_chain. Peel ordered affix chains, applying harmony where the language has it."
+  },
+  {
+   "deps": [],
+   "id": "P-ENG-06",
+   "labels": [
+    "needs:code"
+   ],
+   "title": "Engine: logogram. Resolve logograms, heterograms and determinatives to readings."
+  },
+  {
+   "deps": [],
+   "id": "P-ENG-07",
+   "labels": [
+    "needs:code"
+   ],
+   "title": "Engine: syllabary. Map syllabic signs to values and keep every reading of a polyphonous sign."
+  },
+  {
+   "deps": [],
+   "id": "P-ENG-08",
+   "labels": [
+    "needs:code"
+   ],
+   "title": "Engine: vocalisation. Restore vowels the script leaves unwritten, returning every admissible reading."
+  },
+  {
+   "deps": [],
+   "id": "P-ENG-09",
+   "labels": [
+    "needs:code"
+   ],
+   "title": "Engine: abugida. Resolve inherent vowels, conjuncts and vowel signs, through the Romenagri script tables."
+  },
+  {
+   "deps": [],
+   "id": "P-ENG-10",
+   "labels": [
+    "needs:code"
+   ],
+   "title": "Engine: unspaced. Find word boundaries in text the script does not divide into words."
+  },
+  {
+   "deps": [],
+   "id": "P-ENG-11",
+   "labels": [
+    "needs:code"
+   ],
+   "title": "Engine: sign_sequence. Tokenise and count signs of an undeciphered or proto-writing corpus without assigning a language."
+  },
+  {
+   "deps": [],
+   "id": "P-LIN-indo_aryan",
+   "labels": [
+    "needs:proof",
+    "needs:code"
+   ],
+   "title": "A second Indo-Aryan node (Pali or a Prakrit): its junction table sourced and bound"
+  },
+  {
+   "deps": [],
+   "id": "P-LIN-iranian",
+   "labels": [
+    "needs:proof",
+    "needs:code"
+   ],
+   "title": "First Iranian node: one sourced batch of rules and a lexicon under an open licence, bound through the registry"
+  },
+  {
+   "deps": [],
+   "id": "P-LIN-anatolian",
+   "labels": [
+    "needs:proof",
+    "needs:code"
+   ],
+   "title": "First Anatolian node: one sourced batch of rules and a lexicon under an open licence, bound through the registry"
+  },
+  {
+   "deps": [],
+   "id": "P-LIN-hellenic",
+   "labels": [
+    "needs:proof",
+    "needs:code"
+   ],
+   "title": "First Hellenic node: one sourced batch of rules and a lexicon under an open licence, bound through the registry"
+  },
+  {
+   "deps": [],
+   "id": "P-LIN-italic",
+   "labels": [
+    "needs:proof",
+    "needs:code"
+   ],
+   "title": "First Italic node: one sourced batch of rules and a lexicon under an open licence, bound through the registry"
+  },
+  {
+   "deps": [],
+   "id": "P-LIN-germanic",
+   "labels": [
+    "needs:proof",
+    "needs:code"
+   ],
+   "title": "First Germanic node: one sourced batch of rules and a lexicon under an open licence, bound through the registry"
+  },
+  {
+   "deps": [],
+   "id": "P-LIN-balto_slavic",
+   "labels": [
+    "needs:proof",
+    "needs:code"
+   ],
+   "title": "First Balto-Slavic node: one sourced batch of rules and a lexicon under an open licence, bound through the registry"
+  },
+  {
+   "deps": [],
+   "id": "P-LIN-armenian",
+   "labels": [
+    "needs:proof",
+    "needs:code"
+   ],
+   "title": "First Armenian node: one sourced batch of rules and a lexicon under an open licence, bound through the registry"
+  },
+  {
+   "deps": [],
+   "id": "P-LIN-semitic",
+   "labels": [
+    "needs:proof",
+    "needs:code"
+   ],
+   "title": "First Semitic node: one sourced batch of rules and a lexicon under an open licence, bound through the registry"
+  },
+  {
+   "deps": [],
+   "id": "P-LIN-egyptian",
+   "labels": [
+    "needs:proof",
+    "needs:code"
+   ],
+   "title": "First Egyptian node: one sourced batch of rules and a lexicon under an open licence, bound through the registry"
+  },
+  {
+   "deps": [],
+   "id": "P-LIN-dravidian",
+   "labels": [
+    "needs:proof",
+    "needs:code"
+   ],
+   "title": "First Dravidian node: one sourced batch of rules and a lexicon under an open licence, bound through the registry"
+  },
+  {
+   "deps": [],
+   "id": "P-LIN-sinitic",
+   "labels": [
+    "needs:proof",
+    "needs:code"
+   ],
+   "title": "First Sinitic node: one sourced batch of rules and a lexicon under an open licence, bound through the registry"
+  },
+  {
+   "deps": [],
+   "id": "P-LIN-bodish",
+   "labels": [
+    "needs:proof",
+    "needs:code"
+   ],
+   "title": "First Bodish node: one sourced batch of rules and a lexicon under an open licence, bound through the registry"
+  },
+  {
+   "deps": [],
+   "id": "P-LIN-turkic",
+   "labels": [
+    "needs:proof",
+    "needs:code"
+   ],
+   "title": "First Turkic node: one sourced batch of rules and a lexicon under an open licence, bound through the registry"
+  },
+  {
+   "deps": [],
+   "id": "P-LIN-japonic",
+   "labels": [
+    "needs:proof",
+    "needs:code"
+   ],
+   "title": "First Japonic node: one sourced batch of rules and a lexicon under an open licence, bound through the registry"
+  },
+  {
+   "deps": [],
+   "id": "P-LIN-koreanic",
+   "labels": [
+    "needs:proof",
+    "needs:code"
+   ],
+   "title": "First Koreanic node: one sourced batch of rules and a lexicon under an open licence, bound through the registry"
+  },
+  {
+   "deps": [],
+   "id": "P-LIN-kartvelian",
+   "labels": [
+    "needs:proof",
+    "needs:code"
+   ],
+   "title": "First Kartvelian node: one sourced batch of rules and a lexicon under an open licence, bound through the registry"
+  },
+  {
+   "deps": [],
+   "id": "P-LIN-hurro_urartian",
+   "labels": [
+    "needs:proof",
+    "needs:code"
+   ],
+   "title": "First Hurro-Urartian node: one sourced batch of rules and a lexicon under an open licence, bound through the registry"
+  },
+  {
+   "deps": [],
+   "id": "P-LIN-sumerian",
+   "labels": [
+    "needs:proof",
+    "needs:code"
+   ],
+   "title": "First Sumerian node: one sourced batch of rules and a lexicon under an open licence, bound through the registry"
+  },
+  {
+   "deps": [],
+   "id": "P-LIN-elamite",
+   "labels": [
+    "needs:proof",
+    "needs:code"
+   ],
+   "title": "First Elamite node: one sourced batch of rules and a lexicon under an open licence, bound through the registry"
+  },
+  {
+   "deps": [],
+   "id": "P-LIN-undeciphered",
+   "labels": [
+    "needs:proof",
+    "needs:code"
+   ],
+   "title": "Sign inventories for the Indus and Proto-Elamite corpora as corpus objects, with provenance and no language assigned"
+  }
+ ],
+ "reconcile": {
+  "family_differs": [
+   [
+    "sanskrit_grantha",
+    "Dravidian"
+   ],
+   [
+    "prakrit_brahmi",
+    "Ancient"
+   ],
+   [
+    "gandhari",
+    "Ancient"
+   ],
+   [
+    "sanskrit_siddham",
+    "Ancient"
+   ],
+   [
+    "sanskrit_sharada",
+    "Ancient"
+   ]
+  ],
+  "matched": 46,
+  "outside_posters": 39,
+  "prior_rows": 90
+ },
+ "schema": "tajziya.site/1"
+}

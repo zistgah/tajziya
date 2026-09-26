@@ -1,0 +1,10 @@
+{
+  "name": "sanskrit-parser-js",
+  "version": "0.1.0",
+  "description": "Pure JavaScript port of the Sanskrit parser pipeline. Segmenter is implemented (vowel-sandhi reversal against a placeholder lexicon); MorphAnalyzer and KarakaParser are stubs. Mirrors the Python version one directory up.",
+  "type": "module",
+  "main": "pipeline.js",
+  "engines": {
+    "node": ">=14"
+  }
+}
