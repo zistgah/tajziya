@@ -54,22 +54,24 @@ class TestSanskrit(unittest.TestCase):
     def test_an_unknown_word_is_reported_not_guessed(self):
         self.assertEqual(self.readings("rāmavanam"), [])
 
-    def test_the_rule_database_is_absent_or_pinned(self):
-        with open(path("vendor", "sanskrit_parser", "data", "SOURCE.json"), encoding="utf-8") as fh:
-            src = json.load(fh)
+    def test_the_open_edition_holds_every_sutra(self):
         r = self.p.rules()
-        if os.path.exists(path(*src["local_path"].split("/"))):
-            self.assertEqual(len(r), src["entries"])
+        self.assertEqual((len(r), r[0].id, r[-1].id), (3983, "1.1.1", "8.4.68"))
+        self.assertIn("MIT", self.p.rules_provenance)
+
+    def test_the_restricted_compilation_is_local_or_absent(self):
+        r = self.p.rules(source="local")
+        if isinstance(r, Unknown):
+            self.assertTrue(r.needs[0].endswith("sutras_1.1-1.3.json"))
         else:
-            self.assertIsInstance(r, Unknown)
-            self.assertTrue(r.needs[0].endswith(src["file"]))
+            self.assertEqual(len(r), 152)
 
     def test_a_file_that_is_not_the_pinned_one_is_refused(self):
         p = os.path.join(_base.scratch("rules"), "sutras.json")
         with open(p, "w", encoding="utf-8") as fh:
             fh.write("[]")
         with self.assertRaises(ValueError):
-            self.p.rules(data_path=p)
+            self.p.rules(source="local", data_path=p)
 
     def test_a_pinned_file_loads(self):
         rows = [{"id": "9.9.1", "sutra_krama": 99901, "kaumudi_krama": None, "type": None,
@@ -79,7 +81,7 @@ class TestSanskrit(unittest.TestCase):
             json.dump(rows, fh)
         with open(p, "rb") as fh:
             pin = hashlib.sha256(fh.read()).hexdigest()
-        self.assertEqual([s.id for s in self.p.rules(data_path=p, pin=pin)], ["9.9.1"])
+        self.assertEqual([s.id for s in self.p.rules(source="local", data_path=p, pin=pin)], ["9.9.1"])
 
     def test_conllu_uses_a_multiword_token(self):
         block = conllu.sentences(self.p.segment("neti"))[0]

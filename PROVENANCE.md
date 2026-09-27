@@ -92,3 +92,23 @@ From spdx/license-list-data:
 - `LICENSES/MIT.txt`: `b05785f9f18e6716bab63424b11454513b9943a222595b70411009202fc592b5`
 - `LICENSES/CC-BY-SA-4.0.txt`: `cde7883b9050a1104f4ac19a1572aafd6e5d7323b68351aaf51fbf4beba54966`
 - `LICENSES/CC0-1.0.txt`: `a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499`
+
+## Sutra text, 0.2.0
+
+`modules/cls/data/sutrapatha.tsv` is `vidyut-prakriya/data/sutrapatha.tsv` from
+ambuda-org/vidyut@8da2f90bee3ce1c07505fa432fc3729e3f7e02ea, byte for byte: 3,983 sutras, SLP1,
+SHA-256 `f2ff798707e8b8ea20dd5cf20a7bbcc4b849f0ab4d726a0a4af890ef87b7e87c`. The crate declares the MIT
+licence; `modules/cls/data/LICENSES/vidyut-MIT.txt` is the repository's MIT notice, byte for byte. Its data
+README states that the author of ashtadhyayi.com shared these files with vidyut under the MIT licence.
+The four examples in `modules/cls/reference/examples.json` are attested in the parser's own demonstration,
+`vendor/sanskrit_parser/python/pipeline.py`. The restricted compilation's local copy now sits in
+`modules/cls/data/local/`; `vendor/sanskrit_parser/data/SOURCE.json` records where the upstream first
+expected it.
+
+## Treebank facts, 0.2.0
+
+`registry/corpora.json` records, for 52 nodes, the Universal Dependencies treebanks whose language code
+matches, each with its repository and stated licence, read from
+UniversalDependencies/docs@b3768d7f7b4b44b74a84025eddb2fcce04f40eaf `treebanks/*/index.md` on
+26 Sep 2026. Only names, links and licence statements are recorded; no treebank data is in this
+repository.

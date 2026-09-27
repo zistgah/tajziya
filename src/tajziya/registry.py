@@ -2,6 +2,8 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 """D2. Nodes are bound to implementations here and nowhere else.
 
+0.2.0: a binding may name a language module (kind "module"), loaded by path from modules/.
+
 A caller names a node. registry/bindings.json names the implementation, and this module
 imports it by the kind the binding declares. No implementation id is written in code.
 """
@@ -77,6 +79,12 @@ class Registry:
     def bind(self, node_id, **options):
         node = self.node(node_id)
         b = self.bindings[node_id]
+        if b["kind"] == "module":
+            from . import modules
+            mdir = path(*b["module"].split("/"))
+            if modules.manifest(mdir)["node"] != node_id:
+                raise ValueError(f"{b['module']} does not declare node {node_id}")
+            return modules.bind(mdir, self, **options)
         module = importlib.import_module(f"tajziya.{b['kind']}s.{b['implementation']}")
         return module.make(node, self, **options)
 

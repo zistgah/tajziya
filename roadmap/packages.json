@@ -12,7 +12,7 @@
    ],
    "deps": [],
    "owns": [
-    "src/tajziya/ports/sanskrit_paninian_v0/"
+    "modules/cls/"
    ],
    "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_san_01 && bash ops/verify.sh",
    "state": "open"
@@ -41,7 +41,7 @@
    ],
    "deps": [],
    "owns": [
-    "vendor/sanskrit_parser/data/"
+    "modules/cls/data/"
    ],
    "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_san_03 && bash ops/verify.sh",
    "state": "open"
@@ -55,7 +55,7 @@
    ],
    "deps": [],
    "owns": [
-    "vendor/sanskrit_parser/data/"
+    "modules/cls/data/"
    ],
    "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_san_04 && bash ops/verify.sh",
    "state": "open"
@@ -71,7 +71,7 @@
     "P-SAN-04"
    ],
    "owns": [
-    "src/tajziya/ports/sanskrit_paninian_v0/"
+    "modules/cls/"
    ],
    "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_san_05 && bash ops/verify.sh",
    "state": "open"
@@ -87,7 +87,7 @@
     "P-L4-01"
    ],
    "owns": [
-    "src/tajziya/ports/sanskrit_paninian_v0/"
+    "modules/cls/"
    ],
    "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_san_06 && bash ops/verify.sh",
    "state": "open"
@@ -102,7 +102,7 @@
     "P-SAN-04"
    ],
    "owns": [
-    "src/tajziya/ports/sanskrit_paninian_v0/"
+    "modules/cls/"
    ],
    "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_san_07 && bash ops/verify.sh",
    "state": "open"
@@ -131,10 +131,11 @@
    ],
    "deps": [],
    "owns": [
-    "vendor/sanskrit_parser/data/SOURCE.json"
+    "modules/cls/data/SOURCE.json"
    ],
    "acceptance": "vendor/sanskrit_parser/data/SOURCE.json records the permission or the replacement source, and bash ops/verify.sh passes",
-   "state": "open"
+   "state": "done",
+   "resolution": "Re-sourced, 26 Sep 2026: the sutra ids and text now come from vidyut-prakriya's sutrapatha (MIT), all 3,983 sutras in SLP1. The restricted compilation is used only from a pinned local copy."
   },
   {
    "id": "P-COV-01",
@@ -414,9 +415,9 @@
    ],
    "deps": [],
    "owns": [
-    "src/tajziya/ports/indo_aryan_*"
+    "modules/<node>/"
    ],
-   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_lin_indo_aryan && bash ops/verify.sh",
+   "acceptance": "tools/langpack.py generates the node's package; the package's bash accept.sh passes; the folder is added as modules/<node> and bash ops/verify.sh passes with it bound",
    "state": "open"
   },
   {
@@ -428,9 +429,9 @@
    ],
    "deps": [],
    "owns": [
-    "src/tajziya/ports/iranian_*"
+    "modules/<node>/"
    ],
-   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_lin_iranian && bash ops/verify.sh",
+   "acceptance": "tools/langpack.py generates the node's package; the package's bash accept.sh passes; the folder is added as modules/<node> and bash ops/verify.sh passes with it bound",
    "state": "open"
   },
   {
@@ -442,9 +443,9 @@
    ],
    "deps": [],
    "owns": [
-    "src/tajziya/ports/anatolian_*"
+    "modules/<node>/"
    ],
-   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_lin_anatolian && bash ops/verify.sh",
+   "acceptance": "tools/langpack.py generates the node's package; the package's bash accept.sh passes; the folder is added as modules/<node> and bash ops/verify.sh passes with it bound",
    "state": "open"
   },
   {
@@ -456,9 +457,9 @@
    ],
    "deps": [],
    "owns": [
-    "src/tajziya/ports/hellenic_*"
+    "modules/<node>/"
    ],
-   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_lin_hellenic && bash ops/verify.sh",
+   "acceptance": "tools/langpack.py generates the node's package; the package's bash accept.sh passes; the folder is added as modules/<node> and bash ops/verify.sh passes with it bound",
    "state": "open"
   },
   {
@@ -470,9 +471,9 @@
    ],
    "deps": [],
    "owns": [
-    "src/tajziya/ports/italic_*"
+    "modules/<node>/"
    ],
-   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_lin_italic && bash ops/verify.sh",
+   "acceptance": "tools/langpack.py generates the node's package; the package's bash accept.sh passes; the folder is added as modules/<node> and bash ops/verify.sh passes with it bound",
    "state": "open"
   },
   {
@@ -484,9 +485,9 @@
    ],
    "deps": [],
    "owns": [
-    "src/tajziya/ports/germanic_*"
+    "modules/<node>/"
    ],
-   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_lin_germanic && bash ops/verify.sh",
+   "acceptance": "tools/langpack.py generates the node's package; the package's bash accept.sh passes; the folder is added as modules/<node> and bash ops/verify.sh passes with it bound",
    "state": "open"
   },
   {
@@ -498,9 +499,9 @@
    ],
    "deps": [],
    "owns": [
-    "src/tajziya/ports/balto_slavic_*"
+    "modules/<node>/"
    ],
-   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_lin_balto_slavic && bash ops/verify.sh",
+   "acceptance": "tools/langpack.py generates the node's package; the package's bash accept.sh passes; the folder is added as modules/<node> and bash ops/verify.sh passes with it bound",
    "state": "open"
   },
   {
@@ -512,9 +513,9 @@
    ],
    "deps": [],
    "owns": [
-    "src/tajziya/ports/armenian_*"
+    "modules/<node>/"
    ],
-   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_lin_armenian && bash ops/verify.sh",
+   "acceptance": "tools/langpack.py generates the node's package; the package's bash accept.sh passes; the folder is added as modules/<node> and bash ops/verify.sh passes with it bound",
    "state": "open"
   },
   {
@@ -526,9 +527,9 @@
    ],
    "deps": [],
    "owns": [
-    "src/tajziya/ports/semitic_*"
+    "modules/<node>/"
    ],
-   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_lin_semitic && bash ops/verify.sh",
+   "acceptance": "tools/langpack.py generates the node's package; the package's bash accept.sh passes; the folder is added as modules/<node> and bash ops/verify.sh passes with it bound",
    "state": "open"
   },
   {
@@ -540,9 +541,9 @@
    ],
    "deps": [],
    "owns": [
-    "src/tajziya/ports/egyptian_*"
+    "modules/<node>/"
    ],
-   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_lin_egyptian && bash ops/verify.sh",
+   "acceptance": "tools/langpack.py generates the node's package; the package's bash accept.sh passes; the folder is added as modules/<node> and bash ops/verify.sh passes with it bound",
    "state": "open"
   },
   {
@@ -554,9 +555,9 @@
    ],
    "deps": [],
    "owns": [
-    "src/tajziya/ports/dravidian_*"
+    "modules/<node>/"
    ],
-   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_lin_dravidian && bash ops/verify.sh",
+   "acceptance": "tools/langpack.py generates the node's package; the package's bash accept.sh passes; the folder is added as modules/<node> and bash ops/verify.sh passes with it bound",
    "state": "open"
   },
   {
@@ -568,9 +569,9 @@
    ],
    "deps": [],
    "owns": [
-    "src/tajziya/ports/sinitic_*"
+    "modules/<node>/"
    ],
-   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_lin_sinitic && bash ops/verify.sh",
+   "acceptance": "tools/langpack.py generates the node's package; the package's bash accept.sh passes; the folder is added as modules/<node> and bash ops/verify.sh passes with it bound",
    "state": "open"
   },
   {
@@ -582,9 +583,9 @@
    ],
    "deps": [],
    "owns": [
-    "src/tajziya/ports/bodish_*"
+    "modules/<node>/"
    ],
-   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_lin_bodish && bash ops/verify.sh",
+   "acceptance": "tools/langpack.py generates the node's package; the package's bash accept.sh passes; the folder is added as modules/<node> and bash ops/verify.sh passes with it bound",
    "state": "open"
   },
   {
@@ -596,9 +597,9 @@
    ],
    "deps": [],
    "owns": [
-    "src/tajziya/ports/turkic_*"
+    "modules/<node>/"
    ],
-   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_lin_turkic && bash ops/verify.sh",
+   "acceptance": "tools/langpack.py generates the node's package; the package's bash accept.sh passes; the folder is added as modules/<node> and bash ops/verify.sh passes with it bound",
    "state": "open"
   },
   {
@@ -610,9 +611,9 @@
    ],
    "deps": [],
    "owns": [
-    "src/tajziya/ports/japonic_*"
+    "modules/<node>/"
    ],
-   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_lin_japonic && bash ops/verify.sh",
+   "acceptance": "tools/langpack.py generates the node's package; the package's bash accept.sh passes; the folder is added as modules/<node> and bash ops/verify.sh passes with it bound",
    "state": "open"
   },
   {
@@ -624,9 +625,9 @@
    ],
    "deps": [],
    "owns": [
-    "src/tajziya/ports/koreanic_*"
+    "modules/<node>/"
    ],
-   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_lin_koreanic && bash ops/verify.sh",
+   "acceptance": "tools/langpack.py generates the node's package; the package's bash accept.sh passes; the folder is added as modules/<node> and bash ops/verify.sh passes with it bound",
    "state": "open"
   },
   {
@@ -638,9 +639,9 @@
    ],
    "deps": [],
    "owns": [
-    "src/tajziya/ports/kartvelian_*"
+    "modules/<node>/"
    ],
-   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_lin_kartvelian && bash ops/verify.sh",
+   "acceptance": "tools/langpack.py generates the node's package; the package's bash accept.sh passes; the folder is added as modules/<node> and bash ops/verify.sh passes with it bound",
    "state": "open"
   },
   {
@@ -652,9 +653,9 @@
    ],
    "deps": [],
    "owns": [
-    "src/tajziya/ports/hurro_urartian_*"
+    "modules/<node>/"
    ],
-   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_lin_hurro_urartian && bash ops/verify.sh",
+   "acceptance": "tools/langpack.py generates the node's package; the package's bash accept.sh passes; the folder is added as modules/<node> and bash ops/verify.sh passes with it bound",
    "state": "open"
   },
   {
@@ -666,9 +667,9 @@
    ],
    "deps": [],
    "owns": [
-    "src/tajziya/ports/sumerian_*"
+    "modules/<node>/"
    ],
-   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_lin_sumerian && bash ops/verify.sh",
+   "acceptance": "tools/langpack.py generates the node's package; the package's bash accept.sh passes; the folder is added as modules/<node> and bash ops/verify.sh passes with it bound",
    "state": "open"
   },
   {
@@ -680,9 +681,9 @@
    ],
    "deps": [],
    "owns": [
-    "src/tajziya/ports/elamite_*"
+    "modules/<node>/"
    ],
-   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_lin_elamite && bash ops/verify.sh",
+   "acceptance": "tools/langpack.py generates the node's package; the package's bash accept.sh passes; the folder is added as modules/<node> and bash ops/verify.sh passes with it bound",
    "state": "open"
   },
   {
@@ -694,9 +695,24 @@
    ],
    "deps": [],
    "owns": [
-    "src/tajziya/ports/undeciphered_*"
+    "modules/<node>/"
    ],
-   "acceptance": "PYTHONPATH=src python3 -m unittest tests.test_p_lin_undeciphered && bash ops/verify.sh",
+   "acceptance": "tools/langpack.py generates the node's package; the package's bash accept.sh passes; the folder is added as modules/<node> and bash ops/verify.sh passes with it bound",
+   "state": "open"
+  },
+  {
+   "id": "P-GOV-01",
+   "title": "Inbound terms for contributions from people other than the author, keeping the author able to relicense",
+   "labels": [
+    "needs:legal",
+    "needs:human"
+   ],
+   "deps": [],
+   "owns": [
+    "templates/langpack/CONTRIBUTING.md",
+    "CONTRIBUTING.md"
+   ],
+   "acceptance": "the adopted inbound terms are named in templates/langpack/CONTRIBUTING.md, and bash ops/verify.sh passes",
    "state": "open"
   }
  ]

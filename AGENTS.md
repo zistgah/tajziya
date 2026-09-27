@@ -13,3 +13,7 @@
 
 Name nodes by registry id. Return every reading. Source every rule. Leave an unbuilt layer
 refusing.
+
+To build a language: `PYTHONPATH=src python3 tools/langpack.py <node or ISO code>` writes its
+package under `packs/`. Work inside the package, run its `bash accept.sh`, and hand the folder back. It
+becomes `modules/<node>` and is bound once `python3 -m tajziya accept modules/<node> --integration` passes.

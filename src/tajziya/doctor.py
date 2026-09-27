@@ -36,15 +36,34 @@ def problems(reg):
             p.append(f"{i}: no ISO 639-3 code and not an undeciphered corpus")
         if i not in reg.bindings:
             p.append(f"{i}: not bound")
+    from . import modules
     for i, b in reg.bindings.items():
         if i not in reg.nodes:
             p.append(f"binding for unknown node {i}")
-        if b["kind"] not in ("port", "frame"):
+        if b["kind"] not in ("port", "frame", "module"):
             p.append(f"{i}: binding kind {b['kind']}")
+            continue
+        if b["kind"] == "module":
+            mdir = path(*b.get("module", "").split("/"))
+            if not os.path.isfile(os.path.join(mdir, "module.json")):
+                p.append(f"{i}: bound module {b.get('module')} has no module.json")
+                continue
+            man = modules.manifest(mdir)
+            p += [f"{i}: {x}" for x in modules.problems(man, reg, mdir)]
+            if man.get("node") != i:
+                p.append(f"{i}: the bound module declares node {man.get('node')}")
+            if man.get("implementation") != b["implementation"]:
+                p.append(f"{i}: the binding names {b['implementation']}, the module {man.get('implementation')}")
+            if man.get("layers") != reg.nodes.get(i, {}).get("layers"):
+                p.append(f"{i}: the module's layer states differ from the registry's")
+            continue
         try:
             importlib.import_module(f"tajziya.{b['kind']}s.{b['implementation']}")
         except Exception as e:
             p.append(f"{i}: binding does not import ({type(e).__name__}: {e})")
+    for name, mdir in modules.discover().items():
+        man = modules.manifest(mdir)
+        p += [f"module {name}: {x}" for x in modules.problems(man, reg, mdir)]
     for x in reg.lineages.values():
         if x["family"] not in reg.families:
             p.append(f"lineage {x['id']}: unknown family {x['family']}")

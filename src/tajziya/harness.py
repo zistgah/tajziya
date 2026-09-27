@@ -34,9 +34,8 @@ def check(parser, node, reg):
                 continue
             found.append(("TJZ-C2", False, f"{L} is not_built and returned {value!r:.60}"))
         else:
-            probe = getattr(parser, "REFERENCE_INPUT", {}).get(L, PROBE if L == "L2" else None)
-            if probe is None:
-                continue
+            refs = getattr(parser, "REFERENCE", None) or {}
+            probe = getattr(parser, "REFERENCE_INPUT", {}).get(L) or (next(iter(refs)) if L == "L3s" and refs else PROBE)
             try:
                 fn(probe)
                 found.append(("TJZ-C1", True, f"{L} ({state}) answers"))

@@ -1,0 +1,54 @@
+{
+ "schema": "tajziya.sources/1",
+ "sources": [
+  {
+   "id": "vidyut-sutrapatha",
+   "title": "Sutrapatha of the Ashtadhyayi, from vidyut-prakriya's data",
+   "url": "https://github.com/ambuda-org/vidyut/blob/8da2f90bee3ce1c07505fa432fc3729e3f7e02ea/vidyut-prakriya/data/sutrapatha.tsv",
+   "retrieved": "2026-09-26",
+   "licence": "MIT",
+   "licence_file": "data/LICENSES/vidyut-MIT.txt",
+   "attribution": "ambuda.org, vidyut-prakriya data. vidyut's data README states that the author of ashtadhyayi.com shared these files with vidyut under the MIT licence.",
+   "scheme": "SLP1",
+   "entries": 3983,
+   "files": [
+    {
+     "path": "data/sutrapatha.tsv",
+     "sha256": "f2ff798707e8b8ea20dd5cf20a7bbcc4b849f0ab4d726a0a4af890ef87b7e87c"
+    }
+   ]
+  },
+  {
+   "id": "upstream-demo",
+   "title": "sanskrit_parser pipeline demonstration",
+   "url": "vendor/sanskrit_parser/python/pipeline.py, in this repository",
+   "retrieved": "2026-09-26",
+   "licence": "MIT",
+   "licence_file": "data/LICENSES/sanskrit_parser-MIT.txt",
+   "attribution": "Abhishek Choudhary, sanskrit_parser",
+   "in_repository": {
+    "path": "vendor/sanskrit_parser/python/pipeline.py",
+    "sha256": "18603035238d750587bf5483423821d9f785ec376eca5c880625daa629f73b74"
+   },
+   "files": []
+  },
+  {
+   "id": "sanskritdocuments-compilation",
+   "title": "Ashtadhyayi 1.1.1 to 1.3.4 with padaccheda, compiled at sanskritdocuments.org",
+   "url": "https://sanskritdocuments.org/learning_tools/ashtadhyayi/",
+   "retrieved": "2026-09-26",
+   "licence": "not stated",
+   "attribution": "Sai Susarla, Sanskrit Documents, as stated in the upstream README",
+   "terms": "The source site states that its texts are volunteer-prepared, meant for personal study and research, and not to be reposted without permission.",
+   "local_only": true,
+   "entries": 152,
+   "why_local": "The open edition above replaces it for sutra ids and text. This copy adds padaccheda and Devanagari only where the operator holds it.",
+   "files": [
+    {
+     "path": "data/local/sutras_1.1-1.3.json",
+     "sha256": "6d952a605d026fb7313901de3898d4da62c93b7a454103c4faed36ca2da31c8d"
+    }
+   ]
+  }
+ ]
+}

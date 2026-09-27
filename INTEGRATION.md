@@ -1,6 +1,7 @@
 # Attachment points
 
-Four, closed. Anything that needs a fifth is a contract question, raised as one.
+Five, closed. The fifth, MODULE, was added on the author's instruction of 26 Sep 2026 that the architecture carry
+language modules. Anything that needs a sixth is a contract question, raised as one.
 
 © 1993–2026 Abhishek Choudhary. All rights reserved. AyeAI.
 
@@ -16,3 +17,7 @@ placeholder lexicon is the only one bundled.
 
 **DOOR**: the verbs of `skills/verbs.json`, served by darwaza to any model on the operator's own
 machine. None is gated.
+
+**MODULE**: a language module under `modules/<node>/`: `module.json`, a port importing only `tajziya.api`,
+`data/SOURCES.json` with every licence, and `reference/examples.json` with attested examples. It is bound in
+`registry/bindings.json` only after `python3 -m tajziya accept modules/<node> --integration` passes.

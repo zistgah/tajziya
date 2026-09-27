@@ -1,0 +1,54 @@
+{
+ "schema": "tajziya.reference/1",
+ "rule": "Each example is attested in a listed source, at the locator given. Readings are every reading the source gives.",
+ "examples": [
+  {
+   "layer": "L3s",
+   "input": "neti",
+   "readings": [
+    [
+     "na",
+     "iti"
+    ]
+   ],
+   "source": "upstream-demo",
+   "locator": "the __main__ demonstration, python/pipeline.py line 171"
+  },
+  {
+   "layer": "L3s",
+   "input": "tatraiva",
+   "readings": [
+    [
+     "tatra",
+     "eva"
+    ]
+   ],
+   "source": "upstream-demo",
+   "locator": "the __main__ demonstration, python/pipeline.py line 171"
+  },
+  {
+   "layer": "L3s",
+   "input": "gurūpadeśa",
+   "readings": [
+    [
+     "guru",
+     "upadeśa"
+    ]
+   ],
+   "source": "upstream-demo",
+   "locator": "the __main__ demonstration, python/pipeline.py line 171"
+  },
+  {
+   "layer": "L3s",
+   "input": "sīteva",
+   "readings": [
+    [
+     "sītā",
+     "iva"
+    ]
+   ],
+   "source": "upstream-demo",
+   "locator": "the __main__ demonstration, python/pipeline.py line 171"
+  }
+ ]
+}

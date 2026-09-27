@@ -53,8 +53,10 @@ def _segment(reg, a):
 
 
 def _data_import(reg, a):
-    with open(path("vendor", "sanskrit_parser", "data", "SOURCE.json"), encoding="utf-8") as fh:
-        src = json.load(fh)
+    with open(path("modules", "cls", "data", "SOURCES.json"), encoding="utf-8") as fh:
+        local = next(s for s in json.load(fh)["sources"] if s.get("local_only"))
+    src = {"file": os.path.basename(local["files"][0]["path"]), "sha256": local["files"][0]["sha256"],
+           "entries": local["entries"], "local_path": "modules/cls/" + local["files"][0]["path"]}
     src_path = os.path.realpath(a.source)
     if os.path.commonpath([src_path, os.path.realpath(path())]) != os.path.realpath(path()):
         print("data import: refused, the source must sit inside this repository's folder; nothing "
@@ -78,6 +80,7 @@ def _data_import(reg, a):
         print(f"data import: refused, sha256 {got} is not the pinned {src['sha256']}")
         return 1
     dst = path(*src["local_path"].split("/"))
+    os.makedirs(os.path.dirname(dst), exist_ok=True)
     with open(dst, "wb") as fh:
         fh.write(blob)
     print(f"data import: {src['entries']} sutras written to {src['local_path']}; git ignores this "
@@ -110,6 +113,11 @@ def main(argv=None):
     rc.add_argument("--json", action="store_true")
     ru = sub.add_parser("rules", help="the sutra compilation, when a pinned local copy exists")
     ru.add_argument("--node", default="cls")
+    ac = sub.add_parser("accept", help="the generic acceptance test for a language module")
+    ac.add_argument("module")
+    ac.add_argument("--integration", action="store_true")
+    ac.add_argument("--scratch")
+    ac.add_argument("--json", action="store_true")
     da = sub.add_parser("data", help="import the pinned sutra compilation from a local copy")
     da.add_argument("action", choices=["import"])
     da.add_argument("source")
@@ -199,10 +207,13 @@ def main(argv=None):
         if isinstance(r, Unknown):
             print(r)
             return 3
-        print(f"{len(r)} sutras loaded, {r[0].id} to {r[-1].id}")
+        print(f"{len(r)} sutras loaded, {r[0].id} to {r[-1].id}; {getattr(p, 'rules_provenance', '')}".rstrip("; "))
         return 0
     if a.verb == "data":
         return _data_import(reg, a)
+    if a.verb == "accept":
+        from . import accept
+        return accept.main(a)
     return 1
 
 

@@ -74,6 +74,7 @@ PY
 v13() { [ -f .deps/panini/panini.py ] || { echo "no .deps/panini checkout; make deps fetches it"; return 3; }
   local f; for f in cyclers/*.pni; do python3 .deps/panini/panini.py check "$f" || return 1; done; }
 v14() { [ -d .deps/dhancha/tools ] || { echo "no .deps/dhancha checkout; make deps fetches it"; return 3; }
+  rm -rf tests/.scratch
   python3 .deps/dhancha/tools/spine_validate.py descriptor.json --repo . || return 1
   local others; others=$(ls .deps/dhancha/descriptors/*.json | grep -v '/_template.json$')
   # shellcheck disable=SC2086
@@ -87,6 +88,10 @@ v16() { local pat='10\.5281/zen''odo\.([^0-9]|$)|DOI-PEN''DING|ZENODO-D''OI' hit
 v18() { local pat='\$HO''ME|~''/|/t''mp|\.\.''/' hit
   hit=$(authored | grep -v -e '^vendor/' -e '^docs/vendor/' | grep -E '\.(sh|py|mjs|js)$' | xargs -d '\n' grep -lE "$pat" 2>/dev/null)
   [ -z "$hit" ] || { echo "a script that reaches outside its folder: $hit"; return 1; }; }
+v19() { local d; for d in modules/*/; do [ -f "$d/module.json" ] || continue
+  python3 -m tajziya accept "$d" --integration || return 1; done; }
+v20() { python3 tools/langpack.py --remaining --out tests/.scratch/packs-verify --quiet; local rc=$?
+  rm -rf tests/.scratch/packs-verify; return $rc; }
 v17() { python3 - <<'PY'
 import hashlib, json, os, sys
 def h(p):
@@ -123,6 +128,8 @@ chk V15 "no language of an unfiled claim"                          v15
 chk V16 "no placeholder DOI"                                       v16
 chk V17 "vendored files match their pins"                          v17
 chk V18 "authored scripts stay inside their folder (clause 7)"       v18
+chk V19 "every language module passes the generic acceptance test"  v19
+chk V20 "every remaining language yields an accepted package"      v20
 
 if [ "$JSON" = 1 ]; then
   printf '{"element":"tajziya","failures":%d,"unjudged":%d,"checks":[' "$FAILS" "$UNJ"; sep=""

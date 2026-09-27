@@ -29,6 +29,10 @@ It is attributed, and what its terms do not let us repost is neither committed n
 its hash is. Enforced by V08. Earned by the sutra compilation, whose source states that its texts
 are not to be reposted without permission.
 
+**T5a. Where material is restricted and an openly licensed alternative exists, the alternative is used.**
+The sutra text now comes from an MIT-licensed edition; the restricted compilation is read only from a local
+copy that matches its pin. Enforced for every module by acceptance check A3.
+
 **T6. Translation is not recovery.**
 Enforced by V03 (test_translation_is_never_recovery). Earned by poster III: translation
 equivalence does not establish linguistic redundancy.
@@ -55,5 +59,11 @@ Master clause 7, applied: no home directory, no /tmp, no parent path, and no sou
 repository folder. Dependencies are cloned inside it. Enforced by V18, and by the refusals in `data import`
 and `tools/vendor_import.py`. Earned by the first seed script for this repository, which read estate.sh
 from a path outside its run folder that no repository holds.
+
+**T12. A language is added as a module, and a module is bound only after it is accepted.**
+A module imports `tajziya.api` and nothing else from tajziya. `python3 -m tajziya accept` judges it in
+isolation and then bound in a scratch copy of the repository. Every remaining language is generated as a
+package that passes the same test as handed over. Enforced by V19, V20 and doctor. Earned by the author's
+instruction of 26 Sep 2026: "Ensure our architecture supports language modules."
 
 Reconstruct faithfully. Critique with evidence, not tone. Maintain contract and context.

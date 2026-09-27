@@ -47,3 +47,25 @@ vendored parser keeps the MIT licence its author chose.
 
 A first deposit: a new record, not a version of any existing concept DOI. A DOI is a dated public
 disclosure. Nothing here states an unfiled claim; V15 refuses the language of one.
+
+## 0.2.0, 26 Sep 2026
+
+The author asked for a package per remaining language that another model or a person can take and
+return with an implementation, for the architecture to carry language modules, for one generic
+package, one generator run over a list of codes, one generic acceptance test, and for the best proper
+alternative wherever a licence stood in the way.
+
+- Modules live in `modules/<node>/`, import only `tajziya.api` (API 1), and are bound only after
+  `tajziya accept` passes. Classical Sanskrit is the reference module.
+- The sutra text was re-sourced from vidyut-prakriya (MIT), whose data README states that
+  ashtadhyayi.com shared these files under MIT. That covers all 3,983 sutras where the restricted
+  compilation covered 152, at the cost of its padaccheda and Devanagari, which stay available only from a
+  local copy.
+- Packages point implementers at Universal Dependencies treebanks for their language codes, each marked by
+  whether its licence lets it into the tree. Non-commercial and no-derivatives licences stay out.
+- Not settled here, and left to the author: inbound terms for contributions from people other than the
+  author that keep the author able to relicense (P-GOV-01). Work produced by an AI at the author's
+  direction carries the estate copyright line.
+- 0.2.0 is pushed and sealed without a new DOI. A version DOI beneath the 0.1.0 concept DOI needs a
+  newversion path in the library; `zops_mint` refuses to mint a second record for a repository that
+  already carries a DOI.

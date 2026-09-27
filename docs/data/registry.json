@@ -91,7 +91,7 @@
   "families": 11,
   "lineages": 21,
   "nodes": 79,
-  "packages": 50,
+  "packages": 51,
   "parsing": [
    "cls"
   ],
@@ -744,7 +744,7 @@
   },
   {
    "file": "registry/bindings.json",
-   "sha256": "b2bcde672089378f431cca6965b6b8cfc19bbd148b6f1c15f5c9e7aafcbc2fb3"
+   "sha256": "23b3349fd63d8fafa185c820f724c0256d425e2586212cc9afc4a6218de7e72c"
   },
   {
    "file": "registry/conflicts.json",
@@ -760,7 +760,7 @@
   },
   {
    "file": "roadmap/packages.json",
-   "sha256": "a348181082d61cb75628a17fb15fbf34329d9b142c516e3e07cd56d084f6aa88"
+   "sha256": "26fc31b8cd55cb1e51b06402c55d6429a314e9766d19fa32cd1fff3456c267e6"
   }
  ],
  "lineages": [
@@ -3961,6 +3961,15 @@
     "needs:code"
    ],
    "title": "Sign inventories for the Indus and Proto-Elamite corpora as corpus objects, with provenance and no language assigned"
+  },
+  {
+   "deps": [],
+   "id": "P-GOV-01",
+   "labels": [
+    "needs:legal",
+    "needs:human"
+   ],
+   "title": "Inbound terms for contributions from people other than the author, keeping the author able to relicense"
   }
  ],
  "reconcile": {

@@ -77,8 +77,9 @@
    "implementation": "frame_family"
   },
   "cls": {
-   "kind": "port",
-   "implementation": "sanskrit_paninian_v0"
+   "kind": "module",
+   "implementation": "sanskrit_paninian_v0",
+   "module": "modules/cls"
   },
   "pli": {
    "kind": "frame",

@@ -156,6 +156,13 @@
    "unit_ucum": "%"
   },
   {
+   "id": "TJZ-C9",
+   "condition": "every language module passes the generic acceptance test",
+   "criterion": "share of modules under modules/ that pass tajziya accept in isolation and in integration, equal to 100",
+   "unit": "percent",
+   "unit_ucum": "%"
+  },
+  {
    "id": "TJZ-C7",
    "condition": "segmentation accuracy against a gold corpus",
    "criterion": "not established",
@@ -175,7 +182,8 @@
   "SCRIPT: the Romenagri script tables, read as files",
   "CORPUS: a text or CoNLL-U file supplied by the operator",
   "LEXICON: a lexicon resource file whose licence is recorded",
-  "DOOR: the verbs of skills/verbs.json, served by darwaza"
+  "DOOR: the verbs of skills/verbs.json, served by darwaza",
+  "MODULE: a language module under modules/, bound through registry/bindings.json once tajziya accept passes"
  ],
  "state": "wired_unproven",
  "distinctive_nouns": [

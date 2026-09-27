@@ -1,0 +1,4 @@
+data/local/
+.deps/
+logs/
+__pycache__/

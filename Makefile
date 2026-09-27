@@ -13,4 +13,7 @@ deps:
 	@[ -d .deps/panini ] || git clone -q --depth 1 https://github.com/zistgah/panini .deps/panini
 	@echo "deps: .deps/dhancha and .deps/panini present; make check now judges the spine and the cyclers"
 
-.PHONY: check site deps
+packs:
+	@PYTHONDONTWRITEBYTECODE=1 $(PY) tools/langpack.py --remaining --tar --bundle
+
+.PHONY: check site deps packs

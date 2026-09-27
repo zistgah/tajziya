@@ -1,0 +1,1715 @@
+{
+ "schema": "tajziya.corpora/1",
+ "copyright": "© 1993–2026 Abhishek Choudhary. All rights reserved. AyeAI.",
+ "license": "CC0-1.0",
+ "source": "UniversalDependencies/docs@b3768d7f7b4b44b74a84025eddb2fcce04f40eaf treebanks/*/index.md, read 2026-09-26",
+ "rule": "Treebanks are matched to a node by language code only. Stage fit is not established unless the treebank says so. Only rows with allowed true may enter a module's data; a row whose text is not included needs that text obtained under its own terms.",
+ "nodes": {
+  "akk": [
+   {
+    "treebank": "UD_Akkadian-PISANDUB",
+    "repository": "https://github.com/UniversalDependencies/UD_Akkadian-PISANDUB",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "news"
+   },
+   {
+    "treebank": "UD_Akkadian-RIAO",
+    "repository": "https://github.com/UniversalDependencies/UD_Akkadian-RIAO",
+    "licence_stated": "CC BY-SA 3.0",
+    "licence": "CC-BY-SA-3.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "nonfiction, government"
+   }
+  ],
+  "amh": [
+   {
+    "treebank": "UD_Amharic-ATT",
+    "repository": "https://github.com/UniversalDependencies/UD_Amharic-ATT",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "grammar-examples, fiction, nonfiction, bible, news"
+   }
+  ],
+  "ara-cla": [
+   {
+    "treebank": "UD_Arabic-NYUAD",
+    "repository": "https://github.com/UniversalDependencies/UD_Arabic-NYUAD",
+    "licence_stated": "CC BY-SA 4.0. The underlying text is not included; the user must obtain it separately and then merge with the UD annotation using a script distributed with UD",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": false,
+    "genre": "news"
+   },
+   {
+    "treebank": "UD_Arabic-PADT",
+    "repository": "https://github.com/UniversalDependencies/UD_Arabic-PADT",
+    "licence_stated": "CC BY-NC-SA 3.0",
+    "licence": "CC-BY-NC-SA-3.0",
+    "allowed": false,
+    "text_included": true,
+    "genre": "news"
+   },
+   {
+    "treebank": "UD_Arabic-PUD",
+    "repository": "https://github.com/UniversalDependencies/UD_Arabic-PUD",
+    "licence_stated": "CC BY-SA 3.0",
+    "licence": "CC-BY-SA-3.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "news, wiki"
+   }
+  ],
+  "ara-early": [
+   {
+    "treebank": "UD_Arabic-NYUAD",
+    "repository": "https://github.com/UniversalDependencies/UD_Arabic-NYUAD",
+    "licence_stated": "CC BY-SA 4.0. The underlying text is not included; the user must obtain it separately and then merge with the UD annotation using a script distributed with UD",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": false,
+    "genre": "news"
+   },
+   {
+    "treebank": "UD_Arabic-PADT",
+    "repository": "https://github.com/UniversalDependencies/UD_Arabic-PADT",
+    "licence_stated": "CC BY-NC-SA 3.0",
+    "licence": "CC-BY-NC-SA-3.0",
+    "allowed": false,
+    "text_included": true,
+    "genre": "news"
+   },
+   {
+    "treebank": "UD_Arabic-PUD",
+    "repository": "https://github.com/UniversalDependencies/UD_Arabic-PUD",
+    "licence_stated": "CC BY-SA 3.0",
+    "licence": "CC-BY-SA-3.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "news, wiki"
+   }
+  ],
+  "ara-med": [
+   {
+    "treebank": "UD_Arabic-NYUAD",
+    "repository": "https://github.com/UniversalDependencies/UD_Arabic-NYUAD",
+    "licence_stated": "CC BY-SA 4.0. The underlying text is not included; the user must obtain it separately and then merge with the UD annotation using a script distributed with UD",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": false,
+    "genre": "news"
+   },
+   {
+    "treebank": "UD_Arabic-PADT",
+    "repository": "https://github.com/UniversalDependencies/UD_Arabic-PADT",
+    "licence_stated": "CC BY-NC-SA 3.0",
+    "licence": "CC-BY-NC-SA-3.0",
+    "allowed": false,
+    "text_included": true,
+    "genre": "news"
+   },
+   {
+    "treebank": "UD_Arabic-PUD",
+    "repository": "https://github.com/UniversalDependencies/UD_Arabic-PUD",
+    "licence_stated": "CC BY-SA 3.0",
+    "licence": "CC-BY-SA-3.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "news, wiki"
+   }
+  ],
+  "ara-vern": [
+   {
+    "treebank": "UD_Arabic-NYUAD",
+    "repository": "https://github.com/UniversalDependencies/UD_Arabic-NYUAD",
+    "licence_stated": "CC BY-SA 4.0. The underlying text is not included; the user must obtain it separately and then merge with the UD annotation using a script distributed with UD",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": false,
+    "genre": "news"
+   },
+   {
+    "treebank": "UD_Arabic-PADT",
+    "repository": "https://github.com/UniversalDependencies/UD_Arabic-PADT",
+    "licence_stated": "CC BY-NC-SA 3.0",
+    "licence": "CC-BY-NC-SA-3.0",
+    "allowed": false,
+    "text_included": true,
+    "genre": "news"
+   },
+   {
+    "treebank": "UD_Arabic-PUD",
+    "repository": "https://github.com/UniversalDependencies/UD_Arabic-PUD",
+    "licence_stated": "CC BY-SA 3.0",
+    "licence": "CC-BY-SA-3.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "news, wiki"
+   }
+  ],
+  "arb": [
+   {
+    "treebank": "UD_Arabic-NYUAD",
+    "repository": "https://github.com/UniversalDependencies/UD_Arabic-NYUAD",
+    "licence_stated": "CC BY-SA 4.0. The underlying text is not included; the user must obtain it separately and then merge with the UD annotation using a script distributed with UD",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": false,
+    "genre": "news"
+   },
+   {
+    "treebank": "UD_Arabic-PADT",
+    "repository": "https://github.com/UniversalDependencies/UD_Arabic-PADT",
+    "licence_stated": "CC BY-NC-SA 3.0",
+    "licence": "CC-BY-NC-SA-3.0",
+    "allowed": false,
+    "text_included": true,
+    "genre": "news"
+   },
+   {
+    "treebank": "UD_Arabic-PUD",
+    "repository": "https://github.com/UniversalDependencies/UD_Arabic-PUD",
+    "licence_stated": "CC BY-SA 3.0",
+    "licence": "CC-BY-SA-3.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "news, wiki"
+   }
+  ],
+  "asm": [
+   {
+    "treebank": "UD_Assamese-AiW",
+    "repository": "https://github.com/UniversalDependencies/UD_Assamese-AiW",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "fiction, news"
+   }
+  ],
+  "ben": [
+   {
+    "treebank": "UD_Bengali-BRU",
+    "repository": "https://github.com/UniversalDependencies/UD_Bengali-BRU",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "grammar-examples"
+   }
+  ],
+  "cls": [
+   {
+    "treebank": "UD_Sanskrit-UFAL",
+    "repository": "https://github.com/UniversalDependencies/UD_Sanskrit-UFAL",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "fiction"
+   },
+   {
+    "treebank": "UD_Sanskrit-Vedic",
+    "repository": "https://github.com/UniversalDependencies/UD_Sanskrit-Vedic",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "nonfiction"
+   }
+  ],
+  "deu": [
+   {
+    "treebank": "UD_German-GSD",
+    "repository": "https://github.com/UniversalDependencies/UD_German-GSD",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "news, reviews, wiki"
+   },
+   {
+    "treebank": "UD_German-HDT",
+    "repository": "https://github.com/UniversalDependencies/UD_German-HDT",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "news, nonfiction, web"
+   },
+   {
+    "treebank": "UD_German-LIT",
+    "repository": "https://github.com/UniversalDependencies/UD_German-LIT",
+    "licence_stated": "CC BY-NC-SA 4.0",
+    "licence": "CC-BY-NC-SA-4.0",
+    "allowed": false,
+    "text_included": true,
+    "genre": "nonfiction"
+   },
+   {
+    "treebank": "UD_German-PUD",
+    "repository": "https://github.com/UniversalDependencies/UD_German-PUD",
+    "licence_stated": "CC BY-SA 3.0",
+    "licence": "CC-BY-SA-3.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "news, wiki"
+   }
+  ],
+  "egy": [
+   {
+    "treebank": "UD_Egyptian-PC",
+    "repository": "https://github.com/UniversalDependencies/UD_Egyptian-PC",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "bible, fiction, nonfiction, government"
+   },
+   {
+    "treebank": "UD_Coptic-Bohairic",
+    "repository": "https://github.com/UniversalDependencies/UD_Coptic-Bohairic",
+    "licence_stated": "CC BY 4.0",
+    "licence": "CC-BY-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "bible, fiction, nonfiction"
+   },
+   {
+    "treebank": "UD_Coptic-Scriptorium",
+    "repository": "https://github.com/UniversalDependencies/UD_Coptic-Scriptorium",
+    "licence_stated": "CC BY 4.0",
+    "licence": "CC-BY-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "bible, fiction, nonfiction"
+   }
+  ],
+  "eng": [
+   {
+    "treebank": "UD_English-Atis",
+    "repository": "https://github.com/UniversalDependencies/UD_English-Atis",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "spoken"
+   },
+   {
+    "treebank": "UD_English-CHILDES",
+    "repository": "https://github.com/UniversalDependencies/UD_English-CHILDES",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "spoken"
+   },
+   {
+    "treebank": "UD_English-CTeTex",
+    "repository": "https://github.com/UniversalDependencies/UD_English-CTeTex",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "nonfiction"
+   },
+   {
+    "treebank": "UD_English-ESL",
+    "repository": "https://github.com/UniversalDependencies/UD_English-ESL",
+    "licence_stated": "CC BY-SA 4.0. The underlying text is not included; the user must obtain it separately and then merge with the UD annotation using a script distributed with UD",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": false,
+    "genre": "learner-essays"
+   },
+   {
+    "treebank": "UD_English-ESLSpok",
+    "repository": "https://github.com/UniversalDependencies/UD_English-ESLSpok",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "spoken"
+   },
+   {
+    "treebank": "UD_English-EWT",
+    "repository": "https://github.com/UniversalDependencies/UD_English-EWT",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "blog, social, reviews, email, web"
+   },
+   {
+    "treebank": "UD_English-GENTLE",
+    "repository": "https://github.com/UniversalDependencies/UD_English-GENTLE",
+    "licence_stated": "CC BY-NC-SA 4.0",
+    "licence": "CC-BY-NC-SA-4.0",
+    "allowed": false,
+    "text_included": true,
+    "genre": "academic, grammar-examples, legal, medical, nonfiction, poetry, social, spoken"
+   },
+   {
+    "treebank": "UD_English-GUM",
+    "repository": "https://github.com/UniversalDependencies/UD_English-GUM",
+    "licence_stated": "CC BY-NC-SA 4.0",
+    "licence": "CC-BY-NC-SA-4.0",
+    "allowed": false,
+    "text_included": true,
+    "genre": "academic, blog, email, fiction, government, legal, news, nonfiction, social, spoken, web, wiki"
+   },
+   {
+    "treebank": "UD_English-GUMReddit",
+    "repository": "https://github.com/UniversalDependencies/UD_English-GUMReddit",
+    "licence_stated": "CC BY 4.0. The underlying text is not included; the user must obtain it separately and then merge with the UD annotation using a script distributed with UD",
+    "licence": "CC-BY-4.0",
+    "allowed": true,
+    "text_included": false,
+    "genre": "blog, social"
+   },
+   {
+    "treebank": "UD_English-LinES",
+    "repository": "https://github.com/UniversalDependencies/UD_English-LinES",
+    "licence_stated": "CC BY-NC-SA 4.0",
+    "licence": "CC-BY-NC-SA-4.0",
+    "allowed": false,
+    "text_included": true,
+    "genre": "fiction, nonfiction, spoken"
+   },
+   {
+    "treebank": "UD_English-LittlePrince",
+    "repository": "https://github.com/UniversalDependencies/UD_English-LittlePrince",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "fiction"
+   },
+   {
+    "treebank": "UD_English-ParTUT",
+    "repository": "https://github.com/UniversalDependencies/UD_English-ParTUT",
+    "licence_stated": "CC BY-NC-SA 4.0",
+    "licence": "CC-BY-NC-SA-4.0",
+    "allowed": false,
+    "text_included": true,
+    "genre": "legal, news, wiki"
+   },
+   {
+    "treebank": "UD_English-Pronouns",
+    "repository": "https://github.com/UniversalDependencies/UD_English-Pronouns",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "grammar-examples"
+   },
+   {
+    "treebank": "UD_English-PUD",
+    "repository": "https://github.com/UniversalDependencies/UD_English-PUD",
+    "licence_stated": "CC BY-SA 3.0",
+    "licence": "CC-BY-SA-3.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "news, wiki"
+   }
+  ],
+  "fas": [
+   {
+    "treebank": "UD_Persian-PerDT",
+    "repository": "https://github.com/UniversalDependencies/UD_Persian-PerDT",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "news, fiction, nonfiction, academic, web, blog"
+   },
+   {
+    "treebank": "UD_Persian-Seraji",
+    "repository": "https://github.com/UniversalDependencies/UD_Persian-Seraji",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "news, fiction, medical, legal, social, spoken, nonfiction"
+   }
+  ],
+  "fra": [
+   {
+    "treebank": "UD_French-ALTS",
+    "repository": "https://github.com/UniversalDependencies/UD_French-ALTS",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "legal"
+   },
+   {
+    "treebank": "UD_French-FQB",
+    "repository": "https://github.com/UniversalDependencies/UD_French-FQB",
+    "licence_stated": "LGPL-LR",
+    "licence": "LGPL-LR",
+    "allowed": true,
+    "text_included": true,
+    "genre": "nonfiction, news"
+   },
+   {
+    "treebank": "UD_French-FTB",
+    "repository": "https://github.com/UniversalDependencies/UD_French-FTB",
+    "licence_stated": "LGPL-LR. The underlying text is not included; the user must obtain it separately and then merge with the UD annotation using a script distributed with UD",
+    "licence": "LGPL-LR",
+    "allowed": true,
+    "text_included": false,
+    "genre": "news"
+   },
+   {
+    "treebank": "UD_French-GSD",
+    "repository": "https://github.com/UniversalDependencies/UD_French-GSD",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "blog, news, reviews, wiki"
+   },
+   {
+    "treebank": "UD_French-ParisStories",
+    "repository": "https://github.com/UniversalDependencies/UD_French-ParisStories",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "spoken"
+   },
+   {
+    "treebank": "UD_French-ParTUT",
+    "repository": "https://github.com/UniversalDependencies/UD_French-ParTUT",
+    "licence_stated": "CC BY-NC-SA 4.0",
+    "licence": "CC-BY-NC-SA-4.0",
+    "allowed": false,
+    "text_included": true,
+    "genre": "legal, news, wiki"
+   },
+   {
+    "treebank": "UD_French-PoitevinDIVITAL",
+    "repository": "https://github.com/UniversalDependencies/UD_French-PoitevinDIVITAL",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "grammar-examples"
+   },
+   {
+    "treebank": "UD_French-PUD",
+    "repository": "https://github.com/UniversalDependencies/UD_French-PUD",
+    "licence_stated": "CC BY-SA 3.0",
+    "licence": "CC-BY-SA-3.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "news, wiki"
+   },
+   {
+    "treebank": "UD_French-Rhapsodie",
+    "repository": "https://github.com/UniversalDependencies/UD_French-Rhapsodie",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "spoken"
+   },
+   {
+    "treebank": "UD_French-Sequoia",
+    "repository": "https://github.com/UniversalDependencies/UD_French-Sequoia",
+    "licence_stated": "LGPL-LR",
+    "licence": "LGPL-LR",
+    "allowed": true,
+    "text_included": true,
+    "genre": "wiki, medical, news, nonfiction"
+   }
+  ],
+  "grc": [
+   {
+    "treebank": "UD_Ancient_Greek-Perseus",
+    "repository": "https://github.com/UniversalDependencies/UD_Ancient_Greek-Perseus",
+    "licence_stated": "CC BY-NC-SA 2.5",
+    "licence": "CC-BY-NC-SA-2.5",
+    "allowed": false,
+    "text_included": true,
+    "genre": "fiction"
+   },
+   {
+    "treebank": "UD_Ancient_Greek-PROIEL",
+    "repository": "https://github.com/UniversalDependencies/UD_Ancient_Greek-PROIEL",
+    "licence_stated": "CC BY-NC-SA 3.0",
+    "licence": "CC-BY-NC-SA-3.0",
+    "allowed": false,
+    "text_included": true,
+    "genre": "bible, nonfiction"
+   },
+   {
+    "treebank": "UD_Ancient_Greek-PTNK",
+    "repository": "https://github.com/UniversalDependencies/UD_Ancient_Greek-PTNK",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "bible"
+   }
+  ],
+  "grc-byz": [
+   {
+    "treebank": "UD_Ancient_Greek-Perseus",
+    "repository": "https://github.com/UniversalDependencies/UD_Ancient_Greek-Perseus",
+    "licence_stated": "CC BY-NC-SA 2.5",
+    "licence": "CC-BY-NC-SA-2.5",
+    "allowed": false,
+    "text_included": true,
+    "genre": "fiction"
+   },
+   {
+    "treebank": "UD_Ancient_Greek-PROIEL",
+    "repository": "https://github.com/UniversalDependencies/UD_Ancient_Greek-PROIEL",
+    "licence_stated": "CC BY-NC-SA 3.0",
+    "licence": "CC-BY-NC-SA-3.0",
+    "allowed": false,
+    "text_included": true,
+    "genre": "bible, nonfiction"
+   },
+   {
+    "treebank": "UD_Ancient_Greek-PTNK",
+    "repository": "https://github.com/UniversalDependencies/UD_Ancient_Greek-PTNK",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "bible"
+   }
+  ],
+  "grc-koine": [
+   {
+    "treebank": "UD_Ancient_Greek-Perseus",
+    "repository": "https://github.com/UniversalDependencies/UD_Ancient_Greek-Perseus",
+    "licence_stated": "CC BY-NC-SA 2.5",
+    "licence": "CC-BY-NC-SA-2.5",
+    "allowed": false,
+    "text_included": true,
+    "genre": "fiction"
+   },
+   {
+    "treebank": "UD_Ancient_Greek-PROIEL",
+    "repository": "https://github.com/UniversalDependencies/UD_Ancient_Greek-PROIEL",
+    "licence_stated": "CC BY-NC-SA 3.0",
+    "licence": "CC-BY-NC-SA-3.0",
+    "allowed": false,
+    "text_included": true,
+    "genre": "bible, nonfiction"
+   },
+   {
+    "treebank": "UD_Ancient_Greek-PTNK",
+    "repository": "https://github.com/UniversalDependencies/UD_Ancient_Greek-PTNK",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "bible"
+   }
+  ],
+  "guj": [
+   {
+    "treebank": "UD_Gujarati-GujTB",
+    "repository": "https://github.com/UniversalDependencies/UD_Gujarati-GujTB",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "grammar-examples"
+   }
+  ],
+  "hbo": [
+   {
+    "treebank": "UD_Ancient_Hebrew-PTNK",
+    "repository": "https://github.com/UniversalDependencies/UD_Ancient_Hebrew-PTNK",
+    "licence_stated": "CC BY-NC 4.0",
+    "licence": "CC-BY-NC-4.0",
+    "allowed": false,
+    "text_included": true,
+    "genre": "bible"
+   }
+  ],
+  "hin": [
+   {
+    "treebank": "UD_Hindi-HDTB",
+    "repository": "https://github.com/UniversalDependencies/UD_Hindi-HDTB",
+    "licence_stated": "CC BY-NC-SA 4.0",
+    "licence": "CC-BY-NC-SA-4.0",
+    "allowed": false,
+    "text_included": true,
+    "genre": "news"
+   },
+   {
+    "treebank": "UD_Hindi-PUD",
+    "repository": "https://github.com/UniversalDependencies/UD_Hindi-PUD",
+    "licence_stated": "CC BY-SA 3.0",
+    "licence": "CC-BY-SA-3.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "news, wiki"
+   }
+  ],
+  "hit": [
+   {
+    "treebank": "UD_Hittite-HitTB",
+    "repository": "https://github.com/UniversalDependencies/UD_Hittite-HitTB",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "grammar-examples"
+   }
+  ],
+  "ita": [
+   {
+    "treebank": "UD_Italian-ISDT",
+    "repository": "https://github.com/UniversalDependencies/UD_Italian-ISDT",
+    "licence_stated": "CC BY-NC-SA 3.0",
+    "licence": "CC-BY-NC-SA-3.0",
+    "allowed": false,
+    "text_included": true,
+    "genre": "legal, news, wiki"
+   },
+   {
+    "treebank": "UD_Italian-KIParlaForest",
+    "repository": "https://github.com/UniversalDependencies/UD_Italian-KIParlaForest",
+    "licence_stated": "CC BY-NC-SA 4.0",
+    "licence": "CC-BY-NC-SA-4.0",
+    "allowed": false,
+    "text_included": true,
+    "genre": "spoken"
+   },
+   {
+    "treebank": "UD_Italian-MarkIT",
+    "repository": "https://github.com/UniversalDependencies/UD_Italian-MarkIT",
+    "licence_stated": "CC BY 4.0",
+    "licence": "CC-BY-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "grammar-examples"
+   },
+   {
+    "treebank": "UD_Italian-Old",
+    "repository": "https://github.com/UniversalDependencies/UD_Italian-Old",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "poetry"
+   },
+   {
+    "treebank": "UD_Italian-ParlaMint",
+    "repository": "https://github.com/UniversalDependencies/UD_Italian-ParlaMint",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "government, legal"
+   },
+   {
+    "treebank": "UD_Italian-ParTUT",
+    "repository": "https://github.com/UniversalDependencies/UD_Italian-ParTUT",
+    "licence_stated": "CC BY-NC-SA 4.0",
+    "licence": "CC-BY-NC-SA-4.0",
+    "allowed": false,
+    "text_included": true,
+    "genre": "legal, news, wiki"
+   },
+   {
+    "treebank": "UD_Italian-PoSTWITA",
+    "repository": "https://github.com/UniversalDependencies/UD_Italian-PoSTWITA",
+    "licence_stated": "CC BY-NC-SA 4.0",
+    "licence": "CC-BY-NC-SA-4.0",
+    "allowed": false,
+    "text_included": true,
+    "genre": "social"
+   },
+   {
+    "treebank": "UD_Italian-PUD",
+    "repository": "https://github.com/UniversalDependencies/UD_Italian-PUD",
+    "licence_stated": "CC BY-SA 3.0",
+    "licence": "CC-BY-SA-3.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "news, wiki"
+   },
+   {
+    "treebank": "UD_Italian-TWITTIRO",
+    "repository": "https://github.com/UniversalDependencies/UD_Italian-TWITTIRO",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "social"
+   },
+   {
+    "treebank": "UD_Italian-Valico",
+    "repository": "https://github.com/UniversalDependencies/UD_Italian-Valico",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "learner-essays"
+   },
+   {
+    "treebank": "UD_Italian-VIT",
+    "repository": "https://github.com/UniversalDependencies/UD_Italian-VIT",
+    "licence_stated": "CC BY-NC-SA 3.0",
+    "licence": "CC-BY-NC-SA-3.0",
+    "allowed": false,
+    "text_included": true,
+    "genre": "nonfiction, news"
+   }
+  ],
+  "jpn": [
+   {
+    "treebank": "UD_Japanese-BCCWJ",
+    "repository": "https://github.com/UniversalDependencies/UD_Japanese-BCCWJ",
+    "licence_stated": "CC BY-NC-SA 4.0. The underlying text is not included; the user must obtain it separately and then merge with the UD annotation using a script distributed with UD",
+    "licence": "CC-BY-NC-SA-4.0",
+    "allowed": false,
+    "text_included": false,
+    "genre": "news, nonfiction, fiction, blog, web"
+   },
+   {
+    "treebank": "UD_Japanese-BCCWJLUW",
+    "repository": "https://github.com/UniversalDependencies/UD_Japanese-BCCWJLUW",
+    "licence_stated": "CC BY-NC-SA 4.0. The underlying text is not included; the user must obtain it separately and then merge with the UD annotation using a script distributed with UD",
+    "licence": "CC-BY-NC-SA-4.0",
+    "allowed": false,
+    "text_included": false,
+    "genre": "news, nonfiction, fiction, blog, web"
+   },
+   {
+    "treebank": "UD_Japanese-GSD",
+    "repository": "https://github.com/UniversalDependencies/UD_Japanese-GSD",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "news, blog"
+   },
+   {
+    "treebank": "UD_Japanese-GSDLUW",
+    "repository": "https://github.com/UniversalDependencies/UD_Japanese-GSDLUW",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "news, blog"
+   },
+   {
+    "treebank": "UD_Japanese-PUD",
+    "repository": "https://github.com/UniversalDependencies/UD_Japanese-PUD",
+    "licence_stated": "CC BY-SA 3.0",
+    "licence": "CC-BY-SA-3.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "news, wiki"
+   },
+   {
+    "treebank": "UD_Japanese-PUDLUW",
+    "repository": "https://github.com/UniversalDependencies/UD_Japanese-PUDLUW",
+    "licence_stated": "CC BY-SA 3.0",
+    "licence": "CC-BY-SA-3.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "news, wiki"
+   }
+  ],
+  "jpn-emod": [
+   {
+    "treebank": "UD_Japanese-BCCWJ",
+    "repository": "https://github.com/UniversalDependencies/UD_Japanese-BCCWJ",
+    "licence_stated": "CC BY-NC-SA 4.0. The underlying text is not included; the user must obtain it separately and then merge with the UD annotation using a script distributed with UD",
+    "licence": "CC-BY-NC-SA-4.0",
+    "allowed": false,
+    "text_included": false,
+    "genre": "news, nonfiction, fiction, blog, web"
+   },
+   {
+    "treebank": "UD_Japanese-BCCWJLUW",
+    "repository": "https://github.com/UniversalDependencies/UD_Japanese-BCCWJLUW",
+    "licence_stated": "CC BY-NC-SA 4.0. The underlying text is not included; the user must obtain it separately and then merge with the UD annotation using a script distributed with UD",
+    "licence": "CC-BY-NC-SA-4.0",
+    "allowed": false,
+    "text_included": false,
+    "genre": "news, nonfiction, fiction, blog, web"
+   },
+   {
+    "treebank": "UD_Japanese-GSD",
+    "repository": "https://github.com/UniversalDependencies/UD_Japanese-GSD",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "news, blog"
+   },
+   {
+    "treebank": "UD_Japanese-GSDLUW",
+    "repository": "https://github.com/UniversalDependencies/UD_Japanese-GSDLUW",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "news, blog"
+   },
+   {
+    "treebank": "UD_Japanese-PUD",
+    "repository": "https://github.com/UniversalDependencies/UD_Japanese-PUD",
+    "licence_stated": "CC BY-SA 3.0",
+    "licence": "CC-BY-SA-3.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "news, wiki"
+   },
+   {
+    "treebank": "UD_Japanese-PUDLUW",
+    "repository": "https://github.com/UniversalDependencies/UD_Japanese-PUDLUW",
+    "licence_stated": "CC BY-SA 3.0",
+    "licence": "CC-BY-SA-3.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "news, wiki"
+   }
+  ],
+  "jpn-med": [
+   {
+    "treebank": "UD_Japanese-BCCWJ",
+    "repository": "https://github.com/UniversalDependencies/UD_Japanese-BCCWJ",
+    "licence_stated": "CC BY-NC-SA 4.0. The underlying text is not included; the user must obtain it separately and then merge with the UD annotation using a script distributed with UD",
+    "licence": "CC-BY-NC-SA-4.0",
+    "allowed": false,
+    "text_included": false,
+    "genre": "news, nonfiction, fiction, blog, web"
+   },
+   {
+    "treebank": "UD_Japanese-BCCWJLUW",
+    "repository": "https://github.com/UniversalDependencies/UD_Japanese-BCCWJLUW",
+    "licence_stated": "CC BY-NC-SA 4.0. The underlying text is not included; the user must obtain it separately and then merge with the UD annotation using a script distributed with UD",
+    "licence": "CC-BY-NC-SA-4.0",
+    "allowed": false,
+    "text_included": false,
+    "genre": "news, nonfiction, fiction, blog, web"
+   },
+   {
+    "treebank": "UD_Japanese-GSD",
+    "repository": "https://github.com/UniversalDependencies/UD_Japanese-GSD",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "news, blog"
+   },
+   {
+    "treebank": "UD_Japanese-GSDLUW",
+    "repository": "https://github.com/UniversalDependencies/UD_Japanese-GSDLUW",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "news, blog"
+   },
+   {
+    "treebank": "UD_Japanese-PUD",
+    "repository": "https://github.com/UniversalDependencies/UD_Japanese-PUD",
+    "licence_stated": "CC BY-SA 3.0",
+    "licence": "CC-BY-SA-3.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "news, wiki"
+   },
+   {
+    "treebank": "UD_Japanese-PUDLUW",
+    "repository": "https://github.com/UniversalDependencies/UD_Japanese-PUDLUW",
+    "licence_stated": "CC BY-SA 3.0",
+    "licence": "CC-BY-SA-3.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "news, wiki"
+   }
+  ],
+  "kat": [
+   {
+    "treebank": "UD_Old_Georgian-GLC",
+    "repository": "https://github.com/UniversalDependencies/UD_Old_Georgian-GLC",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "fiction"
+   },
+   {
+    "treebank": "UD_Georgian-GLC",
+    "repository": "https://github.com/UniversalDependencies/UD_Georgian-GLC",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "fiction, nonfiction"
+   },
+   {
+    "treebank": "UD_Georgian-GNC",
+    "repository": "https://github.com/UniversalDependencies/UD_Georgian-GNC",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "fiction, news"
+   }
+  ],
+  "kor": [
+   {
+    "treebank": "UD_Korean-GSD",
+    "repository": "https://github.com/UniversalDependencies/UD_Korean-GSD",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "news, blog"
+   },
+   {
+    "treebank": "UD_Korean-Kaist",
+    "repository": "https://github.com/UniversalDependencies/UD_Korean-Kaist",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "news, fiction, academic"
+   },
+   {
+    "treebank": "UD_Korean-KSL",
+    "repository": "https://github.com/UniversalDependencies/UD_Korean-KSL",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "learner-essays"
+   },
+   {
+    "treebank": "UD_Korean-LittlePrince",
+    "repository": "https://github.com/UniversalDependencies/UD_Korean-LittlePrince",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "fiction"
+   },
+   {
+    "treebank": "UD_Korean-PUD",
+    "repository": "https://github.com/UniversalDependencies/UD_Korean-PUD",
+    "licence_stated": "CC BY-SA 3.0",
+    "licence": "CC-BY-SA-3.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "news, wiki"
+   }
+  ],
+  "lat": [
+   {
+    "treebank": "UD_Latin-CIRCSE",
+    "repository": "https://github.com/UniversalDependencies/UD_Latin-CIRCSE",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "fiction, poetry"
+   },
+   {
+    "treebank": "UD_Latin-ITTB",
+    "repository": "https://github.com/UniversalDependencies/UD_Latin-ITTB",
+    "licence_stated": "CC BY-NC-SA 3.0",
+    "licence": "CC-BY-NC-SA-3.0",
+    "allowed": false,
+    "text_included": true,
+    "genre": "nonfiction"
+   },
+   {
+    "treebank": "UD_Latin-LLCT",
+    "repository": "https://github.com/UniversalDependencies/UD_Latin-LLCT",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "nonfiction, legal"
+   },
+   {
+    "treebank": "UD_Latin-Perseus",
+    "repository": "https://github.com/UniversalDependencies/UD_Latin-Perseus",
+    "licence_stated": "CC BY-NC-SA 2.5",
+    "licence": "CC-BY-NC-SA-2.5",
+    "allowed": false,
+    "text_included": true,
+    "genre": "fiction, nonfiction, bible"
+   },
+   {
+    "treebank": "UD_Latin-PROIEL",
+    "repository": "https://github.com/UniversalDependencies/UD_Latin-PROIEL",
+    "licence_stated": "CC BY-NC-SA 3.0",
+    "licence": "CC-BY-NC-SA-3.0",
+    "allowed": false,
+    "text_included": true,
+    "genre": "bible, nonfiction"
+   },
+   {
+    "treebank": "UD_Latin-UDante",
+    "repository": "https://github.com/UniversalDependencies/UD_Latin-UDante",
+    "licence_stated": "CC BY-NC-SA 3.0",
+    "licence": "CC-BY-NC-SA-3.0",
+    "allowed": false,
+    "text_included": true,
+    "genre": "nonfiction, poetry, email"
+   }
+  ],
+  "lzh": [
+   {
+    "treebank": "UD_Classical_Chinese-Kyoto",
+    "repository": "https://github.com/UniversalDependencies/UD_Classical_Chinese-Kyoto",
+    "licence_stated": "PD",
+    "licence": "public-domain",
+    "allowed": true,
+    "text_included": true,
+    "genre": "nonfiction, poetry"
+   },
+   {
+    "treebank": "UD_Classical_Chinese-TueCL",
+    "repository": "https://github.com/UniversalDependencies/UD_Classical_Chinese-TueCL",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "fiction"
+   }
+  ],
+  "mal": [
+   {
+    "treebank": "UD_Malayalam-UFAL",
+    "repository": "https://github.com/UniversalDependencies/UD_Malayalam-UFAL",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "grammar-examples"
+   }
+  ],
+  "mar": [
+   {
+    "treebank": "UD_Marathi-CMUPAN",
+    "repository": "https://github.com/UniversalDependencies/UD_Marathi-CMUPAN",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "academic, news, grammar-examples, government"
+   },
+   {
+    "treebank": "UD_Marathi-UFAL",
+    "repository": "https://github.com/UniversalDependencies/UD_Marathi-UFAL",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "fiction, wiki"
+   }
+  ],
+  "nld": [
+   {
+    "treebank": "UD_Dutch-Alpino",
+    "repository": "https://github.com/UniversalDependencies/UD_Dutch-Alpino",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "news"
+   },
+   {
+    "treebank": "UD_Dutch-LassySmall",
+    "repository": "https://github.com/UniversalDependencies/UD_Dutch-LassySmall",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "wiki"
+   }
+  ],
+  "npi": [
+   {
+    "treebank": "UD_Nepali-BK",
+    "repository": "https://github.com/UniversalDependencies/UD_Nepali-BK",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "fiction, nonfiction"
+   }
+  ],
+  "ory": [
+   {
+    "treebank": "UD_Odia-ODTB",
+    "repository": "https://github.com/UniversalDependencies/UD_Odia-ODTB",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "nonfiction, news"
+   }
+  ],
+  "ota": [
+   {
+    "treebank": "UD_Ottoman_Turkish-BOUN",
+    "repository": "https://github.com/UniversalDependencies/UD_Ottoman_Turkish-BOUN",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "fiction, nonfiction"
+   },
+   {
+    "treebank": "UD_Ottoman_Turkish-DUDU",
+    "repository": "https://github.com/UniversalDependencies/UD_Ottoman_Turkish-DUDU",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "news, fiction, nonfiction, poetry, bible"
+   },
+   {
+    "treebank": "UD_Ottoman_Turkish-TueCL",
+    "repository": "https://github.com/UniversalDependencies/UD_Ottoman_Turkish-TueCL",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "grammar-examples"
+   }
+  ],
+  "otk": [
+   {
+    "treebank": "UD_Old_Turkish-Clausal",
+    "repository": "https://github.com/UniversalDependencies/UD_Old_Turkish-Clausal",
+    "licence_stated": "CC0 1.0",
+    "licence": "CC0-1.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "nonfiction"
+   }
+  ],
+  "pan": [
+   {
+    "treebank": "UD_Punjabi-CS",
+    "repository": "https://github.com/UniversalDependencies/UD_Punjabi-CS",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "fiction, news"
+   },
+   {
+    "treebank": "UD_Punjabi-Rang",
+    "repository": "https://github.com/UniversalDependencies/UD_Punjabi-Rang",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "fiction, news"
+   }
+  ],
+  "pol": [
+   {
+    "treebank": "UD_Polish-LFG",
+    "repository": "https://github.com/UniversalDependencies/UD_Polish-LFG",
+    "licence_stated": "GNU GPL 3.0",
+    "licence": "GPL-3.0-only",
+    "allowed": true,
+    "text_included": true,
+    "genre": "fiction, nonfiction, news, spoken, social"
+   },
+   {
+    "treebank": "UD_Polish-MPDT",
+    "repository": "https://github.com/UniversalDependencies/UD_Polish-MPDT",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "nonfiction, bible, legal, fiction"
+   },
+   {
+    "treebank": "UD_Polish-PDB",
+    "repository": "https://github.com/UniversalDependencies/UD_Polish-PDB",
+    "licence_stated": "CC BY-NC-SA 4.0",
+    "licence": "CC-BY-NC-SA-4.0",
+    "allowed": false,
+    "text_included": true,
+    "genre": "fiction, nonfiction, news"
+   },
+   {
+    "treebank": "UD_Polish-PUD",
+    "repository": "https://github.com/UniversalDependencies/UD_Polish-PUD",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "nonfiction, news"
+   }
+  ],
+  "por": [
+   {
+    "treebank": "UD_Portuguese-Bosque",
+    "repository": "https://github.com/UniversalDependencies/UD_Portuguese-Bosque",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "news"
+   },
+   {
+    "treebank": "UD_Portuguese-CINTIL",
+    "repository": "https://github.com/UniversalDependencies/UD_Portuguese-CINTIL",
+    "licence_stated": "CC BY-NC-ND 4.0",
+    "licence": "CC-BY-NC-ND-4.0",
+    "allowed": false,
+    "text_included": true,
+    "genre": "news, fiction, nonfiction, grammar-examples"
+   },
+   {
+    "treebank": "UD_Portuguese-DANTEStocks",
+    "repository": "https://github.com/UniversalDependencies/UD_Portuguese-DANTEStocks",
+    "licence_stated": "CC BY 4.0",
+    "licence": "CC-BY-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "social"
+   },
+   {
+    "treebank": "UD_Portuguese-GSD",
+    "repository": "https://github.com/UniversalDependencies/UD_Portuguese-GSD",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "blog, news"
+   },
+   {
+    "treebank": "UD_Portuguese-PetroGold",
+    "repository": "https://github.com/UniversalDependencies/UD_Portuguese-PetroGold",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "academic"
+   },
+   {
+    "treebank": "UD_Portuguese-Porttinari",
+    "repository": "https://github.com/UniversalDependencies/UD_Portuguese-Porttinari",
+    "licence_stated": "CC BY 4.0",
+    "licence": "CC-BY-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "news"
+   },
+   {
+    "treebank": "UD_Portuguese-PUD",
+    "repository": "https://github.com/UniversalDependencies/UD_Portuguese-PUD",
+    "licence_stated": "CC BY-SA 3.0",
+    "licence": "CC-BY-SA-3.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "news, wiki"
+   }
+  ],
+  "rus": [
+   {
+    "treebank": "UD_Russian-GSD",
+    "repository": "https://github.com/UniversalDependencies/UD_Russian-GSD",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "wiki"
+   },
+   {
+    "treebank": "UD_Russian-Poetry",
+    "repository": "https://github.com/UniversalDependencies/UD_Russian-Poetry",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "poetry"
+   },
+   {
+    "treebank": "UD_Russian-PUD",
+    "repository": "https://github.com/UniversalDependencies/UD_Russian-PUD",
+    "licence_stated": "CC BY-SA 3.0",
+    "licence": "CC-BY-SA-3.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "news, wiki"
+   },
+   {
+    "treebank": "UD_Russian-SynTagRus",
+    "repository": "https://github.com/UniversalDependencies/UD_Russian-SynTagRus",
+    "licence_stated": "CC BY-NC-SA 4.0",
+    "licence": "CC-BY-NC-SA-4.0",
+    "allowed": false,
+    "text_included": true,
+    "genre": "news, nonfiction, fiction"
+   },
+   {
+    "treebank": "UD_Russian-Taiga",
+    "repository": "https://github.com/UniversalDependencies/UD_Russian-Taiga",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "blog, fiction, news, poetry, social, wiki"
+   }
+  ],
+  "san-epic": [
+   {
+    "treebank": "UD_Sanskrit-UFAL",
+    "repository": "https://github.com/UniversalDependencies/UD_Sanskrit-UFAL",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "fiction"
+   },
+   {
+    "treebank": "UD_Sanskrit-Vedic",
+    "repository": "https://github.com/UniversalDependencies/UD_Sanskrit-Vedic",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "nonfiction"
+   }
+  ],
+  "sin": [
+   {
+    "treebank": "UD_Sinhala-Appuwa",
+    "repository": "https://github.com/UniversalDependencies/UD_Sinhala-Appuwa",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "fiction"
+   },
+   {
+    "treebank": "UD_Sinhala-STB",
+    "repository": "https://github.com/UniversalDependencies/UD_Sinhala-STB",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "fiction, government, news, nonfiction, web"
+   }
+  ],
+  "snd": [
+   {
+    "treebank": "UD_Sindhi-Isra",
+    "repository": "https://github.com/UniversalDependencies/UD_Sindhi-Isra",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "grammar-examples"
+   }
+  ],
+  "spa": [
+   {
+    "treebank": "UD_Spanish-AnCora",
+    "repository": "https://github.com/UniversalDependencies/UD_Spanish-AnCora",
+    "licence_stated": "CC BY 4.0",
+    "licence": "CC-BY-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "news"
+   },
+   {
+    "treebank": "UD_Spanish-COSER",
+    "repository": "https://github.com/UniversalDependencies/UD_Spanish-COSER",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "spoken"
+   },
+   {
+    "treebank": "UD_Spanish-GSD",
+    "repository": "https://github.com/UniversalDependencies/UD_Spanish-GSD",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "blog, news, reviews, wiki"
+   },
+   {
+    "treebank": "UD_Spanish-PUD",
+    "repository": "https://github.com/UniversalDependencies/UD_Spanish-PUD",
+    "licence_stated": "CC BY-SA 3.0",
+    "licence": "CC-BY-SA-3.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "news, wiki"
+   }
+  ],
+  "tam": [
+   {
+    "treebank": "UD_Tamil-MWTT",
+    "repository": "https://github.com/UniversalDependencies/UD_Tamil-MWTT",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "news"
+   },
+   {
+    "treebank": "UD_Tamil-TTB",
+    "repository": "https://github.com/UniversalDependencies/UD_Tamil-TTB",
+    "licence_stated": "CC BY-NC-SA 3.0",
+    "licence": "CC-BY-NC-SA-3.0",
+    "allowed": false,
+    "text_included": true,
+    "genre": "news"
+   }
+  ],
+  "tel": [
+   {
+    "treebank": "UD_Telugu-MTG",
+    "repository": "https://github.com/UniversalDependencies/UD_Telugu-MTG",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "grammar-examples"
+   }
+  ],
+  "tur": [
+   {
+    "treebank": "UD_Turkish-Atis",
+    "repository": "https://github.com/UniversalDependencies/UD_Turkish-Atis",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "nonfiction, news"
+   },
+   {
+    "treebank": "UD_Turkish-BOUN",
+    "repository": "https://github.com/UniversalDependencies/UD_Turkish-BOUN",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "nonfiction, news"
+   },
+   {
+    "treebank": "UD_Turkish-FrameNet",
+    "repository": "https://github.com/UniversalDependencies/UD_Turkish-FrameNet",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "grammar-examples"
+   },
+   {
+    "treebank": "UD_Turkish-GB",
+    "repository": "https://github.com/UniversalDependencies/UD_Turkish-GB",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "grammar-examples"
+   },
+   {
+    "treebank": "UD_Turkish-IMST",
+    "repository": "https://github.com/UniversalDependencies/UD_Turkish-IMST",
+    "licence_stated": "CC BY-NC-SA 4.0",
+    "licence": "CC-BY-NC-SA-4.0",
+    "allowed": false,
+    "text_included": true,
+    "genre": "nonfiction, news"
+   },
+   {
+    "treebank": "UD_Turkish-Kenet",
+    "repository": "https://github.com/UniversalDependencies/UD_Turkish-Kenet",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "grammar-examples"
+   },
+   {
+    "treebank": "UD_Turkish-Penn",
+    "repository": "https://github.com/UniversalDependencies/UD_Turkish-Penn",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "nonfiction, news"
+   },
+   {
+    "treebank": "UD_Turkish-PUD",
+    "repository": "https://github.com/UniversalDependencies/UD_Turkish-PUD",
+    "licence_stated": "CC BY-SA 3.0",
+    "licence": "CC-BY-SA-3.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "news, wiki"
+   },
+   {
+    "treebank": "UD_Turkish-Tourism",
+    "repository": "https://github.com/UniversalDependencies/UD_Turkish-Tourism",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "reviews"
+   },
+   {
+    "treebank": "UD_Turkish-TueCL",
+    "repository": "https://github.com/UniversalDependencies/UD_Turkish-TueCL",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "grammar-examples"
+   }
+  ],
+  "urd": [
+   {
+    "treebank": "UD_Urdu-UDTB",
+    "repository": "https://github.com/UniversalDependencies/UD_Urdu-UDTB",
+    "licence_stated": "CC BY-NC-SA 4.0",
+    "licence": "CC-BY-NC-SA-4.0",
+    "allowed": false,
+    "text_included": true,
+    "genre": "news"
+   }
+  ],
+  "vsn": [
+   {
+    "treebank": "UD_Sanskrit-UFAL",
+    "repository": "https://github.com/UniversalDependencies/UD_Sanskrit-UFAL",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "fiction"
+   },
+   {
+    "treebank": "UD_Sanskrit-Vedic",
+    "repository": "https://github.com/UniversalDependencies/UD_Sanskrit-Vedic",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "nonfiction"
+   }
+  ],
+  "xcl": [
+   {
+    "treebank": "UD_Classical_Armenian-CAVaL",
+    "repository": "https://github.com/UniversalDependencies/UD_Classical_Armenian-CAVaL",
+    "licence_stated": "CC BY-NC-SA 4.0",
+    "licence": "CC-BY-NC-SA-4.0",
+    "allowed": false,
+    "text_included": true,
+    "genre": "bible, fiction"
+   },
+   {
+    "treebank": "UD_Armenian-ArmTDP",
+    "repository": "https://github.com/UniversalDependencies/UD_Armenian-ArmTDP",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "academic, blog, fiction, government, grammar-examples, legal, medical, news, nonfiction, reviews, social"
+   },
+   {
+    "treebank": "UD_Armenian-BSUT",
+    "repository": "https://github.com/UniversalDependencies/UD_Armenian-BSUT",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "blog, fiction, government, legal, news, nonfiction, web, wiki"
+   }
+  ],
+  "zho-later": [
+   {
+    "treebank": "UD_Chinese-Beginner",
+    "repository": "https://github.com/UniversalDependencies/UD_Chinese-Beginner",
+    "licence_stated": "CC BY-NC-SA 3.0",
+    "licence": "CC-BY-NC-SA-3.0",
+    "allowed": false,
+    "text_included": true,
+    "genre": "grammar-examples"
+   },
+   {
+    "treebank": "UD_Chinese-CFL",
+    "repository": "https://github.com/UniversalDependencies/UD_Chinese-CFL",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "learner-essays"
+   },
+   {
+    "treebank": "UD_Chinese-GSD",
+    "repository": "https://github.com/UniversalDependencies/UD_Chinese-GSD",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "wiki"
+   },
+   {
+    "treebank": "UD_Chinese-GSDSimp",
+    "repository": "https://github.com/UniversalDependencies/UD_Chinese-GSDSimp",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "wiki"
+   },
+   {
+    "treebank": "UD_Chinese-HK",
+    "repository": "https://github.com/UniversalDependencies/UD_Chinese-HK",
+    "licence_stated": "CC BY-SA 4.0",
+    "licence": "CC-BY-SA-4.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "spoken"
+   },
+   {
+    "treebank": "UD_Chinese-PatentChar",
+    "repository": "https://github.com/UniversalDependencies/UD_Chinese-PatentChar",
+    "licence_stated": "CC BY-NC-SA 3.0",
+    "licence": "CC-BY-NC-SA-3.0",
+    "allowed": false,
+    "text_included": true,
+    "genre": "legal"
+   },
+   {
+    "treebank": "UD_Chinese-PUD",
+    "repository": "https://github.com/UniversalDependencies/UD_Chinese-PUD",
+    "licence_stated": "CC BY-SA 3.0",
+    "licence": "CC-BY-SA-3.0",
+    "allowed": true,
+    "text_included": true,
+    "genre": "news, wiki"
+   }
+  ]
+ }
+}

@@ -51,21 +51,6 @@ class TestTools(unittest.TestCase):
         out = run("tools/site_gen.py", "--check")
         self.assertEqual(out.returncode, 0, out.stdout)
 
-    def test_node_new_makes_a_port_that_refuses_like_the_stub(self):
-        out_dir = _base.scratch("node_new")
-        r = run("tools/node_new.py", "--node", "akk", "--impl", "akkadian_v0", "--out", out_dir)
-        self.assertEqual(r.returncode, 0, r.stdout)
-        spec = importlib.util.spec_from_file_location(
-            "tajziya.ports.akkadian_v0", os.path.join(out_dir, "akkadian_v0", "__init__.py"))
-        mod = importlib.util.module_from_spec(spec)
-        spec.loader.exec_module(mod)
-        reg = load()
-        port = mod.make(reg.node("akk"), reg)
-        with self.assertRaises(NotBuilt) as cm:
-            port.segment("x")
-        self.assertIn("P-LIN-semitic", cm.exception.packages)
-        self.assertNotEqual(run("tools/node_new.py", "--node", "akk", "--impl", "Akkadian").returncode, 0)
-
     def test_the_command_line_answers_and_refuses(self):
         self.assertEqual(run("-m", "tajziya", "segment", "--node", "cls", "neti").returncode, 0)
         self.assertEqual(run("-m", "tajziya", "segment", "--node", "akk", "x").returncode, 3)

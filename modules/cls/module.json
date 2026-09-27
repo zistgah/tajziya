@@ -1,0 +1,39 @@
+{
+ "schema": "tajziya.module/1",
+ "node": "cls",
+ "implementation": "sanskrit_paninian_v0",
+ "api": "1",
+ "version": "0.2.0",
+ "layers": {
+  "L0": "not_built",
+  "L1": "not_built",
+  "L2": "wired_unproven",
+  "L3s": "built",
+  "L3m": "not_built",
+  "L4": "not_built"
+ },
+ "scope_excludes": [
+  "consonant sandhi",
+  "visarga sandhi",
+  "e and o before a vowel other than a",
+  "compounds",
+  "any word outside a 12-word placeholder lexicon",
+  "Devanagari input (script pivot not bound)"
+ ],
+ "accepts": [
+  "Latn"
+ ],
+ "engines": [
+  "juncture"
+ ],
+ "entry": "python/sanskrit_paninian_v0/__init__.py",
+ "sources": "data/SOURCES.json",
+ "reference": "reference/examples.json",
+ "requires": [
+  "vendor/sanskrit_parser"
+ ],
+ "licence": {
+  "code": "GPL-3.0-or-later",
+  "vendored_parser": "MIT"
+ }
+}

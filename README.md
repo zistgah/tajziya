@@ -21,14 +21,31 @@ undeciphered corpora, Indus and Proto-Elamite, are kept as corpus objects with n
 
 ## What parses
 
-One node: Classical Sanskrit (`cls`), through the author's own parser in `vendor/sanskrit_parser`,
-Python and JavaScript. It reverses vowel sandhi against a placeholder lexicon and returns every
+One node: Classical Sanskrit (`cls`), the reference language module in `modules/cls`, running the author's own
+parser in `vendor/sanskrit_parser`, Python and JavaScript. It reverses vowel sandhi against a placeholder lexicon and returns every
 admissible reading. Consonant and visarga sandhi, morphology and karaka relations are not built,
 and the parser says so.
 
 Every other node is a stub: bound to its family's frame, it normalises text and reports which
 scripts it is written in, then refuses each further layer by name, listing the engines it needs
 and the packages in `roadmap/packages.json` that would build them.
+
+## Language modules
+
+Every language is added as a module: a folder in `modules/<node>/` with `module.json`, a port that
+imports only `tajziya.api`, `data/SOURCES.json` naming the licence of every data file, and
+`reference/examples.json` citing attested examples. One generic test judges any module:
+
+    PYTHONPATH=src python3 -m tajziya accept modules/<node> --integration
+
+`tools/langpack.py` turns any node, any ISO 639-3 code, or every remaining node into such a module,
+handed over as a self-contained package that already passes that test because every layer refuses:
+
+    PYTHONPATH=src python3 tools/langpack.py --remaining --tar --bundle
+    PYTHONPATH=src python3 tools/langpack.py akk grc
+
+Each package carries its own `accept.sh`, which clones this repository inside the package folder
+and judges the package in isolation and in integration.
 
 ## The layers
 
@@ -60,8 +77,9 @@ With no coverage recorded, nothing is eliminated and nothing is certified.
     PYTHONPATH=src python3 -m tajziya commonalities
     PYTHONPATH=src python3 -m tajziya eliminate
 
-The sutra compilation the Sanskrit parser was built with is not redistributed here; see
-`PROVENANCE.md`. A local copy whose hash matches the pin is used with
+The sutra text comes from an MIT-licensed edition of all 3,983 sutras (vidyut-prakriya, in SLP1),
+in `modules/cls/data`. The compilation the parser was first built with restricts reposting, so it is not
+redistributed; see `PROVENANCE.md`. A local copy whose hash matches the pin is used with
 `PYTHONPATH=src python3 -m tajziya data import <archive or json>`, with the file placed inside
 this repository's folder: nothing outside the folder a script runs in is read.
 

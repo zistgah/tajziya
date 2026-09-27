@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 title: "Tajziya: a parser federation for the classical languages of the human corpus, organised by family"
 doi: 10.5281/zenodo.22982238
-version: 0.1.0
+version: 0.2.0
 license: GPL-3.0-or-later
 repository-code: "https://github.com/zistgah/tajziya"
 authors:
