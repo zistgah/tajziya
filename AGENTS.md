@@ -7,7 +7,8 @@
 3. Take one package from `roadmap/packages.json`. Packages with no dependencies can start now.
    Labels are capabilities (needs:code, needs:proof, needs:legal, needs:human, needs:testing),
    never a model name.
-4. Work it through `cyclers/tajziya.pni`, or `cyclers/node.pni` for one batch on one node.
+4. Work it through its AAB quest: import `quests/<quest>.aab.json`, or a package's `quest/aab-painting.json`,
+   at https://zistgah.org/aab/, and keep the step-3 record with `ledger.py`.
 5. A package is done when its acceptance command passes and `bash ops/verify.sh` is green.
    Paste both outputs. A step you did not run is reported as not run.
 

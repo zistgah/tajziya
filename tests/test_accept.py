@@ -58,7 +58,7 @@ class TestAcceptance(unittest.TestCase):
         d = self.fresh("ok")
         rows = accept.run(d, integration=True, scratch=os.path.join(d, ".deps", "integration"))
         self.assertEqual(failed(rows), set())
-        self.assertEqual([r["id"] for r in rows], ["A1", "A2", "A3", "A4", "A5", "A6"])
+        self.assertEqual([r["id"] for r in rows], ["A1", "A2", "A3", "A4", "A5", "A6", "A7"])
 
     def test_an_open_licence_with_its_file_listed_passes(self):
         d = self.fresh("open")

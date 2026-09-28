@@ -10,8 +10,7 @@ site:
 deps:
 	@mkdir -p .deps
 	@[ -d .deps/dhancha ] || git clone -q --depth 1 https://github.com/zistgah/dhancha .deps/dhancha
-	@[ -d .deps/panini ] || git clone -q --depth 1 https://github.com/zistgah/panini .deps/panini
-	@echo "deps: .deps/dhancha and .deps/panini present; make check now judges the spine and the cyclers"
+	@echo "deps: .deps/dhancha present; make check now judges the spine"
 
 packs:
 	@PYTHONDONTWRITEBYTECODE=1 $(PY) tools/langpack.py --remaining --tar --bundle

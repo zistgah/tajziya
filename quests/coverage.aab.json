@@ -1,0 +1,93 @@
+{
+ "tool": "AAB",
+ "version": "0.2.0",
+ "exported": "2026-09-27T00:00:00Z",
+ "intent": {
+  "original": "include the cyclers you had mentioned, but put them, your process cyclers, put them into AAB, the mechanism for designing",
+  "current": "Evidenced coverage rows for one node, so its status is computed, not assumed."
+ },
+ "domain": {},
+ "model": {
+  "nodes": [
+   {
+    "id": 1,
+    "type": "actor",
+    "x": 90,
+    "y": 70,
+    "name": "Builder",
+    "note": "a person or any AI",
+    "oracle": ""
+   },
+   {
+    "id": 2,
+    "type": "comp",
+    "x": 480,
+    "y": 70,
+    "name": "coverage rows for one node",
+    "note": "who holds which corpus, original or translation, with the declared loss",
+    "oracle": ""
+   },
+   {
+    "id": 3,
+    "type": "store",
+    "x": 680,
+    "y": 70,
+    "name": "registry/coverage.json",
+    "note": "the evidenced rows",
+    "oracle": ""
+   },
+   {
+    "id": 4,
+    "type": "store",
+    "x": 680,
+    "y": 158,
+    "name": "registry/corpus_classes.json",
+    "note": "the corpus classes the rows refer to",
+    "oracle": ""
+   },
+   {
+    "id": 5,
+    "type": "gate",
+    "x": 880,
+    "y": 70,
+    "name": "the elimination rule",
+    "note": "computes I, P or C from the rows",
+    "oracle": "python3 -m tajziya eliminate <node>"
+   },
+   {
+    "id": 6,
+    "type": "gate",
+    "x": 880,
+    "y": 158,
+    "name": "registry consistency",
+    "note": "the registry still agrees with itself",
+    "oracle": "bash ops/verify.sh (V06)"
+   }
+  ],
+  "wires": [
+   [
+    1,
+    2
+   ],
+   [
+    2,
+    3
+   ],
+   [
+    4,
+    2
+   ],
+   [
+    3,
+    5
+   ],
+   [
+    3,
+    6
+   ]
+  ],
+  "xp": 0,
+  "stages": {},
+  "nextId": 7
+ }
+}

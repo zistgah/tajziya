@@ -1,0 +1,93 @@
+{
+ "tool": "AAB",
+ "version": "0.2.0",
+ "exported": "2026-09-27T00:00:00Z",
+ "intent": {
+  "original": "include the cyclers you had mentioned, but put them, your process cyclers, put them into AAB, the mechanism for designing",
+  "current": "One vetted source record, and the open alternative wherever the first choice is restricted."
+ },
+ "domain": {},
+ "model": {
+  "nodes": [
+   {
+    "id": 1,
+    "type": "actor",
+    "x": 90,
+    "y": 70,
+    "name": "Builder",
+    "note": "a person or any AI",
+    "oracle": ""
+   },
+   {
+    "id": 2,
+    "type": "comp",
+    "x": 480,
+    "y": 70,
+    "name": "candidates",
+    "note": "the package's listed corpora and editions",
+    "oracle": ""
+   },
+   {
+    "id": 3,
+    "type": "comp",
+    "x": 480,
+    "y": 158,
+    "name": "the chosen edition",
+    "note": "the best openly licensed one; the restricted one stays local",
+    "oracle": ""
+   },
+   {
+    "id": 4,
+    "type": "store",
+    "x": 680,
+    "y": 70,
+    "name": "registry/licences.json",
+    "note": "which licences data may carry",
+    "oracle": ""
+   },
+   {
+    "id": 5,
+    "type": "store",
+    "x": 680,
+    "y": 158,
+    "name": "data/SOURCES.json",
+    "note": "URL, retrieval date, sha256, licence, attribution",
+    "oracle": ""
+   },
+   {
+    "id": 6,
+    "type": "gate",
+    "x": 880,
+    "y": 70,
+    "name": "A3 licences",
+    "note": "every data file allowed, or local_only in data/local/",
+    "oracle": "python3 -m tajziya accept <module> (A3)"
+   }
+  ],
+  "wires": [
+   [
+    1,
+    2
+   ],
+   [
+    2,
+    3
+   ],
+   [
+    4,
+    3
+   ],
+   [
+    3,
+    5
+   ],
+   [
+    5,
+    6
+   ]
+  ],
+  "xp": 0,
+  "stages": {},
+  "nextId": 7
+ }
+}

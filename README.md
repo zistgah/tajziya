@@ -7,6 +7,16 @@ the dhancha spine.
 
 © 1993–2026 Abhishek Choudhary. All rights reserved. AyeAI.
 
+## Where it sits
+
+In the author's layering (27 Sep 2026) tajziya and ILM are the **front end**: the languages a
+program or a prompt can arrive in, Sanskrit first. PANINI's own front ends and the PANINI language
+are the **middleware**; the **realization backends**, Panini Q among them, are where programs meet
+a substrate. In his three Acts this is Act I, AGI completeness, beside the cyclers and genie as its
+agents and harnesses. The process work of building a language, a script module, a shared engine,
+a source choice or a coverage record is designed and run in AAB, as the paintings in `quests/`.
+Every term is in [GLOSSARY.md](GLOSSARY.md), with the nearest term in common use beside it.
+
 ## What it holds
 
 The registry carries 79 language and stage nodes, transcribed from the author's candidate language
@@ -69,7 +79,7 @@ With no coverage recorded, nothing is eliminated and nothing is certified.
 ## Running it
 
     make check                                       the gate: ops/verify.sh
-    make deps && make check                          also judges the spine and the cyclers
+    make deps && make check                          also judges the spine
     PYTHONPATH=src python3 -m tajziya nodes
     PYTHONPATH=src python3 -m tajziya segment --node cls tatraiva
     PYTHONPATH=src python3 -m tajziya segment --node cls --conllu neti

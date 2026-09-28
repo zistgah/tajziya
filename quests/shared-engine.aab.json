@@ -1,0 +1,123 @@
+{
+ "tool": "AAB",
+ "version": "0.2.0",
+ "exported": "2026-09-27T00:00:00Z",
+ "intent": {
+  "original": "include the cyclers you had mentioned, but put them, your process cyclers, put them into AAB, the mechanism for designing",
+  "current": "One shared engine in the core, proven on two lineages."
+ },
+ "domain": {},
+ "model": {
+  "nodes": [
+   {
+    "id": 1,
+    "type": "actor",
+    "x": 90,
+    "y": 70,
+    "name": "Builder",
+    "note": "a person or any AI",
+    "oracle": ""
+   },
+   {
+    "id": 2,
+    "type": "comp",
+    "x": 480,
+    "y": 70,
+    "name": "the engine, in the core",
+    "note": "shared by phenomenon, never copied per language",
+    "oracle": ""
+   },
+   {
+    "id": 3,
+    "type": "comp",
+    "x": 480,
+    "y": 158,
+    "name": "first lineage's module",
+    "note": "the engine's first user",
+    "oracle": ""
+   },
+   {
+    "id": 4,
+    "type": "comp",
+    "x": 480,
+    "y": 246,
+    "name": "second lineage's module",
+    "note": "proof that it is shared, not bespoke",
+    "oracle": ""
+   },
+   {
+    "id": 5,
+    "type": "store",
+    "x": 680,
+    "y": 70,
+    "name": "registry/engines.json",
+    "note": "which nodes need which engine",
+    "oracle": ""
+   },
+   {
+    "id": 6,
+    "type": "store",
+    "x": 680,
+    "y": 158,
+    "name": "roadmap/packages.json",
+    "note": "the package that builds it",
+    "oracle": ""
+   },
+   {
+    "id": 7,
+    "type": "gate",
+    "x": 880,
+    "y": 70,
+    "name": "conformance",
+    "note": "every node still conforms",
+    "oracle": "python3 -m tajziya conformance"
+   },
+   {
+    "id": 8,
+    "type": "gate",
+    "x": 880,
+    "y": 158,
+    "name": "both modules integrate",
+    "note": "acceptance passes for both lineages",
+    "oracle": "bash accept.sh --integration, in each module"
+   }
+  ],
+  "wires": [
+   [
+    2,
+    3
+   ],
+   [
+    3,
+    8
+   ],
+   [
+    2,
+    4
+   ],
+   [
+    4,
+    8
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    5,
+    2
+   ],
+   [
+    6,
+    2
+   ],
+   [
+    2,
+    7
+   ]
+  ],
+  "xp": 0,
+  "stages": {},
+  "nextId": 9
+ }
+}

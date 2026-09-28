@@ -222,7 +222,7 @@
   {
    "with": "panini",
    "kind": "consumes",
-   "shared": "the cycler language through which packages reach any model"
+   "shared": "PANINI, the middleware and prompt-cycle language beneath the front end"
   },
   {
    "with": "hindawi",

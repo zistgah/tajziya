@@ -4,7 +4,7 @@
 # The gate for tajziya. Each check reports PASS, FAIL or UNJUDGED; exit 1 on any FAIL.
 #   bash ops/verify.sh [--json]
 # UNJUDGED means a tool or checkout the check needs is absent. It is reported, never counted as
-# a pass. `make deps` fetches the two checkouts (.deps/dhancha, .deps/panini) that V13 and V14 use.
+# a pass. `make deps` fetches the checkout (.deps/dhancha) that V14 uses.
 set -uo pipefail
 cd "$(dirname "$(dirname "$(readlink -f "$0")")")" || exit 1
 export PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src
@@ -46,33 +46,33 @@ v09() { local hit; hit=$(files | grep -E '(^|/)__pycache__/|\.pyc$|\.tar\.gz$')
 v10() { local pat="/ho""me/|/tm""p/" hit; hit=$(authored | xargs -d '\n' grep -IlE "$pat" 2>/dev/null)
   [ -z "$hit" ] || { echo "an absolute home or temp path in: $hit"; return 1; }; }
 v11() { python3 tools/site_gen.py --check; }
-v12() { python3 - <<'PY'
-import glob, re, sys
-VERBS = {"CREATE", "VERIFY", "EXECUTE", "MEASURE", "FALSIFY", "INTEGRATE"}
+v12() { python3 tools/quests.py --check; }
+v13() { python3 - <<'PY'
+import os, shutil, sys
+sys.path.insert(0, "src")
+from tajziya import ledger
+d = os.path.join("tests", ".scratch", "ledger-gate"); shutil.rmtree(d, ignore_errors=True); os.makedirs(d)
+open(os.path.join(d, "a.txt"), "w").write("first")
+for kind, kw in (("intent", {"text": "one layer"}), ("prompt", {"text": "segment it"}),
+                 ("response", {"text": "done", "actor": "any AI"}), ("artifact", {"file": "a.txt"})):
+    ledger.append(d, kind, now="2026-09-27T00:00:00Z", **kw)
 bad = []
-files = sorted(glob.glob("cyclers/*.pni"))
-if not files: bad.append("no cycler")
-for f in files:
-    lines = open(f, encoding="utf-8").read().splitlines()
-    stages, in_ask, has_into, has_ask, cur = [], False, False, False, None
-    for ln in lines:
-        s = ln.strip()
-        if in_ask:
-            if s == "END ASK": in_ask = False
-            continue
-        if s.startswith("STAGE "): cur, has_into, has_ask = s.split()[1], False, False; stages.append(cur)
-        elif s.startswith("VERB") and s.split()[1] not in VERBS: bad.append(f"{f}: verb {s.split()[1]} outside the closed set")
-        elif s.startswith("INTO"): has_into = True
-        elif s == "ASK": in_ask, has_ask = True, True
-        elif s == "END STAGE" and has_ask and not has_into: bad.append(f"{f}: stage {cur} asks and stores nothing")
-    if in_ask: bad.append(f"{f}: an ASK block is not closed")
-    if not stages or stages[0] != "CONCEPT": bad.append(f"{f}: the first stage is not CONCEPT")
-for b in bad: print(b)
-sys.exit(1 if bad else 0)
+if ledger.verify(d): bad.append("a clean record does not verify")
+p = os.path.join(d, ledger.LEDGER); lines = open(p, encoding="utf-8").read().splitlines()
+lines[2] = lines[2].replace('"done"', '"DONE"'); open(p, "w", encoding="utf-8").write("\n".join(lines) + "\n")
+if not ledger.verify(d): bad.append("an altered response passed")
+lines[2] = lines[2].replace('"DONE"', '"done"'); open(p, "w", encoding="utf-8").write("\n".join(lines) + "\n")
+open(os.path.join(d, "a.txt"), "w").write("changed")
+if not ledger.verify(d, strict=True): bad.append("an unrecorded change to an artifact passed --strict")
+try:
+    ledger.append(d, "artifact", file=os.path.join("..", "x"))
+    bad.append("an artifact outside the folder was accepted")
+except ValueError:
+    pass
+shutil.rmtree(d)
+print("; ".join(bad)); sys.exit(1 if bad else 0)
 PY
 }
-v13() { [ -f .deps/panini/panini.py ] || { echo "no .deps/panini checkout; make deps fetches it"; return 3; }
-  local f; for f in cyclers/*.pni; do python3 .deps/panini/panini.py check "$f" || return 1; done; }
 v14() { [ -d .deps/dhancha/tools ] || { echo "no .deps/dhancha checkout; make deps fetches it"; return 3; }
   rm -rf tests/.scratch
   python3 .deps/dhancha/tools/spine_validate.py descriptor.json --repo . || return 1
@@ -121,8 +121,8 @@ chk V08 "the withheld compilation is not in the tree (T5)"        v08
 chk V09 "no build artefacts"                                       v09
 chk V10 "no absolute home or temp paths"                           v10
 chk V11 "the site is generated from the registry, not stale"       v11
-chk V12 "cyclers open with CONCEPT and keep the closed verb set"   v12
-chk V13 "cyclers pass PANINI's own checker"                        v13
+chk V12 "the process quests are current AAB paintings; every gate names its oracle"   v12
+chk V13 "the step-3 record refuses an altered entry and an unrecorded change"   v13
 chk V14 "the spine judges the descriptor, D1 to D11 and D9 leak"   v14
 chk V15 "no language of an unfiled claim"                          v15
 chk V16 "no placeholder DOI"                                       v16

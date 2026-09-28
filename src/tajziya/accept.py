@@ -23,11 +23,12 @@ import shutil
 import subprocess
 import sys
 
-from . import api, harness, modules
+from . import api, harness, ledger, modules, quests
 from .registry import ROOT, load, path
 
 CONVENTIONAL = {"module.json", "README.md", "CONTRACT.md", "CONTRIBUTING.md", "accept.sh", ".gitignore",
-                "python", "js", "data", "reference", "tests", "cyclers", "logs", ".deps"}
+                "python", "js", "data", "reference", "tests", "cyclers", "quest", "ledger.py", "runs",
+                "logs", ".deps"}
 LOCAL_ONLY = ("logs", ".deps")
 OUTSIDE = re.compile("\\$HO" + "ME|~" + "/|/t" + "mp|\\.\\." + "/")
 SCRIPT = (".py", ".sh", ".js", ".mjs")
@@ -224,6 +225,29 @@ def a6_integration(module_dir, man, scratch):
     return p, [f"bound {where}; doctor and full conformance run"]
 
 
+def a7_record(module_dir):
+    """His step 3: the quest painting is valid and the configuration record has not been altered."""
+    p, notes = [], []
+    q = os.path.join(module_dir, "quest", "aab-painting.json")
+    if os.path.isfile(q):
+        with open(q, encoding="utf-8") as fh:
+            p += [f"quest: {x}" for x in quests.problems(json.load(fh))]
+    else:
+        notes.append("no quest/aab-painting.json")
+    lp = os.path.join(module_dir, "ledger.py")
+    if os.path.isfile(lp) and _sha(lp) != _sha(path("src", "tajziya", "ledger.py")):
+        p.append("ledger.py is not the core's ledger.py byte for byte")
+    entries = ledger.read(module_dir)
+    probs = ledger.verify_entries(entries)
+    p += [f"record: {x}" for x in probs]
+    if entries and not probs:
+        notes.append(f"record: {len(entries)} entries, chain intact")
+        notes += [f"record: {x}" for x in ledger.status(module_dir, entries)]
+    elif not entries:
+        notes.append("record: no entries yet")
+    return p, notes
+
+
 def run(module_dir, integration=False, scratch=None):
     module_dir = os.path.realpath(module_dir)
     rows = []
@@ -257,6 +281,8 @@ def run(module_dir, integration=False, scratch=None):
         else:
             p6, n6 = a6_integration(module_dir, man, scratch)
             row("A6", "integration", p6, n6)
+    p7, n7 = a7_record(module_dir)
+    row("A7", "quest and record", p7, n7)
     return rows
 
 

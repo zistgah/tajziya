@@ -21,7 +21,7 @@ upstream parser: a merged vowel can come from several pairs.
 
 **T4. A rule enters with its source.**
 No rule text is written from memory, however standard it looks. Until a sutra is sourced, the
-junction record says so. Enforced by the SOURCE stage of both cyclers and by V03. Earned by the
+junction record says so. Enforced by the source quest (`quests/source-choice.aab.json`) and by V03. Earned by the
 upstream CONTRIBUTING.
 
 **T5. Third-party material follows its own terms.**

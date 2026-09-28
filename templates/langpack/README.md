@@ -44,7 +44,14 @@ module.
    For segmentation, give every reading the source admits.
 5. Run `bash accept.sh`.
 
-`cyclers/@@NODE@@.pni` carries the same steps as a PANINI cycler for any model to run.
+`quest/aab-painting.json` is this package as an AAB painting. Import it at
+https://zistgah.org/aab/ and work through the eight VGC quests there; every gate in it names its
+oracle. `quest/QUEST.md` maps the quests onto this package.
+
+`ledger.py` keeps step 3 of every cycle, the configuration record: `python3 ledger.py add prompt
+--text "..."`, `add response --actor "<the AI you used>" --text "..."`, `add decision --text
+"..."`, `add artifact --file <path>`. `python3 ledger.py verify` checks the chain, and acceptance
+check A7 checks it again. Hand the record back with the package.
 
 ## Sources and licences
 

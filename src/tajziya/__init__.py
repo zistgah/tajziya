@@ -8,6 +8,6 @@ is bound through registry/bindings.json. One node parses; every other node refus
 from ._vendor.unknown import Unknown, known
 from .types import NotBuilt, Junction, Segmentation, TokenLattice, Result, LAYERS
 
-__version__ = "0.2.0"
+__version__ = "0.3.0"
 __all__ = ["Unknown", "known", "NotBuilt", "Junction", "Segmentation", "TokenLattice",
            "Result", "LAYERS", "__version__"]

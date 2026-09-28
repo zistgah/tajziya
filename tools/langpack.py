@@ -27,7 +27,7 @@ import tarfile
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "src"))
-from tajziya import accept  # noqa: E402
+from tajziya import accept, quests  # noqa: E402
 from tajziya.registry import load  # noqa: E402
 
 TEMPLATE = os.path.join(ROOT, "templates", "langpack")
@@ -143,7 +143,9 @@ def build(reg, nid, out_dir, corpora):
         "reference/examples.json": {"schema": "tajziya.reference/1",
                                     "rule": "Each example is attested in a listed source at the locator given. A "
                                             "segmentation example gives every reading the source admits.",
-                                    "examples": []}}
+                                    "examples": []},
+        "quest/aab-painting.json": quests.language_layer(reg, nid)}
+    shutil.copyfile(os.path.join(ROOT, "src", "tajziya", "ledger.py"), os.path.join(pkg, "ledger.py"))
     for rel, obj in docs.items():
         p = os.path.join(pkg, rel)
         os.makedirs(os.path.dirname(p), exist_ok=True)
