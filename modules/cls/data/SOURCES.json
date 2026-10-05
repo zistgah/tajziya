@@ -2,6 +2,29 @@
  "schema": "tajziya.sources/1",
  "sources": [
   {
+   "id": "ashtadhyayi-com-data",
+   "title": "Ashtadhyayi sutras with type, term and padaccheda, from the data that powers ashtadhyayi.com",
+   "url": "https://github.com/ashtadhyayi-com/data/tree/5744762f010d677cfb43f347a42d02796cf615d6/sutraani",
+   "commit": "5744762f010d677cfb43f347a42d02796cf615d6",
+   "retrieved": "2026-10-05",
+   "licence": "LicenseRef-ashtadhyayi-com",
+   "licence_file": "data/LICENSES/ashtadhyayi-com.txt",
+   "terms": "You are free to use this data in your own projects provided that appropriate credits are mentioned wherever applicable. (the repository's README)",
+   "scheme": "Devanagari",
+   "entries": 3983,
+   "upstream_path": "sutraani/data.txt",
+   "upstream_sha256": "6a22591f418cd924ba4bd621944de2359cc06721b5ada79ef08d70f17a07bcc6",
+   "derived_by": "tools/sutra_import.py",
+   "files": [
+    {
+     "path": "data/ashtadhyayi/sutraani.tsv",
+     "sha256": "5c5cccd135eb06820fb1c06ca60f81af25949b58b6f7e503d63a3a5acc785948"
+    }
+   ],
+   "local_only": false,
+   "attribution": "Sutra data: ashtadhyayi.com (https://ashtadhyayi.com), from github.com/ashtadhyayi-com/data"
+  },
+  {
    "id": "vidyut-sutrapatha",
    "title": "Sutrapatha of the Ashtadhyayi, from vidyut-prakriya's data",
    "url": "https://github.com/ambuda-org/vidyut/blob/8da2f90bee3ce1c07505fa432fc3729e3f7e02ea/vidyut-prakriya/data/sutrapatha.tsv",
@@ -49,6 +72,21 @@
      "sha256": "6d952a605d026fb7313901de3898d4da62c93b7a454103c4faed36ca2da31c8d"
     }
    ]
+  },
+  {
+   "id": "author-source-review",
+   "title": "The author's source review of the sutras, 5 Oct 2026: which sutra and which field differ",
+   "url": "zistgah/tajziya modules/cls/data/review/flags.json",
+   "retrieved": "2026-10-05",
+   "licence": "CC0-1.0",
+   "attribution": "Abhishek Choudhary, AyeAI",
+   "files": [
+    {
+     "path": "data/review/flags.json",
+     "sha256": "c7bd120b1a7e30f1b5d63e8dd35cef85fe214040187a5bc58294a46c3567b2b9"
+    }
+   ],
+   "local_only": false
   }
  ]
 }

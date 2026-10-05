@@ -6,3 +6,4 @@ tests/.scratch/
 vendor/sanskrit_parser/data/sutras_*.json
 modules/*/data/local/
 packs/
+docs/review-local.html

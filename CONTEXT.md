@@ -89,3 +89,11 @@ alternative wherever a licence stood in the way.
 - 0.2.0 is pushed and sealed without a new DOI. A version DOI beneath the 0.1.0 concept DOI needs a
   newversion path in the library; `zops_mint` refuses to mint a second record for a repository that
   already carries a DOI.
+
+## The sutra database (0.5.0)
+
+`modules/cls/data/ashtadhyayi/sutraani.tsv` holds the 3,983 sutras derived by
+`tools/sutra_import.py` from github.com/ashtadhyayi-com/data at 5744762, credited, pinned.
+`tools/review_gen.py` builds `docs/review.html` from it, from vidyut's MIT text and from
+`modules/cls/data/review/flags.json`. The flags record sutra and field only where the
+restricted compilation differs.

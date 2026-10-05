@@ -110,6 +110,17 @@ sys.exit(1 if bad else 0)
 PY
 }
 
+v21() { PYTHONPATH=src python3 -m tajziya coverage >/dev/null || { PYTHONPATH=src python3 -m tajziya coverage | tail -5; return 1; }; }
+v22() {
+  rm -rf tests/.scratch/packs-ilm
+  local ids; ids=$(PYTHONPATH=src python3 -c "from tajziya.registry import load; print(' '.join(load().coverage_ids()[::250]))")
+  python3 tools/langpack.py $ids --scripts --out tests/.scratch/packs-ilm --quiet >/dev/null
+  local rc=$?; rm -rf tests/.scratch/packs-ilm; return $rc
+}
+
+v23() { python3 tools/review_gen.py --check; }
+
+
 chk V01 "every source file carries the copyright line"            v01
 chk V02 "no affiliation other than AyeAI is claimed"              v02
 chk V03 "the test suite passes"                                    v03
@@ -130,6 +141,9 @@ chk V17 "vendored files match their pins"                          v17
 chk V18 "authored scripts stay inside their folder (clause 7)"       v18
 chk V19 "every language module passes the generic acceptance test"  v19
 chk V20 "every remaining language yields an accepted package"      v20
+chk V21 "every explorer language and script conforms; the ILM copy matches its pins" v21
+chk V22 "sampled explorer languages and every script yield accepted packages" v22
+chk V23 "the sutra data matches its pins and the review page is generated from it" v23
 
 if [ "$JSON" = 1 ]; then
   printf '{"element":"tajziya","failures":%d,"unjudged":%d,"checks":[' "$FAILS" "$UNJ"; sep=""

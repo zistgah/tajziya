@@ -262,6 +262,19 @@
    "state": "open"
   },
   {
+   "id": "P-PROF-01",
+   "title": "A language profile for a language the ILM registry covers: its lineage, morphological type and scripts, each from a citable open source",
+   "labels": [
+    "needs:data"
+   ],
+   "deps": [],
+   "owns": [
+    "registry/"
+   ],
+   "acceptance": "PYTHONPATH=src python3 -m tajziya doctor && bash ops/verify.sh",
+   "state": "open"
+  },
+  {
    "id": "P-ENG-01",
    "title": "Extract the juncture search from the Sanskrit node once a second language needs it",
    "labels": [

@@ -91,7 +91,7 @@
   "families": 11,
   "lineages": 21,
   "nodes": 79,
-  "packages": 51,
+  "packages": 52,
   "parsing": [
    "cls"
   ],
@@ -760,7 +760,7 @@
   },
   {
    "file": "roadmap/packages.json",
-   "sha256": "26fc31b8cd55cb1e51b06402c55d6429a314e9766d19fa32cd1fff3456c267e6"
+   "sha256": "c3fa6b2cb45255349febf229f365cc754f7d1d1efab4ffa7dc9f2df53ec1d6d3"
   }
  ],
  "lineages": [
@@ -3682,6 +3682,14 @@
     "needs:code"
    ],
    "title": "The ILM layer repositories declare their correspondence to layers L0 to L4 here"
+  },
+  {
+   "deps": [],
+   "id": "P-PROF-01",
+   "labels": [
+    "needs:data"
+   ],
+   "title": "A language profile for a language the ILM registry covers: its lineage, morphological type and scripts, each from a citable open source"
   },
   {
    "deps": [

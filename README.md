@@ -87,13 +87,23 @@ With no coverage recorded, nothing is eliminated and nothing is certified.
     PYTHONPATH=src python3 -m tajziya commonalities
     PYTHONPATH=src python3 -m tajziya eliminate
 
-The sutra text comes from an MIT-licensed edition of all 3,983 sutras (vidyut-prakriya, in SLP1),
-in `modules/cls/data`. The compilation the parser was first built with restricts reposting, so it is not
-redistributed; see `PROVENANCE.md`. A local copy whose hash matches the pin is used with
-`PYTHONPATH=src python3 -m tajziya data import <archive or json>`, with the file placed inside
-this repository's folder: nothing outside the folder a script runs in is read.
+All 3,983 sutras carry their type, defined term, padaccheda and Siddhanta Kaumudi number,
+derived from the data that powers ashtadhyayi.com (free to use with credit; the credit is in
+`modules/cls/data/LICENSES/`). Their text is cross-checked against vidyut-prakriya's MIT edition.
+`docs/review.html` is the source review: every sutra, the flags, and an issue link for each.
+
+## Every language and script the ILM explorer shows
+
+The project-ilm 3D explorer draws its points from the ILM registry: 7,867 ISO 639-3 languages
+and 226 ISO 15924 scripts. tajziya carries a pinned copy in `registry/ilm/`. The 79 poster nodes
+keep their curated records; each of the 7,787 other languages is a coverage node, and each script
+stands in a script frame, all refusing by name until a module is bound.
+
+    python3 -m tajziya coverage                         counts and conformance
+    python3 tools/langpack.py --everything --tar --bundle   8,091 packages, each accepted
 
 ## Licences
 
 Code GPL-3.0-or-later; the vendored parser MIT, as its author released it; documents CC-BY-SA-4.0;
-registry and metadata CC0-1.0. Texts in `LICENSES/`.
+registry and metadata CC0-1.0, except `registry/ilm/`, the verbatim copy of project-ilm/ilm.codes's
+registry, which keeps that repository's GPL-2.0. Texts in `LICENSES/`.

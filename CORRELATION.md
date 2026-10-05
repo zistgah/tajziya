@@ -7,6 +7,7 @@ Declared here; each far end is owed until that repository declares the edge back
 | With | Kind | What is shared | Far end |
 |---|---|---|---|
 | zistgah/dhancha | consumes | the ten invariants; `core.unknown` vendored byte for byte | owed (P-SPINE-01) |
+| project-ilm/ilm.codes | consumes | the ILM registry the 3D explorer draws, copied verbatim and pinned in `registry/ilm/` | wired |
 | project-ilm/romenagri | consumes | the L1 script pivot for Brahmic scripts, through its tables | owed |
 | project-ilm ILM layer repositories | supplies | content for L0 to L4; ilm-phonology, ilm-transliteration, ilm-orthography, ilm-lexicon and ilm-syntax-semantics are scaffolds today | owed (P-ILM-01) |
 | zistgah/humanesque | consumes | the 30 Aug ILM template, reconciled by `tajziya reconcile` rather than copied | not needed |

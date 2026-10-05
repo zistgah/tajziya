@@ -14,12 +14,26 @@ from .types import LAYERS, METHODS, NotBuilt
 PROBE = "probe"
 
 
+SCRIPT_LAYERS = ("L1", "L2")
+SCRIPT_METHODS = {"L1": "pivot", "L2": "orthography"}
+
+
+def check_script(parser, reg):
+    """The layer conditions for a script module or frame: L1 and L2 only."""
+    return _layer_findings(parser, reg, SCRIPT_LAYERS, SCRIPT_METHODS)
+
+
 def check(parser, node, reg):
+    found = _layer_findings(parser, reg, LAYERS, METHODS)
+    return found + _reference_findings(parser, reg)
+
+
+def _layer_findings(parser, reg, names, methods):
     found = []
     layers = parser.layers()
-    for L in LAYERS:
+    for L in names:
         state = layers.get(L)
-        fn = getattr(parser, METHODS[L])
+        fn = getattr(parser, methods[L])
         if state == "not_built":
             try:
                 value = fn(PROBE)
@@ -41,6 +55,12 @@ def check(parser, node, reg):
                 found.append(("TJZ-C1", True, f"{L} ({state}) answers"))
             except NotBuilt as e:
                 found.append(("TJZ-C1", False, f"{L} is declared {state} but refuses: {e}"))
+    return found
+
+
+def _reference_findings(parser, reg):
+    found = []
+    layers = parser.layers()
     reference = getattr(parser, "REFERENCE", None)
     if reference and layers.get("L3s") in ("built", "wired_unproven"):
         for text, expected in reference.items():
@@ -65,7 +85,8 @@ def check(parser, node, reg):
 
 def run_all(reg, only=None):
     summary = {"nodes": 0, "findings": 0, "failed": []}
-    for nid in reg.nodes:
+    bound_coverage = [n for n in reg.bindings if n not in reg.nodes and reg.has_node(n)]
+    for nid in list(reg.nodes) + bound_coverage:
         if only and nid not in only:
             continue
         for cond, ok, detail in check(reg.bind(nid), reg.node(nid), reg):
@@ -73,4 +94,32 @@ def run_all(reg, only=None):
             if not ok:
                 summary["failed"].append({"node": nid, "condition": cond, "detail": detail})
         summary["nodes"] += 1
+    return summary
+
+
+def run_coverage(reg, sample=None):
+    """Conformance over the coverage nodes: every one, or every n-th when sample is n."""
+    ids = reg.coverage_ids()
+    if sample:
+        ids = ids[::sample]
+    summary = {"nodes": 0, "findings": 0, "failed": []}
+    for nid in ids:
+        for cond, ok, detail in check(reg.bind(nid), reg.node(nid), reg):
+            summary["findings"] += 1
+            if not ok:
+                summary["failed"].append({"node": nid, "condition": cond, "detail": detail})
+        summary["nodes"] += 1
+    return summary
+
+
+def run_scripts(reg, only=None):
+    summary = {"scripts": 0, "findings": 0, "failed": []}
+    for code in reg.script_ids():
+        if only and code not in only:
+            continue
+        for cond, ok, detail in check_script(reg.bind_script(code), reg):
+            summary["findings"] += 1
+            if not ok:
+                summary["failed"].append({"script": code, "condition": cond, "detail": detail})
+        summary["scripts"] += 1
     return summary

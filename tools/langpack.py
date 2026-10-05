@@ -31,8 +31,11 @@ from tajziya import accept, quests  # noqa: E402
 from tajziya.registry import load  # noqa: E402
 
 TEMPLATE = os.path.join(ROOT, "templates", "langpack")
+SCRIPT_TEMPLATE = os.path.join(ROOT, "templates", "scriptpack")
+BUNDLES = {"language": "tajziya-language-packages", "coverage": "tajziya-ilm-language-packages",
+           "script": "tajziya-script-packages"}
 MTIME = 1790380800  # 2026-09-26T00:00:00Z, so the archives are reproducible
-STATUS = {"I": "irreducible", "P": "provisional", "U": "undeciphered or unknown", "S": "stage, not a separate language",
+STATUS = {"coverage": "in the ILM registry, not on the posters", "I": "irreducible", "P": "provisional", "U": "undeciphered or unknown", "S": "stage, not a separate language",
           "C": "candidate for compression"}
 
 
@@ -66,8 +69,108 @@ def fill(text, values):
     return text
 
 
+def coverage_values(reg, nid, n):
+    names = {"L0": "phonology", "L1": "pivot", "L2": "orthography", "L3s": "segment", "L3m": "analyse", "L4": "relate"}
+    rows = []
+    for L, st in n["layers"].items():
+        if st != "not_built":
+            rows.append(f"| {L} | `{names[L]}` | {st.replace('_', ' ')} through the common layer | none |")
+            continue
+        needs, packs = reg.refusal(n, L)
+        rows.append(f"| {L} | `{names[L]}` | {', '.join(needs) or 'none named'} | {', '.join(packs)} |")
+    r, pending = n["ilm"], "not yet established; package P-PROF-01 establishes it from open sources"
+    return n, {
+        "NODE": nid, "NAME": n["name"], "IMPL": impl_id(nid), "LANGUAGE": n["language"],
+        "STAGE": "not staged", "PATH": pending, "MTYPE": pending, "ISO": nid, "SCRIPTS": pending,
+        "STATUS": "coverage", "STATUS_NAME": STATUS["coverage"],
+        "STATUS_SOURCE": f"ILM registry (project-ilm/ilm.codes): {r['type']}, {r['scope']}, {r['status']}",
+        "CORPUS": n["corpus"],
+        "NOTES": "This language comes from the ILM registry, the data the project-ilm 3D explorer draws, not "
+                 "from the posters. Its profile (lineage, morphological type, scripts) is the first task, "
+                 "package P-PROF-01; until then only the layers that need no profile are described.",
+        "LAYER_TABLE": "\n".join(rows),
+        "CORPORA": "None matched yet: Universal Dependencies was matched against the posters' nodes only.",
+        "CYCLER": ""}
+
+
+def script_values(reg, code):
+    n = reg.script_node(code)
+    r, rows = n["ilm"], []
+    for L, st in n["layers"].items():
+        meth = {"L1": "pivot", "L2": "orthography"}[L]
+        if st != "not_built":
+            rows.append(f"| {L} | `{meth}` | {st.replace('_', ' ')} through the common layer | none |")
+            continue
+        needs, packs = reg.refusal(n, L)
+        rows.append(f"| {L} | `{meth}` | {', '.join(needs) or 'none named'} | {', '.join(packs)} |")
+    cur = reg.scripts.get(code)
+    return n, {"NODE": f"script-{code}", "CODE": code, "NAME": r["name"], "IMPL": f"script_{code.lower()}_v0",
+               "NUM": r["num"] or "none", "PVA": r["unicode_pva"] or "none", "UVER": r["unicode_version"] or "none",
+               "ISTATUS": r["status"], "ENCODED": "encoded" if n["encoded"] else "not yet encoded",
+               "CURATED": (f"used by the posters' nodes; engines {', '.join(cur['engines']) or 'none'}" if cur
+                           else "no poster node uses it"), "LAYER_TABLE": "\n".join(rows)}
+
+
+def _fill_tree(template, pkg, v):
+    for base, _, files in os.walk(template):
+        for f in files:
+            src = os.path.join(base, f)
+            rel = fill(os.path.relpath(src, template), v)
+            rel = ".gitignore" if rel == "gitignore.template" else rel
+            dst = os.path.join(pkg, rel)
+            os.makedirs(os.path.dirname(dst), exist_ok=True)
+            with open(src, encoding="utf-8") as fh:
+                text = fill(fh.read(), v)
+            with open(dst, "w", encoding="utf-8") as fh:
+                fh.write(text)
+            if dst.endswith(".sh"):
+                os.chmod(dst, 0o755)
+
+
+def _write_docs(pkg, docs):
+    shutil.copyfile(os.path.join(ROOT, "src", "tajziya", "ledger.py"), os.path.join(pkg, "ledger.py"))
+    for rel, obj in docs.items():
+        p = os.path.join(pkg, rel)
+        os.makedirs(os.path.dirname(p), exist_ok=True)
+        with open(p, "w", encoding="utf-8") as fh:
+            json.dump(obj, fh, indent=1, ensure_ascii=False)
+            fh.write("\n")
+
+
+def build_script(reg, code, out_dir, policy):
+    n, v = script_values(reg, code)
+    pkg = os.path.join(out_dir, f"tajziya-script-{code}")
+    if os.path.exists(pkg):
+        shutil.rmtree(pkg)
+    _fill_tree(SCRIPT_TEMPLATE, pkg, v)
+    lic = "Unicode-3.0"
+    cand = [] if not n["encoded"] else [{
+        "title": "Unicode Character Database: Scripts.txt, ScriptExtensions.txt and the normalisation data",
+        "url": "https://www.unicode.org/Public/UCD/latest/ucd/", "licence": lic,
+        "allowed": lic in policy["allowed"] or lic in policy["notice_required"],
+        "notice_required": lic in policy["notice_required"]}]
+    man = {"schema": "tajziya.module/1", "kind": "script", "script": code, "implementation": v["IMPL"], "api": "1",
+           "version": "0.0.0", "layers": dict(n["layers"]), "scope_excludes": [],
+           "entry": f"python/{v['IMPL']}/__init__.py", "sources": "data/SOURCES.json",
+           "reference": "reference/examples.json", "requires": [], "licence": {"code": "GPL-3.0-or-later"}}
+    _write_docs(pkg, {
+        "module.json": man,
+        "data/SOURCES.json": {"schema": "tajziya.sources/1",
+                              "rule": "Every data file is listed here with its URL, retrieval date, SHA-256 and an "
+                                      "allowed licence. Restricted material is local_only and sits in data/local/.",
+                              "sources": [], "candidates": cand},
+        "reference/examples.json": {"schema": "tajziya.reference/1",
+                                    "rule": "Each example is attested in a listed source at the locator given. A "
+                                            "pivot example gives the text, its hub form, and the text again.",
+                                    "examples": []},
+        "quest/aab-painting.json": quests.script_module(reg)})
+    return pkg
+
+
 def values_for(reg, nid, corpora):
     n = reg.node(nid)
+    if n.get("kind") == "coverage":
+        return coverage_values(reg, nid, n)
     lin = reg.lineages[n["lineage"]]
     fam = reg.families[lin["family"]]
     names = {"L0": "phonology", "L1": "pivot", "L2": "orthography", "L3s": "segment", "L3m": "analyse", "L4": "relate"}
@@ -176,10 +279,35 @@ def tar(paths, arc_root, dest):
     return hashlib.sha256(raw.getvalue()).hexdigest()
 
 
+def targets(reg, a):
+    """(kind, id) pairs: kind is language (a poster node), coverage (an ILM registry language) or script."""
+    out = []
+    if a.remaining or a.everything:
+        out += [("language", n) for n in resolve(reg, [], True)]
+    if a.ilm or a.everything:
+        out += [("coverage", c) for c in reg.coverage_ids()]
+    if a.scripts or a.everything:
+        out += [("script", c) for c in reg.script_ids()]
+    for x in a.nodes:
+        if x in reg.ilm_scripts:
+            out.append(("script", x))
+        elif x in reg.nodes or any(x in n["iso639_3"] for n in reg.nodes.values()):
+            out += [("language", n) for n in resolve(reg, [x], False)]
+        elif reg.has_node(x):
+            out.append(("coverage", x))
+        else:
+            raise SystemExit(f"langpack: refused, {x} is neither a node, an ISO 639-3 code nor an ISO 15924 script "
+                             f"in the registry")
+    return list(dict.fromkeys(out))
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument("nodes", nargs="*")
     ap.add_argument("--remaining", action="store_true")
+    ap.add_argument("--ilm", action="store_true", help="every ILM registry language no poster node holds")
+    ap.add_argument("--scripts", action="store_true", help="every ISO 15924 script in the ILM registry")
+    ap.add_argument("--everything", action="store_true", help="--remaining, --ilm and --scripts")
     ap.add_argument("--out", default="packs")
     ap.add_argument("--tar", action="store_true")
     ap.add_argument("--bundle", action="store_true")
@@ -190,26 +318,31 @@ def main(argv=None):
         print("langpack: refused, --out must be a folder inside this repository (master contract, clause 7)")
         return 1
     reg = load()
-    targets = resolve(reg, a.nodes, a.remaining)
-    if not targets:
-        print("langpack: no node to package")
+    todo = targets(reg, a)
+    if not todo:
+        print("langpack: nothing to package")
         return 1
+    with open(os.path.join(ROOT, "registry", "licences.json"), encoding="utf-8") as fh:
+        policy = json.load(fh)
     with open(os.path.join(ROOT, "registry", "corpora.json"), encoding="utf-8") as fh:
         corpora = json.load(fh)["nodes"]
     os.makedirs(out_dir, exist_ok=True)
     failed, index = [], []
-    for nid in targets:
-        pkg = build(reg, nid, out_dir, corpora)
-        rows = accept.run(pkg)
+    for k, (kind, nid) in enumerate(todo, 1):
+        pkg = build_script(reg, nid, out_dir, policy) if kind == "script" else build(reg, nid, out_dir, corpora)
+        rows = accept.run(pkg, reg=reg)
         bad = [f"{r['id']} {x}" for r in rows if r["state"] == "FAIL" for x in r["problems"]]
         if bad:
             failed.append(nid)
             print(f"langpack: {nid} REFUSED by its own acceptance test: {bad[0]}")
             continue
-        index.append({"node": nid, "name": reg.node(nid)["name"], "lineage": reg.node(nid)["lineage"],
-                      "package": f"tajziya-lang-{nid}"})
+        name = reg.ilm_scripts[nid]["name"] if kind == "script" else reg.node(nid)["name"]
+        index.append({"kind": kind, "id": nid, "name": name, "package": os.path.basename(pkg)}
+                     | ({"lineage": reg.node(nid)["lineage"]} if kind == "language" else {}))
         if not a.quiet:
             print(f"langpack: {nid:10} accepted as handed over  {os.path.relpath(pkg, ROOT)}")
+        elif k % 1000 == 0:
+            print(f"langpack: {k} of {len(todo)} built and accepted")
     if a.tar or a.bundle:
         dist = os.path.join(out_dir, "dist")
         os.makedirs(dist, exist_ok=True)
@@ -221,13 +354,19 @@ def main(argv=None):
             json.dump({"schema": "tajziya.packs/1", "packages": index}, fh, indent=1, ensure_ascii=False)
             fh.write("\n")
         if a.bundle:
-            idx_dir = os.path.join(out_dir, ".index")
-            os.makedirs(idx_dir, exist_ok=True)
-            shutil.copy(os.path.join(dist, "INDEX.json"), os.path.join(idx_dir, "INDEX.json"))
-            sha = tar([(os.path.join(out_dir, e["package"]), e["package"]) for e in index] + [(idx_dir, "")],
-                      "tajziya-language-packages", os.path.join(dist, "tajziya-language-packages.tar.gz"))
-            shutil.rmtree(idx_dir)
-            print(f"langpack: bundle dist/tajziya-language-packages.tar.gz sha256 {sha}")
+            for kind, stem in BUNDLES.items():
+                part = [e for e in index if e["kind"] == kind]
+                if not part:
+                    continue
+                idx_dir = os.path.join(out_dir, ".index")
+                os.makedirs(idx_dir, exist_ok=True)
+                with open(os.path.join(idx_dir, "INDEX.json"), "w", encoding="utf-8") as fh:
+                    json.dump({"schema": "tajziya.packs/1", "packages": part}, fh, indent=1, ensure_ascii=False)
+                    fh.write("\n")
+                sha = tar([(os.path.join(out_dir, e["package"]), e["package"]) for e in part] + [(idx_dir, "")],
+                          stem, os.path.join(dist, stem + ".tar.gz"))
+                shutil.rmtree(idx_dir)
+                print(f"langpack: bundle dist/{stem}.tar.gz, {len(part)} package(s), sha256 {sha}")
     print(f"langpack: {len(index)} package(s) accepted as handed over, {len(failed)} refused")
     return 1 if failed else 0
 

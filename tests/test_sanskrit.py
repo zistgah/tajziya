@@ -57,6 +57,7 @@ class TestSanskrit(unittest.TestCase):
     def test_the_open_edition_holds_every_sutra(self):
         r = self.p.rules()
         self.assertEqual((len(r), r[0].id, r[-1].id), (3983, "1.1.1", "8.4.68"))
+        self.assertIn("ashtadhyayi", self.p.rules_provenance)
         self.assertIn("MIT", self.p.rules_provenance)
 
     def test_the_restricted_compilation_is_local_or_absent(self):

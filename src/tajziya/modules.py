@@ -40,8 +40,53 @@ def _inside(child, parent):
     return os.path.commonpath([child, parent]) == parent
 
 
+SCRIPT_REQUIRED = ("schema", "kind", "script", "implementation", "api", "version", "layers", "scope_excludes",
+                   "entry", "sources", "reference", "licence", "requires")
+SCRIPT_LAYERS = ("L1", "L2")
+
+
+def _script_problems(man, reg, module_dir):
+    from .api import API_VERSION
+    missing = [k for k in SCRIPT_REQUIRED if k not in man]
+    if missing:
+        return [f"module.json lacks {', '.join(missing)}"]
+    p = []
+    if man["schema"] != SCHEMA:
+        p.append(f"schema is {man['schema']}, not {SCHEMA}")
+    if str(man["api"]).split(".")[0] != API_VERSION:
+        p.append(f"written for API {man['api']}; this tajziya offers API {API_VERSION}")
+    if man["script"] not in reg.ilm_scripts:
+        p.append(f"script {man['script']} is not in registry/ilm/scripts.tsv")
+    if not IMPL.match(man["implementation"]):
+        p.append(f"implementation id {man['implementation']} is not lowercase and versioned, like script_deva_v0")
+    if tuple(man["layers"]) != SCRIPT_LAYERS:
+        p.append(f"a script module's layers must be exactly {', '.join(SCRIPT_LAYERS)}")
+    for L, st in man["layers"].items():
+        if st not in STATES:
+            p.append(f"{L} state {st} is not one of {', '.join(STATES)}")
+        elif st != "not_built" and L != "L2" and not man["scope_excludes"]:
+            p.append(f"{L} is {st} but scope_excludes names nothing it leaves out")
+    p += [f"requires {r}, which this repository does not hold" for r in man["requires"]
+          if not os.path.exists(path(*r.split("/")))]
+    return p + _file_problems(man, module_dir)
+
+
+def _file_problems(man, module_dir):
+    p = []
+    if module_dir:
+        for key in ("entry", "sources", "reference"):
+            target = os.path.join(module_dir, man[key])
+            if not _inside(target, module_dir):
+                p.append(f"{key} {man[key]} lies outside the module")
+            elif not os.path.isfile(target):
+                p.append(f"{key} {man[key]} does not exist")
+    return p
+
+
 def problems(man, reg, module_dir=None):
     from .api import API_VERSION
+    if man.get("kind") == "script":
+        return _script_problems(man, reg, module_dir)
     missing = [k for k in REQUIRED if k not in man]
     if missing:
         return [f"module.json lacks {', '.join(missing)}"]
@@ -50,7 +95,7 @@ def problems(man, reg, module_dir=None):
         p.append(f"schema is {man['schema']}, not {SCHEMA}")
     if str(man["api"]).split(".")[0] != API_VERSION:
         p.append(f"written for API {man['api']}; this tajziya offers API {API_VERSION}")
-    if man["node"] not in reg.nodes:
+    if not reg.has_node(man["node"]):
         p.append(f"node {man['node']} is not in the registry")
     if not IMPL.match(man["implementation"]):
         p.append(f"implementation id {man['implementation']} is not lowercase and versioned, like akk_v0")
@@ -89,6 +134,11 @@ def load(module_dir, man):
 
 def bind(module_dir, reg, node_id=None, **options):
     man = manifest(module_dir)
+    if man.get("kind") == "script":
+        probs = problems(man, reg, module_dir)
+        if probs:
+            raise ValueError("; ".join(probs))
+        return load(module_dir, man).make(reg.script_node(man["script"]), reg, module_dir=module_dir, **options)
     if node_id and man["node"] != node_id:
         raise ValueError(f"the module at {module_dir} implements {man['node']}, not {node_id}")
     probs = problems(man, reg, module_dir)

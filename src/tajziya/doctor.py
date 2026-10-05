@@ -1,6 +1,7 @@
 # © 1993–2026 Abhishek Choudhary. All rights reserved. AyeAI.
 # SPDX-License-Identifier: GPL-3.0-or-later
 """Registry integrity. Each check protects a clause in CONTRACT.md."""
+import hashlib
 import importlib
 import json
 import os
@@ -38,7 +39,7 @@ def problems(reg):
             p.append(f"{i}: not bound")
     from . import modules
     for i, b in reg.bindings.items():
-        if i not in reg.nodes:
+        if not reg.has_node(i):
             p.append(f"binding for unknown node {i}")
         if b["kind"] not in ("port", "frame", "module"):
             p.append(f"{i}: binding kind {b['kind']}")
@@ -54,7 +55,7 @@ def problems(reg):
                 p.append(f"{i}: the bound module declares node {man.get('node')}")
             if man.get("implementation") != b["implementation"]:
                 p.append(f"{i}: the binding names {b['implementation']}, the module {man.get('implementation')}")
-            if man.get("layers") != reg.nodes.get(i, {}).get("layers"):
+            if i in reg.nodes and man.get("layers") != reg.nodes[i]["layers"]:
                 p.append(f"{i}: the module's layer states differ from the registry's")
             continue
         try:
@@ -120,4 +121,26 @@ def problems(reg):
             key = a.split(":")[0]
             if f"**{key}**" not in t:
                 p.append(f"attachment point {key} is not enumerated in INTEGRATION.md")
+    sp = path("registry", "ilm", "SOURCE.json")
+    with open(sp, encoding="utf-8") as fh:
+        src = json.load(fh)
+    for f in src["files"]:
+        with open(path(*f["path"].split("/")), "rb") as fh:
+            if hashlib.sha256(fh.read()).hexdigest() != f["sha256"]:
+                p.append(f"{f['path']} does not match its pin in registry/ilm/SOURCE.json")
+    if len(reg.ilm_languages) != src["files"][0]["rows"] or len(reg.ilm_scripts) != src["files"][1]["rows"]:
+        p.append("registry/ilm row counts differ from registry/ilm/SOURCE.json")
+    from . import modules
+    for code, b in reg.script_bindings.items():
+        if code not in reg.ilm_scripts:
+            p.append(f"script binding for unknown script {code}")
+            continue
+        mdir = path(*b.get("module", "").split("/"))
+        if not os.path.isfile(os.path.join(mdir, "module.json")):
+            p.append(f"script {code}: bound module {b.get('module')} has no module.json")
+            continue
+        man = modules.manifest(mdir)
+        p += [f"script {code}: {x}" for x in modules.problems(man, reg, mdir)]
+        if man.get("script") != code or man.get("implementation") != b.get("implementation"):
+            p.append(f"script {code}: the binding and the module's manifest disagree")
     return p

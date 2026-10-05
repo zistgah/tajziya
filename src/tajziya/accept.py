@@ -137,8 +137,8 @@ def a4_references(module_dir, man, ids, reg):
     rp = os.path.join(module_dir, man["reference"])
     with open(rp, encoding="utf-8") as fh:
         examples = json.load(fh).get("examples", [])
-    node = reg.node(man["node"])
-    allowed_scripts = set(man["accepts"]) | set(node["scripts"])
+    node = reg.script_node(man["script"]) if man.get("kind") == "script" else reg.node(man["node"])
+    allowed_scripts = set(man.get("accepts", [])) | set(node["scripts"])
     for i, e in enumerate(examples):
         tag = f"example {i + 1}"
         if e.get("layer") not in man["layers"]:
@@ -170,6 +170,8 @@ def a5_isolation(module_dir, man, reg):
     port = modules.bind(module_dir, reg)
     if port.layers() != man["layers"]:
         p.append("the port reports layer states its module.json does not declare")
+    if man.get("kind") == "script":
+        return p + [f"{c}: {d}" for c, ok, d in harness.check_script(port, reg) if not ok]
     node = dict(reg.node(man["node"]))
     node["layers"] = dict(man["layers"])
     for cond, ok, detail in harness.check(port, node, reg):
@@ -182,7 +184,38 @@ def _copy(src, dst, skip):
     shutil.copytree(src, dst, ignore=shutil.ignore_patterns(*skip))
 
 
+def _a6_script(module_dir, man, scratch):
+    code, name = man["script"], f"script-{man['script']}"
+    if not scratch:
+        return ["integration needs --scratch, a folder inside the one this runs in"], []
+    scratch = os.path.realpath(scratch)
+    if os.path.exists(scratch):
+        shutil.rmtree(scratch)
+    _copy(ROOT, scratch, (".git", ".deps", ".scratch", "packs", "logs", "__pycache__"))
+    dest = os.path.join(scratch, "modules", name)
+    if os.path.exists(dest):
+        shutil.rmtree(dest)
+    _copy(module_dir, dest, (".deps", "logs", "__pycache__", ".git"))
+    bp = os.path.join(scratch, "registry", "script_bindings.json")
+    with open(bp, encoding="utf-8") as fh:
+        b = json.load(fh)
+    b["bindings"][code] = {"kind": "module", "implementation": man["implementation"], "module": f"modules/{name}"}
+    with open(bp, "w", encoding="utf-8") as fh:
+        json.dump(b, fh, indent=1, ensure_ascii=False)
+        fh.write("\n")
+    env = dict(os.environ, PYTHONPATH=os.path.join(scratch, "src"), PYTHONDONTWRITEBYTECODE="1")
+    p = []
+    for args in (["doctor"], ["coverage", "--script", code]):
+        r = subprocess.run([sys.executable, "-m", "tajziya"] + args, cwd=scratch, env=env, capture_output=True, text=True)
+        if r.returncode != 0:
+            p.append(f"{args[0]} fails with the module bound: " + " | ".join((r.stdout + r.stderr).strip().splitlines()[-3:]))
+    return p, [f"bound as {code} in {os.path.relpath(scratch, os.path.dirname(os.path.realpath(module_dir)))}; "
+               f"doctor and the script's conformance run"]
+
+
 def a6_integration(module_dir, man, scratch):
+    if man.get("kind") == "script":
+        return _a6_script(module_dir, man, scratch)
     node = man["node"]
     here = os.path.realpath(os.path.join(ROOT, "modules", node))
     bound_in_place = os.path.realpath(module_dir) == here
@@ -248,14 +281,14 @@ def a7_record(module_dir):
     return p, notes
 
 
-def run(module_dir, integration=False, scratch=None):
+def run(module_dir, integration=False, scratch=None, reg=None):
     module_dir = os.path.realpath(module_dir)
     rows = []
 
     def row(cid, name, probs, notes=()):
         rows.append({"id": cid, "check": name, "state": "FAIL" if probs else "PASS",
                      "problems": list(probs), "notes": list(notes)})
-    reg = load()
+    reg = reg or load()
     if not os.path.isfile(os.path.join(module_dir, "module.json")):
         return [{"id": "A1", "check": "manifest", "state": "FAIL", "problems": ["no module.json"], "notes": []}]
     man = modules.manifest(module_dir)

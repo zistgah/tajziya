@@ -1,0 +1,11 @@
+Sutra data: ashtadhyayi.com
+https://ashtadhyayi.com
+https://github.com/ashtadhyayi-com/data (commit 5744762f010d677cfb43f347a42d02796cf615d6, sutraani/data.txt)
+
+The data's terms, from that repository's README:
+"You are free to use this data in your own projects provided that appropriate credits are
+mentioned wherever applicable."
+
+data/ashtadhyayi/sutraani.tsv is derived from it by tools/sutra_import.py: the number, the
+Siddhanta Kaumudi number, the type, the defined term, the text and the padaccheda of each of
+the 3,983 sutras, re-encoded and otherwise unchanged. Credit for the data is ashtadhyayi.com's.

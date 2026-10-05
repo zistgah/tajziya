@@ -130,25 +130,28 @@ class SanskritPort:
             return next(s for s in json.load(fh)["sources"] if s["id"] == sid)
 
     def rules(self, source="open", data_path=None, pin=None):
-        """The sutras: "open" is the MIT edition in data/; "local" is the restricted compilation, if held."""
+        """The sutras. "open": all 3,983 from ashtadhyayi.com's data (credited), in Devanagari, each with
+        its type, defined term, padaccheda and Siddhanta Kaumudi number. "local": the restricted
+        compilation, if held here."""
         Sutra = self._u["rules"].Sutra
         if source == "open":
-            s = self._source("vidyut-sutrapatha")
+            s = self._source("ashtadhyayi-com-data")
             f = s["files"][0]
             p = os.path.join(self._dir, f["path"])
             if _sha(p) != f["sha256"]:
                 raise ValueError(f"refused: {f['path']} does not match its pin")
             out = []
             with open(p, encoding="utf-8") as fh:
-                next(fh)
+                cols = next(fh).rstrip("\n").split("\t")
                 for line in fh:
-                    code, _, text = line.rstrip("\r\n").partition("\t")
-                    if not code:
-                        continue
-                    a, pd, n = (int(x) for x in code.split("."))
-                    out.append(Sutra(id=code, sutra_krama=a * 10000 + pd * 1000 + n, kaumudi_krama=None, type=None,
-                                     term=None, sutra=text, padaccheda=None))
-            self.rules_provenance = f"{s['scheme']}, {s['licence']}, from {s['id']}"
+                    r = dict(zip(cols, line.rstrip("\n").split("\t")))
+                    out.append(Sutra(id=r["id"], sutra_krama=int(r["krama"]),
+                                     kaumudi_krama=int(r["kaumudi"]) if r["kaumudi"].isdigit() else None,
+                                     type=r["type"], term=r["term"] or None, sutra=r["sutra"],
+                                     padaccheda=r["padaccheda"]))
+            v = self._source("vidyut-sutrapatha")
+            self.rules_provenance = (f"{s['scheme']}, {s['licence']} (credit: ashtadhyayi.com), from {s['id']}; "
+                                     f"text cross-checked against {v['id']} ({v['licence']})")
             return out
         s = self._source("sanskritdocuments-compilation")
         p = data_path or os.path.join(self._dir, s["files"][0]["path"])

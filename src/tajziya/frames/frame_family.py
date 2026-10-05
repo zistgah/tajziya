@@ -20,7 +20,7 @@ WHAT = {"L0": "no phonological base is defined for this node",
 class FamilyFrame:
     def __init__(self, node, reg):
         self.node, self._n, self._reg = node["id"], node, reg
-        self.lineage = reg.lineages[node["lineage"]]
+        self.lineage = reg.lineages.get(node.get("lineage"))
         self.engines = reg.engines_of(node)
 
     def layers(self):

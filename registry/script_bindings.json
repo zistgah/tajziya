@@ -1,0 +1,5 @@
+{
+ "schema": "tajziya.script_bindings/1",
+ "rule": "A script module is used only once bound here, as code: {kind: module, implementation, module: modules/script-<code>}.",
+ "bindings": {}
+}

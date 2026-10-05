@@ -113,7 +113,11 @@ def main(argv=None):
     rc.add_argument("--json", action="store_true")
     ru = sub.add_parser("rules", help="the sutra compilation, when a pinned local copy exists")
     ru.add_argument("--node", default="cls")
-    ac = sub.add_parser("accept", help="the generic acceptance test for a language module")
+    cv = sub.add_parser("coverage", help="the ILM registry's languages and scripts: counts and conformance")
+    cv.add_argument("--sample", type=int, help="judge every n-th coverage language")
+    cv.add_argument("--script", action="append", help="judge only this script (repeatable)")
+    cv.add_argument("--scripts-only", action="store_true")
+    ac = sub.add_parser("accept", help="the generic acceptance test for a language or script module")
     ac.add_argument("module")
     ac.add_argument("--integration", action="store_true")
     ac.add_argument("--scratch")
@@ -211,6 +215,19 @@ def main(argv=None):
         return 0
     if a.verb == "data":
         return _data_import(reg, a)
+    if a.verb == "coverage":
+        failed = []
+        if not a.script and not a.scripts_only:
+            s = harness.run_coverage(reg, a.sample)
+            failed += s["failed"]
+            print(f"coverage: {len(reg.coverage_ids())} languages from the ILM registry beyond the {len(reg.nodes)} curated nodes; "
+                  f"{s['nodes']} judged, {len(s['failed'])} failed")
+        t = harness.run_scripts(reg, a.script)
+        failed += t["failed"]
+        print(f"coverage: {t['scripts']} of {len(reg.ilm_scripts)} scripts judged, {len(t['failed'])} failed")
+        for f in failed[:20]:
+            print(f"FAIL {f.get('node') or f.get('script')} {f['condition']}: {f['detail']}")
+        return 1 if failed else 0
     if a.verb == "accept":
         from . import accept
         return accept.main(a)

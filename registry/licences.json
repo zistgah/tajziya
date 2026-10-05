@@ -23,13 +23,16 @@
   "GPL-3.0-or-later",
   "LGPL-2.1-or-later",
   "LGPL-3.0-or-later",
-  "LGPL-LR"
+  "LGPL-LR",
+  "LicenseRef-ashtadhyayi-com"
  ],
  "notice_required": [
   "MIT",
   "BSD-2-Clause",
   "BSD-3-Clause",
-  "Apache-2.0"
+  "Apache-2.0",
+  "Unicode-3.0",
+  "LicenseRef-ashtadhyayi-com"
  ],
  "restricted_markers": [
   "NC",
@@ -58,5 +61,8 @@
   "CC BY-NC-SA 4.0": "CC-BY-NC-SA-4.0",
   "CC BY-NC 4.0": "CC-BY-NC-4.0",
   "CC BY-NC-ND 4.0": "CC-BY-NC-ND-4.0"
+ },
+ "notes": {
+  "LicenseRef-ashtadhyayi-com": "ashtadhyayi.com's data terms (its README): free to use in your own projects with appropriate credit. Allowed with its notice in data/LICENSES/."
  }
 }

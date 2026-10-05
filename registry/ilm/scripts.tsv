@@ -1,0 +1,227 @@
+code	num	name	unicode_pva	unicode_version	status
+Adlm	166	Adlam	Adlam	9.0	encoded
+Afak	439	Afaka			pending
+Aghb	239	Caucasian Albanian	Caucasian_Albanian	7.0	encoded
+Ahom	338	Ahom, Tai Ahom	Ahom	8.0	seeded
+Arab	160	Arabic	Arabic	1.1	seeded
+Aran	161	Arabic (Nastaliq variant)		1.1	seeded
+Armi	124	Imperial Aramaic	Imperial_Aramaic	5.2	encoded
+Armn	230	Armenian	Armenian	1.1	encoded
+Avst	134	Avestan	Avestan	5.2	encoded
+Bali	360	Balinese	Balinese	5.0	seeded
+Bamu	435	Bamum	Bamum	5.2	encoded
+Bass	259	Bassa Vah	Bassa_Vah	7.0	encoded
+Batk	365	Batak	Batak	6.0	seeded
+Beng	325	Bengali (Bangla)	Bengali	1.1	seeded
+Berf	258	Beria Erfe			pending
+Bhks	334	Bhaiksuki	Bhaiksuki	9.0	seeded
+Blis	550	Blissymbols			pending
+Bopo	285	Bopomofo	Bopomofo	1.1	encoded
+Brah	300	Brahmi	Brahmi	6.0	seeded
+Brai	570	Braille	Braille	3.0	encoded
+Bugi	367	Buginese	Buginese	4.1	seeded
+Buhd	372	Buhid	Buhid	3.2	seeded
+Cakm	349	Chakma	Chakma	6.1	seeded
+Cans	440	Unified Canadian Aboriginal Syllabics	Canadian_Aboriginal	3.0	encoded
+Cari	201	Carian	Carian	5.1	encoded
+Cham	358	Cham	Cham	5.1	seeded
+Cher	445	Cherokee	Cherokee	3.0	encoded
+Chis	298	Chisoi			pending
+Chrs	109	Chorasmian	Chorasmian	13.0	encoded
+Cirt	291	Cirth			pending
+Copt	204	Coptic	Coptic	4.1	encoded
+Cpmn	402	Cypro-Minoan	Cypro_Minoan	14.0	encoded
+Cprt	403	Cypriot syllabary	Cypriot	4.0	encoded
+Cyrl	220	Cyrillic	Cyrillic	1.1	encoded
+Cyrs	221	Cyrillic (Old Church Slavonic variant)		1.1	encoded
+Deva	315	Devanagari (Nagari)	Devanagari	1.1	seeded
+Diak	342	Dives Akuru	Dives_Akuru	13.0	seeded
+Dogr	328	Dogra	Dogra	11.0	seeded
+Dsrt	250	Deseret (Mormon)	Deseret	3.1	encoded
+Dupl	755	Duployan shorthand, Duployan stenography	Duployan	7.0	encoded
+Egyd	070	Egyptian demotic			pending
+Egyh	060	Egyptian hieratic		5.2	encoded
+Egyp	050	Egyptian hieroglyphs	Egyptian_Hieroglyphs	5.2	encoded
+Elba	226	Elbasan	Elbasan	7.0	encoded
+Elym	128	Elymaic	Elymaic	12.0	encoded
+Ethi	430	Ethiopic (Geʻez)	Ethiopic	3.0	encoded
+Gara	164	Garay	Garay	16.0	encoded
+Geok	241	Khutsuri (Asomtavruli and Nuskhuri)	Georgian	1.1	encoded
+Geor	240	Georgian (Mkhedruli and Mtavruli)	Georgian	1.1	encoded
+Glag	225	Glagolitic	Glagolitic	4.1	encoded
+Gong	312	Gunjala Gondi	Gunjala_Gondi	11.0	seeded
+Gonm	313	Masaram Gondi	Masaram_Gondi	10.0	seeded
+Goth	206	Gothic	Gothic	3.1	encoded
+Gran	343	Grantha	Grantha	7.0	seeded
+Grek	200	Greek	Greek	1.1	encoded
+Gujr	320	Gujarati	Gujarati	1.1	seeded
+Gukh	397	Gurung Khema	Gurung_Khema	16.0	encoded
+Guru	310	Gurmukhi	Gurmukhi	1.1	seeded
+Hanb	503	Han with Bopomofo		1.1	encoded
+Hang	286	Hangul	Hangul	1.1	encoded
+Hani	500	Han (Hanzi, Kanji, Hanja)	Han	1.1	encoded
+Hano	371	Hanunoo	Hanunoo	3.2	seeded
+Hans	501	Han (Simplified variant)		1.1	encoded
+Hant	502	Han (Traditional variant)		1.1	encoded
+Hatr	127	Hatran	Hatran	8.0	encoded
+Hebr	125	Hebrew	Hebrew	1.1	seeded
+Hira	410	Hiragana	Hiragana	1.1	encoded
+Hluw	080	Anatolian Hieroglyphs	Anatolian_Hieroglyphs	8.0	encoded
+Hmng	450	Pahawh Hmong	Pahawh_Hmong	7.0	encoded
+Hmnp	451	Nyiakeng Puachue Hmong	Nyiakeng_Puachue_Hmong	12.0	encoded
+Hntl	504	Han (Traditional) with Latin			pending
+Hrkt	412	Japanese syllabaries	Katakana_Or_Hiragana	1.1	encoded
+Hung	176	Old Hungarian (Hungarian Runic)	Old_Hungarian	8.0	encoded
+Inds	610	Indus (Harappan)			pending
+Ital	210	Old Italic (Etruscan, Oscan, etc.)	Old_Italic	3.1	encoded
+Jamo	284	Jamo		1.1	encoded
+Java	361	Javanese	Javanese	5.2	seeded
+Jpan	413	Japanese		1.1	encoded
+Jurc	510	Jurchen			pending
+Kali	357	Kayah Li	Kayah_Li	5.1	seeded
+Kana	411	Katakana	Katakana	1.1	encoded
+Kawi	368	Kawi	Kawi	15.0	seeded
+Khar	305	Kharoshthi	Kharoshthi	4.1	seeded
+Khmr	355	Khmer	Khmer	3.0	seeded
+Khoj	322	Khojki	Khojki	7.0	seeded
+Kitl	505	Khitan large script			pending
+Kits	288	Khitan small script	Khitan_Small_Script	13.0	encoded
+Knda	345	Kannada	Kannada	1.1	seeded
+Kore	287	Korean		1.1	encoded
+Kpel	436	Kpelle			pending
+Krai	396	Kirat Rai	Kirat_Rai	16.0	encoded
+Kthi	317	Kaithi	Kaithi	5.2	seeded
+Lana	351	Tai Tham (Lanna)	Tai_Tham	5.2	seeded
+Laoo	356	Lao	Lao	1.1	seeded
+Latf	217	Latin (Fraktur variant)		1.1	encoded
+Latg	216	Latin (Gaelic variant)		1.1	encoded
+Latn	215	Latin	Latin	1.1	encoded
+Leke	364	Leke			pending
+Lepc	335	Lepcha (Róng)	Lepcha	5.1	seeded
+Limb	336	Limbu	Limbu	4.0	seeded
+Lina	400	Linear A	Linear_A	7.0	encoded
+Linb	401	Linear B	Linear_B	4.0	encoded
+Lisu	399	Lisu (Fraser)	Lisu	5.2	encoded
+Loma	437	Loma			pending
+Lyci	202	Lycian	Lycian	5.1	encoded
+Lydi	116	Lydian	Lydian	5.1	encoded
+Mahj	314	Mahajani	Mahajani	7.0	seeded
+Maka	366	Makasar	Makasar	11.0	encoded
+Mand	140	Mandaic, Mandaean	Mandaic	6.0	encoded
+Mani	139	Manichaean	Manichaean	7.0	encoded
+Marc	332	Marchen	Marchen	9.0	seeded
+Maya	090	Mayan hieroglyphs			pending
+Medf	265	Medefaidrin	Medefaidrin	11.0	encoded
+Mend	438	Mende Kikakui	Mende_Kikakui	7.0	encoded
+Merc	101	Meroitic Cursive	Meroitic_Cursive	6.1	encoded
+Mero	100	Meroitic Hieroglyphs	Meroitic_Hieroglyphs	6.1	encoded
+Mlym	347	Malayalam	Malayalam	1.1	seeded
+Modi	324	Modi	Modi	7.0	seeded
+Mong	145	Mongolian	Mongolian	3.0	seeded
+Moon	218	Moon			pending
+Mroo	264	Mro, Mru	Mro	7.0	encoded
+Mtei	337	Meitei Mayek	Meetei_Mayek	5.2	seeded
+Mult	323	Multani	Multani	8.0	seeded
+Mymr	350	Myanmar (Burmese)	Myanmar	3.0	seeded
+Nagm	295	Nag Mundari	Nag_Mundari	15.0	seeded
+Nand	311	Nandinagari	Nandinagari	12.0	seeded
+Narb	106	Old North Arabian	Old_North_Arabian	7.0	encoded
+Nbat	159	Nabataean	Nabataean	7.0	encoded
+Newa	333	Newa, Newar, Newari	Newa	9.0	seeded
+Nkdb	085	Naxi Dongba			pending
+Nkgb	420	Naxi Geba			pending
+Nkoo	165	N’Ko	Nko	5.0	encoded
+Nshu	499	Nüshu	Nushu	10.0	encoded
+Ogam	212	Ogham	Ogham	3.0	encoded
+Olck	261	Ol Chiki	Ol_Chiki	5.1	encoded
+Onao	296	Ol Onal	Ol_Onal	16.0	encoded
+Orkh	175	Old Turkic, Orkhon Runic	Old_Turkic	5.2	encoded
+Orya	327	Oriya (Odia)	Oriya	1.1	seeded
+Osge	219	Osage	Osage	9.0	encoded
+Osma	260	Osmanya	Osmanya	4.0	encoded
+Ougr	143	Old Uyghur	Old_Uyghur	14.0	encoded
+Palm	126	Palmyrene	Palmyrene	7.0	encoded
+Pauc	263	Pau Cin Hau	Pau_Cin_Hau	7.0	seeded
+Pcun	015	Proto-Cuneiform			pending
+Pelm	016	Proto-Elamite			pending
+Perm	227	Old Permic	Old_Permic	7.0	encoded
+Phag	331	Phags-pa	Phags_Pa	5.0	encoded
+Phli	131	Inscriptional Pahlavi	Inscriptional_Pahlavi	5.2	encoded
+Phlp	132	Psalter Pahlavi	Psalter_Pahlavi	7.0	encoded
+Phlv	133	Book Pahlavi			pending
+Phnx	115	Phoenician	Phoenician	5.0	encoded
+Plrd	282	Miao (Pollard)	Miao	6.1	encoded
+Piqd	293	Klingon (KLI pIqaD)			pending
+Prti	130	Inscriptional Parthian	Inscriptional_Parthian	5.2	encoded
+Psin	103	Proto-Sinaitic			pending
+Qaaa	900	Reserved for private use (start)			pending
+Qabx	949	Reserved for private use (end)			pending
+Ranj	303	Ranjana			pending
+Rjng	363	Rejang (Redjang, Kaganga)	Rejang	5.1	seeded
+Rohg	167	Hanifi Rohingya	Hanifi_Rohingya	11.0	encoded
+Roro	620	Rongorongo			pending
+Runr	211	Runic	Runic	3.0	encoded
+Samr	123	Samaritan	Samaritan	5.2	encoded
+Sara	292	Sarati			pending
+Sarb	105	Old South Arabian	Old_South_Arabian	5.2	encoded
+Saur	344	Saurashtra	Saurashtra	5.1	seeded
+Seal	590	(Small) Seal			pending
+Sgnw	095	SignWriting	SignWriting	8.0	encoded
+Shaw	281	Shavian (Shaw)	Shavian	4.0	encoded
+Shrd	319	Sharada	Sharada	6.1	seeded
+Shui	530	Shuishu			pending
+Sidd	302	Siddham	Siddham	7.0	seeded
+Sidt	180	Sidetic			pending
+Sind	318	Khudawadi, Sindhi	Khudawadi	7.0	seeded
+Sinh	348	Sinhala	Sinhala	3.0	seeded
+Sogd	141	Sogdian	Sogdian	11.0	encoded
+Sogo	142	Old Sogdian	Old_Sogdian	11.0	encoded
+Sora	398	Sora Sompeng	Sora_Sompeng	6.1	encoded
+Soyo	329	Soyombo	Soyombo	10.0	seeded
+Sund	362	Sundanese	Sundanese	5.1	seeded
+Sunu	274	Sunuwar	Sunuwar	16.0	encoded
+Sylo	316	Syloti Nagri	Syloti_Nagri	4.1	seeded
+Syrc	135	Syriac	Syriac	3.0	seeded
+Syre	138	Syriac (Estrangelo variant)		3.0	seeded
+Syrj	137	Syriac (Western variant)		3.0	seeded
+Syrn	136	Syriac (Eastern variant)		3.0	seeded
+Tagb	373	Tagbanwa	Tagbanwa	3.2	seeded
+Takr	321	Takri	Takri	6.1	seeded
+Tale	353	Tai Le	Tai_Le	4.0	seeded
+Talu	354	New Tai Lue	New_Tai_Lue	4.1	seeded
+Taml	346	Tamil	Tamil	1.1	seeded
+Tang	520	Tangut	Tangut	9.0	encoded
+Tavt	359	Tai Viet	Tai_Viet	5.2	seeded
+Tayo	380	Tai Yo			pending
+Telu	340	Telugu	Telugu	1.1	seeded
+Teng	290	Tengwar			pending
+Tfng	120	Tifinagh (Berber)	Tifinagh	4.1	encoded
+Tglg	370	Tagalog (Baybayin, Alibata)	Tagalog	3.2	seeded
+Thaa	170	Thaana	Thaana	3.0	encoded
+Thai	352	Thai	Thai	1.1	encoded
+Tibt	330	Tibetan	Tibetan	2.0	seeded
+Tirh	326	Tirhuta	Tirhuta	7.0	seeded
+Tnsa	275	Tangsa	Tangsa	14.0	seeded
+Todr	229	Todhri	Todhri	16.0	encoded
+Tols	299	Tolong Siki			pending
+Toto	294	Toto	Toto	14.0	seeded
+Tutg	341	Tulu-Tigalari	Tulu_Tigalari	16.0	encoded
+Ugar	040	Ugaritic	Ugaritic	4.0	encoded
+Vaii	470	Vai	Vai	5.1	encoded
+Visp	280	Visible Speech			pending
+Vith	228	Vithkuqi	Vithkuqi	14.0	encoded
+Wara	262	Warang Citi	Warang_Citi	7.0	encoded
+Wcho	283	Wancho	Wancho	12.0	seeded
+Wole	480	Woleai			pending
+Xpeo	030	Old Persian	Old_Persian	4.1	encoded
+Xsux	020	Cuneiform, Sumero-Akkadian	Cuneiform	5.0	encoded
+Yezi	192	Yezidi	Yezidi	13.0	encoded
+Yiii	460	Yi	Yi	3.0	encoded
+Zanb	339	Zanabazar Square	Zanabazar_Square	10.0	seeded
+Zinh	994	Code for inherited script	Inherited		pending
+Zmth	995	Mathematical notation		3.2	encoded
+Zsye	993	Symbols (Emoji variant)		6.0	encoded
+Zsym	996	Symbols		1.1	encoded
+Zxxx	997	Code for unwritten documents			pending
+Zyyy	998	Code for undetermined script	Common		pending
+Zzzz	999	Code for uncoded script	Unknown		pending

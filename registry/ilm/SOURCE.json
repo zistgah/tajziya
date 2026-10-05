@@ -1,0 +1,24 @@
+{
+ "schema": "tajziya.source/1",
+ "what": "The ILM registry that the project-ilm 3D explorer (ilm.codes/explore) draws: every ISO 639-3 language and every ISO 15924 script, with the explorer's status for each. Copied verbatim.",
+ "repository": "https://github.com/project-ilm/ilm.codes",
+ "commit": "c49f5292577ab442c2e26be270de77f3d5c01135",
+ "retrieved": "2026-09-28",
+ "licence": "GPL-2.0, as project-ilm/ilm.codes declares in its LICENSE; text in LICENSES/GPL-2.0.txt",
+ "authorities": {
+  "languages": "ISO 639-3; its Registration Authority is SIL International",
+  "scripts": "ISO 15924; its Registration Authority is the Unicode Consortium"
+ },
+ "files": [
+  {
+   "path": "registry/ilm/languages.tsv",
+   "sha256": "7ffbd43d0836e957726f738707b22795275be8bd73543c18a79eff0c8a88cb0c",
+   "rows": 7867
+  },
+  {
+   "path": "registry/ilm/scripts.tsv",
+   "sha256": "823743dda3e9e9150e4cd32ff53e2586f9bd7031df48157ee499305b64ee205c",
+   "rows": 226
+  }
+ ]
+}

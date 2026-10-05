@@ -8,6 +8,8 @@
 |---|---|---|---|
 | Node | One language at one stage, with its scripts and corpus (for example Old Persian, or Classical Sanskrit). | language variety, languoid, ISO 639-3 code plus period | A stage of a language can be its own node; the matrix decides. |
 | Lineage | The genealogical family a node belongs to. | language family | |
+| Coverage node | A language the ILM registry lists and no poster node holds; it refuses by name until its profile and layers are built. | language entry, locale stub | It carries no lineage until one is sourced. |
+| Script module | A module for one ISO 15924 script: L1 pivot to its hub, L2 orthography. | script or writing-system plugin; transliteration and normalisation | Scripts are their own axis, never folded into a language. |
 | Layers L0 to L4 | L0 phonology; L1 script pivot; L2 orthography; L3s segmentation; L3m morphology; L4 syntax, following Project ILM. | NLP pipeline: phonology, transliteration, normalisation and tokenisation, word segmentation, morphological analysis, dependency parsing | Script and language are separate axes throughout. |
 | Engine | A mechanism shared by phenomenon across lineages: a logogram engine, a syllabary engine, an affix chain. | shared analyser, finite-state component | Script mechanisms recur across unrelated lineages; language mechanisms follow descent. |
 | Port, frame, module | A port parses one node; a frame covers a family and refuses what it cannot do; a module is a port packaged with its manifest, sources and examples. | adapter, fallback, plugin | |
