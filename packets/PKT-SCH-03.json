@@ -1,0 +1,42 @@
+{
+ "schema": "tajziya.packet/1",
+ "id": "PKT-SCH-03",
+ "title": "The Jainendra school, beside Pāṇini",
+ "area": "interpretation-schools",
+ "wave": 1,
+ "size": "L",
+ "status": "open",
+ "summary": "Find an openly licensed edition of the Jainendra grammar and record, for each of its rules that answers a Pāṇinian sutra, the correspondence and its text.",
+ "inputs": [
+  {
+   "what": "an edition of the Jainendra grammar",
+   "where": "to be found; record its terms"
+  }
+ ],
+ "outputs": [
+  "modules/cls/data/schools/jainendra.tsv",
+  "modules/cls/data/SOURCES.json"
+ ],
+ "licence": "registry/licences.json decides; a restricted edition stays local-only and the packet waits for an open one.",
+ "acceptance": {
+  "kind": "sutra-table",
+  "args": {
+   "path": "modules/cls/data/schools/jainendra.tsv",
+   "columns": [
+    "id",
+    "school_rule",
+    "text"
+   ],
+   "min_rows": 1,
+   "multi": true,
+   "source_id": "school-jainendra"
+  },
+  "command": "python3 -m tajziya packet check PKT-SCH-03"
+ },
+ "depends": [],
+ "how": [
+  "Find the edition and read its terms; record them verbatim.",
+  "Write a deterministic import and a concordance: Pāṇini's sutra id, the school's rule number, its text.",
+  "Run the acceptance command."
+ ]
+}

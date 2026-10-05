@@ -87,6 +87,25 @@
     }
    ],
    "local_only": false
+  },
+  {
+   "id": "romenagri-forms",
+   "title": "Every sutra in Romenagri, with its round trip",
+   "url": "https://github.com/hindawiai/chintamani/tree/3ad8778/Romenagri",
+   "retrieved": "2026-10-05",
+   "licence": "LicenseRef-ashtadhyayi-com",
+   "licence_file": "data/LICENSES/ashtadhyayi-com.txt",
+   "terms": "The sutra text is ashtadhyayi.com's, credited; the transliteration is the output of the author's own Romenagri (GPL-2.0-or-later), vendored in vendor/romenagri.",
+   "derived_by": "tools/romenagri_sutras.py",
+   "entries": 3983,
+   "files": [
+    {
+     "path": "data/romenagri/sutras.tsv",
+     "sha256": "5ebfe6389f0abdc5d922a6a579e4050cba722109b82ba9ae11fe8d98697edc84"
+    }
+   ],
+   "local_only": false,
+   "attribution": "Sutra text: ashtadhyayi.com. Transliteration: Romenagri, by Abhishek Choudhary (hindawiai/chintamani)."
   }
  ]
 }

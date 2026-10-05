@@ -1,0 +1,223 @@
+{
+ "schema": "tajziya.upstream/1",
+ "what": "The Romenagri Transliteration System, Abhishek Choudhary's, vendored byte for byte from the Romenagri folder of hindawiai/chintamani. Its test corpora (corp_*) are left upstream.",
+ "repository": "https://github.com/hindawiai/chintamani",
+ "path": "Romenagri",
+ "commit": "3ad87785a75dc2b18438a8b068807103cb920c81",
+ "licence": "GPL-2.0-or-later (its own headers and LEGAL)",
+ "pipeline": {
+  "roman": "iconv -futf8 -tutf16 | uni2acii | acii2rmn",
+  "devanagari": "rmn2acii | acii2uni | iconv -futf16 -tutf8",
+  "from": "mass_hindawi, in this folder"
+ },
+ "files": [
+  {
+   "file": "LEGAL",
+   "sha256": "87a8f97f7a3deb12536436d3b07a770177bfabdde8c389532d05f39b823bad19"
+  },
+  {
+   "file": "Makefile",
+   "sha256": "bfea260963a1994a98e5c79eec24d2892d5264346e0915b3f38899c7b976d31c"
+  },
+  {
+   "file": "acii.h",
+   "sha256": "e5d2ee9d275c0413f38f886f56429615f622d15a19f5cd64361007f967dc266c"
+  },
+  {
+   "file": "acii2cf.lex",
+   "sha256": "6ea1cba710164a7840e2d2a722d0b1773e3df3a65dc93eba0d803750cb54f0c3"
+  },
+  {
+   "file": "acii2hin.c",
+   "sha256": "cf1423243b8c4552b04a35f0d533fdc808a2e548bf35c9749f80f4e26eecf14a"
+  },
+  {
+   "file": "acii2hin.h",
+   "sha256": "899f2b194ee41f8b61ece1af9d016a4ec2c25e272ad0b3bba915027d9aec0336"
+  },
+  {
+   "file": "acii2hin.lex",
+   "sha256": "1103d1c0302f366dd5024c3787217d92287bb8bd4182561ffb94d7baf366d002"
+  },
+  {
+   "file": "acii2pcf.lex",
+   "sha256": "bdf00a38955311928c0a9dff8d5e3ca264fae0a7235abc4e4af9d8dfe641e64f"
+  },
+  {
+   "file": "acii2rmn.c",
+   "sha256": "678eef53ab8a63c43e9b6f73efc325e6e116724ff39e5947ca3aa5d0aec44692"
+  },
+  {
+   "file": "acii2rmn.h",
+   "sha256": "61047591bd50ba0db3ae63258fe00a434c76bef7c11380ca52180a9684ca2a4f"
+  },
+  {
+   "file": "acii2rmn.lex",
+   "sha256": "01e0740a07d314d9c4d6f1403a2bd842b19790972b18c2573c6f9d4111943d02"
+  },
+  {
+   "file": "acii2uni.c",
+   "sha256": "12993c3103683694b0df3470b491ef2e65744b96dda0d8e9b28e4209a35b3032"
+  },
+  {
+   "file": "aciihin.h",
+   "sha256": "bbdfd06f86b11f8080263ff39489ff90c172c171dcc7718e5fbafbc3697abfb2"
+  },
+  {
+   "file": "alpha_urdu.txt",
+   "sha256": "fa7d57094c8a80a547e0d059b52fbe2393ecbddd8dfd0c6044551d282aac6ced"
+  },
+  {
+   "file": "ar_ipa.csv",
+   "sha256": "5f4fbd1f1cfdc009f566c4d4bf0dd68df26400ef9c64828703ddbe23097c4d3d"
+  },
+  {
+   "file": "chars_ar.txt",
+   "sha256": "bd711b39e02dfe803a2f3baf48d3aff40e99fc6055e30b9f9a90f309fb7bae09"
+  },
+  {
+   "file": "copying",
+   "sha256": "e6d6a009505e345fe949e1310334fcb0747f28dae2856759de102ab66b722cb4"
+  },
+  {
+   "file": "cse-bt",
+   "sha256": "ea8efc663fe6a8947631d5fb22875e9e8588550f06409c1d8abdc13b4e858172"
+  },
+  {
+   "file": "fixuninum.lex",
+   "sha256": "725f568f77e510b72c98a8e5c19d885cc16c417a39ea199197befc299dcf2b39"
+  },
+  {
+   "file": "fixuninum_dev",
+   "sha256": "f5f81e80589bd24f6c8c19ed59a4e0601587fabdb1df5c3d4c72f1f62f4d3d8d"
+  },
+  {
+   "file": "fixuninum_dev.lex",
+   "sha256": "e89218c5f8c22920b12c19eaa4531b7fcc4bf9265dcf0e61f059e97086dfdb51"
+  },
+  {
+   "file": "flatten_uni_dev",
+   "sha256": "f66202e6328eaeaabf9f9b3518b5fe430cc0bc57e6b6db742ef6b280bbdd1653"
+  },
+  {
+   "file": "flatten_uni_dev.lex",
+   "sha256": "074cd254818611e4e27a4d35e11ad95dcb2ad414717f9f2743b68908ad7f2763"
+  },
+  {
+   "file": "fltr_hi_te",
+   "sha256": "9f68bf87636836d562058696466872c98d78b35e73da008ef47ceb5d3d65974b"
+  },
+  {
+   "file": "fltr_hi_ur",
+   "sha256": "7fe59f4c569a4d85aae733ad3ade85f81f28ef2edc678a514e107b7d37630af0"
+  },
+  {
+   "file": "fltr_te_hi",
+   "sha256": "c3fbda6b845ca9f33e4b6949144f5feee7574663fd6e0e9c20804474a6514af2"
+  },
+  {
+   "file": "fltr_ur_hi",
+   "sha256": "9bf4fcfd2082689d969c2e5290cd59c98cf9611d7f4fdf93285c9f2ded735de9"
+  },
+  {
+   "file": "gen_fixuninum",
+   "sha256": "8ecbf206704d4ca7fafb85dcb7eb3bf34b1d29b1f69ffb6906cbca1d824e0f8b"
+  },
+  {
+   "file": "gen_flatten_uni_dev",
+   "sha256": "ac9bc5251743353d2d920948393f5055a50ed88c855b702342bcd0f9def53b32"
+  },
+  {
+   "file": "hi",
+   "sha256": "0b1c2b8f66f16370e4748b619c6ff2a671913dbade9f4d1938f93298118a0b1e"
+  },
+  {
+   "file": "hi_ur.tmp",
+   "sha256": "0b1c2b8f66f16370e4748b619c6ff2a671913dbade9f4d1938f93298118a0b1e"
+  },
+  {
+   "file": "hindawi_tashkil.txt",
+   "sha256": "9b6747f0e73e64e06711324bee392eef9aafb458fb4f875b470499e145b0a222"
+  },
+  {
+   "file": "iscii_map.csv",
+   "sha256": "659fd796736858b29fefaa55eadf92265bdb054a72bcd27369a7b367a3d2718b"
+  },
+  {
+   "file": "iso15919_map.csv",
+   "sha256": "e2f2b01a0705daba8e6bf617c5cd0b0067d5175abe25dfe9f0d17d3fb9e9d0f5"
+  },
+  {
+   "file": "lex.yy.c",
+   "sha256": "bf92d25789b1550ead8481699f05b211235eb1c34f421a1c3de99bbe1f23046b"
+  },
+  {
+   "file": "main.c",
+   "sha256": "3ab193028e335f83b8e824bafe59253c0ab6265e61bd61f8b5345ed47ea5373c"
+  },
+  {
+   "file": "mass_hindawi",
+   "sha256": "4302030d6c639fb507f428cd876a5cc36bf5aeda1775fe15c3dc481b72702735"
+  },
+  {
+   "file": "rmn2acii.c",
+   "sha256": "eae91a43024668e975476a6aff5643f6e773913be18a48ecfc6b67c38d41994d"
+  },
+  {
+   "file": "rmn2acii.h",
+   "sha256": "fb76396c2d6f529158972f9fb35b0e9072384acae50310fd581b9ab73c6fe8d3"
+  },
+  {
+   "file": "rmn2acii.lex",
+   "sha256": "bb86fdfcb84f944650e6265c511dc2e0ff0f949c7c0e689a503642e85adf4d34"
+  },
+  {
+   "file": "stack.c",
+   "sha256": "fbfc983ef2513ed757a23f52fd8dfbf47aeb3d6c32e33671aafd8123af81ce5b"
+  },
+  {
+   "file": "stack.h",
+   "sha256": "ecbe78a388ad0e2772ab2b0c2450747c3d239b7815d4856591ee7d3254643ce7"
+  },
+  {
+   "file": "test.txt",
+   "sha256": "7613cdfba01f2521e4617db12f991caf490e35b4a1408938ea7e1be263176d64"
+  },
+  {
+   "file": "test.uni",
+   "sha256": "8bb96d3a6c25ac72f536856065736ed0a0542cfe900a72deb87c706f7b16441d"
+  },
+  {
+   "file": "test2.txt",
+   "sha256": "b3f862ddccb821571c1311b1c33331f9b7fdb1e8c2d2f943bc0dd4bd289c140e"
+  },
+  {
+   "file": "test3.txt",
+   "sha256": "e32356ee3f3b574cef71db2222f95433a8629a494383606f1afb012f647cee47"
+  },
+  {
+   "file": "test_ar.txt",
+   "sha256": "a843722bd7fa04e5e723d07082ebfdcb51ce341da2397a5ab24b0710cfcd3a6a"
+  },
+  {
+   "file": "test_hi.txt",
+   "sha256": "3172c0925b227895c510b2dd76c038e1b7db43c02e4fe6c796d063664a0673ab"
+  },
+  {
+   "file": "uni2acii.c",
+   "sha256": "ca38d8c0bea513057280ba227c7a7f090a6ab6f0c8d7c75f328b964cfd7b44e2"
+  },
+  {
+   "file": "unicode.h",
+   "sha256": "92e9d0b8c7f772b3cc58037f88a0fb915b524cffe073da6db77f1441bd833313"
+  },
+  {
+   "file": "ur_ar_delta",
+   "sha256": "8da0a18acb7aef7e67422de36fe8b0a082dafb7c8b2f49aef99d00d28f11c4e2"
+  },
+  {
+   "file": "urdu_map.csv",
+   "sha256": "4fbfa506638e3ee97ceaeeec8abe2edff164c66abbdad8977cef9366899c2849"
+  }
+ ]
+}

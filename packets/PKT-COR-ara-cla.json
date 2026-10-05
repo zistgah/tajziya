@@ -1,0 +1,33 @@
+{
+ "schema": "tajziya.packet/1",
+ "id": "PKT-COR-ara-cla",
+ "title": "A test corpus for Classical Arabic",
+ "area": "corpus",
+ "wave": 2,
+ "size": "L",
+ "status": "open",
+ "summary": "Attested text in Classical Arabic with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+ "inputs": [
+  {
+   "what": "candidate sources",
+   "where": "registry/corpora.json, node ara-cla"
+  }
+ ],
+ "outputs": [
+  "corpus/ara-cla/"
+ ],
+ "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+ "acceptance": {
+  "kind": "corpus",
+  "args": {
+   "node": "ara-cla"
+  },
+  "command": "python3 -m tajziya packet check PKT-COR-ara-cla"
+ },
+ "depends": [],
+ "how": [
+  "Read CORPUS.md for the unit schema and the rules.",
+  "Build corpus/ara-cla/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+  "Run the acceptance command."
+ ]
+}

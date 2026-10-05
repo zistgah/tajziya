@@ -1,0 +1,3025 @@
+{
+ "schema": "tajziya.site-packets/1",
+ "coverage": {
+  "languages": 7787,
+  "scripts": 226,
+  "poster_nodes": 79
+ },
+ "packets": [
+  {
+   "id": "PKT-ACA-01",
+   "title": "Import Otto Böhtlingk, Pâṇini's Grammatik (1887)",
+   "area": "interpretation-academic",
+   "wave": 1,
+   "size": "L",
+   "status": "open",
+   "summary": "A translation whose copyright has expired: import it from an openly available scan or transcription, keyed by sutra.",
+   "outputs": [
+    "modules/cls/data/academic/bohtlingk.tsv",
+    "modules/cls/data/SOURCES.json"
+   ],
+   "licence": "Public domain by age; record the edition, the scan's own terms and the evidence for the date.",
+   "how": [
+    "Find a scan or transcription whose own terms allow reuse; record them.",
+    "Import deterministically, keyed by sutra; NFC; pin the TSV in SOURCES.json.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-ACA-01",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-ACA-01%3A%20Import%20Otto%20B%C3%B6htlingk%2C%20P%C3%A2%E1%B9%87ini%27s%20Grammatik%20%281887%29&body=I%20am%20taking%20packet%20PKT-ACA-01%3A%20Import%20Otto%20B%C3%B6htlingk%2C%20P%C3%A2%E1%B9%87ini%27s%20Grammatik%20%281887%29.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-ACA-01%0AOutputs%3A%20modules/cls/data/academic/bohtlingk.tsv%2C%20modules/cls/data/SOURCES.json%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-ACA-02",
+   "title": "Index Louis Renou, La grammaire de Pāṇini (1948 to 1954)",
+   "area": "interpretation-academic",
+   "wave": 1,
+   "size": "M",
+   "status": "open",
+   "summary": "A per-sutra index to Louis Renou, La grammaire de Pāṇini (1948 to 1954): where it treats each sutra, and a summary in our own words of what it says. The work's own text is never copied.",
+   "outputs": [
+    "modules/cls/data/academic/renou.tsv",
+    "modules/cls/data/SOURCES.json"
+   ],
+   "licence": "Our own index and summaries (CC-BY-SA-4.0); the work is cited, never reproduced.",
+   "how": [
+    "Record the work's full citation in a source with a 'citation' field.",
+    "One row per place the work treats a sutra: id, locator (volume and page), a summary of at most 400 characters.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-ACA-02",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-ACA-02%3A%20Index%20Louis%20Renou%2C%20La%20grammaire%20de%20P%C4%81%E1%B9%87ini%20%281948%20to%201954%29&body=I%20am%20taking%20packet%20PKT-ACA-02%3A%20Index%20Louis%20Renou%2C%20La%20grammaire%20de%20P%C4%81%E1%B9%87ini%20%281948%20to%201954%29.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-ACA-02%0AOutputs%3A%20modules/cls/data/academic/renou.tsv%2C%20modules/cls/data/SOURCES.json%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-ACA-03",
+   "title": "Index Sumitra M. Katre, Aṣṭādhyāyī of Pāṇini (1987)",
+   "area": "interpretation-academic",
+   "wave": 1,
+   "size": "M",
+   "status": "open",
+   "summary": "A per-sutra index to Sumitra M. Katre, Aṣṭādhyāyī of Pāṇini (1987): where it treats each sutra, and a summary in our own words of what it says. The work's own text is never copied.",
+   "outputs": [
+    "modules/cls/data/academic/katre.tsv",
+    "modules/cls/data/SOURCES.json"
+   ],
+   "licence": "Our own index and summaries (CC-BY-SA-4.0); the work is cited, never reproduced.",
+   "how": [
+    "Record the work's full citation in a source with a 'citation' field.",
+    "One row per place the work treats a sutra: id, locator (volume and page), a summary of at most 400 characters.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-ACA-03",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-ACA-03%3A%20Index%20Sumitra%20M.%20Katre%2C%20A%E1%B9%A3%E1%B9%AD%C4%81dhy%C4%81y%C4%AB%20of%20P%C4%81%E1%B9%87ini%20%281987%29&body=I%20am%20taking%20packet%20PKT-ACA-03%3A%20Index%20Sumitra%20M.%20Katre%2C%20A%E1%B9%A3%E1%B9%AD%C4%81dhy%C4%81y%C4%AB%20of%20P%C4%81%E1%B9%87ini%20%281987%29.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-ACA-03%0AOutputs%3A%20modules/cls/data/academic/katre.tsv%2C%20modules/cls/data/SOURCES.json%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-ACA-04",
+   "title": "Index Rama Nath Sharma, The Aṣṭādhyāyī of Pāṇini (1987 to 2003)",
+   "area": "interpretation-academic",
+   "wave": 1,
+   "size": "M",
+   "status": "open",
+   "summary": "A per-sutra index to Rama Nath Sharma, The Aṣṭādhyāyī of Pāṇini (1987 to 2003): where it treats each sutra, and a summary in our own words of what it says. The work's own text is never copied.",
+   "outputs": [
+    "modules/cls/data/academic/sharma.tsv",
+    "modules/cls/data/SOURCES.json"
+   ],
+   "licence": "Our own index and summaries (CC-BY-SA-4.0); the work is cited, never reproduced.",
+   "how": [
+    "Record the work's full citation in a source with a 'citation' field.",
+    "One row per place the work treats a sutra: id, locator (volume and page), a summary of at most 400 characters.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-ACA-04",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-ACA-04%3A%20Index%20Rama%20Nath%20Sharma%2C%20The%20A%E1%B9%A3%E1%B9%AD%C4%81dhy%C4%81y%C4%AB%20of%20P%C4%81%E1%B9%87ini%20%281987%20to%202003%29&body=I%20am%20taking%20packet%20PKT-ACA-04%3A%20Index%20Rama%20Nath%20Sharma%2C%20The%20A%E1%B9%A3%E1%B9%AD%C4%81dhy%C4%81y%C4%AB%20of%20P%C4%81%E1%B9%87ini%20%281987%20to%202003%29.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-ACA-04%0AOutputs%3A%20modules/cls/data/academic/sharma.tsv%2C%20modules/cls/data/SOURCES.json%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-ACA-05",
+   "title": "Index George Cardona's studies of Pāṇini",
+   "area": "interpretation-academic",
+   "wave": 1,
+   "size": "M",
+   "status": "open",
+   "summary": "A per-sutra index to George Cardona's studies of Pāṇini: where it treats each sutra, and a summary in our own words of what it says. The work's own text is never copied.",
+   "outputs": [
+    "modules/cls/data/academic/cardona.tsv",
+    "modules/cls/data/SOURCES.json"
+   ],
+   "licence": "Our own index and summaries (CC-BY-SA-4.0); the work is cited, never reproduced.",
+   "how": [
+    "Record the work's full citation in a source with a 'citation' field.",
+    "One row per place the work treats a sutra: id, locator (volume and page), a summary of at most 400 characters.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-ACA-05",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-ACA-05%3A%20Index%20George%20Cardona%27s%20studies%20of%20P%C4%81%E1%B9%87ini&body=I%20am%20taking%20packet%20PKT-ACA-05%3A%20Index%20George%20Cardona%27s%20studies%20of%20P%C4%81%E1%B9%87ini.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-ACA-05%0AOutputs%3A%20modules/cls/data/academic/cardona.tsv%2C%20modules/cls/data/SOURCES.json%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-ACA-06",
+   "title": "Index Paul Kiparsky's studies of Pāṇini's grammar",
+   "area": "interpretation-academic",
+   "wave": 1,
+   "size": "M",
+   "status": "open",
+   "summary": "A per-sutra index to Paul Kiparsky's studies of Pāṇini's grammar: where it treats each sutra, and a summary in our own words of what it says. The work's own text is never copied.",
+   "outputs": [
+    "modules/cls/data/academic/kiparsky.tsv",
+    "modules/cls/data/SOURCES.json"
+   ],
+   "licence": "Our own index and summaries (CC-BY-SA-4.0); the work is cited, never reproduced.",
+   "how": [
+    "Record the work's full citation in a source with a 'citation' field.",
+    "One row per place the work treats a sutra: id, locator (volume and page), a summary of at most 400 characters.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-ACA-06",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-ACA-06%3A%20Index%20Paul%20Kiparsky%27s%20studies%20of%20P%C4%81%E1%B9%87ini%27s%20grammar&body=I%20am%20taking%20packet%20PKT-ACA-06%3A%20Index%20Paul%20Kiparsky%27s%20studies%20of%20P%C4%81%E1%B9%87ini%27s%20grammar.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-ACA-06%0AOutputs%3A%20modules/cls/data/academic/kiparsky.tsv%2C%20modules/cls/data/SOURCES.json%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-ACA-07",
+   "title": "Index S. D. Joshi and J. A. F. Roodbergen's Mahābhāṣya translations",
+   "area": "interpretation-academic",
+   "wave": 1,
+   "size": "M",
+   "status": "open",
+   "summary": "A per-sutra index to S. D. Joshi and J. A. F. Roodbergen's Mahābhāṣya translations: where it treats each sutra, and a summary in our own words of what it says. The work's own text is never copied.",
+   "outputs": [
+    "modules/cls/data/academic/joshi-roodbergen.tsv",
+    "modules/cls/data/SOURCES.json"
+   ],
+   "licence": "Our own index and summaries (CC-BY-SA-4.0); the work is cited, never reproduced.",
+   "how": [
+    "Record the work's full citation in a source with a 'citation' field.",
+    "One row per place the work treats a sutra: id, locator (volume and page), a summary of at most 400 characters.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-ACA-07",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-ACA-07%3A%20Index%20S.%20D.%20Joshi%20and%20J.%20A.%20F.%20Roodbergen%27s%20Mah%C4%81bh%C4%81%E1%B9%A3ya%20translations&body=I%20am%20taking%20packet%20PKT-ACA-07%3A%20Index%20S.%20D.%20Joshi%20and%20J.%20A.%20F.%20Roodbergen%27s%20Mah%C4%81bh%C4%81%E1%B9%A3ya%20translations.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-ACA-07%0AOutputs%3A%20modules/cls/data/academic/joshi-roodbergen.tsv%2C%20modules/cls/data/SOURCES.json%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-ACA-08",
+   "title": "Index computational models of Pāṇini (vidyut, the Sanskrit Heritage Platform and others)",
+   "area": "interpretation-academic",
+   "wave": 1,
+   "size": "M",
+   "status": "open",
+   "summary": "A per-sutra index to computational models of Pāṇini (vidyut, the Sanskrit Heritage Platform and others): where it treats each sutra, and a summary in our own words of what it says. The work's own text is never copied.",
+   "outputs": [
+    "modules/cls/data/academic/computational.tsv",
+    "modules/cls/data/SOURCES.json"
+   ],
+   "licence": "Our own index and summaries (CC-BY-SA-4.0); the work is cited, never reproduced.",
+   "how": [
+    "Record the work's full citation in a source with a 'citation' field.",
+    "One row per place the work treats a sutra: id, locator (volume and page), a summary of at most 400 characters.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-ACA-08",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-ACA-08%3A%20Index%20computational%20models%20of%20P%C4%81%E1%B9%87ini%20%28vidyut%2C%20the%20Sanskrit%20Heritage%20Platform%20and%20others%29&body=I%20am%20taking%20packet%20PKT-ACA-08%3A%20Index%20computational%20models%20of%20P%C4%81%E1%B9%87ini%20%28vidyut%2C%20the%20Sanskrit%20Heritage%20Platform%20and%20others%29.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-ACA-08%0AOutputs%3A%20modules/cls/data/academic/computational.tsv%2C%20modules/cls/data/SOURCES.json%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-akk",
+   "title": "A test corpus for Akkadian",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Akkadian with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/akk/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/akk/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-akk",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-akk%3A%20A%20test%20corpus%20for%20Akkadian&body=I%20am%20taking%20packet%20PKT-COR-akk%3A%20A%20test%20corpus%20for%20Akkadian.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-akk%0AOutputs%3A%20corpus/akk/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-amh",
+   "title": "A test corpus for Modern Ethiopian",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Modern Ethiopian with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/amh/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/amh/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-amh",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-amh%3A%20A%20test%20corpus%20for%20Modern%20Ethiopian&body=I%20am%20taking%20packet%20PKT-COR-amh%3A%20A%20test%20corpus%20for%20Modern%20Ethiopian.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-amh%0AOutputs%3A%20corpus/amh/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-ara-cla",
+   "title": "A test corpus for Classical Arabic",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Classical Arabic with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/ara-cla/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/ara-cla/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-ara-cla",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-ara-cla%3A%20A%20test%20corpus%20for%20Classical%20Arabic&body=I%20am%20taking%20packet%20PKT-COR-ara-cla%3A%20A%20test%20corpus%20for%20Classical%20Arabic.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-ara-cla%0AOutputs%3A%20corpus/ara-cla/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-ara-early",
+   "title": "A test corpus for Early Arabic",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Early Arabic with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/ara-early/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/ara-early/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-ara-early",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-ara-early%3A%20A%20test%20corpus%20for%20Early%20Arabic&body=I%20am%20taking%20packet%20PKT-COR-ara-early%3A%20A%20test%20corpus%20for%20Early%20Arabic.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-ara-early%0AOutputs%3A%20corpus/ara-early/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-ara-med",
+   "title": "A test corpus for Medieval Arabic",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Medieval Arabic with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/ara-med/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/ara-med/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-ara-med",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-ara-med%3A%20A%20test%20corpus%20for%20Medieval%20Arabic&body=I%20am%20taking%20packet%20PKT-COR-ara-med%3A%20A%20test%20corpus%20for%20Medieval%20Arabic.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-ara-med%0AOutputs%3A%20corpus/ara-med/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-ara-vern",
+   "title": "A test corpus for Arabic vernaculars",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Arabic vernaculars with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/ara-vern/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/ara-vern/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-ara-vern",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-ara-vern%3A%20A%20test%20corpus%20for%20Arabic%20vernaculars&body=I%20am%20taking%20packet%20PKT-COR-ara-vern%3A%20A%20test%20corpus%20for%20Arabic%20vernaculars.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-ara-vern%0AOutputs%3A%20corpus/ara-vern/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-arb",
+   "title": "A test corpus for Modern Standard Arabic",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Modern Standard Arabic with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/arb/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/arb/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-arb",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-arb%3A%20A%20test%20corpus%20for%20Modern%20Standard%20Arabic&body=I%20am%20taking%20packet%20PKT-COR-arb%3A%20A%20test%20corpus%20for%20Modern%20Standard%20Arabic.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-arb%0AOutputs%3A%20corpus/arb/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-arc",
+   "title": "A test corpus for Aramaic",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Aramaic with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/arc/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/arc/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-arc",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-arc%3A%20A%20test%20corpus%20for%20Aramaic&body=I%20am%20taking%20packet%20PKT-COR-arc%3A%20A%20test%20corpus%20for%20Aramaic.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-arc%0AOutputs%3A%20corpus/arc/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-asm",
+   "title": "A test corpus for Assamese",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Assamese with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/asm/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/asm/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-asm",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-asm%3A%20A%20test%20corpus%20for%20Assamese&body=I%20am%20taking%20packet%20PKT-COR-asm%3A%20A%20test%20corpus%20for%20Assamese.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-asm%0AOutputs%3A%20corpus/asm/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-ave",
+   "title": "A test corpus for Avestan",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Avestan with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/ave/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/ave/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-ave",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-ave%3A%20A%20test%20corpus%20for%20Avestan&body=I%20am%20taking%20packet%20PKT-COR-ave%3A%20A%20test%20corpus%20for%20Avestan.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-ave%0AOutputs%3A%20corpus/ave/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-ben",
+   "title": "A test corpus for Bengali",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Bengali with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/ben/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/ben/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-ben",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-ben%3A%20A%20test%20corpus%20for%20Bengali&body=I%20am%20taking%20packet%20PKT-COR-ben%3A%20A%20test%20corpus%20for%20Bengali.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-ben%0AOutputs%3A%20corpus/ben/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-chg",
+   "title": "A test corpus for Chagatai",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Chagatai with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/chg/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/chg/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-chg",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-chg%3A%20A%20test%20corpus%20for%20Chagatai&body=I%20am%20taking%20packet%20PKT-COR-chg%3A%20A%20test%20corpus%20for%20Chagatai.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-chg%0AOutputs%3A%20corpus/chg/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-cls",
+   "title": "A test corpus for Classical Sanskrit",
+   "area": "corpus",
+   "wave": 1,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Classical Sanskrit with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/cls/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/cls/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-cls",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-cls%3A%20A%20test%20corpus%20for%20Classical%20Sanskrit&body=I%20am%20taking%20packet%20PKT-COR-cls%3A%20A%20test%20corpus%20for%20Classical%20Sanskrit.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-cls%0AOutputs%3A%20corpus/cls/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-deu",
+   "title": "A test corpus for German",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in German with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/deu/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/deu/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-deu",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-deu%3A%20A%20test%20corpus%20for%20German&body=I%20am%20taking%20packet%20PKT-COR-deu%3A%20A%20test%20corpus%20for%20German.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-deu%0AOutputs%3A%20corpus/deu/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-egy",
+   "title": "A test corpus for Egyptian",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Egyptian with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/egy/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/egy/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-egy",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-egy%3A%20A%20test%20corpus%20for%20Egyptian&body=I%20am%20taking%20packet%20PKT-COR-egy%3A%20A%20test%20corpus%20for%20Egyptian.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-egy%0AOutputs%3A%20corpus/egy/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-elx",
+   "title": "A test corpus for Elamite",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Elamite with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/elx/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/elx/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-elx",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-elx%3A%20A%20test%20corpus%20for%20Elamite&body=I%20am%20taking%20packet%20PKT-COR-elx%3A%20A%20test%20corpus%20for%20Elamite.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-elx%0AOutputs%3A%20corpus/elx/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-eng",
+   "title": "A test corpus for English",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in English with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/eng/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/eng/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-eng",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-eng%3A%20A%20test%20corpus%20for%20English&body=I%20am%20taking%20packet%20PKT-COR-eng%3A%20A%20test%20corpus%20for%20English.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-eng%0AOutputs%3A%20corpus/eng/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-fas",
+   "title": "A test corpus for New Persian",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in New Persian with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/fas/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/fas/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-fas",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-fas%3A%20A%20test%20corpus%20for%20New%20Persian&body=I%20am%20taking%20packet%20PKT-COR-fas%3A%20A%20test%20corpus%20for%20New%20Persian.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-fas%0AOutputs%3A%20corpus/fas/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-fra",
+   "title": "A test corpus for French",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in French with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/fra/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/fra/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-fra",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-fra%3A%20A%20test%20corpus%20for%20French&body=I%20am%20taking%20packet%20PKT-COR-fra%3A%20A%20test%20corpus%20for%20French.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-fra%0AOutputs%3A%20corpus/fra/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-gez",
+   "title": "A test corpus for Ge'ez",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Ge'ez with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/gez/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/gez/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-gez",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-gez%3A%20A%20test%20corpus%20for%20Ge%27ez&body=I%20am%20taking%20packet%20PKT-COR-gez%3A%20A%20test%20corpus%20for%20Ge%27ez.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-gez%0AOutputs%3A%20corpus/gez/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-gmy",
+   "title": "A test corpus for Mycenaean Greek",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Mycenaean Greek with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/gmy/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/gmy/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-gmy",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-gmy%3A%20A%20test%20corpus%20for%20Mycenaean%20Greek&body=I%20am%20taking%20packet%20PKT-COR-gmy%3A%20A%20test%20corpus%20for%20Mycenaean%20Greek.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-gmy%0AOutputs%3A%20corpus/gmy/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-grc-byz",
+   "title": "A test corpus for Byzantine Greek",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Byzantine Greek with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/grc-byz/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/grc-byz/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-grc-byz",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-grc-byz%3A%20A%20test%20corpus%20for%20Byzantine%20Greek&body=I%20am%20taking%20packet%20PKT-COR-grc-byz%3A%20A%20test%20corpus%20for%20Byzantine%20Greek.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-grc-byz%0AOutputs%3A%20corpus/grc-byz/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-grc-koine",
+   "title": "A test corpus for Koine Greek",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Koine Greek with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/grc-koine/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/grc-koine/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-grc-koine",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-grc-koine%3A%20A%20test%20corpus%20for%20Koine%20Greek&body=I%20am%20taking%20packet%20PKT-COR-grc-koine%3A%20A%20test%20corpus%20for%20Koine%20Greek.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-grc-koine%0AOutputs%3A%20corpus/grc-koine/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-grc",
+   "title": "A test corpus for Archaic/Classical Greek",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Archaic/Classical Greek with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/grc/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/grc/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-grc",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-grc%3A%20A%20test%20corpus%20for%20Archaic/Classical%20Greek&body=I%20am%20taking%20packet%20PKT-COR-grc%3A%20A%20test%20corpus%20for%20Archaic/Classical%20Greek.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-grc%0AOutputs%3A%20corpus/grc/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-guj",
+   "title": "A test corpus for Gujarati",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Gujarati with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/guj/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/guj/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-guj",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-guj%3A%20A%20test%20corpus%20for%20Gujarati&body=I%20am%20taking%20packet%20PKT-COR-guj%3A%20A%20test%20corpus%20for%20Gujarati.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-guj%0AOutputs%3A%20corpus/guj/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-hbo",
+   "title": "A test corpus for Hebrew",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Hebrew with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/hbo/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/hbo/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-hbo",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-hbo%3A%20A%20test%20corpus%20for%20Hebrew&body=I%20am%20taking%20packet%20PKT-COR-hbo%3A%20A%20test%20corpus%20for%20Hebrew.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-hbo%0AOutputs%3A%20corpus/hbo/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-hin",
+   "title": "A test corpus for Hindi/Hindavi",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Hindi/Hindavi with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/hin/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/hin/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-hin",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-hin%3A%20A%20test%20corpus%20for%20Hindi/Hindavi&body=I%20am%20taking%20packet%20PKT-COR-hin%3A%20A%20test%20corpus%20for%20Hindi/Hindavi.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-hin%0AOutputs%3A%20corpus/hin/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-hit",
+   "title": "A test corpus for Hittite",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Hittite with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/hit/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/hit/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-hit",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-hit%3A%20A%20test%20corpus%20for%20Hittite&body=I%20am%20taking%20packet%20PKT-COR-hit%3A%20A%20test%20corpus%20for%20Hittite.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-hit%0AOutputs%3A%20corpus/hit/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-ita",
+   "title": "A test corpus for Italian",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Italian with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/ita/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/ita/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-ita",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-ita%3A%20A%20test%20corpus%20for%20Italian&body=I%20am%20taking%20packet%20PKT-COR-ita%3A%20A%20test%20corpus%20for%20Italian.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-ita%0AOutputs%3A%20corpus/ita/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-jpn-emod",
+   "title": "A test corpus for Early Modern Japanese",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Early Modern Japanese with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/jpn-emod/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/jpn-emod/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-jpn-emod",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-jpn-emod%3A%20A%20test%20corpus%20for%20Early%20Modern%20Japanese&body=I%20am%20taking%20packet%20PKT-COR-jpn-emod%3A%20A%20test%20corpus%20for%20Early%20Modern%20Japanese.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-jpn-emod%0AOutputs%3A%20corpus/jpn-emod/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-jpn-med",
+   "title": "A test corpus for Medieval Japanese",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Medieval Japanese with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/jpn-med/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/jpn-med/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-jpn-med",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-jpn-med%3A%20A%20test%20corpus%20for%20Medieval%20Japanese&body=I%20am%20taking%20packet%20PKT-COR-jpn-med%3A%20A%20test%20corpus%20for%20Medieval%20Japanese.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-jpn-med%0AOutputs%3A%20corpus/jpn-med/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-jpn",
+   "title": "A test corpus for Modern Japanese",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Modern Japanese with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/jpn/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/jpn/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-jpn",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-jpn%3A%20A%20test%20corpus%20for%20Modern%20Japanese&body=I%20am%20taking%20packet%20PKT-COR-jpn%3A%20A%20test%20corpus%20for%20Modern%20Japanese.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-jpn%0AOutputs%3A%20corpus/jpn/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-kan",
+   "title": "A test corpus for Kannada",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Kannada with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/kan/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/kan/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-kan",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-kan%3A%20A%20test%20corpus%20for%20Kannada&body=I%20am%20taking%20packet%20PKT-COR-kan%3A%20A%20test%20corpus%20for%20Kannada.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-kan%0AOutputs%3A%20corpus/kan/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-kas",
+   "title": "A test corpus for Kashmiri",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Kashmiri with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/kas/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/kas/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-kas",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-kas%3A%20A%20test%20corpus%20for%20Kashmiri&body=I%20am%20taking%20packet%20PKT-COR-kas%3A%20A%20test%20corpus%20for%20Kashmiri.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-kas%0AOutputs%3A%20corpus/kas/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-kat",
+   "title": "A test corpus for Georgian",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Georgian with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/kat/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/kat/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-kat",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-kat%3A%20A%20test%20corpus%20for%20Georgian&body=I%20am%20taking%20packet%20PKT-COR-kat%3A%20A%20test%20corpus%20for%20Georgian.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-kat%0AOutputs%3A%20corpus/kat/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-kok",
+   "title": "A test corpus for Konkani",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Konkani with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/kok/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/kok/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-kok",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-kok%3A%20A%20test%20corpus%20for%20Konkani&body=I%20am%20taking%20packet%20PKT-COR-kok%3A%20A%20test%20corpus%20for%20Konkani.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-kok%0AOutputs%3A%20corpus/kok/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-kor",
+   "title": "A test corpus for Modern Korean",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Modern Korean with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/kor/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/kor/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-kor",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-kor%3A%20A%20test%20corpus%20for%20Modern%20Korean&body=I%20am%20taking%20packet%20PKT-COR-kor%3A%20A%20test%20corpus%20for%20Modern%20Korean.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-kor%0AOutputs%3A%20corpus/kor/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-lat",
+   "title": "A test corpus for Latin",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Latin with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/lat/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/lat/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-lat",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-lat%3A%20A%20test%20corpus%20for%20Latin&body=I%20am%20taking%20packet%20PKT-COR-lat%3A%20A%20test%20corpus%20for%20Latin.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-lat%0AOutputs%3A%20corpus/lat/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-ltc",
+   "title": "A test corpus for Middle Chinese",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Middle Chinese with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/ltc/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/ltc/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-ltc",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-ltc%3A%20A%20test%20corpus%20for%20Middle%20Chinese&body=I%20am%20taking%20packet%20PKT-COR-ltc%3A%20A%20test%20corpus%20for%20Middle%20Chinese.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-ltc%0AOutputs%3A%20corpus/ltc/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-lzh",
+   "title": "A test corpus for Classical Chinese",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Classical Chinese with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/lzh/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/lzh/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-lzh",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-lzh%3A%20A%20test%20corpus%20for%20Classical%20Chinese&body=I%20am%20taking%20packet%20PKT-COR-lzh%3A%20A%20test%20corpus%20for%20Classical%20Chinese.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-lzh%0AOutputs%3A%20corpus/lzh/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-mal",
+   "title": "A test corpus for Malayalam",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Malayalam with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/mal/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/mal/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-mal",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-mal%3A%20A%20test%20corpus%20for%20Malayalam&body=I%20am%20taking%20packet%20PKT-COR-mal%3A%20A%20test%20corpus%20for%20Malayalam.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-mal%0AOutputs%3A%20corpus/mal/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-mar",
+   "title": "A test corpus for Marathi",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Marathi with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/mar/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/mar/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-mar",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-mar%3A%20A%20test%20corpus%20for%20Marathi&body=I%20am%20taking%20packet%20PKT-COR-mar%3A%20A%20test%20corpus%20for%20Marathi.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-mar%0AOutputs%3A%20corpus/mar/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-nld",
+   "title": "A test corpus for Dutch",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Dutch with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/nld/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/nld/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-nld",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-nld%3A%20A%20test%20corpus%20for%20Dutch&body=I%20am%20taking%20packet%20PKT-COR-nld%3A%20A%20test%20corpus%20for%20Dutch.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-nld%0AOutputs%3A%20corpus/nld/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-npi",
+   "title": "A test corpus for Nepali",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Nepali with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/npi/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/npi/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-npi",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-npi%3A%20A%20test%20corpus%20for%20Nepali&body=I%20am%20taking%20packet%20PKT-COR-npi%3A%20A%20test%20corpus%20for%20Nepali.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-npi%0AOutputs%3A%20corpus/npi/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-och",
+   "title": "A test corpus for Early/Old Chinese",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Early/Old Chinese with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/och/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/och/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-och",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-och%3A%20A%20test%20corpus%20for%20Early/Old%20Chinese&body=I%20am%20taking%20packet%20PKT-COR-och%3A%20A%20test%20corpus%20for%20Early/Old%20Chinese.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-och%0AOutputs%3A%20corpus/och/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-ojp",
+   "title": "A test corpus for Old/Classical Japanese",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Old/Classical Japanese with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/ojp/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/ojp/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-ojp",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-ojp%3A%20A%20test%20corpus%20for%20Old/Classical%20Japanese&body=I%20am%20taking%20packet%20PKT-COR-ojp%3A%20A%20test%20corpus%20for%20Old/Classical%20Japanese.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-ojp%0AOutputs%3A%20corpus/ojp/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-okm",
+   "title": "A test corpus for Middle Korean",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Middle Korean with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/okm/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/okm/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-okm",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-okm%3A%20A%20test%20corpus%20for%20Middle%20Korean&body=I%20am%20taking%20packet%20PKT-COR-okm%3A%20A%20test%20corpus%20for%20Middle%20Korean.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-okm%0AOutputs%3A%20corpus/okm/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-oko",
+   "title": "A test corpus for Historical Korean",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Historical Korean with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/oko/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/oko/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-oko",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-oko%3A%20A%20test%20corpus%20for%20Historical%20Korean&body=I%20am%20taking%20packet%20PKT-COR-oko%3A%20A%20test%20corpus%20for%20Historical%20Korean.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-oko%0AOutputs%3A%20corpus/oko/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-ory",
+   "title": "A test corpus for Odia",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Odia with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/ory/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/ory/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-ory",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-ory%3A%20A%20test%20corpus%20for%20Odia&body=I%20am%20taking%20packet%20PKT-COR-ory%3A%20A%20test%20corpus%20for%20Odia.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-ory%0AOutputs%3A%20corpus/ory/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-ota",
+   "title": "A test corpus for Ottoman Turkish",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Ottoman Turkish with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/ota/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/ota/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-ota",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-ota%3A%20A%20test%20corpus%20for%20Ottoman%20Turkish&body=I%20am%20taking%20packet%20PKT-COR-ota%3A%20A%20test%20corpus%20for%20Ottoman%20Turkish.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-ota%0AOutputs%3A%20corpus/ota/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-otk",
+   "title": "A test corpus for Old Turkic",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Old Turkic with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/otk/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/otk/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-otk",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-otk%3A%20A%20test%20corpus%20for%20Old%20Turkic&body=I%20am%20taking%20packet%20PKT-COR-otk%3A%20A%20test%20corpus%20for%20Old%20Turkic.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-otk%0AOutputs%3A%20corpus/otk/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-pal",
+   "title": "A test corpus for Middle Persian",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Middle Persian with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/pal/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/pal/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-pal",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-pal%3A%20A%20test%20corpus%20for%20Middle%20Persian&body=I%20am%20taking%20packet%20PKT-COR-pal%3A%20A%20test%20corpus%20for%20Middle%20Persian.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-pal%0AOutputs%3A%20corpus/pal/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-pan",
+   "title": "A test corpus for Punjabi",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Punjabi with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/pan/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/pan/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-pan",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-pan%3A%20A%20test%20corpus%20for%20Punjabi&body=I%20am%20taking%20packet%20PKT-COR-pan%3A%20A%20test%20corpus%20for%20Punjabi.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-pan%0AOutputs%3A%20corpus/pan/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-peo",
+   "title": "A test corpus for Old Persian",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Old Persian with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/peo/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/peo/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-peo",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-peo%3A%20A%20test%20corpus%20for%20Old%20Persian&body=I%20am%20taking%20packet%20PKT-COR-peo%3A%20A%20test%20corpus%20for%20Old%20Persian.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-peo%0AOutputs%3A%20corpus/peo/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-pgd",
+   "title": "A test corpus for Gāndhārī",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Gāndhārī with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/pgd/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/pgd/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-pgd",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-pgd%3A%20A%20test%20corpus%20for%20G%C4%81ndh%C4%81r%C4%AB&body=I%20am%20taking%20packet%20PKT-COR-pgd%3A%20A%20test%20corpus%20for%20G%C4%81ndh%C4%81r%C4%AB.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-pgd%0AOutputs%3A%20corpus/pgd/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-phn",
+   "title": "A test corpus for Phoenician/Punic",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Phoenician/Punic with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/phn/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/phn/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-phn",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-phn%3A%20A%20test%20corpus%20for%20Phoenician/Punic&body=I%20am%20taking%20packet%20PKT-COR-phn%3A%20A%20test%20corpus%20for%20Phoenician/Punic.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-phn%0AOutputs%3A%20corpus/phn/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-pli",
+   "title": "A test corpus for Pāli",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Pāli with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/pli/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/pli/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-pli",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-pli%3A%20A%20test%20corpus%20for%20P%C4%81li&body=I%20am%20taking%20packet%20PKT-COR-pli%3A%20A%20test%20corpus%20for%20P%C4%81li.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-pli%0AOutputs%3A%20corpus/pli/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-pol",
+   "title": "A test corpus for Polish",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Polish with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/pol/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/pol/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-pol",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-pol%3A%20A%20test%20corpus%20for%20Polish&body=I%20am%20taking%20packet%20PKT-COR-pol%3A%20A%20test%20corpus%20for%20Polish.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-pol%0AOutputs%3A%20corpus/pol/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-por",
+   "title": "A test corpus for Portuguese",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Portuguese with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/por/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/por/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-por",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-por%3A%20A%20test%20corpus%20for%20Portuguese&body=I%20am%20taking%20packet%20PKT-COR-por%3A%20A%20test%20corpus%20for%20Portuguese.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-por%0AOutputs%3A%20corpus/por/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-prakrit",
+   "title": "A test corpus for Prakrits",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Prakrits with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/prakrit/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/prakrit/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-prakrit",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-prakrit%3A%20A%20test%20corpus%20for%20Prakrits&body=I%20am%20taking%20packet%20PKT-COR-prakrit%3A%20A%20test%20corpus%20for%20Prakrits.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-prakrit%0AOutputs%3A%20corpus/prakrit/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-rus",
+   "title": "A test corpus for Russian",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Russian with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/rus/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/rus/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-rus",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-rus%3A%20A%20test%20corpus%20for%20Russian&body=I%20am%20taking%20packet%20PKT-COR-rus%3A%20A%20test%20corpus%20for%20Russian.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-rus%0AOutputs%3A%20corpus/rus/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-san-epic",
+   "title": "A test corpus for Epic Sanskrit",
+   "area": "corpus",
+   "wave": 1,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Epic Sanskrit with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/san-epic/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/san-epic/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-san-epic",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-san-epic%3A%20A%20test%20corpus%20for%20Epic%20Sanskrit&body=I%20am%20taking%20packet%20PKT-COR-san-epic%3A%20A%20test%20corpus%20for%20Epic%20Sanskrit.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-san-epic%0AOutputs%3A%20corpus/san-epic/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-sin",
+   "title": "A test corpus for Sinhala",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Sinhala with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/sin/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/sin/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-sin",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-sin%3A%20A%20test%20corpus%20for%20Sinhala&body=I%20am%20taking%20packet%20PKT-COR-sin%3A%20A%20test%20corpus%20for%20Sinhala.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-sin%0AOutputs%3A%20corpus/sin/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-snd",
+   "title": "A test corpus for Sindhi",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Sindhi with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/snd/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/snd/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-snd",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-snd%3A%20A%20test%20corpus%20for%20Sindhi&body=I%20am%20taking%20packet%20PKT-COR-snd%3A%20A%20test%20corpus%20for%20Sindhi.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-snd%0AOutputs%3A%20corpus/snd/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-spa",
+   "title": "A test corpus for Spanish",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Spanish with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/spa/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/spa/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-spa",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-spa%3A%20A%20test%20corpus%20for%20Spanish&body=I%20am%20taking%20packet%20PKT-COR-spa%3A%20A%20test%20corpus%20for%20Spanish.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-spa%0AOutputs%3A%20corpus/spa/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-sux",
+   "title": "A test corpus for Sumerian",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Sumerian with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/sux/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/sux/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-sux",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-sux%3A%20A%20test%20corpus%20for%20Sumerian&body=I%20am%20taking%20packet%20PKT-COR-sux%3A%20A%20test%20corpus%20for%20Sumerian.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-sux%0AOutputs%3A%20corpus/sux/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-tam",
+   "title": "A test corpus for Tamil",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Tamil with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/tam/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/tam/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-tam",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-tam%3A%20A%20test%20corpus%20for%20Tamil&body=I%20am%20taking%20packet%20PKT-COR-tam%3A%20A%20test%20corpus%20for%20Tamil.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-tam%0AOutputs%3A%20corpus/tam/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-tel",
+   "title": "A test corpus for Telugu",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Telugu with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/tel/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/tel/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-tel",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-tel%3A%20A%20test%20corpus%20for%20Telugu&body=I%20am%20taking%20packet%20PKT-COR-tel%3A%20A%20test%20corpus%20for%20Telugu.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-tel%0AOutputs%3A%20corpus/tel/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-tur",
+   "title": "A test corpus for Modern Turkish",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Modern Turkish with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/tur/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/tur/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-tur",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-tur%3A%20A%20test%20corpus%20for%20Modern%20Turkish&body=I%20am%20taking%20packet%20PKT-COR-tur%3A%20A%20test%20corpus%20for%20Modern%20Turkish.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-tur%0AOutputs%3A%20corpus/tur/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-uga",
+   "title": "A test corpus for Ugaritic",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Ugaritic with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/uga/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/uga/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-uga",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-uga%3A%20A%20test%20corpus%20for%20Ugaritic&body=I%20am%20taking%20packet%20PKT-COR-uga%3A%20A%20test%20corpus%20for%20Ugaritic.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-uga%0AOutputs%3A%20corpus/uga/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-und-Inds",
+   "title": "A test corpus for Indus/Harappan corpus",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Indus/Harappan corpus with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/und-Inds/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/und-Inds/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-und-Inds",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-und-Inds%3A%20A%20test%20corpus%20for%20Indus/Harappan%20corpus&body=I%20am%20taking%20packet%20PKT-COR-und-Inds%3A%20A%20test%20corpus%20for%20Indus/Harappan%20corpus.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-und-Inds%0AOutputs%3A%20corpus/und-Inds/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-und-Pelm",
+   "title": "A test corpus for Proto-Elamite corpus",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Proto-Elamite corpus with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/und-Pelm/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/und-Pelm/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-und-Pelm",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-und-Pelm%3A%20A%20test%20corpus%20for%20Proto-Elamite%20corpus&body=I%20am%20taking%20packet%20PKT-COR-und-Pelm%3A%20A%20test%20corpus%20for%20Proto-Elamite%20corpus.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-und-Pelm%0AOutputs%3A%20corpus/und-Pelm/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-urd",
+   "title": "A test corpus for Urdu",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Urdu with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/urd/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/urd/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-urd",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-urd%3A%20A%20test%20corpus%20for%20Urdu&body=I%20am%20taking%20packet%20PKT-COR-urd%3A%20A%20test%20corpus%20for%20Urdu.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-urd%0AOutputs%3A%20corpus/urd/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-vsn",
+   "title": "A test corpus for Vedic Sanskrit",
+   "area": "corpus",
+   "wave": 1,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Vedic Sanskrit with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/vsn/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/vsn/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-vsn",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-vsn%3A%20A%20test%20corpus%20for%20Vedic%20Sanskrit&body=I%20am%20taking%20packet%20PKT-COR-vsn%3A%20A%20test%20corpus%20for%20Vedic%20Sanskrit.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-vsn%0AOutputs%3A%20corpus/vsn/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-xcl",
+   "title": "A test corpus for Armenian",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Armenian with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/xcl/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/xcl/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-xcl",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-xcl%3A%20A%20test%20corpus%20for%20Armenian&body=I%20am%20taking%20packet%20PKT-COR-xcl%3A%20A%20test%20corpus%20for%20Armenian.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-xcl%0AOutputs%3A%20corpus/xcl/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-xct",
+   "title": "A test corpus for Tibetan",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Tibetan with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/xct/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/xct/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-xct",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-xct%3A%20A%20test%20corpus%20for%20Tibetan&body=I%20am%20taking%20packet%20PKT-COR-xct%3A%20A%20test%20corpus%20for%20Tibetan.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-xct%0AOutputs%3A%20corpus/xct/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-xhu",
+   "title": "A test corpus for Hurrian",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Hurrian with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/xhu/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/xhu/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-xhu",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-xhu%3A%20A%20test%20corpus%20for%20Hurrian&body=I%20am%20taking%20packet%20PKT-COR-xhu%3A%20A%20test%20corpus%20for%20Hurrian.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-xhu%0AOutputs%3A%20corpus/xhu/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-xlu",
+   "title": "A test corpus for Luwian",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Luwian with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/xlu/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/xlu/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-xlu",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-xlu%3A%20A%20test%20corpus%20for%20Luwian&body=I%20am%20taking%20packet%20PKT-COR-xlu%3A%20A%20test%20corpus%20for%20Luwian.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-xlu%0AOutputs%3A%20corpus/xlu/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-COR-zho-later",
+   "title": "A test corpus for Later Chinese",
+   "area": "corpus",
+   "wave": 2,
+   "size": "L",
+   "status": "open",
+   "summary": "Attested text in Later Chinese with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+   "outputs": [
+    "corpus/zho-later/"
+   ],
+   "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+   "how": [
+    "Read CORPUS.md for the unit schema and the rules.",
+    "Build corpus/zho-later/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-COR-zho-later",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-COR-zho-later%3A%20A%20test%20corpus%20for%20Later%20Chinese&body=I%20am%20taking%20packet%20PKT-COR-zho-later%3A%20A%20test%20corpus%20for%20Later%20Chinese.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-COR-zho-later%0AOutputs%3A%20corpus/zho-later/%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-IMP-01",
+   "title": "Which sutras the author's parser applies",
+   "area": "implementation",
+   "wave": 1,
+   "size": "M",
+   "status": "open",
+   "summary": "Map each junction rule in the author's Sanskrit parser to the sutra it implements: file, line, function, and what it applies in plain words.",
+   "outputs": [
+    "modules/cls/data/implementation/tajziya.tsv"
+   ],
+   "licence": "Our own index, CC-BY-SA-4.0; no code is copied.",
+   "how": [
+    "Read vendor/sanskrit_parser's junction rules; never edit the vendored code.",
+    "Write one row per rule: id, file, line, function, applies (for example: a + i becomes e).",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-IMP-01",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-IMP-01%3A%20Which%20sutras%20the%20author%27s%20parser%20applies&body=I%20am%20taking%20packet%20PKT-IMP-01%3A%20Which%20sutras%20the%20author%27s%20parser%20applies.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-IMP-01%0AOutputs%3A%20modules/cls/data/implementation/tajziya.tsv%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-IMP-02",
+   "title": "Which sutras vidyut-prakriya implements, and where",
+   "area": "implementation",
+   "wave": 1,
+   "size": "M",
+   "status": "open",
+   "summary": "Scan vidyut-prakriya's source at a pinned commit for the sutra codes it cites, so each sutra on the review page names the file and line that implements it.",
+   "outputs": [
+    "modules/cls/data/implementation/vidyut.tsv",
+    "Makefile"
+   ],
+   "licence": "vidyut is MIT; cite file and line, quote nothing long.",
+   "how": [
+    "Add vidyut at a pinned commit to `make deps`, cloned into .deps/vidyut.",
+    "Write a deterministic scanner in tools/ that finds sutra codes in vidyut-prakriya/src and writes id, file, line, function, applies (the rule's own comment, or the sutra text).",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-IMP-02",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-IMP-02%3A%20Which%20sutras%20vidyut-prakriya%20implements%2C%20and%20where&body=I%20am%20taking%20packet%20PKT-IMP-02%3A%20Which%20sutras%20vidyut-prakriya%20implements%2C%20and%20where.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-IMP-02%0AOutputs%3A%20modules/cls/data/implementation/vidyut.tsv%2C%20Makefile%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-INT-01",
+   "title": "the Mahābhāṣya of Patañjali",
+   "area": "interpretation-traditional",
+   "wave": 1,
+   "size": "L",
+   "status": "open",
+   "summary": "Import the Mahābhāṣya of Patañjali for the 1702 sutras the source covers, keyed by sutra number.",
+   "outputs": [
+    "modules/cls/data/interpretation/mahabhashya.tsv",
+    "modules/cls/data/SOURCES.json"
+   ],
+   "licence": "ashtadhyayi.com's terms: use with credit (LicenseRef-ashtadhyayi-com; the notice is in modules/cls/data/LICENSES/ashtadhyayi-com.txt). The underlying work's own status is recorded too: a modern author's work enters the tree only on the owner's ruling.",
+   "how": [
+    "Download the file at the pinned commit; record its sha256.",
+    "Write a deterministic import script in tools/ that keys each entry by sutra number (a.p.n) and writes id and text, NFC, one row per sutra.",
+    "Add a source to modules/cls/data/SOURCES.json pinning the TSV you wrote, with the terms.",
+    "Run the acceptance command; open a pull request when it passes."
+   ],
+   "command": "python3 -m tajziya packet check PKT-INT-01",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-INT-01%3A%20the%20Mah%C4%81bh%C4%81%E1%B9%A3ya%20of%20Pata%C3%B1jali&body=I%20am%20taking%20packet%20PKT-INT-01%3A%20the%20Mah%C4%81bh%C4%81%E1%B9%A3ya%20of%20Pata%C3%B1jali.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-INT-01%0AOutputs%3A%20modules/cls/data/interpretation/mahabhashya.tsv%2C%20modules/cls/data/SOURCES.json%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-INT-02",
+   "title": "the Kāśikā of Vāmana and Jayāditya",
+   "area": "interpretation-traditional",
+   "wave": 1,
+   "size": "M",
+   "status": "open",
+   "summary": "Import the Kāśikā of Vāmana and Jayāditya for the 3983 sutras the source covers, keyed by sutra number.",
+   "outputs": [
+    "modules/cls/data/interpretation/kashika.tsv",
+    "modules/cls/data/SOURCES.json"
+   ],
+   "licence": "ashtadhyayi.com's terms: use with credit (LicenseRef-ashtadhyayi-com; the notice is in modules/cls/data/LICENSES/ashtadhyayi-com.txt). The underlying work's own status is recorded too: a modern author's work enters the tree only on the owner's ruling.",
+   "how": [
+    "Download the file at the pinned commit; record its sha256.",
+    "Write a deterministic import script in tools/ that keys each entry by sutra number (a.p.n) and writes id and text, NFC, one row per sutra.",
+    "Add a source to modules/cls/data/SOURCES.json pinning the TSV you wrote, with the terms.",
+    "Run the acceptance command; open a pull request when it passes."
+   ],
+   "command": "python3 -m tajziya packet check PKT-INT-02",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-INT-02%3A%20the%20K%C4%81%C5%9Bik%C4%81%20of%20V%C4%81mana%20and%20Jay%C4%81ditya&body=I%20am%20taking%20packet%20PKT-INT-02%3A%20the%20K%C4%81%C5%9Bik%C4%81%20of%20V%C4%81mana%20and%20Jay%C4%81ditya.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-INT-02%0AOutputs%3A%20modules/cls/data/interpretation/kashika.tsv%2C%20modules/cls/data/SOURCES.json%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-INT-03",
+   "title": "the Nyāsa of Jinendrabuddhi",
+   "area": "interpretation-traditional",
+   "wave": 1,
+   "size": "M",
+   "status": "open",
+   "summary": "Import the Nyāsa of Jinendrabuddhi for the 3432 sutras the source covers, keyed by sutra number.",
+   "outputs": [
+    "modules/cls/data/interpretation/nyasa.tsv",
+    "modules/cls/data/SOURCES.json"
+   ],
+   "licence": "ashtadhyayi.com's terms: use with credit (LicenseRef-ashtadhyayi-com; the notice is in modules/cls/data/LICENSES/ashtadhyayi-com.txt). The underlying work's own status is recorded too: a modern author's work enters the tree only on the owner's ruling.",
+   "how": [
+    "Download the file at the pinned commit; record its sha256.",
+    "Write a deterministic import script in tools/ that keys each entry by sutra number (a.p.n) and writes id and text, NFC, one row per sutra.",
+    "Add a source to modules/cls/data/SOURCES.json pinning the TSV you wrote, with the terms.",
+    "Run the acceptance command; open a pull request when it passes."
+   ],
+   "command": "python3 -m tajziya packet check PKT-INT-03",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-INT-03%3A%20the%20Ny%C4%81sa%20of%20Jinendrabuddhi&body=I%20am%20taking%20packet%20PKT-INT-03%3A%20the%20Ny%C4%81sa%20of%20Jinendrabuddhi.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-INT-03%0AOutputs%3A%20modules/cls/data/interpretation/nyasa.tsv%2C%20modules/cls/data/SOURCES.json%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-INT-04",
+   "title": "the Padamañjarī of Haradatta",
+   "area": "interpretation-traditional",
+   "wave": 1,
+   "size": "M",
+   "status": "open",
+   "summary": "Import the Padamañjarī of Haradatta for the 3368 sutras the source covers, keyed by sutra number.",
+   "outputs": [
+    "modules/cls/data/interpretation/padamanjari.tsv",
+    "modules/cls/data/SOURCES.json"
+   ],
+   "licence": "ashtadhyayi.com's terms: use with credit (LicenseRef-ashtadhyayi-com; the notice is in modules/cls/data/LICENSES/ashtadhyayi-com.txt). The underlying work's own status is recorded too: a modern author's work enters the tree only on the owner's ruling.",
+   "how": [
+    "Download the file at the pinned commit; record its sha256.",
+    "Write a deterministic import script in tools/ that keys each entry by sutra number (a.p.n) and writes id and text, NFC, one row per sutra.",
+    "Add a source to modules/cls/data/SOURCES.json pinning the TSV you wrote, with the terms.",
+    "Run the acceptance command; open a pull request when it passes."
+   ],
+   "command": "python3 -m tajziya packet check PKT-INT-04",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-INT-04%3A%20the%20Padama%C3%B1jar%C4%AB%20of%20Haradatta&body=I%20am%20taking%20packet%20PKT-INT-04%3A%20the%20Padama%C3%B1jar%C4%AB%20of%20Haradatta.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-INT-04%0AOutputs%3A%20modules/cls/data/interpretation/padamanjari.tsv%2C%20modules/cls/data/SOURCES.json%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-INT-05",
+   "title": "the Siddhānta Kaumudī of Bhaṭṭoji Dīkṣita",
+   "area": "interpretation-traditional",
+   "wave": 1,
+   "size": "M",
+   "status": "open",
+   "summary": "Import the Siddhānta Kaumudī of Bhaṭṭoji Dīkṣita for the 3949 sutras the source covers, keyed by sutra number.",
+   "outputs": [
+    "modules/cls/data/interpretation/siddhanta-kaumudi.tsv",
+    "modules/cls/data/SOURCES.json"
+   ],
+   "licence": "ashtadhyayi.com's terms: use with credit (LicenseRef-ashtadhyayi-com; the notice is in modules/cls/data/LICENSES/ashtadhyayi-com.txt). The underlying work's own status is recorded too: a modern author's work enters the tree only on the owner's ruling.",
+   "how": [
+    "Download the file at the pinned commit; record its sha256.",
+    "Write a deterministic import script in tools/ that keys each entry by sutra number (a.p.n) and writes id and text, NFC, one row per sutra.",
+    "Add a source to modules/cls/data/SOURCES.json pinning the TSV you wrote, with the terms.",
+    "Run the acceptance command; open a pull request when it passes."
+   ],
+   "command": "python3 -m tajziya packet check PKT-INT-05",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-INT-05%3A%20the%20Siddh%C4%81nta%20Kaumud%C4%AB%20of%20Bha%E1%B9%AD%E1%B9%ADoji%20D%C4%ABk%E1%B9%A3ita&body=I%20am%20taking%20packet%20PKT-INT-05%3A%20the%20Siddh%C4%81nta%20Kaumud%C4%AB%20of%20Bha%E1%B9%AD%E1%B9%ADoji%20D%C4%ABk%E1%B9%A3ita.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-INT-05%0AOutputs%3A%20modules/cls/data/interpretation/siddhanta-kaumudi.tsv%2C%20modules/cls/data/SOURCES.json%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-INT-06",
+   "title": "the Prauḍhamanoramā of Bhaṭṭoji Dīkṣita",
+   "area": "interpretation-traditional",
+   "wave": 1,
+   "size": "S",
+   "status": "open",
+   "summary": "Import the Prauḍhamanoramā of Bhaṭṭoji Dīkṣita for the 462 sutras the source covers, keyed by sutra number.",
+   "outputs": [
+    "modules/cls/data/interpretation/praudhamanorama.tsv",
+    "modules/cls/data/SOURCES.json"
+   ],
+   "licence": "ashtadhyayi.com's terms: use with credit (LicenseRef-ashtadhyayi-com; the notice is in modules/cls/data/LICENSES/ashtadhyayi-com.txt). The underlying work's own status is recorded too: a modern author's work enters the tree only on the owner's ruling.",
+   "how": [
+    "Download the file at the pinned commit; record its sha256.",
+    "Write a deterministic import script in tools/ that keys each entry by sutra number (a.p.n) and writes id and text, NFC, one row per sutra.",
+    "Add a source to modules/cls/data/SOURCES.json pinning the TSV you wrote, with the terms.",
+    "Run the acceptance command; open a pull request when it passes."
+   ],
+   "command": "python3 -m tajziya packet check PKT-INT-06",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-INT-06%3A%20the%20Prau%E1%B8%8Dhamanoram%C4%81%20of%20Bha%E1%B9%AD%E1%B9%ADoji%20D%C4%ABk%E1%B9%A3ita&body=I%20am%20taking%20packet%20PKT-INT-06%3A%20the%20Prau%E1%B8%8Dhamanoram%C4%81%20of%20Bha%E1%B9%AD%E1%B9%ADoji%20D%C4%ABk%E1%B9%A3ita.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-INT-06%0AOutputs%3A%20modules/cls/data/interpretation/praudhamanorama.tsv%2C%20modules/cls/data/SOURCES.json%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-INT-07",
+   "title": "the Bālamanoramā of Vāsudeva Dīkṣita",
+   "area": "interpretation-traditional",
+   "wave": 1,
+   "size": "M",
+   "status": "open",
+   "summary": "Import the Bālamanoramā of Vāsudeva Dīkṣita for the 2912 sutras the source covers, keyed by sutra number.",
+   "outputs": [
+    "modules/cls/data/interpretation/balamanorama.tsv",
+    "modules/cls/data/SOURCES.json"
+   ],
+   "licence": "ashtadhyayi.com's terms: use with credit (LicenseRef-ashtadhyayi-com; the notice is in modules/cls/data/LICENSES/ashtadhyayi-com.txt). The underlying work's own status is recorded too: a modern author's work enters the tree only on the owner's ruling.",
+   "how": [
+    "Download the file at the pinned commit; record its sha256.",
+    "Write a deterministic import script in tools/ that keys each entry by sutra number (a.p.n) and writes id and text, NFC, one row per sutra.",
+    "Add a source to modules/cls/data/SOURCES.json pinning the TSV you wrote, with the terms.",
+    "Run the acceptance command; open a pull request when it passes."
+   ],
+   "command": "python3 -m tajziya packet check PKT-INT-07",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-INT-07%3A%20the%20B%C4%81lamanoram%C4%81%20of%20V%C4%81sudeva%20D%C4%ABk%E1%B9%A3ita&body=I%20am%20taking%20packet%20PKT-INT-07%3A%20the%20B%C4%81lamanoram%C4%81%20of%20V%C4%81sudeva%20D%C4%ABk%E1%B9%A3ita.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-INT-07%0AOutputs%3A%20modules/cls/data/interpretation/balamanorama.tsv%2C%20modules/cls/data/SOURCES.json%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-INT-08",
+   "title": "the Tattvabodhinī of Jñānendra Sarasvatī",
+   "area": "interpretation-traditional",
+   "wave": 1,
+   "size": "M",
+   "status": "open",
+   "summary": "Import the Tattvabodhinī of Jñānendra Sarasvatī for the 2477 sutras the source covers, keyed by sutra number.",
+   "outputs": [
+    "modules/cls/data/interpretation/tattvabodhini.tsv",
+    "modules/cls/data/SOURCES.json"
+   ],
+   "licence": "ashtadhyayi.com's terms: use with credit (LicenseRef-ashtadhyayi-com; the notice is in modules/cls/data/LICENSES/ashtadhyayi-com.txt). The underlying work's own status is recorded too: a modern author's work enters the tree only on the owner's ruling.",
+   "how": [
+    "Download the file at the pinned commit; record its sha256.",
+    "Write a deterministic import script in tools/ that keys each entry by sutra number (a.p.n) and writes id and text, NFC, one row per sutra.",
+    "Add a source to modules/cls/data/SOURCES.json pinning the TSV you wrote, with the terms.",
+    "Run the acceptance command; open a pull request when it passes."
+   ],
+   "command": "python3 -m tajziya packet check PKT-INT-08",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-INT-08%3A%20the%20Tattvabodhin%C4%AB%20of%20J%C3%B1%C4%81nendra%20Sarasvat%C4%AB&body=I%20am%20taking%20packet%20PKT-INT-08%3A%20the%20Tattvabodhin%C4%AB%20of%20J%C3%B1%C4%81nendra%20Sarasvat%C4%AB.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-INT-08%0AOutputs%3A%20modules/cls/data/interpretation/tattvabodhini.tsv%2C%20modules/cls/data/SOURCES.json%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-INT-09",
+   "title": "the Laghu Kaumudī of Varadarāja",
+   "area": "interpretation-traditional",
+   "wave": 1,
+   "size": "S",
+   "status": "open",
+   "summary": "Import the Laghu Kaumudī of Varadarāja for the 1254 sutras the source covers, keyed by sutra number.",
+   "outputs": [
+    "modules/cls/data/interpretation/laghu-kaumudi.tsv",
+    "modules/cls/data/SOURCES.json"
+   ],
+   "licence": "ashtadhyayi.com's terms: use with credit (LicenseRef-ashtadhyayi-com; the notice is in modules/cls/data/LICENSES/ashtadhyayi-com.txt). The underlying work's own status is recorded too: a modern author's work enters the tree only on the owner's ruling.",
+   "how": [
+    "Download the file at the pinned commit; record its sha256.",
+    "Write a deterministic import script in tools/ that keys each entry by sutra number (a.p.n) and writes id and text, NFC, one row per sutra.",
+    "Add a source to modules/cls/data/SOURCES.json pinning the TSV you wrote, with the terms.",
+    "Run the acceptance command; open a pull request when it passes."
+   ],
+   "command": "python3 -m tajziya packet check PKT-INT-09",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-INT-09%3A%20the%20Laghu%20Kaumud%C4%AB%20of%20Varadar%C4%81ja&body=I%20am%20taking%20packet%20PKT-INT-09%3A%20the%20Laghu%20Kaumud%C4%AB%20of%20Varadar%C4%81ja.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-INT-09%0AOutputs%3A%20modules/cls/data/interpretation/laghu-kaumudi.tsv%2C%20modules/cls/data/SOURCES.json%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-INT-10",
+   "title": "the Laghuśabdenduśekhara of Nāgeśa Bhaṭṭa",
+   "area": "interpretation-traditional",
+   "wave": 1,
+   "size": "S",
+   "status": "open",
+   "summary": "Import the Laghuśabdenduśekhara of Nāgeśa Bhaṭṭa for the 82 sutras the source covers, keyed by sutra number.",
+   "outputs": [
+    "modules/cls/data/interpretation/laghushabdendushekhara.tsv",
+    "modules/cls/data/SOURCES.json"
+   ],
+   "licence": "ashtadhyayi.com's terms: use with credit (LicenseRef-ashtadhyayi-com; the notice is in modules/cls/data/LICENSES/ashtadhyayi-com.txt). The underlying work's own status is recorded too: a modern author's work enters the tree only on the owner's ruling.",
+   "how": [
+    "Download the file at the pinned commit; record its sha256.",
+    "Write a deterministic import script in tools/ that keys each entry by sutra number (a.p.n) and writes id and text, NFC, one row per sutra.",
+    "Add a source to modules/cls/data/SOURCES.json pinning the TSV you wrote, with the terms.",
+    "Run the acceptance command; open a pull request when it passes."
+   ],
+   "command": "python3 -m tajziya packet check PKT-INT-10",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-INT-10%3A%20the%20Laghu%C5%9Babdendu%C5%9Bekhara%20of%20N%C4%81ge%C5%9Ba%20Bha%E1%B9%AD%E1%B9%ADa&body=I%20am%20taking%20packet%20PKT-INT-10%3A%20the%20Laghu%C5%9Babdendu%C5%9Bekhara%20of%20N%C4%81ge%C5%9Ba%20Bha%E1%B9%AD%E1%B9%ADa.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-INT-10%0AOutputs%3A%20modules/cls/data/interpretation/laghushabdendushekhara.tsv%2C%20modules/cls/data/SOURCES.json%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-INT-11",
+   "title": "the Prakriyāsarvasva of Nārāyaṇa Bhaṭṭa",
+   "area": "interpretation-traditional",
+   "wave": 1,
+   "size": "M",
+   "status": "open",
+   "summary": "Import the Prakriyāsarvasva of Nārāyaṇa Bhaṭṭa for the 3634 sutras the source covers, keyed by sutra number.",
+   "outputs": [
+    "modules/cls/data/interpretation/prakriyasarvasva.tsv",
+    "modules/cls/data/SOURCES.json"
+   ],
+   "licence": "ashtadhyayi.com's terms: use with credit (LicenseRef-ashtadhyayi-com; the notice is in modules/cls/data/LICENSES/ashtadhyayi-com.txt). The underlying work's own status is recorded too: a modern author's work enters the tree only on the owner's ruling.",
+   "how": [
+    "Download the file at the pinned commit; record its sha256.",
+    "Write a deterministic import script in tools/ that keys each entry by sutra number (a.p.n) and writes id and text, NFC, one row per sutra.",
+    "Add a source to modules/cls/data/SOURCES.json pinning the TSV you wrote, with the terms.",
+    "Run the acceptance command; open a pull request when it passes."
+   ],
+   "command": "python3 -m tajziya packet check PKT-INT-11",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-INT-11%3A%20the%20Prakriy%C4%81sarvasva%20of%20N%C4%81r%C4%81ya%E1%B9%87a%20Bha%E1%B9%AD%E1%B9%ADa&body=I%20am%20taking%20packet%20PKT-INT-11%3A%20the%20Prakriy%C4%81sarvasva%20of%20N%C4%81r%C4%81ya%E1%B9%87a%20Bha%E1%B9%AD%E1%B9%ADa.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-INT-11%0AOutputs%3A%20modules/cls/data/interpretation/prakriyasarvasva.tsv%2C%20modules/cls/data/SOURCES.json%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-INT-12",
+   "title": "the commentary the data names sarala",
+   "area": "interpretation-traditional",
+   "wave": 1,
+   "size": "S",
+   "status": "open",
+   "summary": "Import the commentary the data names sarala for the 215 sutras the source covers, keyed by sutra number.",
+   "outputs": [
+    "modules/cls/data/interpretation/sarala.tsv",
+    "modules/cls/data/SOURCES.json"
+   ],
+   "licence": "ashtadhyayi.com's terms: use with credit (LicenseRef-ashtadhyayi-com; the notice is in modules/cls/data/LICENSES/ashtadhyayi-com.txt). The underlying work's own status is recorded too: a modern author's work enters the tree only on the owner's ruling.",
+   "how": [
+    "Download the file at the pinned commit; record its sha256.",
+    "Write a deterministic import script in tools/ that keys each entry by sutra number (a.p.n) and writes id and text, NFC, one row per sutra.",
+    "Add a source to modules/cls/data/SOURCES.json pinning the TSV you wrote, with the terms.",
+    "First establish the work's author and date, with a citation, and its copyright status; a modern work waits for the owner's ruling before it enters the tree.",
+    "Run the acceptance command; open a pull request when it passes."
+   ],
+   "command": "python3 -m tajziya packet check PKT-INT-12",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-INT-12%3A%20the%20commentary%20the%20data%20names%20sarala&body=I%20am%20taking%20packet%20PKT-INT-12%3A%20the%20commentary%20the%20data%20names%20sarala.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-INT-12%0AOutputs%3A%20modules/cls/data/interpretation/sarala.tsv%2C%20modules/cls/data/SOURCES.json%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-INT-13",
+   "title": "the commentary the data names sudha",
+   "area": "interpretation-traditional",
+   "wave": 1,
+   "size": "S",
+   "status": "open",
+   "summary": "Import the commentary the data names sudha for the 375 sutras the source covers, keyed by sutra number.",
+   "outputs": [
+    "modules/cls/data/interpretation/sudha.tsv",
+    "modules/cls/data/SOURCES.json"
+   ],
+   "licence": "ashtadhyayi.com's terms: use with credit (LicenseRef-ashtadhyayi-com; the notice is in modules/cls/data/LICENSES/ashtadhyayi-com.txt). The underlying work's own status is recorded too: a modern author's work enters the tree only on the owner's ruling.",
+   "how": [
+    "Download the file at the pinned commit; record its sha256.",
+    "Write a deterministic import script in tools/ that keys each entry by sutra number (a.p.n) and writes id and text, NFC, one row per sutra.",
+    "Add a source to modules/cls/data/SOURCES.json pinning the TSV you wrote, with the terms.",
+    "First establish the work's author and date, with a citation, and its copyright status; a modern work waits for the owner's ruling before it enters the tree.",
+    "Run the acceptance command; open a pull request when it passes."
+   ],
+   "command": "python3 -m tajziya packet check PKT-INT-13",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-INT-13%3A%20the%20commentary%20the%20data%20names%20sudha&body=I%20am%20taking%20packet%20PKT-INT-13%3A%20the%20commentary%20the%20data%20names%20sudha.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-INT-13%0AOutputs%3A%20modules/cls/data/interpretation/sudha.tsv%2C%20modules/cls/data/SOURCES.json%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-ROM-01",
+   "title": "Romenagri: bring the avagraha back",
+   "area": "romenagri",
+   "wave": 1,
+   "size": "S",
+   "status": "open",
+   "summary": "374 of the 3,983 sutras do not come back from Romenagri the same: ऽ returns as ्3. The fix is in the author's Romenagri, upstream; this repository then re-vendors it.",
+   "outputs": [
+    "vendor/romenagri/",
+    "modules/cls/data/romenagri/sutras.tsv"
+   ],
+   "licence": "GPL-2.0-or-later, the author's own code; the change goes upstream first.",
+   "how": [
+    "Fix the avagraha in hindawiai/chintamani's Romenagri (acii2rmn.lex, rmn2acii.lex or the tables).",
+    "Re-vendor the folder byte for byte and update vendor/romenagri/UPSTREAM.json to the new commit.",
+    "Regenerate modules/cls/data/romenagri/sutras.tsv with tools/romenagri_sutras.py.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-ROM-01",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-ROM-01%3A%20Romenagri%3A%20bring%20the%20avagraha%20back&body=I%20am%20taking%20packet%20PKT-ROM-01%3A%20Romenagri%3A%20bring%20the%20avagraha%20back.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-ROM-01%0AOutputs%3A%20vendor/romenagri/%2C%20modules/cls/data/romenagri/sutras.tsv%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-ROM-02",
+   "title": "Romenagri in the browser",
+   "area": "romenagri",
+   "wave": 1,
+   "size": "M",
+   "status": "open",
+   "summary": "Compile the vendored Romenagri to WebAssembly with a JavaScript wrapper, so the pages can call roman() and devanagari() themselves, with output byte-identical to the C build on every sutra.",
+   "outputs": [
+    "docs/vendor/romenagri.js",
+    "docs/vendor/romenagri.wasm"
+   ],
+   "licence": "GPL-2.0-or-later, as the vendored code.",
+   "how": [
+    "Build the vendored C and lex with Emscripten; reproduce its own Makefile's pipeline, no rewrite.",
+    "Make the wrapper read lines on stdin under node with --roman, and export roman() for the page.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-ROM-02",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-ROM-02%3A%20Romenagri%20in%20the%20browser&body=I%20am%20taking%20packet%20PKT-ROM-02%3A%20Romenagri%20in%20the%20browser.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-ROM-02%0AOutputs%3A%20docs/vendor/romenagri.js%2C%20docs/vendor/romenagri.wasm%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-SCH-01",
+   "title": "The Kātantra school, beside Pāṇini",
+   "area": "interpretation-schools",
+   "wave": 1,
+   "size": "L",
+   "status": "open",
+   "summary": "Find an openly licensed edition of the Kātantra grammar and record, for each of its rules that answers a Pāṇinian sutra, the correspondence and its text.",
+   "outputs": [
+    "modules/cls/data/schools/katantra.tsv",
+    "modules/cls/data/SOURCES.json"
+   ],
+   "licence": "registry/licences.json decides; a restricted edition stays local-only and the packet waits for an open one.",
+   "how": [
+    "Find the edition and read its terms; record them verbatim.",
+    "Write a deterministic import and a concordance: Pāṇini's sutra id, the school's rule number, its text.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-SCH-01",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-SCH-01%3A%20The%20K%C4%81tantra%20school%2C%20beside%20P%C4%81%E1%B9%87ini&body=I%20am%20taking%20packet%20PKT-SCH-01%3A%20The%20K%C4%81tantra%20school%2C%20beside%20P%C4%81%E1%B9%87ini.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-SCH-01%0AOutputs%3A%20modules/cls/data/schools/katantra.tsv%2C%20modules/cls/data/SOURCES.json%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-SCH-02",
+   "title": "The Cāndra school, beside Pāṇini",
+   "area": "interpretation-schools",
+   "wave": 1,
+   "size": "L",
+   "status": "open",
+   "summary": "Find an openly licensed edition of the Cāndra grammar and record, for each of its rules that answers a Pāṇinian sutra, the correspondence and its text.",
+   "outputs": [
+    "modules/cls/data/schools/candra.tsv",
+    "modules/cls/data/SOURCES.json"
+   ],
+   "licence": "registry/licences.json decides; a restricted edition stays local-only and the packet waits for an open one.",
+   "how": [
+    "Find the edition and read its terms; record them verbatim.",
+    "Write a deterministic import and a concordance: Pāṇini's sutra id, the school's rule number, its text.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-SCH-02",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-SCH-02%3A%20The%20C%C4%81ndra%20school%2C%20beside%20P%C4%81%E1%B9%87ini&body=I%20am%20taking%20packet%20PKT-SCH-02%3A%20The%20C%C4%81ndra%20school%2C%20beside%20P%C4%81%E1%B9%87ini.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-SCH-02%0AOutputs%3A%20modules/cls/data/schools/candra.tsv%2C%20modules/cls/data/SOURCES.json%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-SCH-03",
+   "title": "The Jainendra school, beside Pāṇini",
+   "area": "interpretation-schools",
+   "wave": 1,
+   "size": "L",
+   "status": "open",
+   "summary": "Find an openly licensed edition of the Jainendra grammar and record, for each of its rules that answers a Pāṇinian sutra, the correspondence and its text.",
+   "outputs": [
+    "modules/cls/data/schools/jainendra.tsv",
+    "modules/cls/data/SOURCES.json"
+   ],
+   "licence": "registry/licences.json decides; a restricted edition stays local-only and the packet waits for an open one.",
+   "how": [
+    "Find the edition and read its terms; record them verbatim.",
+    "Write a deterministic import and a concordance: Pāṇini's sutra id, the school's rule number, its text.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-SCH-03",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-SCH-03%3A%20The%20Jainendra%20school%2C%20beside%20P%C4%81%E1%B9%87ini&body=I%20am%20taking%20packet%20PKT-SCH-03%3A%20The%20Jainendra%20school%2C%20beside%20P%C4%81%E1%B9%87ini.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-SCH-03%0AOutputs%3A%20modules/cls/data/schools/jainendra.tsv%2C%20modules/cls/data/SOURCES.json%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-SCH-04",
+   "title": "The Śākaṭāyana school, beside Pāṇini",
+   "area": "interpretation-schools",
+   "wave": 1,
+   "size": "L",
+   "status": "open",
+   "summary": "Find an openly licensed edition of the Śākaṭāyana grammar and record, for each of its rules that answers a Pāṇinian sutra, the correspondence and its text.",
+   "outputs": [
+    "modules/cls/data/schools/shakatayana.tsv",
+    "modules/cls/data/SOURCES.json"
+   ],
+   "licence": "registry/licences.json decides; a restricted edition stays local-only and the packet waits for an open one.",
+   "how": [
+    "Find the edition and read its terms; record them verbatim.",
+    "Write a deterministic import and a concordance: Pāṇini's sutra id, the school's rule number, its text.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-SCH-04",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-SCH-04%3A%20The%20%C5%9A%C4%81ka%E1%B9%AD%C4%81yana%20school%2C%20beside%20P%C4%81%E1%B9%87ini&body=I%20am%20taking%20packet%20PKT-SCH-04%3A%20The%20%C5%9A%C4%81ka%E1%B9%AD%C4%81yana%20school%2C%20beside%20P%C4%81%E1%B9%87ini.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-SCH-04%0AOutputs%3A%20modules/cls/data/schools/shakatayana.tsv%2C%20modules/cls/data/SOURCES.json%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-SCH-05",
+   "title": "The Hemacandra's Siddhahemaśabdānuśāsana school, beside Pāṇini",
+   "area": "interpretation-schools",
+   "wave": 1,
+   "size": "L",
+   "status": "open",
+   "summary": "Find an openly licensed edition of the Hemacandra's Siddhahemaśabdānuśāsana grammar and record, for each of its rules that answers a Pāṇinian sutra, the correspondence and its text.",
+   "outputs": [
+    "modules/cls/data/schools/haima.tsv",
+    "modules/cls/data/SOURCES.json"
+   ],
+   "licence": "registry/licences.json decides; a restricted edition stays local-only and the packet waits for an open one.",
+   "how": [
+    "Find the edition and read its terms; record them verbatim.",
+    "Write a deterministic import and a concordance: Pāṇini's sutra id, the school's rule number, its text.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-SCH-05",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-SCH-05%3A%20The%20Hemacandra%27s%20Siddhahema%C5%9Babd%C4%81nu%C5%9B%C4%81sana%20school%2C%20beside%20P%C4%81%E1%B9%87ini&body=I%20am%20taking%20packet%20PKT-SCH-05%3A%20The%20Hemacandra%27s%20Siddhahema%C5%9Babd%C4%81nu%C5%9B%C4%81sana%20school%2C%20beside%20P%C4%81%E1%B9%87ini.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-SCH-05%0AOutputs%3A%20modules/cls/data/schools/haima.tsv%2C%20modules/cls/data/SOURCES.json%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-SCH-06",
+   "title": "The Sārasvata school, beside Pāṇini",
+   "area": "interpretation-schools",
+   "wave": 1,
+   "size": "L",
+   "status": "open",
+   "summary": "Find an openly licensed edition of the Sārasvata grammar and record, for each of its rules that answers a Pāṇinian sutra, the correspondence and its text.",
+   "outputs": [
+    "modules/cls/data/schools/sarasvata.tsv",
+    "modules/cls/data/SOURCES.json"
+   ],
+   "licence": "registry/licences.json decides; a restricted edition stays local-only and the packet waits for an open one.",
+   "how": [
+    "Find the edition and read its terms; record them verbatim.",
+    "Write a deterministic import and a concordance: Pāṇini's sutra id, the school's rule number, its text.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-SCH-06",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-SCH-06%3A%20The%20S%C4%81rasvata%20school%2C%20beside%20P%C4%81%E1%B9%87ini&body=I%20am%20taking%20packet%20PKT-SCH-06%3A%20The%20S%C4%81rasvata%20school%2C%20beside%20P%C4%81%E1%B9%87ini.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-SCH-06%0AOutputs%3A%20modules/cls/data/schools/sarasvata.tsv%2C%20modules/cls/data/SOURCES.json%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-SCH-07",
+   "title": "The Mugdhabodha school, beside Pāṇini",
+   "area": "interpretation-schools",
+   "wave": 1,
+   "size": "L",
+   "status": "open",
+   "summary": "Find an openly licensed edition of the Mugdhabodha grammar and record, for each of its rules that answers a Pāṇinian sutra, the correspondence and its text.",
+   "outputs": [
+    "modules/cls/data/schools/mugdhabodha.tsv",
+    "modules/cls/data/SOURCES.json"
+   ],
+   "licence": "registry/licences.json decides; a restricted edition stays local-only and the packet waits for an open one.",
+   "how": [
+    "Find the edition and read its terms; record them verbatim.",
+    "Write a deterministic import and a concordance: Pāṇini's sutra id, the school's rule number, its text.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-SCH-07",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-SCH-07%3A%20The%20Mugdhabodha%20school%2C%20beside%20P%C4%81%E1%B9%87ini&body=I%20am%20taking%20packet%20PKT-SCH-07%3A%20The%20Mugdhabodha%20school%2C%20beside%20P%C4%81%E1%B9%87ini.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-SCH-07%0AOutputs%3A%20modules/cls/data/schools/mugdhabodha.tsv%2C%20modules/cls/data/SOURCES.json%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-SCH-08",
+   "title": "The Supadma school, beside Pāṇini",
+   "area": "interpretation-schools",
+   "wave": 1,
+   "size": "L",
+   "status": "open",
+   "summary": "Find an openly licensed edition of the Supadma grammar and record, for each of its rules that answers a Pāṇinian sutra, the correspondence and its text.",
+   "outputs": [
+    "modules/cls/data/schools/supadma.tsv",
+    "modules/cls/data/SOURCES.json"
+   ],
+   "licence": "registry/licences.json decides; a restricted edition stays local-only and the packet waits for an open one.",
+   "how": [
+    "Find the edition and read its terms; record them verbatim.",
+    "Write a deterministic import and a concordance: Pāṇini's sutra id, the school's rule number, its text.",
+    "Run the acceptance command."
+   ],
+   "command": "python3 -m tajziya packet check PKT-SCH-08",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-SCH-08%3A%20The%20Supadma%20school%2C%20beside%20P%C4%81%E1%B9%87ini&body=I%20am%20taking%20packet%20PKT-SCH-08%3A%20The%20Supadma%20school%2C%20beside%20P%C4%81%E1%B9%87ini.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-SCH-08%0AOutputs%3A%20modules/cls/data/schools/supadma.tsv%2C%20modules/cls/data/SOURCES.json%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-SCR-Ahom",
+   "title": "Ahom, Tai Ahom on Romenagri's pivot",
+   "area": "scripts",
+   "wave": 1,
+   "size": "S",
+   "status": "open",
+   "summary": "A table taking Romenagri's ACII pivot to Ahom, Tai Ahom and back, so every sutra can be read in Ahom, Tai Ahom. The round trip must be lossless on all 3,983 sutras.",
+   "outputs": [
+    "tables/romenagri/Ahom.csv"
+   ],
+   "licence": "Our own table (CC0-1.0), derived from the Unicode Character Database, cited.",
+   "how": [
+    "Write tables/romenagri/<code>.csv with columns acii (hex, like A4) and char (the script's character or sequence), one row per ACII value the sutras use.",
+    "Derive each character from the Unicode Character Database by name; cite the version.",
+    "Run the acceptance command: every sutra's ACII must go to the script and come back unchanged."
+   ],
+   "command": "python3 -m tajziya packet check PKT-SCR-Ahom",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-SCR-Ahom%3A%20Ahom%2C%20Tai%20Ahom%20on%20Romenagri%27s%20pivot&body=I%20am%20taking%20packet%20PKT-SCR-Ahom%3A%20Ahom%2C%20Tai%20Ahom%20on%20Romenagri%27s%20pivot.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-SCR-Ahom%0AOutputs%3A%20tables/romenagri/Ahom.csv%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-SCR-Bhks",
+   "title": "Bhaiksuki on Romenagri's pivot",
+   "area": "scripts",
+   "wave": 1,
+   "size": "S",
+   "status": "open",
+   "summary": "A table taking Romenagri's ACII pivot to Bhaiksuki and back, so every sutra can be read in Bhaiksuki. The round trip must be lossless on all 3,983 sutras.",
+   "outputs": [
+    "tables/romenagri/Bhks.csv"
+   ],
+   "licence": "Our own table (CC0-1.0), derived from the Unicode Character Database, cited.",
+   "how": [
+    "Write tables/romenagri/<code>.csv with columns acii (hex, like A4) and char (the script's character or sequence), one row per ACII value the sutras use.",
+    "Derive each character from the Unicode Character Database by name; cite the version.",
+    "Run the acceptance command: every sutra's ACII must go to the script and come back unchanged."
+   ],
+   "command": "python3 -m tajziya packet check PKT-SCR-Bhks",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-SCR-Bhks%3A%20Bhaiksuki%20on%20Romenagri%27s%20pivot&body=I%20am%20taking%20packet%20PKT-SCR-Bhks%3A%20Bhaiksuki%20on%20Romenagri%27s%20pivot.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-SCR-Bhks%0AOutputs%3A%20tables/romenagri/Bhks.csv%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-SCR-Brah",
+   "title": "Brahmi on Romenagri's pivot",
+   "area": "scripts",
+   "wave": 1,
+   "size": "S",
+   "status": "open",
+   "summary": "A table taking Romenagri's ACII pivot to Brahmi and back, so every sutra can be read in Brahmi. The round trip must be lossless on all 3,983 sutras.",
+   "outputs": [
+    "tables/romenagri/Brah.csv"
+   ],
+   "licence": "Our own table (CC0-1.0), derived from the Unicode Character Database, cited.",
+   "how": [
+    "Write tables/romenagri/<code>.csv with columns acii (hex, like A4) and char (the script's character or sequence), one row per ACII value the sutras use.",
+    "Derive each character from the Unicode Character Database by name; cite the version.",
+    "Run the acceptance command: every sutra's ACII must go to the script and come back unchanged."
+   ],
+   "command": "python3 -m tajziya packet check PKT-SCR-Brah",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-SCR-Brah%3A%20Brahmi%20on%20Romenagri%27s%20pivot&body=I%20am%20taking%20packet%20PKT-SCR-Brah%3A%20Brahmi%20on%20Romenagri%27s%20pivot.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-SCR-Brah%0AOutputs%3A%20tables/romenagri/Brah.csv%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-SCR-Cakm",
+   "title": "Chakma on Romenagri's pivot",
+   "area": "scripts",
+   "wave": 1,
+   "size": "S",
+   "status": "open",
+   "summary": "A table taking Romenagri's ACII pivot to Chakma and back, so every sutra can be read in Chakma. The round trip must be lossless on all 3,983 sutras.",
+   "outputs": [
+    "tables/romenagri/Cakm.csv"
+   ],
+   "licence": "Our own table (CC0-1.0), derived from the Unicode Character Database, cited.",
+   "how": [
+    "Write tables/romenagri/<code>.csv with columns acii (hex, like A4) and char (the script's character or sequence), one row per ACII value the sutras use.",
+    "Derive each character from the Unicode Character Database by name; cite the version.",
+    "Run the acceptance command: every sutra's ACII must go to the script and come back unchanged."
+   ],
+   "command": "python3 -m tajziya packet check PKT-SCR-Cakm",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-SCR-Cakm%3A%20Chakma%20on%20Romenagri%27s%20pivot&body=I%20am%20taking%20packet%20PKT-SCR-Cakm%3A%20Chakma%20on%20Romenagri%27s%20pivot.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-SCR-Cakm%0AOutputs%3A%20tables/romenagri/Cakm.csv%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-SCR-Diak",
+   "title": "Dives Akuru on Romenagri's pivot",
+   "area": "scripts",
+   "wave": 1,
+   "size": "S",
+   "status": "open",
+   "summary": "A table taking Romenagri's ACII pivot to Dives Akuru and back, so every sutra can be read in Dives Akuru. The round trip must be lossless on all 3,983 sutras.",
+   "outputs": [
+    "tables/romenagri/Diak.csv"
+   ],
+   "licence": "Our own table (CC0-1.0), derived from the Unicode Character Database, cited.",
+   "how": [
+    "Write tables/romenagri/<code>.csv with columns acii (hex, like A4) and char (the script's character or sequence), one row per ACII value the sutras use.",
+    "Derive each character from the Unicode Character Database by name; cite the version.",
+    "Run the acceptance command: every sutra's ACII must go to the script and come back unchanged."
+   ],
+   "command": "python3 -m tajziya packet check PKT-SCR-Diak",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-SCR-Diak%3A%20Dives%20Akuru%20on%20Romenagri%27s%20pivot&body=I%20am%20taking%20packet%20PKT-SCR-Diak%3A%20Dives%20Akuru%20on%20Romenagri%27s%20pivot.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-SCR-Diak%0AOutputs%3A%20tables/romenagri/Diak.csv%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-SCR-Dogr",
+   "title": "Dogra on Romenagri's pivot",
+   "area": "scripts",
+   "wave": 1,
+   "size": "S",
+   "status": "open",
+   "summary": "A table taking Romenagri's ACII pivot to Dogra and back, so every sutra can be read in Dogra. The round trip must be lossless on all 3,983 sutras.",
+   "outputs": [
+    "tables/romenagri/Dogr.csv"
+   ],
+   "licence": "Our own table (CC0-1.0), derived from the Unicode Character Database, cited.",
+   "how": [
+    "Write tables/romenagri/<code>.csv with columns acii (hex, like A4) and char (the script's character or sequence), one row per ACII value the sutras use.",
+    "Derive each character from the Unicode Character Database by name; cite the version.",
+    "Run the acceptance command: every sutra's ACII must go to the script and come back unchanged."
+   ],
+   "command": "python3 -m tajziya packet check PKT-SCR-Dogr",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-SCR-Dogr%3A%20Dogra%20on%20Romenagri%27s%20pivot&body=I%20am%20taking%20packet%20PKT-SCR-Dogr%3A%20Dogra%20on%20Romenagri%27s%20pivot.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-SCR-Dogr%0AOutputs%3A%20tables/romenagri/Dogr.csv%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-SCR-Gong",
+   "title": "Gunjala Gondi on Romenagri's pivot",
+   "area": "scripts",
+   "wave": 1,
+   "size": "S",
+   "status": "open",
+   "summary": "A table taking Romenagri's ACII pivot to Gunjala Gondi and back, so every sutra can be read in Gunjala Gondi. The round trip must be lossless on all 3,983 sutras.",
+   "outputs": [
+    "tables/romenagri/Gong.csv"
+   ],
+   "licence": "Our own table (CC0-1.0), derived from the Unicode Character Database, cited.",
+   "how": [
+    "Write tables/romenagri/<code>.csv with columns acii (hex, like A4) and char (the script's character or sequence), one row per ACII value the sutras use.",
+    "Derive each character from the Unicode Character Database by name; cite the version.",
+    "Run the acceptance command: every sutra's ACII must go to the script and come back unchanged."
+   ],
+   "command": "python3 -m tajziya packet check PKT-SCR-Gong",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-SCR-Gong%3A%20Gunjala%20Gondi%20on%20Romenagri%27s%20pivot&body=I%20am%20taking%20packet%20PKT-SCR-Gong%3A%20Gunjala%20Gondi%20on%20Romenagri%27s%20pivot.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-SCR-Gong%0AOutputs%3A%20tables/romenagri/Gong.csv%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-SCR-Gonm",
+   "title": "Masaram Gondi on Romenagri's pivot",
+   "area": "scripts",
+   "wave": 1,
+   "size": "S",
+   "status": "open",
+   "summary": "A table taking Romenagri's ACII pivot to Masaram Gondi and back, so every sutra can be read in Masaram Gondi. The round trip must be lossless on all 3,983 sutras.",
+   "outputs": [
+    "tables/romenagri/Gonm.csv"
+   ],
+   "licence": "Our own table (CC0-1.0), derived from the Unicode Character Database, cited.",
+   "how": [
+    "Write tables/romenagri/<code>.csv with columns acii (hex, like A4) and char (the script's character or sequence), one row per ACII value the sutras use.",
+    "Derive each character from the Unicode Character Database by name; cite the version.",
+    "Run the acceptance command: every sutra's ACII must go to the script and come back unchanged."
+   ],
+   "command": "python3 -m tajziya packet check PKT-SCR-Gonm",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-SCR-Gonm%3A%20Masaram%20Gondi%20on%20Romenagri%27s%20pivot&body=I%20am%20taking%20packet%20PKT-SCR-Gonm%3A%20Masaram%20Gondi%20on%20Romenagri%27s%20pivot.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-SCR-Gonm%0AOutputs%3A%20tables/romenagri/Gonm.csv%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-SCR-Gran",
+   "title": "Grantha on Romenagri's pivot",
+   "area": "scripts",
+   "wave": 1,
+   "size": "S",
+   "status": "open",
+   "summary": "A table taking Romenagri's ACII pivot to Grantha and back, so every sutra can be read in Grantha. The round trip must be lossless on all 3,983 sutras.",
+   "outputs": [
+    "tables/romenagri/Gran.csv"
+   ],
+   "licence": "Our own table (CC0-1.0), derived from the Unicode Character Database, cited.",
+   "how": [
+    "Write tables/romenagri/<code>.csv with columns acii (hex, like A4) and char (the script's character or sequence), one row per ACII value the sutras use.",
+    "Derive each character from the Unicode Character Database by name; cite the version.",
+    "Run the acceptance command: every sutra's ACII must go to the script and come back unchanged."
+   ],
+   "command": "python3 -m tajziya packet check PKT-SCR-Gran",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-SCR-Gran%3A%20Grantha%20on%20Romenagri%27s%20pivot&body=I%20am%20taking%20packet%20PKT-SCR-Gran%3A%20Grantha%20on%20Romenagri%27s%20pivot.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-SCR-Gran%0AOutputs%3A%20tables/romenagri/Gran.csv%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-SCR-Khar",
+   "title": "Kharoshthi on Romenagri's pivot",
+   "area": "scripts",
+   "wave": 1,
+   "size": "S",
+   "status": "open",
+   "summary": "A table taking Romenagri's ACII pivot to Kharoshthi and back, so every sutra can be read in Kharoshthi. The round trip must be lossless on all 3,983 sutras.",
+   "outputs": [
+    "tables/romenagri/Khar.csv"
+   ],
+   "licence": "Our own table (CC0-1.0), derived from the Unicode Character Database, cited.",
+   "how": [
+    "Write tables/romenagri/<code>.csv with columns acii (hex, like A4) and char (the script's character or sequence), one row per ACII value the sutras use.",
+    "Derive each character from the Unicode Character Database by name; cite the version.",
+    "Run the acceptance command: every sutra's ACII must go to the script and come back unchanged."
+   ],
+   "command": "python3 -m tajziya packet check PKT-SCR-Khar",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-SCR-Khar%3A%20Kharoshthi%20on%20Romenagri%27s%20pivot&body=I%20am%20taking%20packet%20PKT-SCR-Khar%3A%20Kharoshthi%20on%20Romenagri%27s%20pivot.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-SCR-Khar%0AOutputs%3A%20tables/romenagri/Khar.csv%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-SCR-Khoj",
+   "title": "Khojki on Romenagri's pivot",
+   "area": "scripts",
+   "wave": 1,
+   "size": "S",
+   "status": "open",
+   "summary": "A table taking Romenagri's ACII pivot to Khojki and back, so every sutra can be read in Khojki. The round trip must be lossless on all 3,983 sutras.",
+   "outputs": [
+    "tables/romenagri/Khoj.csv"
+   ],
+   "licence": "Our own table (CC0-1.0), derived from the Unicode Character Database, cited.",
+   "how": [
+    "Write tables/romenagri/<code>.csv with columns acii (hex, like A4) and char (the script's character or sequence), one row per ACII value the sutras use.",
+    "Derive each character from the Unicode Character Database by name; cite the version.",
+    "Run the acceptance command: every sutra's ACII must go to the script and come back unchanged."
+   ],
+   "command": "python3 -m tajziya packet check PKT-SCR-Khoj",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-SCR-Khoj%3A%20Khojki%20on%20Romenagri%27s%20pivot&body=I%20am%20taking%20packet%20PKT-SCR-Khoj%3A%20Khojki%20on%20Romenagri%27s%20pivot.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-SCR-Khoj%0AOutputs%3A%20tables/romenagri/Khoj.csv%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-SCR-Kthi",
+   "title": "Kaithi on Romenagri's pivot",
+   "area": "scripts",
+   "wave": 1,
+   "size": "S",
+   "status": "open",
+   "summary": "A table taking Romenagri's ACII pivot to Kaithi and back, so every sutra can be read in Kaithi. The round trip must be lossless on all 3,983 sutras.",
+   "outputs": [
+    "tables/romenagri/Kthi.csv"
+   ],
+   "licence": "Our own table (CC0-1.0), derived from the Unicode Character Database, cited.",
+   "how": [
+    "Write tables/romenagri/<code>.csv with columns acii (hex, like A4) and char (the script's character or sequence), one row per ACII value the sutras use.",
+    "Derive each character from the Unicode Character Database by name; cite the version.",
+    "Run the acceptance command: every sutra's ACII must go to the script and come back unchanged."
+   ],
+   "command": "python3 -m tajziya packet check PKT-SCR-Kthi",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-SCR-Kthi%3A%20Kaithi%20on%20Romenagri%27s%20pivot&body=I%20am%20taking%20packet%20PKT-SCR-Kthi%3A%20Kaithi%20on%20Romenagri%27s%20pivot.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-SCR-Kthi%0AOutputs%3A%20tables/romenagri/Kthi.csv%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-SCR-Lepc",
+   "title": "Lepcha (Róng) on Romenagri's pivot",
+   "area": "scripts",
+   "wave": 1,
+   "size": "S",
+   "status": "open",
+   "summary": "A table taking Romenagri's ACII pivot to Lepcha (Róng) and back, so every sutra can be read in Lepcha (Róng). The round trip must be lossless on all 3,983 sutras.",
+   "outputs": [
+    "tables/romenagri/Lepc.csv"
+   ],
+   "licence": "Our own table (CC0-1.0), derived from the Unicode Character Database, cited.",
+   "how": [
+    "Write tables/romenagri/<code>.csv with columns acii (hex, like A4) and char (the script's character or sequence), one row per ACII value the sutras use.",
+    "Derive each character from the Unicode Character Database by name; cite the version.",
+    "Run the acceptance command: every sutra's ACII must go to the script and come back unchanged."
+   ],
+   "command": "python3 -m tajziya packet check PKT-SCR-Lepc",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-SCR-Lepc%3A%20Lepcha%20%28R%C3%B3ng%29%20on%20Romenagri%27s%20pivot&body=I%20am%20taking%20packet%20PKT-SCR-Lepc%3A%20Lepcha%20%28R%C3%B3ng%29%20on%20Romenagri%27s%20pivot.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-SCR-Lepc%0AOutputs%3A%20tables/romenagri/Lepc.csv%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-SCR-Limb",
+   "title": "Limbu on Romenagri's pivot",
+   "area": "scripts",
+   "wave": 1,
+   "size": "S",
+   "status": "open",
+   "summary": "A table taking Romenagri's ACII pivot to Limbu and back, so every sutra can be read in Limbu. The round trip must be lossless on all 3,983 sutras.",
+   "outputs": [
+    "tables/romenagri/Limb.csv"
+   ],
+   "licence": "Our own table (CC0-1.0), derived from the Unicode Character Database, cited.",
+   "how": [
+    "Write tables/romenagri/<code>.csv with columns acii (hex, like A4) and char (the script's character or sequence), one row per ACII value the sutras use.",
+    "Derive each character from the Unicode Character Database by name; cite the version.",
+    "Run the acceptance command: every sutra's ACII must go to the script and come back unchanged."
+   ],
+   "command": "python3 -m tajziya packet check PKT-SCR-Limb",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-SCR-Limb%3A%20Limbu%20on%20Romenagri%27s%20pivot&body=I%20am%20taking%20packet%20PKT-SCR-Limb%3A%20Limbu%20on%20Romenagri%27s%20pivot.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-SCR-Limb%0AOutputs%3A%20tables/romenagri/Limb.csv%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-SCR-Mahj",
+   "title": "Mahajani on Romenagri's pivot",
+   "area": "scripts",
+   "wave": 1,
+   "size": "S",
+   "status": "open",
+   "summary": "A table taking Romenagri's ACII pivot to Mahajani and back, so every sutra can be read in Mahajani. The round trip must be lossless on all 3,983 sutras.",
+   "outputs": [
+    "tables/romenagri/Mahj.csv"
+   ],
+   "licence": "Our own table (CC0-1.0), derived from the Unicode Character Database, cited.",
+   "how": [
+    "Write tables/romenagri/<code>.csv with columns acii (hex, like A4) and char (the script's character or sequence), one row per ACII value the sutras use.",
+    "Derive each character from the Unicode Character Database by name; cite the version.",
+    "Run the acceptance command: every sutra's ACII must go to the script and come back unchanged."
+   ],
+   "command": "python3 -m tajziya packet check PKT-SCR-Mahj",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-SCR-Mahj%3A%20Mahajani%20on%20Romenagri%27s%20pivot&body=I%20am%20taking%20packet%20PKT-SCR-Mahj%3A%20Mahajani%20on%20Romenagri%27s%20pivot.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-SCR-Mahj%0AOutputs%3A%20tables/romenagri/Mahj.csv%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-SCR-Marc",
+   "title": "Marchen on Romenagri's pivot",
+   "area": "scripts",
+   "wave": 1,
+   "size": "S",
+   "status": "open",
+   "summary": "A table taking Romenagri's ACII pivot to Marchen and back, so every sutra can be read in Marchen. The round trip must be lossless on all 3,983 sutras.",
+   "outputs": [
+    "tables/romenagri/Marc.csv"
+   ],
+   "licence": "Our own table (CC0-1.0), derived from the Unicode Character Database, cited.",
+   "how": [
+    "Write tables/romenagri/<code>.csv with columns acii (hex, like A4) and char (the script's character or sequence), one row per ACII value the sutras use.",
+    "Derive each character from the Unicode Character Database by name; cite the version.",
+    "Run the acceptance command: every sutra's ACII must go to the script and come back unchanged."
+   ],
+   "command": "python3 -m tajziya packet check PKT-SCR-Marc",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-SCR-Marc%3A%20Marchen%20on%20Romenagri%27s%20pivot&body=I%20am%20taking%20packet%20PKT-SCR-Marc%3A%20Marchen%20on%20Romenagri%27s%20pivot.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-SCR-Marc%0AOutputs%3A%20tables/romenagri/Marc.csv%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-SCR-Modi",
+   "title": "Modi on Romenagri's pivot",
+   "area": "scripts",
+   "wave": 1,
+   "size": "S",
+   "status": "open",
+   "summary": "A table taking Romenagri's ACII pivot to Modi and back, so every sutra can be read in Modi. The round trip must be lossless on all 3,983 sutras.",
+   "outputs": [
+    "tables/romenagri/Modi.csv"
+   ],
+   "licence": "Our own table (CC0-1.0), derived from the Unicode Character Database, cited.",
+   "how": [
+    "Write tables/romenagri/<code>.csv with columns acii (hex, like A4) and char (the script's character or sequence), one row per ACII value the sutras use.",
+    "Derive each character from the Unicode Character Database by name; cite the version.",
+    "Run the acceptance command: every sutra's ACII must go to the script and come back unchanged."
+   ],
+   "command": "python3 -m tajziya packet check PKT-SCR-Modi",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-SCR-Modi%3A%20Modi%20on%20Romenagri%27s%20pivot&body=I%20am%20taking%20packet%20PKT-SCR-Modi%3A%20Modi%20on%20Romenagri%27s%20pivot.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-SCR-Modi%0AOutputs%3A%20tables/romenagri/Modi.csv%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-SCR-Mtei",
+   "title": "Meitei Mayek on Romenagri's pivot",
+   "area": "scripts",
+   "wave": 1,
+   "size": "S",
+   "status": "open",
+   "summary": "A table taking Romenagri's ACII pivot to Meitei Mayek and back, so every sutra can be read in Meitei Mayek. The round trip must be lossless on all 3,983 sutras.",
+   "outputs": [
+    "tables/romenagri/Mtei.csv"
+   ],
+   "licence": "Our own table (CC0-1.0), derived from the Unicode Character Database, cited.",
+   "how": [
+    "Write tables/romenagri/<code>.csv with columns acii (hex, like A4) and char (the script's character or sequence), one row per ACII value the sutras use.",
+    "Derive each character from the Unicode Character Database by name; cite the version.",
+    "Run the acceptance command: every sutra's ACII must go to the script and come back unchanged."
+   ],
+   "command": "python3 -m tajziya packet check PKT-SCR-Mtei",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-SCR-Mtei%3A%20Meitei%20Mayek%20on%20Romenagri%27s%20pivot&body=I%20am%20taking%20packet%20PKT-SCR-Mtei%3A%20Meitei%20Mayek%20on%20Romenagri%27s%20pivot.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-SCR-Mtei%0AOutputs%3A%20tables/romenagri/Mtei.csv%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-SCR-Mult",
+   "title": "Multani on Romenagri's pivot",
+   "area": "scripts",
+   "wave": 1,
+   "size": "S",
+   "status": "open",
+   "summary": "A table taking Romenagri's ACII pivot to Multani and back, so every sutra can be read in Multani. The round trip must be lossless on all 3,983 sutras.",
+   "outputs": [
+    "tables/romenagri/Mult.csv"
+   ],
+   "licence": "Our own table (CC0-1.0), derived from the Unicode Character Database, cited.",
+   "how": [
+    "Write tables/romenagri/<code>.csv with columns acii (hex, like A4) and char (the script's character or sequence), one row per ACII value the sutras use.",
+    "Derive each character from the Unicode Character Database by name; cite the version.",
+    "Run the acceptance command: every sutra's ACII must go to the script and come back unchanged."
+   ],
+   "command": "python3 -m tajziya packet check PKT-SCR-Mult",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-SCR-Mult%3A%20Multani%20on%20Romenagri%27s%20pivot&body=I%20am%20taking%20packet%20PKT-SCR-Mult%3A%20Multani%20on%20Romenagri%27s%20pivot.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-SCR-Mult%0AOutputs%3A%20tables/romenagri/Mult.csv%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-SCR-Nand",
+   "title": "Nandinagari on Romenagri's pivot",
+   "area": "scripts",
+   "wave": 1,
+   "size": "S",
+   "status": "open",
+   "summary": "A table taking Romenagri's ACII pivot to Nandinagari and back, so every sutra can be read in Nandinagari. The round trip must be lossless on all 3,983 sutras.",
+   "outputs": [
+    "tables/romenagri/Nand.csv"
+   ],
+   "licence": "Our own table (CC0-1.0), derived from the Unicode Character Database, cited.",
+   "how": [
+    "Write tables/romenagri/<code>.csv with columns acii (hex, like A4) and char (the script's character or sequence), one row per ACII value the sutras use.",
+    "Derive each character from the Unicode Character Database by name; cite the version.",
+    "Run the acceptance command: every sutra's ACII must go to the script and come back unchanged."
+   ],
+   "command": "python3 -m tajziya packet check PKT-SCR-Nand",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-SCR-Nand%3A%20Nandinagari%20on%20Romenagri%27s%20pivot&body=I%20am%20taking%20packet%20PKT-SCR-Nand%3A%20Nandinagari%20on%20Romenagri%27s%20pivot.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-SCR-Nand%0AOutputs%3A%20tables/romenagri/Nand.csv%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-SCR-Newa",
+   "title": "Newa, Newar, Newari on Romenagri's pivot",
+   "area": "scripts",
+   "wave": 1,
+   "size": "S",
+   "status": "open",
+   "summary": "A table taking Romenagri's ACII pivot to Newa, Newar, Newari and back, so every sutra can be read in Newa, Newar, Newari. The round trip must be lossless on all 3,983 sutras.",
+   "outputs": [
+    "tables/romenagri/Newa.csv"
+   ],
+   "licence": "Our own table (CC0-1.0), derived from the Unicode Character Database, cited.",
+   "how": [
+    "Write tables/romenagri/<code>.csv with columns acii (hex, like A4) and char (the script's character or sequence), one row per ACII value the sutras use.",
+    "Derive each character from the Unicode Character Database by name; cite the version.",
+    "Run the acceptance command: every sutra's ACII must go to the script and come back unchanged."
+   ],
+   "command": "python3 -m tajziya packet check PKT-SCR-Newa",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-SCR-Newa%3A%20Newa%2C%20Newar%2C%20Newari%20on%20Romenagri%27s%20pivot&body=I%20am%20taking%20packet%20PKT-SCR-Newa%3A%20Newa%2C%20Newar%2C%20Newari%20on%20Romenagri%27s%20pivot.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-SCR-Newa%0AOutputs%3A%20tables/romenagri/Newa.csv%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-SCR-Phag",
+   "title": "Phags-pa on Romenagri's pivot",
+   "area": "scripts",
+   "wave": 1,
+   "size": "S",
+   "status": "open",
+   "summary": "A table taking Romenagri's ACII pivot to Phags-pa and back, so every sutra can be read in Phags-pa. The round trip must be lossless on all 3,983 sutras.",
+   "outputs": [
+    "tables/romenagri/Phag.csv"
+   ],
+   "licence": "Our own table (CC0-1.0), derived from the Unicode Character Database, cited.",
+   "how": [
+    "Write tables/romenagri/<code>.csv with columns acii (hex, like A4) and char (the script's character or sequence), one row per ACII value the sutras use.",
+    "Derive each character from the Unicode Character Database by name; cite the version.",
+    "Run the acceptance command: every sutra's ACII must go to the script and come back unchanged."
+   ],
+   "command": "python3 -m tajziya packet check PKT-SCR-Phag",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-SCR-Phag%3A%20Phags-pa%20on%20Romenagri%27s%20pivot&body=I%20am%20taking%20packet%20PKT-SCR-Phag%3A%20Phags-pa%20on%20Romenagri%27s%20pivot.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-SCR-Phag%0AOutputs%3A%20tables/romenagri/Phag.csv%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-SCR-Saur",
+   "title": "Saurashtra on Romenagri's pivot",
+   "area": "scripts",
+   "wave": 1,
+   "size": "S",
+   "status": "open",
+   "summary": "A table taking Romenagri's ACII pivot to Saurashtra and back, so every sutra can be read in Saurashtra. The round trip must be lossless on all 3,983 sutras.",
+   "outputs": [
+    "tables/romenagri/Saur.csv"
+   ],
+   "licence": "Our own table (CC0-1.0), derived from the Unicode Character Database, cited.",
+   "how": [
+    "Write tables/romenagri/<code>.csv with columns acii (hex, like A4) and char (the script's character or sequence), one row per ACII value the sutras use.",
+    "Derive each character from the Unicode Character Database by name; cite the version.",
+    "Run the acceptance command: every sutra's ACII must go to the script and come back unchanged."
+   ],
+   "command": "python3 -m tajziya packet check PKT-SCR-Saur",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-SCR-Saur%3A%20Saurashtra%20on%20Romenagri%27s%20pivot&body=I%20am%20taking%20packet%20PKT-SCR-Saur%3A%20Saurashtra%20on%20Romenagri%27s%20pivot.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-SCR-Saur%0AOutputs%3A%20tables/romenagri/Saur.csv%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-SCR-Shrd",
+   "title": "Sharada on Romenagri's pivot",
+   "area": "scripts",
+   "wave": 1,
+   "size": "S",
+   "status": "open",
+   "summary": "A table taking Romenagri's ACII pivot to Sharada and back, so every sutra can be read in Sharada. The round trip must be lossless on all 3,983 sutras.",
+   "outputs": [
+    "tables/romenagri/Shrd.csv"
+   ],
+   "licence": "Our own table (CC0-1.0), derived from the Unicode Character Database, cited.",
+   "how": [
+    "Write tables/romenagri/<code>.csv with columns acii (hex, like A4) and char (the script's character or sequence), one row per ACII value the sutras use.",
+    "Derive each character from the Unicode Character Database by name; cite the version.",
+    "Run the acceptance command: every sutra's ACII must go to the script and come back unchanged."
+   ],
+   "command": "python3 -m tajziya packet check PKT-SCR-Shrd",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-SCR-Shrd%3A%20Sharada%20on%20Romenagri%27s%20pivot&body=I%20am%20taking%20packet%20PKT-SCR-Shrd%3A%20Sharada%20on%20Romenagri%27s%20pivot.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-SCR-Shrd%0AOutputs%3A%20tables/romenagri/Shrd.csv%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-SCR-Sidd",
+   "title": "Siddham on Romenagri's pivot",
+   "area": "scripts",
+   "wave": 1,
+   "size": "S",
+   "status": "open",
+   "summary": "A table taking Romenagri's ACII pivot to Siddham and back, so every sutra can be read in Siddham. The round trip must be lossless on all 3,983 sutras.",
+   "outputs": [
+    "tables/romenagri/Sidd.csv"
+   ],
+   "licence": "Our own table (CC0-1.0), derived from the Unicode Character Database, cited.",
+   "how": [
+    "Write tables/romenagri/<code>.csv with columns acii (hex, like A4) and char (the script's character or sequence), one row per ACII value the sutras use.",
+    "Derive each character from the Unicode Character Database by name; cite the version.",
+    "Run the acceptance command: every sutra's ACII must go to the script and come back unchanged."
+   ],
+   "command": "python3 -m tajziya packet check PKT-SCR-Sidd",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-SCR-Sidd%3A%20Siddham%20on%20Romenagri%27s%20pivot&body=I%20am%20taking%20packet%20PKT-SCR-Sidd%3A%20Siddham%20on%20Romenagri%27s%20pivot.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-SCR-Sidd%0AOutputs%3A%20tables/romenagri/Sidd.csv%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-SCR-Sind",
+   "title": "Khudawadi, Sindhi on Romenagri's pivot",
+   "area": "scripts",
+   "wave": 1,
+   "size": "S",
+   "status": "open",
+   "summary": "A table taking Romenagri's ACII pivot to Khudawadi, Sindhi and back, so every sutra can be read in Khudawadi, Sindhi. The round trip must be lossless on all 3,983 sutras.",
+   "outputs": [
+    "tables/romenagri/Sind.csv"
+   ],
+   "licence": "Our own table (CC0-1.0), derived from the Unicode Character Database, cited.",
+   "how": [
+    "Write tables/romenagri/<code>.csv with columns acii (hex, like A4) and char (the script's character or sequence), one row per ACII value the sutras use.",
+    "Derive each character from the Unicode Character Database by name; cite the version.",
+    "Run the acceptance command: every sutra's ACII must go to the script and come back unchanged."
+   ],
+   "command": "python3 -m tajziya packet check PKT-SCR-Sind",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-SCR-Sind%3A%20Khudawadi%2C%20Sindhi%20on%20Romenagri%27s%20pivot&body=I%20am%20taking%20packet%20PKT-SCR-Sind%3A%20Khudawadi%2C%20Sindhi%20on%20Romenagri%27s%20pivot.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-SCR-Sind%0AOutputs%3A%20tables/romenagri/Sind.csv%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-SCR-Soyo",
+   "title": "Soyombo on Romenagri's pivot",
+   "area": "scripts",
+   "wave": 1,
+   "size": "S",
+   "status": "open",
+   "summary": "A table taking Romenagri's ACII pivot to Soyombo and back, so every sutra can be read in Soyombo. The round trip must be lossless on all 3,983 sutras.",
+   "outputs": [
+    "tables/romenagri/Soyo.csv"
+   ],
+   "licence": "Our own table (CC0-1.0), derived from the Unicode Character Database, cited.",
+   "how": [
+    "Write tables/romenagri/<code>.csv with columns acii (hex, like A4) and char (the script's character or sequence), one row per ACII value the sutras use.",
+    "Derive each character from the Unicode Character Database by name; cite the version.",
+    "Run the acceptance command: every sutra's ACII must go to the script and come back unchanged."
+   ],
+   "command": "python3 -m tajziya packet check PKT-SCR-Soyo",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-SCR-Soyo%3A%20Soyombo%20on%20Romenagri%27s%20pivot&body=I%20am%20taking%20packet%20PKT-SCR-Soyo%3A%20Soyombo%20on%20Romenagri%27s%20pivot.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-SCR-Soyo%0AOutputs%3A%20tables/romenagri/Soyo.csv%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-SCR-Sylo",
+   "title": "Syloti Nagri on Romenagri's pivot",
+   "area": "scripts",
+   "wave": 1,
+   "size": "S",
+   "status": "open",
+   "summary": "A table taking Romenagri's ACII pivot to Syloti Nagri and back, so every sutra can be read in Syloti Nagri. The round trip must be lossless on all 3,983 sutras.",
+   "outputs": [
+    "tables/romenagri/Sylo.csv"
+   ],
+   "licence": "Our own table (CC0-1.0), derived from the Unicode Character Database, cited.",
+   "how": [
+    "Write tables/romenagri/<code>.csv with columns acii (hex, like A4) and char (the script's character or sequence), one row per ACII value the sutras use.",
+    "Derive each character from the Unicode Character Database by name; cite the version.",
+    "Run the acceptance command: every sutra's ACII must go to the script and come back unchanged."
+   ],
+   "command": "python3 -m tajziya packet check PKT-SCR-Sylo",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-SCR-Sylo%3A%20Syloti%20Nagri%20on%20Romenagri%27s%20pivot&body=I%20am%20taking%20packet%20PKT-SCR-Sylo%3A%20Syloti%20Nagri%20on%20Romenagri%27s%20pivot.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-SCR-Sylo%0AOutputs%3A%20tables/romenagri/Sylo.csv%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-SCR-Takr",
+   "title": "Takri on Romenagri's pivot",
+   "area": "scripts",
+   "wave": 1,
+   "size": "S",
+   "status": "open",
+   "summary": "A table taking Romenagri's ACII pivot to Takri and back, so every sutra can be read in Takri. The round trip must be lossless on all 3,983 sutras.",
+   "outputs": [
+    "tables/romenagri/Takr.csv"
+   ],
+   "licence": "Our own table (CC0-1.0), derived from the Unicode Character Database, cited.",
+   "how": [
+    "Write tables/romenagri/<code>.csv with columns acii (hex, like A4) and char (the script's character or sequence), one row per ACII value the sutras use.",
+    "Derive each character from the Unicode Character Database by name; cite the version.",
+    "Run the acceptance command: every sutra's ACII must go to the script and come back unchanged."
+   ],
+   "command": "python3 -m tajziya packet check PKT-SCR-Takr",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-SCR-Takr%3A%20Takri%20on%20Romenagri%27s%20pivot&body=I%20am%20taking%20packet%20PKT-SCR-Takr%3A%20Takri%20on%20Romenagri%27s%20pivot.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-SCR-Takr%0AOutputs%3A%20tables/romenagri/Takr.csv%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-SCR-Tibt",
+   "title": "Tibetan on Romenagri's pivot",
+   "area": "scripts",
+   "wave": 1,
+   "size": "S",
+   "status": "open",
+   "summary": "A table taking Romenagri's ACII pivot to Tibetan and back, so every sutra can be read in Tibetan. The round trip must be lossless on all 3,983 sutras.",
+   "outputs": [
+    "tables/romenagri/Tibt.csv"
+   ],
+   "licence": "Our own table (CC0-1.0), derived from the Unicode Character Database, cited.",
+   "how": [
+    "Write tables/romenagri/<code>.csv with columns acii (hex, like A4) and char (the script's character or sequence), one row per ACII value the sutras use.",
+    "Derive each character from the Unicode Character Database by name; cite the version.",
+    "Run the acceptance command: every sutra's ACII must go to the script and come back unchanged."
+   ],
+   "command": "python3 -m tajziya packet check PKT-SCR-Tibt",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-SCR-Tibt%3A%20Tibetan%20on%20Romenagri%27s%20pivot&body=I%20am%20taking%20packet%20PKT-SCR-Tibt%3A%20Tibetan%20on%20Romenagri%27s%20pivot.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-SCR-Tibt%0AOutputs%3A%20tables/romenagri/Tibt.csv%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-SCR-Tirh",
+   "title": "Tirhuta on Romenagri's pivot",
+   "area": "scripts",
+   "wave": 1,
+   "size": "S",
+   "status": "open",
+   "summary": "A table taking Romenagri's ACII pivot to Tirhuta and back, so every sutra can be read in Tirhuta. The round trip must be lossless on all 3,983 sutras.",
+   "outputs": [
+    "tables/romenagri/Tirh.csv"
+   ],
+   "licence": "Our own table (CC0-1.0), derived from the Unicode Character Database, cited.",
+   "how": [
+    "Write tables/romenagri/<code>.csv with columns acii (hex, like A4) and char (the script's character or sequence), one row per ACII value the sutras use.",
+    "Derive each character from the Unicode Character Database by name; cite the version.",
+    "Run the acceptance command: every sutra's ACII must go to the script and come back unchanged."
+   ],
+   "command": "python3 -m tajziya packet check PKT-SCR-Tirh",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-SCR-Tirh%3A%20Tirhuta%20on%20Romenagri%27s%20pivot&body=I%20am%20taking%20packet%20PKT-SCR-Tirh%3A%20Tirhuta%20on%20Romenagri%27s%20pivot.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-SCR-Tirh%0AOutputs%3A%20tables/romenagri/Tirh.csv%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-SCR-Tutg",
+   "title": "Tulu-Tigalari on Romenagri's pivot",
+   "area": "scripts",
+   "wave": 1,
+   "size": "S",
+   "status": "open",
+   "summary": "A table taking Romenagri's ACII pivot to Tulu-Tigalari and back, so every sutra can be read in Tulu-Tigalari. The round trip must be lossless on all 3,983 sutras.",
+   "outputs": [
+    "tables/romenagri/Tutg.csv"
+   ],
+   "licence": "Our own table (CC0-1.0), derived from the Unicode Character Database, cited.",
+   "how": [
+    "Write tables/romenagri/<code>.csv with columns acii (hex, like A4) and char (the script's character or sequence), one row per ACII value the sutras use.",
+    "Derive each character from the Unicode Character Database by name; cite the version.",
+    "Run the acceptance command: every sutra's ACII must go to the script and come back unchanged."
+   ],
+   "command": "python3 -m tajziya packet check PKT-SCR-Tutg",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-SCR-Tutg%3A%20Tulu-Tigalari%20on%20Romenagri%27s%20pivot&body=I%20am%20taking%20packet%20PKT-SCR-Tutg%3A%20Tulu-Tigalari%20on%20Romenagri%27s%20pivot.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-SCR-Tutg%0AOutputs%3A%20tables/romenagri/Tutg.csv%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-SCR-Zanb",
+   "title": "Zanabazar Square on Romenagri's pivot",
+   "area": "scripts",
+   "wave": 1,
+   "size": "S",
+   "status": "open",
+   "summary": "A table taking Romenagri's ACII pivot to Zanabazar Square and back, so every sutra can be read in Zanabazar Square. The round trip must be lossless on all 3,983 sutras.",
+   "outputs": [
+    "tables/romenagri/Zanb.csv"
+   ],
+   "licence": "Our own table (CC0-1.0), derived from the Unicode Character Database, cited.",
+   "how": [
+    "Write tables/romenagri/<code>.csv with columns acii (hex, like A4) and char (the script's character or sequence), one row per ACII value the sutras use.",
+    "Derive each character from the Unicode Character Database by name; cite the version.",
+    "Run the acceptance command: every sutra's ACII must go to the script and come back unchanged."
+   ],
+   "command": "python3 -m tajziya packet check PKT-SCR-Zanb",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-SCR-Zanb%3A%20Zanabazar%20Square%20on%20Romenagri%27s%20pivot&body=I%20am%20taking%20packet%20PKT-SCR-Zanb%3A%20Zanabazar%20Square%20on%20Romenagri%27s%20pivot.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-SCR-Zanb%0AOutputs%3A%20tables/romenagri/Zanb.csv%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-TRN-01",
+   "title": "the English meaning (sutrartha)",
+   "area": "translation",
+   "wave": 1,
+   "size": "S",
+   "status": "open",
+   "summary": "Import the English meaning (sutrartha) for the 838 sutras the source covers, keyed by sutra number.",
+   "outputs": [
+    "modules/cls/data/translation/english.tsv",
+    "modules/cls/data/SOURCES.json"
+   ],
+   "licence": "ashtadhyayi.com's terms: use with credit (LicenseRef-ashtadhyayi-com; the notice is in modules/cls/data/LICENSES/ashtadhyayi-com.txt). The underlying work's own status is recorded too: a modern author's work enters the tree only on the owner's ruling.",
+   "how": [
+    "Download the file at the pinned commit; record its sha256.",
+    "Write a deterministic import script in tools/ that keys each entry by sutra number (a.p.n) and writes id and text, NFC, one row per sutra.",
+    "Add a source to modules/cls/data/SOURCES.json pinning the TSV you wrote, with the terms.",
+    "Run the acceptance command; open a pull request when it passes."
+   ],
+   "command": "python3 -m tajziya packet check PKT-TRN-01",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-TRN-01%3A%20the%20English%20meaning%20%28sutrartha%29&body=I%20am%20taking%20packet%20PKT-TRN-01%3A%20the%20English%20meaning%20%28sutrartha%29.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-TRN-01%0AOutputs%3A%20modules/cls/data/translation/english.tsv%2C%20modules/cls/data/SOURCES.json%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-TRN-02",
+   "title": "Śrīśa Chandra Vasu's English translation",
+   "area": "translation",
+   "wave": 1,
+   "size": "S",
+   "status": "open",
+   "summary": "Import Śrīśa Chandra Vasu's English translation for the 3983 sutras the source covers, keyed by sutra number.",
+   "outputs": [
+    "modules/cls/data/translation/vasu.tsv",
+    "modules/cls/data/SOURCES.json"
+   ],
+   "licence": "ashtadhyayi.com's terms: use with credit (LicenseRef-ashtadhyayi-com; the notice is in modules/cls/data/LICENSES/ashtadhyayi-com.txt). The underlying work's own status is recorded too: a modern author's work enters the tree only on the owner's ruling.",
+   "how": [
+    "Download the file at the pinned commit; record its sha256.",
+    "Write a deterministic import script in tools/ that keys each entry by sutra number (a.p.n) and writes id and text, NFC, one row per sutra.",
+    "Add a source to modules/cls/data/SOURCES.json pinning the TSV you wrote, with the terms.",
+    "Record in the source who Vasu was, when the translation was published and its copyright status, with a citation for each.",
+    "Run the acceptance command; open a pull request when it passes."
+   ],
+   "command": "python3 -m tajziya packet check PKT-TRN-02",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-TRN-02%3A%20%C5%9Ar%C4%AB%C5%9Ba%20Chandra%20Vasu%27s%20English%20translation&body=I%20am%20taking%20packet%20PKT-TRN-02%3A%20%C5%9Ar%C4%AB%C5%9Ba%20Chandra%20Vasu%27s%20English%20translation.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-TRN-02%0AOutputs%3A%20modules/cls/data/translation/vasu.tsv%2C%20modules/cls/data/SOURCES.json%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  },
+  {
+   "id": "PKT-TRN-03",
+   "title": "the Sanskrit meaning (artha)",
+   "area": "translation",
+   "wave": 1,
+   "size": "S",
+   "status": "open",
+   "summary": "Import the Sanskrit meaning (artha) for the 3983 sutras the source covers, keyed by sutra number.",
+   "outputs": [
+    "modules/cls/data/translation/sanskrit-artha.tsv",
+    "modules/cls/data/SOURCES.json"
+   ],
+   "licence": "ashtadhyayi.com's terms: use with credit (LicenseRef-ashtadhyayi-com; the notice is in modules/cls/data/LICENSES/ashtadhyayi-com.txt). The underlying work's own status is recorded too: a modern author's work enters the tree only on the owner's ruling.",
+   "how": [
+    "Download the file at the pinned commit; record its sha256.",
+    "Write a deterministic import script in tools/ that keys each entry by sutra number (a.p.n) and writes id and text, NFC, one row per sutra.",
+    "Add a source to modules/cls/data/SOURCES.json pinning the TSV you wrote, with the terms.",
+    "Run the acceptance command; open a pull request when it passes."
+   ],
+   "command": "python3 -m tajziya packet check PKT-TRN-03",
+   "claim": "https://github.com/zistgah/tajziya/issues/new?title=Claim%20PKT-TRN-03%3A%20the%20Sanskrit%20meaning%20%28artha%29&body=I%20am%20taking%20packet%20PKT-TRN-03%3A%20the%20Sanskrit%20meaning%20%28artha%29.%0A%0AAcceptance%3A%20python3%20-m%20tajziya%20packet%20check%20PKT-TRN-03%0AOutputs%3A%20modules/cls/data/translation/sanskrit-artha.tsv%2C%20modules/cls/data/SOURCES.json%0A%0AI%20will%20open%20a%20pull%20request%20when%20the%20command%20passes."
+  }
+ ]
+}

@@ -1,0 +1,33 @@
+{
+ "schema": "tajziya.packet/1",
+ "id": "PKT-COR-vsn",
+ "title": "A test corpus for Vedic Sanskrit",
+ "area": "corpus",
+ "wave": 1,
+ "size": "L",
+ "status": "open",
+ "summary": "Attested text in Vedic Sanskrit with its analyses from the sources themselves, to measure the parser against. The rules are CORPUS.md's: retrieve, never recall; gold only from the source; exact counts.",
+ "inputs": [
+  {
+   "what": "candidate sources",
+   "where": "registry/corpora.json, node vsn"
+  }
+ ],
+ "outputs": [
+  "corpus/vsn/"
+ ],
+ "licence": "registry/licences.json decides; restricted sources stay local-only, pinned.",
+ "acceptance": {
+  "kind": "corpus",
+  "args": {
+   "node": "vsn"
+  },
+  "command": "python3 -m tajziya packet check PKT-COR-vsn"
+ },
+ "depends": [],
+ "how": [
+  "Read CORPUS.md for the unit schema and the rules.",
+  "Build corpus/vsn/: units.jsonl, SOURCES.json, README.md stating 'units: N', LICENSES/.",
+  "Run the acceptance command."
+ ]
+}

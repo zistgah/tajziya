@@ -70,6 +70,14 @@ th{font-weight:600;font-size:14px;color:var(--mute)}
 footer{border-top:1px solid var(--rule);margin-top:56px;padding-top:16px;font-size:14px;color:var(--mute)}
 @media (max-width:640px){h1{font-size:34px}.lin{grid-template-columns:1fr}.lin .ln{padding-top:0}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+.pk{margin:18px 0 6px}.pk .chips{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.pk .chips button{font:inherit;font-size:14px;padding:4px 10px;border:1px solid var(--rule);border-radius:14px;background:var(--card);color:inherit;cursor:pointer}
+.pk .chips button.on{border-color:var(--gold);color:var(--gold)}
+.pkl{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px}
+.pkc{background:var(--card);border:1px solid var(--rule);border-radius:6px;padding:12px 14px}
+.pkc h3{font-size:16px;margin:2px 0 6px}.pkc .meta{font-size:13px;color:var(--mute)}
+.pkc code{font-size:12px;word-break:break-all}.pkc a.claim{display:inline-block;margin-top:8px;font-weight:600}
+.also li{margin:6px 0}
 </style>
 <script type="importmap">{"imports":{"./vendor/rules.js":"./vendor/rules.browser.js"}}</script>
 </head>
@@ -80,6 +88,22 @@ footer{border-top:1px solid var(--rule);margin-top:56px;padding-top:16px;font-si
   <div class="counts" id="counts">Loading the registry.</div>
 </div></header>
 <main>
+<section class="pk" id="packets">
+  <h2>Pick up a work packet</h2>
+  <p class="lede">tajziya is built in small packets that any AI or any person can take. Each packet names its inputs, the files it must produce, its licence rule, and one command that decides whether it is done. A pull request that passes that command and the gate is merged: nobody has to read it to judge it.</p>
+  <p class="lede">To take one: follow its claim link, which opens an issue saying you have it. Work in a fork. Run the command shown on the packet. Open a pull request when it passes. The rules are in <a href="https://github.com/zistgah/tajziya/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a>.</p>
+  <div class="chips" id="pk-areas"></div>
+  <div class="pkl" id="pk-list">Loading the packets.</div>
+</section>
+<section class="also">
+  <h2>Also here</h2>
+  <ul>
+    <li><a href="review.html">The sutra review</a>: all 3,983 sutras of the Aṣṭādhyāyī with their type, term, padaccheda and Romenagri form, the ones two sources disagree on, and an issue link on every sutra.</li>
+    <li id="pk-cov">Every language and script the ILM explorer shows, as coverage nodes and script frames.</li>
+    <li>The language and script packages: <code>python3 tools/langpack.py --everything --tar --bundle</code> builds and accepts all of them.</li>
+  </ul>
+</section>
+
   <h2>The candidate languages, by family</h2>
   <p class="lede">Every row of the candidate language matrix, as a node: a language at a stage, in declared scripts, holding a declared corpus. The colour is the matrix's own status. Select one to see its layers and what it would take to build them.</p>
   <div class="key">
@@ -181,6 +205,27 @@ function run() {
 }
 $("f").onsubmit = (ev) => { ev.preventDefault(); run(); };
 run();
+</script>
+<script>
+(async () => {
+  const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+  let d; try { d = await (await fetch("data/packets.json")).json(); } catch (e) { document.getElementById("pk-list").textContent = "The packets could not be loaded."; return; }
+  const c = d.coverage; document.getElementById("pk-cov").textContent = `Every language and script the ILM explorer shows: ${c.languages.toLocaleString()} languages beyond the ${c.poster_nodes} poster nodes, and ${c.scripts} scripts, each refusing by name until a module is built.`;
+  const areas = [...new Set(d.packets.map(p => p.area))];
+  let pick = "all";
+  const chips = document.getElementById("pk-areas");
+  const draw = () => {
+    const ps = d.packets.filter(p => pick === "all" || p.area === pick).sort((a, b) => a.wave - b.wave || a.id.localeCompare(b.id));
+    document.getElementById("pk-list").innerHTML = ps.map(p => `<div class="pkc"><div class="meta">${esc(p.id)} · ${esc(p.area)} · size ${esc(p.size)} · wave ${p.wave} · <strong>${esc(p.status)}</strong></div>
+      <h3>${esc(p.title)}</h3><div>${esc(p.summary)}</div><div class="meta">Produces: ${p.outputs.map(esc).join(", ")}</div>
+      <div class="meta">Done when this passes: <code>${esc(p.command)}</code></div>
+      ${p.status === "open" ? `<a class="claim" href="${esc(p.claim)}" target="_blank" rel="noopener">Claim this packet</a>` : ""}</div>`).join("");
+    chips.querySelectorAll("button").forEach(b => b.classList.toggle("on", b.dataset.a === pick));
+  };
+  chips.innerHTML = ["all", ...areas].map(a => `<button data-a="${esc(a)}">${esc(a)} (${a === "all" ? d.packets.length : d.packets.filter(p => p.area === a).length})</button>`).join("");
+  chips.onclick = e => { if (e.target.dataset.a) { pick = e.target.dataset.a; draw(); } };
+  draw();
+})();
 </script>
 </body>
 </html>

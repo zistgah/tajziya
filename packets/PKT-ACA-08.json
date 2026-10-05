@@ -1,0 +1,46 @@
+{
+ "schema": "tajziya.packet/1",
+ "id": "PKT-ACA-08",
+ "title": "Index computational models of Pāṇini (vidyut, the Sanskrit Heritage Platform and others)",
+ "area": "interpretation-academic",
+ "wave": 1,
+ "size": "M",
+ "status": "open",
+ "summary": "A per-sutra index to computational models of Pāṇini (vidyut, the Sanskrit Heritage Platform and others): where it treats each sutra, and a summary in our own words of what it says. The work's own text is never copied.",
+ "inputs": [
+  {
+   "what": "computational models of Pāṇini (vidyut, the Sanskrit Heritage Platform and others)",
+   "where": "the published work, cited"
+  }
+ ],
+ "outputs": [
+  "modules/cls/data/academic/computational.tsv",
+  "modules/cls/data/SOURCES.json"
+ ],
+ "licence": "Our own index and summaries (CC-BY-SA-4.0); the work is cited, never reproduced.",
+ "acceptance": {
+  "kind": "sutra-table",
+  "args": {
+   "path": "modules/cls/data/academic/computational.tsv",
+   "columns": [
+    "id",
+    "locator",
+    "summary"
+   ],
+   "min_rows": 1,
+   "multi": true,
+   "own_work": true,
+   "max_chars": {
+    "summary": 400
+   },
+   "source_id": "academic-computational"
+  },
+  "command": "python3 -m tajziya packet check PKT-ACA-08"
+ },
+ "depends": [],
+ "how": [
+  "Record the work's full citation in a source with a 'citation' field.",
+  "One row per place the work treats a sutra: id, locator (volume and page), a summary of at most 400 characters.",
+  "Run the acceptance command."
+ ]
+}

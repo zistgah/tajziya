@@ -113,6 +113,11 @@ def main(argv=None):
     rc.add_argument("--json", action="store_true")
     ru = sub.add_parser("rules", help="the sutra compilation, when a pinned local copy exists")
     ru.add_argument("--node", default="cls")
+    pk = sub.add_parser("packet", help="work packets: list them, or run a packet's acceptance check")
+    pk.add_argument("action", choices=("list", "check"))
+    pk.add_argument("ids", nargs="*")
+    pk.add_argument("--all", action="store_true")
+    pk.add_argument("--changed", metavar="BASE", help="check the packets a change since BASE touches")
     cv = sub.add_parser("coverage", help="the ILM registry's languages and scripts: counts and conformance")
     cv.add_argument("--sample", type=int, help="judge every n-th coverage language")
     cv.add_argument("--script", action="append", help="judge only this script (repeatable)")
@@ -215,6 +220,29 @@ def main(argv=None):
         return 0
     if a.verb == "data":
         return _data_import(reg, a)
+    if a.verb == "packet":
+        from . import packets
+        allp = packets.all_packets()
+        if a.action == "list":
+            for pid, x in allp.items():
+                print(f"{pid:22} {x['status']:9} {x['area']:26} {x['title']}")
+            return 0
+        ids = list(allp) if a.all else (packets.changed(a.changed) if a.changed else a.ids)
+        if not ids:
+            print("packet: nothing to check"); return 0
+        worst = 0
+        for pid in ids:
+            if pid not in allp:
+                print(f"FAIL     {pid}: no such packet"); worst = 1; continue
+            if a.all and allp[pid]["status"] != "done":
+                probs = packets.problems(allp[pid])
+                state = "FAIL" if probs else "PASS"
+                print(f"{state:8} {pid}: well formed" + ("" if not probs else ": " + "; ".join(probs))); worst = max(worst, 1 if probs else 0)
+                continue
+            state, probs = packets.check(pid, allp)
+            print(f"{state:8} {pid}" + ("" if not probs else ": " + "; ".join(probs[:3])))
+            worst = max(worst, {"PASS": 0, "FAIL": 1, "UNJUDGED": 0}[state])
+        return worst
     if a.verb == "coverage":
         failed = []
         if not a.script and not a.scripts_only:

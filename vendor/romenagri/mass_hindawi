@@ -1,0 +1,48 @@
+for n in $(find . -type f | grep '\.[ch]$'); do cat $n | c2h | acii2uni | iconv -futf16 -tutf8 | awk 'BEGIN {print "<शैली गुरु>"};{print}' > $n.uhin; done
+
+for n in $(find . -type f | grep '\.[ch]\.uhin$'); do cat $n > $(echo $n | sed 's/\.uhin$//g'); done
+
+#cat main.c.uhin | tail +2 | iconv -futf8 -tutf16 | uni2acii | acii2pcf | h2c > main.c.test
+
+for n in $(find . -type f | grep '\.[ch]\.uhin$'); do cat $n | tail +2 | iconv -futf8 -tutf16 | uni2acii | acii2pcf | h2c > $(echo $n | sed 's/uhin$/test/g') && echo Comparing $(echo $n | sed 's/\.uhin$//g') $(echo $n | sed 's/uhin$/test/g') ... && diff -b $(echo $n | sed 's/\.uhin$//g') $(echo $n | sed 's/uhin$/test/g'); done
+
+echo 'trace_kvm_run_exit(cpu->cpu_index, run->exit_reason);' | c2h | acii2uni | iconv -futf16 -tutf8
+echo 'traceअ्kvmअ्run_निकास(cpu->cpuअ्index, run->निकासअ्reason);' | iconv -futf8 -tutf16 | uni2acii | acii2pcf | h2c
+
+#TBD: Bug in flex or wrong grammar?
+echo 'trace_kvm_run_exit(cpu->cpu_index, run->exit_reason); SIG_DFL' | c2h | c2h | acii2uni | iconv -futf16 -tutf8
+echo 'traceअ्kvmअ्run_निकास(cpu->cpuअ्index, run->निकासअ्reason); संक_पूर्व' | iconv -futf8 -tutf16 | uni2acii | acii2pcf | h2c
+
+
+#After fixing rmn2acii
+echo 'trace_kvm_run_exit(cpu->cpu_index, ""run->exit_reason"" "नमस्ते" "aनमस्ते" "नमaस्ते" "नमस्तेa" नमस्ते" "aनमस्ते" "नमaस्ते" "नमस्तेa); SIG_DFL नमस्ते" aनमस्ते नमaस्ते नमस्तेa' | iconv -futf8 -tutf16 | uni2acii | acii2rmn | acii2rmn | rmn2acii | rmn2acii | acii2uni | iconv -futf16 -tutf8
+
+---------------
+find $(pwd) -type f | grep -v '\.test$\|\.uhin$\|\.c$\|\.h$\|\.bmp$\|\.svg$\|\.png$' | awk -F. '{print $NF}' | xargs -n1 basename | sort -u >file_types
+
+#Dictionary based C to H
+cat stack_using_linked_lists.c.uhin | sed 's/\\n//g; s/[^a-z^A-Z]/ /g;' | tr -s ' ' | sed 's/\ \ +/\n/g; s/^\ *\|\ *$//g;' | sort -ru | awk '{if(length($0)>1) printf "s/"$0"/"; system("echo trans -show-alternatives n -b -s en -t hi \"" $0 "\"");}' | sed 's/$/\/g;/g;
+
+#Makefile rule - does not work - make this TBD // till then just replace the c files and call hincc
+%.c : %.c.uhin
+	cat $< | tail +2 | iconv -futf8 -tutf16 | uni2acii | acii2pcf | h2c |\
+	 awk 'BEGIN {print "/*Generated from Hindawi Programming System*/"};{print}'> $@
+
+for n in $(find . -type f | grep '\.[ch]\.uhin$'); do cat $n | tail +2 | iconv -futf8 -tutf16 | uni2acii | acii2pcf | h2c | awk 'BEGIN {print "/*Generated from Hindawi Programming System*/"};{print}' > $(echo $n | sed 's/\.uhin$//g'); done
+
+#Integrate with the online translation and lookup process - TBD local MLT
+cat variance.c | ./get_comms | sed 's/^\ *\|\ *$//g;' | tr -s '\n' | sort -u | awk '{if(length($0)>1) printf "s/"$0"/"; system("trans -e aspell -no-warn -b -s en -t hi \"" $0 "\"");}' | sed 's/$/\/g;/g;' | awk 'BEGIN {printf "sed -i \""};/.*/ {printf $0 " "};END {printf "\" variance.c"}' >variance.c.tr_hi
+. ./variance.c.tr_hi
+
+cat qr_eigen_values.c.uhin | tr '$!"#%&()*+,-./:;<=>?@[\\]^_|' ' ' | tr ' ' '\n' | sort -u | grep -i '[a-z]' | iconv -futf8 -tutf16 | uni2acii | acii2pcf | h2c | sed 's/[^A-Z^a-z^0-9]/ /g;' | tr ' ' '\n' | sort -u | awk '{printf "s/"$0"/"; system("trans -no-warn -b -s en -t hi \"" $0 "\"");}' | sed 's/$/\/g;/g;'
+
+for n in $(find . -type f | grep '\.[ch]\.uhin$'); do cat $n | tr '$!"#%&()*+,-./:;<=>?@[\\]^_|' ' ' | tr ' ' '\n' | sort -u | grep -i '[a-z]' | iconv -futf8 -tutf16 | uni2acii | acii2pcf | h2c | sed 's/[^A-Z^a-z^0-9]/ /g;' | tr ' ' '\n' | sort -u | awk '{printf "s/"$0"/"; system("trans -no-warn -b -s en -t hi \"" $0 "\"");}' | sed 's/$/\/g;/g;'; done
+
+for n in $(find . -type f | grep '\.[ch]\.uhin$'); do cat $n | tr '$!"#%&()*+,-./:;<=>?@[\\]^_|' ' ' | tr ' ' '\n' | sort -u | grep -i '[a-z]' | iconv -futf8 -tutf16 | uni2acii | acii2pcf | h2c | sed 's/[^A-Z^a-z^0-9]/ /g;' | tr ' ' '\n' | sort -u ; done
+
+for n in $(find . -type f | grep '\.[ch]\.uhin$'); do cat $n | tr '$!"#%&()*+,-./:;<=>?@[\\]^_|' ' ' | tr ' ' '\n' | sort -u | grep -i '[a-z]' | iconv -futf8 -tutf16 | uni2acii | acii2pcf | h2c | sed 's/[^A-Z^a-z^0-9]/ /g;' | tr ' ' '\n' | sort -u ; done | sort -u > for_trans
+
+
+
+
+	 

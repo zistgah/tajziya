@@ -92,6 +92,23 @@ derived from the data that powers ashtadhyayi.com (free to use with credit; the 
 `modules/cls/data/LICENSES/`). Their text is cross-checked against vidyut-prakriya's MIT edition.
 `docs/review.html` is the source review: every sutra, the flags, and an issue link for each.
 
+## Work packets
+
+The work is cut into packets in `packets/`, listed first on the landing page with a claim link
+each. A packet says what it needs, what it produces, its licence rule and the one command that
+decides it is done:
+
+    python3 -m tajziya packet list
+    python3 -m tajziya packet check PKT-TRN-02
+
+A pull request that completes a packet is judged by that command and the gate, in
+`.github/workflows/packets.yml`. See CONTRIBUTING.md.
+
+## Romenagri
+
+`tajziya.romenagri` runs the author's Romenagri, vendored from hindawiai/chintamani and built
+with its own Makefile: `roman("वृद्धिरादैच्")` gives `w_ri_d_dhiraa_daich`.
+
 ## Every language and script the ILM explorer shows
 
 The project-ilm 3D explorer draws its points from the ILM registry: 7,867 ISO 639-3 languages

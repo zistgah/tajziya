@@ -2,6 +2,26 @@
 
 © 1993–2026 Abhishek Choudhary. All rights reserved. AyeAI.
 
+## 0.6.0
+
+- Work packets. `packets/` holds 148 small pieces of work any AI or person can take, each with
+  its inputs, the files it must produce, its licence rule and one acceptance command,
+  `python3 -m tajziya packet check <ID>`. Six kinds of check, all mechanical: sutra tables,
+  implementation maps, script tables on Romenagri's pivot, the Romenagri pin, the browser
+  build's parity, and corpora. The landing page opens with them, grouped by area, each with a
+  claim link; `.github/workflows/packets.yml` runs the packets a pull request touches and the
+  gate, so a pull request is judged without anyone reading it.
+- Romenagri, the author's transliteration system, vendored byte for byte from
+  hindawiai/chintamani's Romenagri folder (pinned) and offered as functions:
+  `tajziya.romenagri.roman()` and `devanagari()` run his own pipeline from mass_hindawi. Every
+  sutra's Romenagri form is in `modules/cls/data/romenagri/sutras.tsv`; 3,609 of 3,983 come back
+  the same, the rest lose the avagraha, which is packet PKT-ROM-01.
+- The review page gives every sutra an issue link and its Romenagri form, and points to the
+  packets that will add translations, interpretations, implementing code and scripts.
+- The landing page links the review, the coverage and the packages; V25 refuses a page in
+  `docs/` it does not link. V24 rebuilds Romenagri and checks the committed forms; V26 checks
+  every packet. `CORPUS.md` is the corpus work order the corpus packets follow.
+
 ## 0.5.0
 
 - The Sanskrit parser's sutra database, complete. All 3,983 sutras come from the data that

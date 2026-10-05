@@ -1,0 +1,34 @@
+{
+ "schema": "tajziya.packet/1",
+ "id": "PKT-ROM-02",
+ "title": "Romenagri in the browser",
+ "area": "romenagri",
+ "wave": 1,
+ "size": "M",
+ "status": "open",
+ "summary": "Compile the vendored Romenagri to WebAssembly with a JavaScript wrapper, so the pages can call roman() and devanagari() themselves, with output byte-identical to the C build on every sutra.",
+ "inputs": [
+  {
+   "what": "Romenagri",
+   "where": "vendor/romenagri (pinned)"
+  }
+ ],
+ "outputs": [
+  "docs/vendor/romenagri.js",
+  "docs/vendor/romenagri.wasm"
+ ],
+ "licence": "GPL-2.0-or-later, as the vendored code.",
+ "acceptance": {
+  "kind": "wasm-parity",
+  "args": {
+   "js": "docs/vendor/romenagri.js"
+  },
+  "command": "python3 -m tajziya packet check PKT-ROM-02"
+ },
+ "depends": [],
+ "how": [
+  "Build the vendored C and lex with Emscripten; reproduce its own Makefile's pipeline, no rewrite.",
+  "Make the wrapper read lines on stdin under node with --roman, and export roman() for the page.",
+  "Run the acceptance command."
+ ]
+}

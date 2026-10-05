@@ -1,0 +1,39 @@
+{
+ "schema": "tajziya.packet/1",
+ "id": "PKT-ROM-01",
+ "title": "Romenagri: bring the avagraha back",
+ "area": "romenagri",
+ "wave": 1,
+ "size": "S",
+ "status": "open",
+ "summary": "374 of the 3,983 sutras do not come back from Romenagri the same: ऽ returns as ्3. The fix is in the author's Romenagri, upstream; this repository then re-vendors it.",
+ "inputs": [
+  {
+   "what": "the sutras that differ",
+   "where": "modules/cls/data/romenagri/sutras.tsv (round_trip = differs)"
+  },
+  {
+   "what": "Romenagri",
+   "where": "github.com/hindawiai/chintamani, Romenagri/"
+  }
+ ],
+ "outputs": [
+  "vendor/romenagri/",
+  "modules/cls/data/romenagri/sutras.tsv"
+ ],
+ "licence": "GPL-2.0-or-later, the author's own code; the change goes upstream first.",
+ "acceptance": {
+  "kind": "romenagri-pin",
+  "args": {
+   "expect_same": 3983
+  },
+  "command": "python3 -m tajziya packet check PKT-ROM-01"
+ },
+ "depends": [],
+ "how": [
+  "Fix the avagraha in hindawiai/chintamani's Romenagri (acii2rmn.lex, rmn2acii.lex or the tables).",
+  "Re-vendor the folder byte for byte and update vendor/romenagri/UPSTREAM.json to the new commit.",
+  "Regenerate modules/cls/data/romenagri/sutras.tsv with tools/romenagri_sutras.py.",
+  "Run the acceptance command."
+ ]
+}

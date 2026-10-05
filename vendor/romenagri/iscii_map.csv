@@ -1,0 +1,111 @@
+Hex,Official Listing,ISO 15919,Devanagari,,Bengali,,Assamese,,Gurmukhi,,Gujarati,,Oriya,,Tamil,,Telugu,,Kannada,,Malayalam,
+A0,Sign OM,,ॐ,950,,,,,,,ૐ,0AD0,,,,,,,,,,
+A1,Vowel-modifier CHANDRABINDU,,ँ,901,ঁ,981,ঁ,981,ਁ,0A01,ઁ,0A81,ଁ,0B01,,,ఁ,0C01,,,,
+A2,Vowel-modifier ANUSWARAM,ṁ,ं,902,ং,982,ং,982,ਂ,0A02,ં,0A82,ଂ,0B02,ஂ,0B82,ం,0C02,ಂ,0C82,ം,0D02
+A3,Vowel-modifier VISARGAM,ḥ,ः,903,ঃ,983,ঃ,983,ਃ,0A03,ઃ,0A83,ଃ,0B03,ஃ,0B83,ః,0C03,ಃ,0C83,ഃ,0D03
+A4,Vowel A,a,अ,905,অ,985,অ,985,ਅ,0A05,અ,0A85,ଅ,0B05,அ,0B85,అ,0C05,ಅ,0C85,അ,0D05
+A5,Vowel AA,ā,आ,906,আ,986,আ,986,ਆ,0A06,આ,0A86,ଆ,0B06,ஆ,0B86,ఆ,0C06,ಆ,0C86,ആ,0D06
+A6,Vowel I,i,इ,907,ই,987,ই,987,ਇ,0A07,ઇ,0A87,ଇ,0B07,இ,0B87,ఇ,0C07,ಇ,0C87,ഇ,0D07
+A6*,Vowel LI (Sanskrit),ḷ,ऌ,090C,ঌ,098C,ঌ,098C,,,ઌ,0A8C,ଌ,0B0C,,,ఌ,0C0C,ಌ,0C8C,ഌ,0D0C
+A7,Vowel II,ī,ई,908,ঈ,988,ঈ,988,ਈ,0A08,ઈ,0A88,ଈ,0B08,ஈ,0B88,ఈ,0C08,ಈ,0C88,ഈ,0D08
+A7*,Vowel LII (Sanskrit),ḹ,ॡ,961,ৡ,9.00E+01,ৡ,9.00E+01,,,ૡ,0AE1,ୡ,0B61,,,ౡ,0C61,ೡ,0CE1,ൡ,0D61
+A8,Vowel U,u,उ,909,উ,989,উ,989,ਉ,0A09,ઉ,0A89,ଉ,0B09,உ,0B89,ఉ,0C09,ಉ,0C89,ഉ,0D09
+A9,Vowel UU,ū,ऊ,090A,ঊ,098A,ঊ,098A,ਊ,0A0A,ઊ,0A8A,ଊ,0B0A,ஊ,0B8A,ఊ,0C0A,ಊ,0C8A,ഊ,0D0A
+AA,Vowel RI,r̥,ऋ,090B,ঋ,098B,ঋ,098B,,,ઋ,0A8B,ଋ,0B0B,,,ఋ,0C0B,ಋ,0C8B,ഋ,0D0B
+AA*,Vowel RII (Sanskrit),ṝ,ॠ,960,ৠ,9.00E+00,ৠ,9.00E+00,,,ૠ,0AE0,ୠ,0B60,,,ౠ,0C60,ೠ,0CE0,ൠ,0D60
+AB,Vowel E (Southern Scripts),e,ऎ,090E,,,,,,,,,,,எ,0B8E,ఎ,0C0E,ಎ,0C8E,എ,0D0E
+AC,Vowel EY,ē,ए,090F,এ,098F,এ,098F,ਏ,0A0F,એ,0A8F,ଏ,0B0F,ஏ,0B8F,ఏ,0C0F,ಏ,0C8F,ഏ,0D0F
+AD,Vowel AI,ai,ऐ,910,ঐ,990,ঐ,990,ਐ,0A10,ઐ,0A90,ଐ,0B10,ஐ,0B90,ఐ,0C10,ಐ,0C90,ഐ,0D10
+AE,Vowel AYE (Devanagari Script),ê,ऍ,090D,,,,,,,ઍ,0A8D,,,,,,,,,,
+AF,Vowel O (Southern Scripts),o,ऒ,912,,,,,,,,,,,ஒ,0B92,ఒ,0C12,ಒ,0C92,ഒ,0D12
+B0,Vowel OW,ō,ओ,913,ও,993,ও,993,ਓ,0A13,ઓ,0A93,ଓ,0B13,ஓ,0B93,ఓ,0C13,ಓ,0C93,ഓ,0D13
+B1,Vowel AU,au,औ,914,ঔ,994,ঔ,994,ਔ,0A14,ઔ,0A94,ଔ,0B14,ஔ,0B94,ఔ,0C14,ಔ,0C94,ഔ,0D14
+B2,Vowel AWE (Devanagari Script),ô,ऑ,911,,,,,,,ઑ,0A91,,,,,,,,,,
+B3,Consonant KA,k,क,915,ক,995,ক,995,ਕ,0A15,ક,0A95,କ,0B15,க,0B95,క,0C15,ಕ,0C95,ക,0D15
+B3*,Consonant QA (Urdu),q,क़,958,,,,,,,,,,,,,,,,,,
+B4,Consonant KHA,kh,ख,916,খ,996,খ,996,ਖ,0A16,ખ,0A96,ଖ,0B16,,,ఖ,0C16,ಖ,0C96,ഖ,0D16
+B4*,Consonant KHHA (Urdu),kh,ख़,959,,,,,ਖ਼,0A59,,,,,,,,,,,,
+B5,Consonant GA,g,ग,917,গ,997,গ,997,ਗ,0A17,ગ,0A97,ଗ,0B17,,,గ,0C17,ಗ,0C97,ഗ,0D17
+B5*,Consonant GHHA (Urdu),ġ,ग़,095A,,,,,ਗ਼,0A5A,,,,,,,,,,,,
+B6,Consonant GHA,gh,घ,918,ঘ,998,ঘ,998,ਘ,0A18,ઘ,0A98,ଘ,0B18,,,ఘ,0C18,ಘ,0C98,ഘ,0D18
+B7,Consonant NGA,ṅ,ङ,919,ঙ,999,ঙ,999,ਙ,0A19,ઙ,0A99,ଙ,0B19,ங,0B99,ఙ,0C19,ಙ,0C99,ങ,0D19
+B8,Consonant CHA,c,च,091A,চ,099A,চ,099A,ਚ,0A1A,ચ,0A9A,ଚ,0B1A,ச,0B9A,చ,0C1A,ಚ,0C9A,ച,0D1A
+B9,Consonant CHHA,ch,छ,091B,ছ,099B,ছ,099B,ਛ,0A1B,છ,0A9B,ଛ,0B1B,,,ఛ,0C1B,ಛ,0C9B,ഛ,0D1B
+BA,Consonant JA,j,ज,091C,জ,099C,জ,099C,ਜ,0A1C,જ,0A9C,ଜ,0B1C,ஜ,0B9C,జ,0C1C,ಜ,0C9C,ജ,0D1C
+BA*,Consonant ZA (Urdu),z,ज़,095B,,,,,ਜ਼,0A5B,,,,,,,,,,,,
+BB,Consonant JHA,jh,झ,091D,ঝ,099D,ঝ,099D,ਝ,0A1D,ઝ,0A9D,ଝ,0B1D,,,ఝ,0C1D,ಝ,0C9D,ഝ,0D1D
+BC,Consonant JNA,ñ,ञ,091E,ঞ,099E,ঞ,099E,ਞ,0A1E,ઞ,0A9E,ଞ,0B1E,ஞ,0B9E,ఞ,0C1E,ಞ,0C9E,ഞ,0D1E
+BD,Consonant Hard TA,ṭ,ट,091F,ট,099F,ট,099F,ਟ,0A1F,ટ,0A9F,ଟ,0B1F,ட,0B9F,ట,0C1F,ಟ,0C9F,ട,0D1F
+BE,Consonant Hard THA,ṭh,ठ,920,ঠ,09A0,ঠ,09A0,ਠ,0A20,ઠ,0AA0,ଠ,0B20,,,ఠ,0C20,ಠ,0CA0,ഠ,0D20
+BF,Consonant Hard DA,ḍ,ड,921,ড,09A1,ড,09A1,ਡ,0A21,ડ,0AA1,ଡ,0B21,,,డ,0C21,ಡ,0CA1,ഡ,0D21
+BF*,Consonant Flapped DA,ṛ,ड़,095C,ড়,09DC,ড়,09DC,ੜ,0A5C,,,ଡ଼,0B5C,,,,,,,,
+C0,Consonant Hard DHA,ḍh,ढ,922,ঢ,09A2,ঢ,09A2,ਢ,0A22,ઢ,0AA2,ଢ,0B22,,,ఢ,0C22,ಢ,0CA2,ഢ,0D22
+C0*,Consonant Flapped DHA,ṛh,ढ़,095D,ঢ়,09DD,ঢ়,09DD,,,,,ଢ଼,0B5D,,,,,,,,
+C1,Consonant Hard NA,ṇ,ण,923,ণ,09A3,ণ,09A3,ਣ,0A23,ણ,0AA3,ଣ,0B23,ண,0BA3,ణ,0C23,ಣ,0CA3,ണ,0D23
+C2,Consonant Soft TA,t,त,924,ত,09A4,ত,09A4,ਤ,0A24,ત,0AA4,ତ,0B24,த,0BA4,త,0C24,ತ,0CA4,ത,0D24
+C3,Consonant Soft THA,th,थ,925,থ,09A5,থ,09A5,ਥ,0A25,થ,0AA5,ଥ,0B25,,,థ,0C25,ಥ,0CA5,ഥ,0D25
+C4,Consonant Soft DA,d,द,926,দ,09A6,দ,09A6,ਦ,0A26,દ,0AA6,ଦ,0B26,,,ద,0C26,ದ,0CA6,ദ,0D26
+C5,Consonant Soft DHA,dh,ध,927,ধ,09A7,ধ,09A7,ਧ,0A27,ધ,0AA7,ଧ,0B27,,,ధ,0C27,ಧ,0CA7,ധ,0D27
+C6,Consonant Soft NA,n,न,928,ন,09A8,ন,09A8,ਨ,0A28,ન,0AA8,ନ,0B28,ந,0BA8,న,0C28,ನ,0CA8,ന,0D28
+C7,Consonant NA (Tamil),ṉ,ऩ,929,,,,,,,,,,,ன,0BA9,,,,,,
+C8,Consonant PA,p,प,092A,প,09AA,প,09AA,ਪ,0A2A,પ,0AAA,ପ,0B2A,ப,0BAA,ప,0C2A,ಪ,0CAA,പ,0D2A
+C9,Consonant PHA,ph,फ,092B,ফ,09AB,ফ,09AB,ਫ,0A2B,ફ,0AAB,ଫ,0B2B,,,ఫ,0C2B,ಫ,0CAB,ഫ,0D2B
+C9*,Consonant FA (Urdu),f,फ़,095E,,,,,ਫ਼,0A5E,,,,,,,,,ೞ,0CDE,,
+CA,Consonant BA,b,ब,092C,ব,09AC,ব,09AC,ਬ,0A2C,બ,0AAC,ବ,0B2C,,,బ,0C2C,ಬ,0CAC,ബ,0D2C
+CB,Consonant BHA,bh,भ,092D,ভ,09AD,ভ,09AD,ਭ,0A2D,ભ,0AAD,ଭ,0B2D,,,భ,0C2D,ಭ,0CAD,ഭ,0D2D
+CC,Consonant MA,m,म,092E,ম,09AE,ম,09AE,ਮ,0A2E,મ,0AAE,ମ,0B2E,ம,0BAE,మ,0C2E,ಮ,0CAE,മ,0D2E
+CD,Consonant YA,y,य,092F,য,09AF,য,09AF,ਯ,0A2F,ય,0AAF,ଯ,0B2F,ய,0BAF,య,0C2F,ಯ,0CAF,യ,0D2F
+CE,"Consonant JYA (Bengali, Assamese & Oriya)",ẏ,य़,095F,য়,09DF,য়,09DF,,,,,ୟ,0B5F,,,,,,,,
+CF,Consonant RA,r̥,र,930,র,09B0,ৰ︎,09F0,ਰ,0A30,ર,0AB0,ର,0B30,ர,0BB0,ర,0C30,ರ,0CB0,ര,0D30
+D0,Consonant Hard RA (Southern Scripts),ṟ,ऱ,931,,,,,,,,,,,ற,0BB1,ఱ,0C31,ಱ,0CB1,റ,0D31
+D1,Consonant LA,l,ल,932,ল,09B2,ল,09B2,ਲ,0A32,લ,0AB2,ଲ,0B32,ல,0BB2,ల,0C32,ಲ,0CB2,ല,0D32
+D2,Consonant Hard LA,ḷ,ळ,933,,,,,ਲ਼,0A33,ળ,0AB3,ଳ,0B33,ள,0BB3,ళ,0C33,ಳ,0CB3,ള,0D33
+D3,Consonant ZHA (Tamil & Malayalam),ḻ,ऴ,934,,,,,,,,,,,ழ,0BB4,,,,,ഴ,0D34
+D4,Consonant VA,v,व,935,ব,09AC,ৱ,09F1,ਵ,0A35,વ,0AB5,ଵ,0B35,வ,0BB5,వ,0C35,ವ,0CB5,വ,0D35
+D5,Consonant SHA,ś,श,936,শ,09B6,শ,09B6,ਸ਼,0A36,શ,0AB6,ଶ,0B36,ஶ,0BB6,శ,0C36,ಶ,0CB6,ശ,0D36
+D6,Consonant Hard SHA,ṣ,ष,937,ষ,09B7,ষ,09B7,,,ષ,0AB7,ଷ,0B37,ஷ,0BB7,ష,0C37,ಷ,0CB7,ഷ,0D37
+D7,Consonant SA,s,स,938,স,09B8,স,09B8,ਸ,0A38,સ,0AB8,ସ,0B38,ஸ,0BB8,స,0C38,ಸ,0CB8,സ,0D38
+D8,Consonant HA,h,ह,939,হ,09B9,হ,09B9,ਹ,0A39,હ,0AB9,ହ,0B39,ஹ,0BB9,హ,0C39,ಹ,0CB9,ഹ,0D39
+D9,Consonant INVISIBLE,,,,,,,,,,,,,,,,,,,,,
+DA,Vowel Sign AA,ā,ा,093E,া,09BE,া,09BE,ਾ,0A3E,ા,0ABE,ା,0B3E,ா,0BBE,ా,0C3E,ಾ,0CBE,ാ,0D3E
+DB,Vowel Sign I,i,ि,093F,ি,09BF,ি,09BF,ਿ,0A3F,િ,0ABF,ି,0B3F,ி,0BBF,ి,0C3F,ಿ,0CBF,ി,0D3F
+DB*,Vowel Sign LI (Sanskrit),ḷ,ॢ,962,ৢ,9.00E+02,ৢ,9.00E+02,,,ૢ,0AE2,ୢ,0B62,,,ౢ,0C62,ೢ,0CE2,ൢ,0D62
+DC,Vowel Sign II,ī,ी,940,ী,09C0,ী,09C0,ੀ,0A40,ી,0AC0,ୀ,0B40,ீ,0BC0,ీ,0C40,ೀ,0CC0,ീ,0D40
+DC*,Vowel Sign LII (Sanskrit),ḹ,ॣ,963,ৣ,9.00E+03,ৣ,9.00E+03,,,ૣ,0AE3,ୣ,0B63,,,ౣ,0C63,ೣ,0CE3,ൣ,0D63
+DD,Vowel Sign U,u,ु,941,ু,09C1,ু,09C1,ੁ,0A41,ુ,0AC1,ୁ,0B41,ு,0BC1,ు,0C41,ು,0CC1,ു,0D41
+DE,Vowel Sign UU,ū,ू,942,ূ,09C2,ূ,09C2,ੂ,0A42,ૂ,0AC2,ୂ,0B42,ூ,0BC2,ూ,0C42,ೂ,0CC2,ൂ,0D42
+DF,Vowel Sign RI,r̥,ृ,943,ৃ,09C3,ৃ,09C3,,,ૃ,0AC3,ୃ,0B43,,,ృ,0C43,ೃ,0CC3,ൃ,0D43
+DF*,Vowel Sign RII (Sanskrit),ṝ,ॄ,944,ৄ,09C4,ৄ,09C4,,,ૄ,0AC4,ୄ,0B44,,,ౄ,0C44,ೄ,0CC4,ൄ,0D44
+E0,Vowel Sign E (Southern Scripts),e,ॆ,946,,,,,,,,,,,ெ,0BC6,ె,0C46,ೆ,0CC6,െ,0D46
+E1,Vowel Sign EY,ē,े,947,ে,09C7,ে,09C7,ੇ,0A47,ે,0AC7,େ,0B47,ே,0BC7,ే,0C47,ೇ,0CC7,േ,0D47
+E2,Vowel Sign AI,ai,ै,948,ৈ,09C8,ৈ,09C8,ੈ,0A48,ૈ,0AC8,ୈ,0B48,ை,0BC8,ై,0C48,ೈ,0CC8,ൈ,0D48
+E3,Vowel Sign AYE (Devanagari Script),ê,ॅ,945,,,,,,,ૅ,0AC5,,,,,,,,,,
+E4,Vowel Sign O (Southern Scripts),o,ॊ,094A,,,,,,,,,,,ொ,0BCA,ొ,0C4A,ೊ,0CCA,ൊ,0D4A
+E5,Vowel Sign OW,ō,ो,094B,ো,09CB,ো,09CB,ੋ,0A4B,ો,0ACB,ୋ,0B4B,ோ,0BCB,ో,0C4B,ೋ,0CCB,ോ,0D4B
+E6,Vowel Sign AU,au,ौ,094C,ৌ,09CC,ৌ,09CC,ੌ,0A4C,ૌ,0ACC,ୌ,0B4C,ௌ,0BCC,ౌ,0C4C,ೌ,0CCC,ൌ,0D4C
+E7,Vowel Sign AWE (Devanagari Script),ô,ॉ,949,,,,,,,ૉ,0AC9,,,,,,,,,,
+E8,Vowel Omission Sign (Halant),,्,094D,্,09CD,্,09CD,੍,0A4D,્,0ACD,୍,0B4D,்,0BCD,్,0C4D,್,0CCD,്,0D4D
+E9,Diacritic Sign (Nuktam),,़,093C,়,09BC,়,09BC,਼,0A3C,઼,0ABC,଼,0B3C,,,,,಼,0CBC,,
+EA,"Full Stop (Viram, Northern Scripts)",,।,964,,,,,,,,,,,,,,,,,,
+EA*,Vowel Stress Sign AVAGRAH,,ऽ,093D,ঽ,09BD,ঽ,09BD,,,ઽ,0ABD,ଽ,0B3D,,,ఽ,0C3D,ಽ,0CBD,ഽ,0D3D
+EB,Unused,,,,,,,,,,,,,,,,,,,,,
+EC,Unused,,,,,,,,,,,,,,,,,,,,,
+ED,Unused,,,,,,,,,,,,,,,,,,,,,
+EE,Unused,,,,,,,,,,,,,,,,,,,,,
+EF,Attribute Code,,,,,,,,,,,,,,,,,,,,,
+F0,Extension Code,,,,,,,,,,,,,,,,,,,,,
+F1,Digit 0,0,०,0966,০,09E6,০,09E6,੦,0A66,૦,0AE6,୦,0B66,௦,0BE6,౦,0C66,೦,0CE6,൦,0D66
+F2,Digit 1,1,१,0967,১,09E7,১,09E7,੧,0A67,૧,0AE7,୧,0B67,௧,0BE7,౧,0C67,೧,0CE7,൧,0D67
+F3,Digit 2,2,२,0968,২,09E8,২,09E8,੨,0A68,૨,0AE8,୨,0B68,௨,0BE8,౨,0C68,೨,0CE8,൨,0D68
+F4,Digit 3,3,३,0969,৩,09E9,৩,09E9,੩,0A69,૩,0AE9,୩,0B69,௩,0BE9,౩,0C69,೩,0CE9,൩,0D69
+F5,Digit 4,4,४,096A,৪,09EA,৪,09EA,੪,0A6A,૪,0AEA,୪,0B6A,௪,0BEA,౪,0C6A,೪,0CEA,൪,0D6A
+F6,Digit 5,5,५,096B,৫,09EB,৫,09EB,੫,0A6B,૫,0AEB,୫,0B6B,௫,0BEB,౫,0C6B,೫,0CEB,൫,0D6B
+F7,Digit 6,6,६,096C,৬,09EC,৬,09EC,੬,0A6C,૬,0AEC,୬,0B6C,௬,0BEC,౬,0C6C,೬,0CEC,൬,0D6C
+F8,Digit 7,7,७,096D,৭,09ED,৭,09ED,੭,0A6D,૭,0AED,୭,0B6D,௭,0BED,౭,0C6D,೭,0CED,൭,0D6D
+F9,Digit 8,8,८,096E,৮,09EE,৮,09EE,੮,0A6E,૮,0AEE,୮,0B6E,௮,0BEE,౮,0C6E,೮,0CEE,൮,0D6E
+FA,Digit 9,9,९,096F,৯,09EF,৯,09EF,੯,0A6F,૯,0AEF,୯,0B6F,௯,0BEF,౯,0C6F,೯,0CEF,൯,0D6F
+FB,Unused,,,,,,,,,,,,,,,,,,,,,
+FC,Unused,,,,,,,,,,,,,,,,,,,,,
+FD,Unused,,,,,,,,,,,,,,,,,,,,,
+FE,Unused,,,,,,,,,,,,,,,,,,,,,
+FF,Unused,,,,,,,,,,,,,,,,,,,,,

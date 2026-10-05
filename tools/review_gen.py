@@ -80,11 +80,22 @@ def flags_for(sutras):
     return out
 
 
+def romenagri_forms():
+    p = os.path.join(DATA, "romenagri", "sutras.tsv")
+    if not os.path.exists(p):
+        return {}
+    with open(p, encoding="utf-8") as fh:
+        next(fh)
+        return {a: (b, c) for a, b, c in (l.rstrip("\n").split("\t") for l in fh)}
+
+
 def page(sutras, flags, repo, local=None):
-    rows = []
+    rows, rom = [], romenagri_forms()
     for r in sutras:
         row = {"id": r["id"], "t": r["type"], "tm": r["term"] or None, "s": r["sutra"], "pc": r["padaccheda"],
                "k": r["kaumudi"] or None, "f": flags.get(r["id"])}
+        if r["id"] in rom:
+            row["r"], row["rt"] = rom[r["id"]][0], rom[r["id"]][1] == "same"
         if local is not None and r["id"] in local:
             row["l"] = local[r["id"]]
         rows.append(row)
@@ -127,7 +138,8 @@ button.on{border-color:var(--acc);color:var(--acc)}
 </style></head><body><div class="wrap">
 <h1>@@TITLE@@</h1>
 <p class="sub">All @@N@@ sutras, from ashtadhyayi.com's data (credited). @@NFLAG@@ carry a flag: a field where
-another source differs. @@LOCALNOTE@@ "Open issue" opens a pre-filled issue on <strong>@@REPO@@</strong>.</p>
+another source differs. @@LOCALNOTE@@ Every sutra has an issue link to <strong>@@REPO@@</strong>.
+Translations, interpretations, the implementing code and more scripts arrive as work packets: <a href="index.html#packets">pick one up</a>.</p>
 <div class="controls"><input id="q" placeholder="Search by number (2.3.17), text or term">
 <button id="tf" class="on">Flagged</button><button id="ta">All</button><span id="n" class="meta"></span></div>
 <div id="list"></div><button id="more" hidden>More</button>
@@ -138,11 +150,16 @@ const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",
 function issue(r,f){const t=`Sutra ${r.id}: ${f.field} differs from ${f.against}`;
  const b=`Sutra ${r.id}\\nField: ${f.field}\\nOpen data (ashtadhyayi.com): ${f.field==="sutra"?r.s:r.pc}\\nDiffers from: ${f.against}\\n\\nReading and source for the correction:\\n`;
  return `https://github.com/${REPO}/issues/new?title=${encodeURIComponent(t)}&body=${encodeURIComponent(b)}`;}
+function review(r){const t=`Sutra ${r.id}: review`;
+ const b=`Sutra ${r.id}\n${r.s}\nPadaccheda: ${r.pc}\n${r.r?"Romenagri: "+r.r+"\n":""}\nWhich part is wrong (text, padaccheda, type or term, translation, interpretation, implementation, transliteration), and the source for the correction:\n`;
+ return `https://github.com/${REPO}/issues/new?title=${encodeURIComponent(t)}&body=${encodeURIComponent(b)}`;}
 function card(r){const fl=r.f||[];return `<div class="card${fl.length?" flag":""}"><span class="id">${esc(r.id)}</span>
  <span class="meta">${esc(r.t)}${r.tm?" · "+esc(r.tm):""}${r.k?" · SK "+esc(r.k):""}</span>
  <div class="s">${esc(r.s)}</div><div class="meta">${esc(r.pc)}</div>
+ ${r.r?`<div class="meta">Romenagri: ${esc(r.r)}${r.rt?"":" · does not yet come back the same (packet PKT-ROM-01)"}</div>`:""}
  ${r.l?`<div class="meta">local: ${esc(r.l.sutra)} · ${esc(r.l.padaccheda)}</div>`:""}
- ${fl.map(f=>`<div class="f">${esc(f.field)} differs from ${esc(f.against)} · <a href="${issue(r,f)}" target="_blank" rel="noopener">Open issue</a></div>`).join("")}</div>`;}
+ ${fl.map(f=>`<div class="f">${esc(f.field)} differs from ${esc(f.against)} · <a href="${issue(r,f)}" target="_blank" rel="noopener">Open issue</a></div>`).join("")}
+ <div class="f"><a href="${review(r)}" target="_blank" rel="noopener">Open an issue on this sutra</a></div></div>`;}
 function draw(){const q=document.getElementById("q").value.trim().toLowerCase();
  let rs=ROWS.filter(r=>mode==="all"||r.f);
  if(q)rs=rs.filter(r=>r.id.includes(q)||r.s.includes(q)||(r.tm||"").includes(q)||r.pc.includes(q));

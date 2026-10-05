@@ -57,6 +57,19 @@ def build():
                       "family_differs": [(x["prior"], x["prior_family"]) for x in rc["family_differs"]]},
     }
     files = {"docs/data/registry.json": json.dumps(data, ensure_ascii=False, indent=1, sort_keys=True) + "\n"}
+    from tajziya import packets as _packets
+    from urllib.parse import quote
+    pk = []
+    for pid, x in _packets.all_packets().items():
+        body = (f"I am taking packet {pid}: {x['title']}.\n\nAcceptance: {x['acceptance']['command']}\n"
+                f"Outputs: {', '.join(x['outputs'])}\n\nI will open a pull request when the command passes.")
+        pk.append({k: x[k] for k in ("id", "title", "area", "wave", "size", "status", "summary", "outputs", "licence", "how")}
+                  | {"command": x["acceptance"]["command"],
+                     "claim": "https://github.com/zistgah/tajziya/issues/new?title=" + quote(f"Claim {pid}: {x['title']}")
+                              + "&body=" + quote(body)})
+    cov = {"languages": len(reg.coverage_ids()), "scripts": len(reg.ilm_scripts), "poster_nodes": len(reg.nodes)}
+    files["docs/data/packets.json"] = json.dumps({"schema": "tajziya.site-packets/1", "coverage": cov, "packets": pk},
+                                                  ensure_ascii=False, indent=1) + "\n"
     for f in JS:
         with open(os.path.join(ROOT, "vendor", "sanskrit_parser", "js", f), encoding="utf-8") as fh:
             files[f"docs/vendor/{f}"] = fh.read()

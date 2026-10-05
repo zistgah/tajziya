@@ -1,0 +1,40 @@
+{
+ "schema": "tajziya.packet/1",
+ "id": "PKT-ACA-01",
+ "title": "Import Otto Böhtlingk, Pâṇini's Grammatik (1887)",
+ "area": "interpretation-academic",
+ "wave": 1,
+ "size": "L",
+ "status": "open",
+ "summary": "A translation whose copyright has expired: import it from an openly available scan or transcription, keyed by sutra.",
+ "inputs": [
+  {
+   "what": "Otto Böhtlingk, Pâṇini's Grammatik (1887)",
+   "where": "a public-domain scan or transcription you cite"
+  }
+ ],
+ "outputs": [
+  "modules/cls/data/academic/bohtlingk.tsv",
+  "modules/cls/data/SOURCES.json"
+ ],
+ "licence": "Public domain by age; record the edition, the scan's own terms and the evidence for the date.",
+ "acceptance": {
+  "kind": "sutra-table",
+  "args": {
+   "path": "modules/cls/data/academic/bohtlingk.tsv",
+   "columns": [
+    "id",
+    "text"
+   ],
+   "min_rows": 3900,
+   "source_id": "academic-bohtlingk"
+  },
+  "command": "python3 -m tajziya packet check PKT-ACA-01"
+ },
+ "depends": [],
+ "how": [
+  "Find a scan or transcription whose own terms allow reuse; record them.",
+  "Import deterministically, keyed by sutra; NFC; pin the TSV in SOURCES.json.",
+  "Run the acceptance command."
+ ]
+}

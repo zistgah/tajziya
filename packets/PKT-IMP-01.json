@@ -1,0 +1,35 @@
+{
+ "schema": "tajziya.packet/1",
+ "id": "PKT-IMP-01",
+ "title": "Which sutras the author's parser applies",
+ "area": "implementation",
+ "wave": 1,
+ "size": "M",
+ "status": "open",
+ "summary": "Map each junction rule in the author's Sanskrit parser to the sutra it implements: file, line, function, and what it applies in plain words.",
+ "inputs": [
+  {
+   "what": "the parser",
+   "where": "vendor/sanskrit_parser (pinned)"
+  }
+ ],
+ "outputs": [
+  "modules/cls/data/implementation/tajziya.tsv"
+ ],
+ "licence": "Our own index, CC-BY-SA-4.0; no code is copied.",
+ "acceptance": {
+  "kind": "implementation-map",
+  "args": {
+   "path": "modules/cls/data/implementation/tajziya.tsv",
+   "root": ".",
+   "min_rows": 5
+  },
+  "command": "python3 -m tajziya packet check PKT-IMP-01"
+ },
+ "depends": [],
+ "how": [
+  "Read vendor/sanskrit_parser's junction rules; never edit the vendored code.",
+  "Write one row per rule: id, file, line, function, applies (for example: a + i becomes e).",
+  "Run the acceptance command."
+ ]
+}

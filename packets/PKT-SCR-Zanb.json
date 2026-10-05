@@ -1,0 +1,39 @@
+{
+ "schema": "tajziya.packet/1",
+ "id": "PKT-SCR-Zanb",
+ "title": "Zanabazar Square on Romenagri's pivot",
+ "area": "scripts",
+ "wave": 1,
+ "size": "S",
+ "status": "open",
+ "summary": "A table taking Romenagri's ACII pivot to Zanabazar Square and back, so every sutra can be read in Zanabazar Square. The round trip must be lossless on all 3,983 sutras.",
+ "inputs": [
+  {
+   "what": "the pivot",
+   "where": "vendor/romenagri (iscii_map.csv shows the Brahmic layout)"
+  },
+  {
+   "what": "Zanabazar Square in Unicode 10.0",
+   "where": "the Unicode Character Database"
+  }
+ ],
+ "outputs": [
+  "tables/romenagri/Zanb.csv"
+ ],
+ "licence": "Our own table (CC0-1.0), derived from the Unicode Character Database, cited.",
+ "acceptance": {
+  "kind": "script-table",
+  "args": {
+   "path": "tables/romenagri/Zanb.csv",
+   "unicode_name": "ZANABAZAR SQUARE",
+   "min_unicode": "10.0"
+  },
+  "command": "python3 -m tajziya packet check PKT-SCR-Zanb"
+ },
+ "depends": [],
+ "how": [
+  "Write tables/romenagri/<code>.csv with columns acii (hex, like A4) and char (the script's character or sequence), one row per ACII value the sutras use.",
+  "Derive each character from the Unicode Character Database by name; cite the version.",
+  "Run the acceptance command: every sutra's ACII must go to the script and come back unchanged."
+ ]
+}

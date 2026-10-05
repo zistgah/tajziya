@@ -1,0 +1,26 @@
+# © 1993–2026 Abhishek Choudhary. All rights reserved. AyeAI.
+# A pull request is judged by the packet it completes and by the gate. Nothing else reads it.
+name: packets
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: the toolchain Romenagri builds with
+        run: sudo apt-get update -q && sudo apt-get install -y -q flex libfl-dev
+      - name: the packets this change touches
+        if: github.event_name == 'pull_request'
+        run: PYTHONPATH=src python3 -m tajziya packet check --changed origin/${{ github.base_ref }}
+      - name: the gate
+        run: bash ops/verify.sh

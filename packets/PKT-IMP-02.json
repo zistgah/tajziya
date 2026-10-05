@@ -1,0 +1,36 @@
+{
+ "schema": "tajziya.packet/1",
+ "id": "PKT-IMP-02",
+ "title": "Which sutras vidyut-prakriya implements, and where",
+ "area": "implementation",
+ "wave": 1,
+ "size": "M",
+ "status": "open",
+ "summary": "Scan vidyut-prakriya's source at a pinned commit for the sutra codes it cites, so each sutra on the review page names the file and line that implements it.",
+ "inputs": [
+  {
+   "what": "vidyut",
+   "where": "github.com/ambuda-org/vidyut, MIT, at a commit you pin"
+  }
+ ],
+ "outputs": [
+  "modules/cls/data/implementation/vidyut.tsv",
+  "Makefile"
+ ],
+ "licence": "vidyut is MIT; cite file and line, quote nothing long.",
+ "acceptance": {
+  "kind": "implementation-map",
+  "args": {
+   "path": "modules/cls/data/implementation/vidyut.tsv",
+   "root": ".deps/vidyut",
+   "min_rows": 1000
+  },
+  "command": "python3 -m tajziya packet check PKT-IMP-02"
+ },
+ "depends": [],
+ "how": [
+  "Add vidyut at a pinned commit to `make deps`, cloned into .deps/vidyut.",
+  "Write a deterministic scanner in tools/ that finds sutra codes in vidyut-prakriya/src and writes id, file, line, function, applies (the rule's own comment, or the sutra text).",
+  "Run the acceptance command."
+ ]
+}

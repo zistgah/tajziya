@@ -1,0 +1,31 @@
+rtlm=$(printf "\u200f")
+ensp=$(printf "\u2002")
+damma=$(printf "\u064f")
+shadda=$(printf "\u064e")
+fatha=$(printf "\u0651")
+fathatan=$(printf "\u064b")
+kasrah=$(printf "\u0650")
+kasratan=$(printf "\u064d")
+sukun=$(printf "\u0652")
+
+printf "ہندوی""\n"
+printf "ہ"$kasrah"ن"$sukun"دوی""\n"
+
+printf "گ"$damma"منام ح"$fatha"در""ابادی""\n"
+
+printf "ز"$damma"با"$fathatan" ا ""ہ"$kasratan"د"" ہے یہ""\n"
+printf "نور ا آفتاب کہیں""\n"
+printf "دلوں کا ناز کہیں""\n"
+printf "آغاز ا درد  کہیں""\n"
+
+printf "اک التجا ہے کی اسکی""\n"
+printf " شان و روابط کو""\n"
+printf "جو مٹا سکے نہ بدی""\n"
+printf "مل جائے وو مکام کہیں      |2|""\n"
+
+printf "...""\n"
+printf "زبان ا ہند ہے یہ""\n"
+printf "نور ا آفتاب کہیں""\n"
+printf "دلوں کا ناز کہیں""\n"
+printf "آغاز ا درد  کہیں""\n"
+

@@ -1,0 +1,42 @@
+{
+ "schema": "tajziya.packet/1",
+ "id": "PKT-INT-13",
+ "title": "the commentary the data names sudha",
+ "area": "interpretation-traditional",
+ "wave": 1,
+ "size": "S",
+ "status": "open",
+ "summary": "Import the commentary the data names sudha for the 375 sutras the source covers, keyed by sutra number.",
+ "inputs": [
+  {
+   "what": "sudha.txt",
+   "where": "github.com/ashtadhyayi-com/data at 5744762f010d677cfb43f347a42d02796cf615d6, sutraani/sudha.txt"
+  }
+ ],
+ "outputs": [
+  "modules/cls/data/interpretation/sudha.tsv",
+  "modules/cls/data/SOURCES.json"
+ ],
+ "licence": "ashtadhyayi.com's terms: use with credit (LicenseRef-ashtadhyayi-com; the notice is in modules/cls/data/LICENSES/ashtadhyayi-com.txt). The underlying work's own status is recorded too: a modern author's work enters the tree only on the owner's ruling.",
+ "acceptance": {
+  "kind": "sutra-table",
+  "args": {
+   "path": "modules/cls/data/interpretation/sudha.tsv",
+   "columns": [
+    "id",
+    "text"
+   ],
+   "min_rows": 375,
+   "source_id": "ashtadhyayi-com-sudha"
+  },
+  "command": "python3 -m tajziya packet check PKT-INT-13"
+ },
+ "depends": [],
+ "how": [
+  "Download the file at the pinned commit; record its sha256.",
+  "Write a deterministic import script in tools/ that keys each entry by sutra number (a.p.n) and writes id and text, NFC, one row per sutra.",
+  "Add a source to modules/cls/data/SOURCES.json pinning the TSV you wrote, with the terms.",
+  "First establish the work's author and date, with a citation, and its copyright status; a modern work waits for the owner's ruling before it enters the tree.",
+  "Run the acceptance command; open a pull request when it passes."
+ ]
+}

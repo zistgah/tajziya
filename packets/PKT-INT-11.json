@@ -1,0 +1,41 @@
+{
+ "schema": "tajziya.packet/1",
+ "id": "PKT-INT-11",
+ "title": "the Prakriyāsarvasva of Nārāyaṇa Bhaṭṭa",
+ "area": "interpretation-traditional",
+ "wave": 1,
+ "size": "M",
+ "status": "open",
+ "summary": "Import the Prakriyāsarvasva of Nārāyaṇa Bhaṭṭa for the 3634 sutras the source covers, keyed by sutra number.",
+ "inputs": [
+  {
+   "what": "prakriyasarvasvam.txt",
+   "where": "github.com/ashtadhyayi-com/data at 5744762f010d677cfb43f347a42d02796cf615d6, sutraani/prakriyasarvasvam.txt"
+  }
+ ],
+ "outputs": [
+  "modules/cls/data/interpretation/prakriyasarvasva.tsv",
+  "modules/cls/data/SOURCES.json"
+ ],
+ "licence": "ashtadhyayi.com's terms: use with credit (LicenseRef-ashtadhyayi-com; the notice is in modules/cls/data/LICENSES/ashtadhyayi-com.txt). The underlying work's own status is recorded too: a modern author's work enters the tree only on the owner's ruling.",
+ "acceptance": {
+  "kind": "sutra-table",
+  "args": {
+   "path": "modules/cls/data/interpretation/prakriyasarvasva.tsv",
+   "columns": [
+    "id",
+    "text"
+   ],
+   "min_rows": 3634,
+   "source_id": "ashtadhyayi-com-prakriyasarvasva"
+  },
+  "command": "python3 -m tajziya packet check PKT-INT-11"
+ },
+ "depends": [],
+ "how": [
+  "Download the file at the pinned commit; record its sha256.",
+  "Write a deterministic import script in tools/ that keys each entry by sutra number (a.p.n) and writes id and text, NFC, one row per sutra.",
+  "Add a source to modules/cls/data/SOURCES.json pinning the TSV you wrote, with the terms.",
+  "Run the acceptance command; open a pull request when it passes."
+ ]
+}
