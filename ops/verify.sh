@@ -127,6 +127,8 @@ v25() { local bad=""; for f in docs/*.html; do b=$(basename "$f"); [ "$b" = inde
         [ -z "$bad" ] || { echo "pages the landing page does not link:$bad"; return 1; }; }
 v26() { PYTHONPATH=src python3 -m tajziya packet check --all >/dev/null || { PYTHONPATH=src python3 -m tajziya packet check --all | grep -v "^PASS" | head -8; return 1; }; }
 
+v27() { python3 tools/page_check.py; }
+
 chk V01 "every source file carries the copyright line"            v01
 chk V02 "no affiliation other than AyeAI is claimed"              v02
 chk V03 "the test suite passes"                                    v03
@@ -153,6 +155,7 @@ chk V23 "the sutra data matches its pins and the review page is generated from i
 chk V24 "Romenagri, built from its pin, gives the committed forms of every sutra" v24
 chk V25 "every page in docs/ is linked from the landing page"      v25
 chk V26 "every work packet is well formed; every packet marked done passes" v26
+chk V27 "every page's scripts parse, and the review and packets pages render" v27
 
 if [ "$JSON" = 1 ]; then
   printf '{"element":"tajziya","failures":%d,"unjudged":%d,"checks":[' "$FAILS" "$UNJ"; sep=""

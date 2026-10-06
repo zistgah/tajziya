@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tajziya: work packets</title>
+<!-- © 1993–2026 Abhishek Choudhary. All rights reserved. AyeAI. -->
+<style>
+:root{--bg:#fbfaf7;--fg:#1d1d1b;--mut:#6b675f;--line:#e4e0d6;--card:#fff;--acc:#8a4b08}
+@media (prefers-color-scheme:dark){:root{--bg:#171614;--fg:#ecebe6;--mut:#a29d93;--line:#34312c;--card:#211f1c;--acc:#e3a35a}}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,sans-serif}
+.wrap{max-width:1040px;margin:0 auto;padding:1.2rem}
+h1{font-size:1.5rem;margin:.2rem 0}.meta{color:var(--mut);font-size:.9rem}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0;position:sticky;top:0;background:var(--bg);padding:6px 0}
+.chips button{font:inherit;font-size:14px;padding:4px 10px;border:1px solid var(--line);border-radius:14px;background:var(--card);color:inherit;cursor:pointer}
+.chips button.on{border-color:var(--acc);color:var(--acc)}
+.list{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:10px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:12px 14px}
+.card h3{font-size:16px;margin:2px 0 6px}.card code{font-size:12px;word-break:break-all}
+.card a.claim{display:inline-block;margin-top:8px;font-weight:600;color:var(--acc)}
+ol li{margin:4px 0}.err{color:#b00020}
+</style></head><body><div class="wrap">
+<p class="meta"><a href="index.html">tajziya</a> · <a href="review.html">the sutra review</a></p>
+<h1>Work packets</h1>
+<p id="pk-lead">Loading the packets.</p>
+<p>tajziya is built in small packets that any AI or any person can take. Each names its inputs, the files it must
+produce, its licence rule, and one command that decides whether it is done. A pull request that passes that command
+and the gate is merged; nobody has to read it to judge it.</p>
+<ol>
+  <li>Pick an open packet below and follow its claim link: it opens an issue saying you have it.</li>
+  <li>Work in a fork, inside the paths the packet lists.</li>
+  <li>Run the command shown on the packet until it passes, then <code>bash ops/verify.sh</code>.</li>
+  <li>Open a pull request. The workflow runs the same commands; green is merged.</li>
+</ol>
+<p class="meta">The rules: <a href="https://github.com/zistgah/tajziya/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a>; for corpora, <a href="https://github.com/zistgah/tajziya/blob/main/CORPUS.md">CORPUS.md</a>.</p>
+<div class="chips" id="pk-areas"></div>
+<div class="list" id="pk-list"></div>
+</div><script>
+(function () {
+  var esc = function (s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) {
+    return {"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]; }); };
+  var D = null, pick = "all";
+  function draw() {
+    var ps = D.packets.filter(function (p) { return pick === "all" || p.area === pick; })
+      .sort(function (a, b) { return a.wave - b.wave || (a.id < b.id ? -1 : 1); });
+    document.getElementById("pk-list").innerHTML = ps.map(function (p) {
+      return '<div class="card"><div class="meta">' + esc(p.id) + " · " + esc(p.area) + " · size " + esc(p.size) +
+        " · wave " + p.wave + " · <strong>" + esc(p.status) + "</strong></div><h3>" + esc(p.title) + "</h3><div>" +
+        esc(p.summary) + '</div><div class="meta">Produces: ' + p.outputs.map(esc).join(", ") + "</div>" +
+        '<div class="meta">Done when this passes: <code>' + esc(p.command) + "</code></div>" +
+        (p.status === "open" ? '<a class="claim" href="' + esc(p.claim) + '" target="_blank" rel="noopener">Claim this packet</a>' : "") +
+        "</div>"; }).join("");
+    var bs = document.querySelectorAll("#pk-areas button");
+    for (var i = 0; i < bs.length; i++) bs[i].className = bs[i].getAttribute("data-a") === pick ? "on" : "";
+  }
+  fetch("data/packets.json").then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+    .then(function (d) {
+      D = d;
+      var open = d.packets.filter(function (p) { return p.status === "open"; }).length;
+      document.getElementById("pk-lead").textContent = d.packets.length + " packets, " + open + " open.";
+      var areas = []; d.packets.forEach(function (p) { if (areas.indexOf(p.area) < 0) areas.push(p.area); });
+      var chips = document.getElementById("pk-areas");
+      chips.innerHTML = ["all"].concat(areas).map(function (a) {
+        var n = a === "all" ? d.packets.length : d.packets.filter(function (p) { return p.area === a; }).length;
+        return '<button data-a="' + esc(a) + '">' + esc(a) + " (" + n + ")</button>"; }).join("");
+      chips.onclick = function (e) { var a = e.target.getAttribute && e.target.getAttribute("data-a"); if (a) { pick = a; draw(); } };
+      draw();
+    })
+    .catch(function (e) { document.getElementById("pk-lead").innerHTML = '<span class="err">The packets could not be loaded (' +
+      esc(e.message) + ').</span>'; });
+})();
+</script></body></html>

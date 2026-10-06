@@ -2,6 +2,17 @@
 
 © 1993–2026 Abhishek Choudhary. All rights reserved. AyeAI.
 
+## 0.6.1
+
+- The review page renders again. 0.6.0's page carried a line break inside a JavaScript string,
+  so its script did not parse and the page showed its header and nothing else. The page is now a
+  small shell that fetches `docs/data/review.json` and renders the sutras as you scroll; if the
+  data cannot load, it says so instead of staying blank.
+- The work packets have their own page, `docs/packets.html`, with area filters and a claim link
+  on every packet; the landing page links it near the top.
+- V27: every page's scripts must parse under node, and the review and packets pages must render
+  their content from their real data against a stand-in DOM. It would have caught 0.6.0's fault.
+
 ## 0.6.0
 
 - Work packets. `packets/` holds 148 small pieces of work any AI or person can take, each with

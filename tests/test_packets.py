@@ -57,6 +57,8 @@ class Checks(unittest.TestCase):
             self.assertEqual(packets.v_corpus({"node": "zz-test"}), ("PASS", []))
         finally:
             shutil.rmtree(d, ignore_errors=True)
+            if os.path.isdir(os.path.dirname(d)) and not os.listdir(os.path.dirname(d)):
+                os.rmdir(os.path.dirname(d))
 
 
 @unittest.skipUnless(romenagri.build() is None, "Romenagri cannot be built here (gcc, flex, make, iconv)")

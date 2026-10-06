@@ -7,3 +7,4 @@ vendor/sanskrit_parser/data/sutras_*.json
 modules/*/data/local/
 packs/
 docs/review-local.html
+docs/data/review-local.json
