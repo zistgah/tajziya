@@ -1,0 +1,43 @@
+{
+ "schema": "tajziya.sources/1",
+ "rule": "Every data file is listed here with its URL, retrieval date, SHA-256 and an allowed licence. Restricted material is local_only and sits in data/local/.",
+ "sources": [],
+ "candidates": [
+  {
+   "treebank": "UD_Spanish-AnCora",
+   "repository": "https://github.com/UniversalDependencies/UD_Spanish-AnCora",
+   "licence_stated": "CC BY 4.0",
+   "licence": "CC-BY-4.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "news"
+  },
+  {
+   "treebank": "UD_Spanish-COSER",
+   "repository": "https://github.com/UniversalDependencies/UD_Spanish-COSER",
+   "licence_stated": "CC BY-SA 4.0",
+   "licence": "CC-BY-SA-4.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "spoken"
+  },
+  {
+   "treebank": "UD_Spanish-GSD",
+   "repository": "https://github.com/UniversalDependencies/UD_Spanish-GSD",
+   "licence_stated": "CC BY-SA 4.0",
+   "licence": "CC-BY-SA-4.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "blog, news, reviews, wiki"
+  },
+  {
+   "treebank": "UD_Spanish-PUD",
+   "repository": "https://github.com/UniversalDependencies/UD_Spanish-PUD",
+   "licence_stated": "CC BY-SA 3.0",
+   "licence": "CC-BY-SA-3.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "news, wiki"
+  }
+ ]
+}

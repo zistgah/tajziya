@@ -1,0 +1,43 @@
+{
+ "schema": "tajziya.sources/1",
+ "rule": "Every data file is listed here with its URL, retrieval date, SHA-256 and an allowed licence. Restricted material is local_only and sits in data/local/.",
+ "sources": [],
+ "candidates": [
+  {
+   "treebank": "UD_Polish-LFG",
+   "repository": "https://github.com/UniversalDependencies/UD_Polish-LFG",
+   "licence_stated": "GNU GPL 3.0",
+   "licence": "GPL-3.0-only",
+   "allowed": true,
+   "text_included": true,
+   "genre": "fiction, nonfiction, news, spoken, social"
+  },
+  {
+   "treebank": "UD_Polish-MPDT",
+   "repository": "https://github.com/UniversalDependencies/UD_Polish-MPDT",
+   "licence_stated": "CC BY-SA 4.0",
+   "licence": "CC-BY-SA-4.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "nonfiction, bible, legal, fiction"
+  },
+  {
+   "treebank": "UD_Polish-PDB",
+   "repository": "https://github.com/UniversalDependencies/UD_Polish-PDB",
+   "licence_stated": "CC BY-NC-SA 4.0",
+   "licence": "CC-BY-NC-SA-4.0",
+   "allowed": false,
+   "text_included": true,
+   "genre": "fiction, nonfiction, news"
+  },
+  {
+   "treebank": "UD_Polish-PUD",
+   "repository": "https://github.com/UniversalDependencies/UD_Polish-PUD",
+   "licence_stated": "CC BY-SA 4.0",
+   "licence": "CC-BY-SA-4.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "nonfiction, news"
+  }
+ ]
+}

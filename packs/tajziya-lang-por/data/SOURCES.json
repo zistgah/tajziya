@@ -1,0 +1,70 @@
+{
+ "schema": "tajziya.sources/1",
+ "rule": "Every data file is listed here with its URL, retrieval date, SHA-256 and an allowed licence. Restricted material is local_only and sits in data/local/.",
+ "sources": [],
+ "candidates": [
+  {
+   "treebank": "UD_Portuguese-Bosque",
+   "repository": "https://github.com/UniversalDependencies/UD_Portuguese-Bosque",
+   "licence_stated": "CC BY-SA 4.0",
+   "licence": "CC-BY-SA-4.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "news"
+  },
+  {
+   "treebank": "UD_Portuguese-CINTIL",
+   "repository": "https://github.com/UniversalDependencies/UD_Portuguese-CINTIL",
+   "licence_stated": "CC BY-NC-ND 4.0",
+   "licence": "CC-BY-NC-ND-4.0",
+   "allowed": false,
+   "text_included": true,
+   "genre": "news, fiction, nonfiction, grammar-examples"
+  },
+  {
+   "treebank": "UD_Portuguese-DANTEStocks",
+   "repository": "https://github.com/UniversalDependencies/UD_Portuguese-DANTEStocks",
+   "licence_stated": "CC BY 4.0",
+   "licence": "CC-BY-4.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "social"
+  },
+  {
+   "treebank": "UD_Portuguese-GSD",
+   "repository": "https://github.com/UniversalDependencies/UD_Portuguese-GSD",
+   "licence_stated": "CC BY-SA 4.0",
+   "licence": "CC-BY-SA-4.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "blog, news"
+  },
+  {
+   "treebank": "UD_Portuguese-PetroGold",
+   "repository": "https://github.com/UniversalDependencies/UD_Portuguese-PetroGold",
+   "licence_stated": "CC BY-SA 4.0",
+   "licence": "CC-BY-SA-4.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "academic"
+  },
+  {
+   "treebank": "UD_Portuguese-Porttinari",
+   "repository": "https://github.com/UniversalDependencies/UD_Portuguese-Porttinari",
+   "licence_stated": "CC BY 4.0",
+   "licence": "CC-BY-4.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "news"
+  },
+  {
+   "treebank": "UD_Portuguese-PUD",
+   "repository": "https://github.com/UniversalDependencies/UD_Portuguese-PUD",
+   "licence_stated": "CC BY-SA 3.0",
+   "licence": "CC-BY-SA-3.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "news, wiki"
+  }
+ ]
+}

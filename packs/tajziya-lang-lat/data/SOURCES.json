@@ -1,0 +1,61 @@
+{
+ "schema": "tajziya.sources/1",
+ "rule": "Every data file is listed here with its URL, retrieval date, SHA-256 and an allowed licence. Restricted material is local_only and sits in data/local/.",
+ "sources": [],
+ "candidates": [
+  {
+   "treebank": "UD_Latin-CIRCSE",
+   "repository": "https://github.com/UniversalDependencies/UD_Latin-CIRCSE",
+   "licence_stated": "CC BY-SA 4.0",
+   "licence": "CC-BY-SA-4.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "fiction, poetry"
+  },
+  {
+   "treebank": "UD_Latin-ITTB",
+   "repository": "https://github.com/UniversalDependencies/UD_Latin-ITTB",
+   "licence_stated": "CC BY-NC-SA 3.0",
+   "licence": "CC-BY-NC-SA-3.0",
+   "allowed": false,
+   "text_included": true,
+   "genre": "nonfiction"
+  },
+  {
+   "treebank": "UD_Latin-LLCT",
+   "repository": "https://github.com/UniversalDependencies/UD_Latin-LLCT",
+   "licence_stated": "CC BY-SA 4.0",
+   "licence": "CC-BY-SA-4.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "nonfiction, legal"
+  },
+  {
+   "treebank": "UD_Latin-Perseus",
+   "repository": "https://github.com/UniversalDependencies/UD_Latin-Perseus",
+   "licence_stated": "CC BY-NC-SA 2.5",
+   "licence": "CC-BY-NC-SA-2.5",
+   "allowed": false,
+   "text_included": true,
+   "genre": "fiction, nonfiction, bible"
+  },
+  {
+   "treebank": "UD_Latin-PROIEL",
+   "repository": "https://github.com/UniversalDependencies/UD_Latin-PROIEL",
+   "licence_stated": "CC BY-NC-SA 3.0",
+   "licence": "CC-BY-NC-SA-3.0",
+   "allowed": false,
+   "text_included": true,
+   "genre": "bible, nonfiction"
+  },
+  {
+   "treebank": "UD_Latin-UDante",
+   "repository": "https://github.com/UniversalDependencies/UD_Latin-UDante",
+   "licence_stated": "CC BY-NC-SA 3.0",
+   "licence": "CC-BY-NC-SA-3.0",
+   "allowed": false,
+   "text_included": true,
+   "genre": "nonfiction, poetry, email"
+  }
+ ]
+}

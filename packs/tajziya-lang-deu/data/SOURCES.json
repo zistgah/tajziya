@@ -1,0 +1,43 @@
+{
+ "schema": "tajziya.sources/1",
+ "rule": "Every data file is listed here with its URL, retrieval date, SHA-256 and an allowed licence. Restricted material is local_only and sits in data/local/.",
+ "sources": [],
+ "candidates": [
+  {
+   "treebank": "UD_German-GSD",
+   "repository": "https://github.com/UniversalDependencies/UD_German-GSD",
+   "licence_stated": "CC BY-SA 4.0",
+   "licence": "CC-BY-SA-4.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "news, reviews, wiki"
+  },
+  {
+   "treebank": "UD_German-HDT",
+   "repository": "https://github.com/UniversalDependencies/UD_German-HDT",
+   "licence_stated": "CC BY-SA 4.0",
+   "licence": "CC-BY-SA-4.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "news, nonfiction, web"
+  },
+  {
+   "treebank": "UD_German-LIT",
+   "repository": "https://github.com/UniversalDependencies/UD_German-LIT",
+   "licence_stated": "CC BY-NC-SA 4.0",
+   "licence": "CC-BY-NC-SA-4.0",
+   "allowed": false,
+   "text_included": true,
+   "genre": "nonfiction"
+  },
+  {
+   "treebank": "UD_German-PUD",
+   "repository": "https://github.com/UniversalDependencies/UD_German-PUD",
+   "licence_stated": "CC BY-SA 3.0",
+   "licence": "CC-BY-SA-3.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "news, wiki"
+  }
+ ]
+}

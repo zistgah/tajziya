@@ -1,0 +1,97 @@
+{
+ "schema": "tajziya.sources/1",
+ "rule": "Every data file is listed here with its URL, retrieval date, SHA-256 and an allowed licence. Restricted material is local_only and sits in data/local/.",
+ "sources": [],
+ "candidates": [
+  {
+   "treebank": "UD_French-ALTS",
+   "repository": "https://github.com/UniversalDependencies/UD_French-ALTS",
+   "licence_stated": "CC BY-SA 4.0",
+   "licence": "CC-BY-SA-4.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "legal"
+  },
+  {
+   "treebank": "UD_French-FQB",
+   "repository": "https://github.com/UniversalDependencies/UD_French-FQB",
+   "licence_stated": "LGPL-LR",
+   "licence": "LGPL-LR",
+   "allowed": true,
+   "text_included": true,
+   "genre": "nonfiction, news"
+  },
+  {
+   "treebank": "UD_French-FTB",
+   "repository": "https://github.com/UniversalDependencies/UD_French-FTB",
+   "licence_stated": "LGPL-LR. The underlying text is not included; the user must obtain it separately and then merge with the UD annotation using a script distributed with UD",
+   "licence": "LGPL-LR",
+   "allowed": true,
+   "text_included": false,
+   "genre": "news"
+  },
+  {
+   "treebank": "UD_French-GSD",
+   "repository": "https://github.com/UniversalDependencies/UD_French-GSD",
+   "licence_stated": "CC BY-SA 4.0",
+   "licence": "CC-BY-SA-4.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "blog, news, reviews, wiki"
+  },
+  {
+   "treebank": "UD_French-ParisStories",
+   "repository": "https://github.com/UniversalDependencies/UD_French-ParisStories",
+   "licence_stated": "CC BY-SA 4.0",
+   "licence": "CC-BY-SA-4.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "spoken"
+  },
+  {
+   "treebank": "UD_French-ParTUT",
+   "repository": "https://github.com/UniversalDependencies/UD_French-ParTUT",
+   "licence_stated": "CC BY-NC-SA 4.0",
+   "licence": "CC-BY-NC-SA-4.0",
+   "allowed": false,
+   "text_included": true,
+   "genre": "legal, news, wiki"
+  },
+  {
+   "treebank": "UD_French-PoitevinDIVITAL",
+   "repository": "https://github.com/UniversalDependencies/UD_French-PoitevinDIVITAL",
+   "licence_stated": "CC BY-SA 4.0",
+   "licence": "CC-BY-SA-4.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "grammar-examples"
+  },
+  {
+   "treebank": "UD_French-PUD",
+   "repository": "https://github.com/UniversalDependencies/UD_French-PUD",
+   "licence_stated": "CC BY-SA 3.0",
+   "licence": "CC-BY-SA-3.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "news, wiki"
+  },
+  {
+   "treebank": "UD_French-Rhapsodie",
+   "repository": "https://github.com/UniversalDependencies/UD_French-Rhapsodie",
+   "licence_stated": "CC BY-SA 4.0",
+   "licence": "CC-BY-SA-4.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "spoken"
+  },
+  {
+   "treebank": "UD_French-Sequoia",
+   "repository": "https://github.com/UniversalDependencies/UD_French-Sequoia",
+   "licence_stated": "LGPL-LR",
+   "licence": "LGPL-LR",
+   "allowed": true,
+   "text_included": true,
+   "genre": "wiki, medical, news, nonfiction"
+  }
+ ]
+}

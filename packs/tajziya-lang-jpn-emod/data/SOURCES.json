@@ -1,0 +1,61 @@
+{
+ "schema": "tajziya.sources/1",
+ "rule": "Every data file is listed here with its URL, retrieval date, SHA-256 and an allowed licence. Restricted material is local_only and sits in data/local/.",
+ "sources": [],
+ "candidates": [
+  {
+   "treebank": "UD_Japanese-BCCWJ",
+   "repository": "https://github.com/UniversalDependencies/UD_Japanese-BCCWJ",
+   "licence_stated": "CC BY-NC-SA 4.0. The underlying text is not included; the user must obtain it separately and then merge with the UD annotation using a script distributed with UD",
+   "licence": "CC-BY-NC-SA-4.0",
+   "allowed": false,
+   "text_included": false,
+   "genre": "news, nonfiction, fiction, blog, web"
+  },
+  {
+   "treebank": "UD_Japanese-BCCWJLUW",
+   "repository": "https://github.com/UniversalDependencies/UD_Japanese-BCCWJLUW",
+   "licence_stated": "CC BY-NC-SA 4.0. The underlying text is not included; the user must obtain it separately and then merge with the UD annotation using a script distributed with UD",
+   "licence": "CC-BY-NC-SA-4.0",
+   "allowed": false,
+   "text_included": false,
+   "genre": "news, nonfiction, fiction, blog, web"
+  },
+  {
+   "treebank": "UD_Japanese-GSD",
+   "repository": "https://github.com/UniversalDependencies/UD_Japanese-GSD",
+   "licence_stated": "CC BY-SA 4.0",
+   "licence": "CC-BY-SA-4.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "news, blog"
+  },
+  {
+   "treebank": "UD_Japanese-GSDLUW",
+   "repository": "https://github.com/UniversalDependencies/UD_Japanese-GSDLUW",
+   "licence_stated": "CC BY-SA 4.0",
+   "licence": "CC-BY-SA-4.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "news, blog"
+  },
+  {
+   "treebank": "UD_Japanese-PUD",
+   "repository": "https://github.com/UniversalDependencies/UD_Japanese-PUD",
+   "licence_stated": "CC BY-SA 3.0",
+   "licence": "CC-BY-SA-3.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "news, wiki"
+  },
+  {
+   "treebank": "UD_Japanese-PUDLUW",
+   "repository": "https://github.com/UniversalDependencies/UD_Japanese-PUDLUW",
+   "licence_stated": "CC BY-SA 3.0",
+   "licence": "CC-BY-SA-3.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "news, wiki"
+  }
+ ]
+}

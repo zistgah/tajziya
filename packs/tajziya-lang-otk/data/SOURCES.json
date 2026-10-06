@@ -1,0 +1,16 @@
+{
+ "schema": "tajziya.sources/1",
+ "rule": "Every data file is listed here with its URL, retrieval date, SHA-256 and an allowed licence. Restricted material is local_only and sits in data/local/.",
+ "sources": [],
+ "candidates": [
+  {
+   "treebank": "UD_Old_Turkish-Clausal",
+   "repository": "https://github.com/UniversalDependencies/UD_Old_Turkish-Clausal",
+   "licence_stated": "CC0 1.0",
+   "licence": "CC0-1.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "nonfiction"
+  }
+ ]
+}

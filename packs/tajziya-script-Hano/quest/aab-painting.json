@@ -1,0 +1,136 @@
+{
+ "tool": "AAB",
+ "version": "0.2.0",
+ "exported": "2026-09-27T00:00:00Z",
+ "intent": {
+  "original": "include the cyclers you had mentioned, but put them, your process cyclers, put them into AAB, the mechanism for designing",
+  "current": "One script module: normalisation, detection and a pivot to its hub, with a round-trip proof listing every loss."
+ },
+ "domain": {},
+ "model": {
+  "nodes": [
+   {
+    "id": 1,
+    "type": "actor",
+    "x": 90,
+    "y": 70,
+    "name": "Builder",
+    "note": "a person or any AI",
+    "oracle": ""
+   },
+   {
+    "id": 2,
+    "type": "iface",
+    "x": 280,
+    "y": 70,
+    "name": "Romenagri tables",
+    "note": "the one transliterator; never a second one",
+    "oracle": ""
+   },
+   {
+    "id": 3,
+    "type": "env",
+    "x": 280,
+    "y": 158,
+    "name": "Unicode character data",
+    "note": "normalisation and grapheme rules come from it",
+    "oracle": ""
+   },
+   {
+    "id": 4,
+    "type": "comp",
+    "x": 480,
+    "y": 70,
+    "name": "normalisation and graphemes",
+    "note": "NFC and grapheme clusters for the script",
+    "oracle": ""
+   },
+   {
+    "id": 5,
+    "type": "comp",
+    "x": 480,
+    "y": 158,
+    "name": "detection",
+    "note": "which script a run of text is in",
+    "oracle": ""
+   },
+   {
+    "id": 6,
+    "type": "comp",
+    "x": 480,
+    "y": 246,
+    "name": "pivot to the hub",
+    "note": "Devanagari hub for Brahmic scripts through Romenagri; a declared hub otherwise",
+    "oracle": ""
+   },
+   {
+    "id": 7,
+    "type": "store",
+    "x": 680,
+    "y": 70,
+    "name": "data/SOURCES.json",
+    "note": "Unicode files and tables, with licences",
+    "oracle": ""
+   },
+   {
+    "id": 8,
+    "type": "gate",
+    "x": 880,
+    "y": 70,
+    "name": "round trip",
+    "note": "text to hub and back is identical on a test corpus; every loss listed",
+    "oracle": "OPEN: no round-trip checker exists yet; building it is the first task of this quest"
+   },
+   {
+    "id": 9,
+    "type": "gate",
+    "x": 880,
+    "y": 158,
+    "name": "licences",
+    "note": "every table has an allowed licence",
+    "oracle": "python3 -m tajziya accept <module> (A3)"
+   }
+  ],
+  "wires": [
+   [
+    1,
+    4
+   ],
+   [
+    4,
+    8
+   ],
+   [
+    1,
+    5
+   ],
+   [
+    5,
+    8
+   ],
+   [
+    1,
+    6
+   ],
+   [
+    6,
+    8
+   ],
+   [
+    2,
+    6
+   ],
+   [
+    3,
+    4
+   ],
+   [
+    7,
+    9
+   ]
+  ],
+  "xp": 0,
+  "stages": {},
+  "nextId": 10
+ }
+}

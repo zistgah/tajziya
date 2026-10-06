@@ -1,0 +1,70 @@
+{
+ "schema": "tajziya.sources/1",
+ "rule": "Every data file is listed here with its URL, retrieval date, SHA-256 and an allowed licence. Restricted material is local_only and sits in data/local/.",
+ "sources": [],
+ "candidates": [
+  {
+   "treebank": "UD_Chinese-Beginner",
+   "repository": "https://github.com/UniversalDependencies/UD_Chinese-Beginner",
+   "licence_stated": "CC BY-NC-SA 3.0",
+   "licence": "CC-BY-NC-SA-3.0",
+   "allowed": false,
+   "text_included": true,
+   "genre": "grammar-examples"
+  },
+  {
+   "treebank": "UD_Chinese-CFL",
+   "repository": "https://github.com/UniversalDependencies/UD_Chinese-CFL",
+   "licence_stated": "CC BY-SA 4.0",
+   "licence": "CC-BY-SA-4.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "learner-essays"
+  },
+  {
+   "treebank": "UD_Chinese-GSD",
+   "repository": "https://github.com/UniversalDependencies/UD_Chinese-GSD",
+   "licence_stated": "CC BY-SA 4.0",
+   "licence": "CC-BY-SA-4.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "wiki"
+  },
+  {
+   "treebank": "UD_Chinese-GSDSimp",
+   "repository": "https://github.com/UniversalDependencies/UD_Chinese-GSDSimp",
+   "licence_stated": "CC BY-SA 4.0",
+   "licence": "CC-BY-SA-4.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "wiki"
+  },
+  {
+   "treebank": "UD_Chinese-HK",
+   "repository": "https://github.com/UniversalDependencies/UD_Chinese-HK",
+   "licence_stated": "CC BY-SA 4.0",
+   "licence": "CC-BY-SA-4.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "spoken"
+  },
+  {
+   "treebank": "UD_Chinese-PatentChar",
+   "repository": "https://github.com/UniversalDependencies/UD_Chinese-PatentChar",
+   "licence_stated": "CC BY-NC-SA 3.0",
+   "licence": "CC-BY-NC-SA-3.0",
+   "allowed": false,
+   "text_included": true,
+   "genre": "legal"
+  },
+  {
+   "treebank": "UD_Chinese-PUD",
+   "repository": "https://github.com/UniversalDependencies/UD_Chinese-PUD",
+   "licence_stated": "CC BY-SA 3.0",
+   "licence": "CC-BY-SA-3.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "news, wiki"
+  }
+ ]
+}

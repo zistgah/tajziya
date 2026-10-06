@@ -1,0 +1,14 @@
+{
+ "schema": "tajziya.sources/1",
+ "rule": "Every data file is listed here with its URL, retrieval date, SHA-256 and an allowed licence. Restricted material is local_only and sits in data/local/.",
+ "sources": [],
+ "candidates": [
+  {
+   "title": "Unicode Character Database: Scripts.txt, ScriptExtensions.txt and the normalisation data",
+   "url": "https://www.unicode.org/Public/UCD/latest/ucd/",
+   "licence": "Unicode-3.0",
+   "allowed": true,
+   "notice_required": true
+  }
+ ]
+}

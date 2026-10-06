@@ -1,0 +1,106 @@
+{
+ "schema": "tajziya.sources/1",
+ "rule": "Every data file is listed here with its URL, retrieval date, SHA-256 and an allowed licence. Restricted material is local_only and sits in data/local/.",
+ "sources": [],
+ "candidates": [
+  {
+   "treebank": "UD_Italian-ISDT",
+   "repository": "https://github.com/UniversalDependencies/UD_Italian-ISDT",
+   "licence_stated": "CC BY-NC-SA 3.0",
+   "licence": "CC-BY-NC-SA-3.0",
+   "allowed": false,
+   "text_included": true,
+   "genre": "legal, news, wiki"
+  },
+  {
+   "treebank": "UD_Italian-KIParlaForest",
+   "repository": "https://github.com/UniversalDependencies/UD_Italian-KIParlaForest",
+   "licence_stated": "CC BY-NC-SA 4.0",
+   "licence": "CC-BY-NC-SA-4.0",
+   "allowed": false,
+   "text_included": true,
+   "genre": "spoken"
+  },
+  {
+   "treebank": "UD_Italian-MarkIT",
+   "repository": "https://github.com/UniversalDependencies/UD_Italian-MarkIT",
+   "licence_stated": "CC BY 4.0",
+   "licence": "CC-BY-4.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "grammar-examples"
+  },
+  {
+   "treebank": "UD_Italian-Old",
+   "repository": "https://github.com/UniversalDependencies/UD_Italian-Old",
+   "licence_stated": "CC BY-SA 4.0",
+   "licence": "CC-BY-SA-4.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "poetry"
+  },
+  {
+   "treebank": "UD_Italian-ParlaMint",
+   "repository": "https://github.com/UniversalDependencies/UD_Italian-ParlaMint",
+   "licence_stated": "CC BY-SA 4.0",
+   "licence": "CC-BY-SA-4.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "government, legal"
+  },
+  {
+   "treebank": "UD_Italian-ParTUT",
+   "repository": "https://github.com/UniversalDependencies/UD_Italian-ParTUT",
+   "licence_stated": "CC BY-NC-SA 4.0",
+   "licence": "CC-BY-NC-SA-4.0",
+   "allowed": false,
+   "text_included": true,
+   "genre": "legal, news, wiki"
+  },
+  {
+   "treebank": "UD_Italian-PoSTWITA",
+   "repository": "https://github.com/UniversalDependencies/UD_Italian-PoSTWITA",
+   "licence_stated": "CC BY-NC-SA 4.0",
+   "licence": "CC-BY-NC-SA-4.0",
+   "allowed": false,
+   "text_included": true,
+   "genre": "social"
+  },
+  {
+   "treebank": "UD_Italian-PUD",
+   "repository": "https://github.com/UniversalDependencies/UD_Italian-PUD",
+   "licence_stated": "CC BY-SA 3.0",
+   "licence": "CC-BY-SA-3.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "news, wiki"
+  },
+  {
+   "treebank": "UD_Italian-TWITTIRO",
+   "repository": "https://github.com/UniversalDependencies/UD_Italian-TWITTIRO",
+   "licence_stated": "CC BY-SA 4.0",
+   "licence": "CC-BY-SA-4.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "social"
+  },
+  {
+   "treebank": "UD_Italian-Valico",
+   "repository": "https://github.com/UniversalDependencies/UD_Italian-Valico",
+   "licence_stated": "CC BY-SA 4.0",
+   "licence": "CC-BY-SA-4.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "learner-essays"
+  },
+  {
+   "treebank": "UD_Italian-VIT",
+   "repository": "https://github.com/UniversalDependencies/UD_Italian-VIT",
+   "licence_stated": "CC BY-NC-SA 3.0",
+   "licence": "CC-BY-NC-SA-3.0",
+   "allowed": false,
+   "text_included": true,
+   "genre": "nonfiction, news"
+  }
+ ]
+}

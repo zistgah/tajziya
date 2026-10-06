@@ -1,0 +1,133 @@
+{
+ "schema": "tajziya.sources/1",
+ "rule": "Every data file is listed here with its URL, retrieval date, SHA-256 and an allowed licence. Restricted material is local_only and sits in data/local/.",
+ "sources": [],
+ "candidates": [
+  {
+   "treebank": "UD_English-Atis",
+   "repository": "https://github.com/UniversalDependencies/UD_English-Atis",
+   "licence_stated": "CC BY-SA 4.0",
+   "licence": "CC-BY-SA-4.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "spoken"
+  },
+  {
+   "treebank": "UD_English-CHILDES",
+   "repository": "https://github.com/UniversalDependencies/UD_English-CHILDES",
+   "licence_stated": "CC BY-SA 4.0",
+   "licence": "CC-BY-SA-4.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "spoken"
+  },
+  {
+   "treebank": "UD_English-CTeTex",
+   "repository": "https://github.com/UniversalDependencies/UD_English-CTeTex",
+   "licence_stated": "CC BY-SA 4.0",
+   "licence": "CC-BY-SA-4.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "nonfiction"
+  },
+  {
+   "treebank": "UD_English-ESL",
+   "repository": "https://github.com/UniversalDependencies/UD_English-ESL",
+   "licence_stated": "CC BY-SA 4.0. The underlying text is not included; the user must obtain it separately and then merge with the UD annotation using a script distributed with UD",
+   "licence": "CC-BY-SA-4.0",
+   "allowed": true,
+   "text_included": false,
+   "genre": "learner-essays"
+  },
+  {
+   "treebank": "UD_English-ESLSpok",
+   "repository": "https://github.com/UniversalDependencies/UD_English-ESLSpok",
+   "licence_stated": "CC BY-SA 4.0",
+   "licence": "CC-BY-SA-4.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "spoken"
+  },
+  {
+   "treebank": "UD_English-EWT",
+   "repository": "https://github.com/UniversalDependencies/UD_English-EWT",
+   "licence_stated": "CC BY-SA 4.0",
+   "licence": "CC-BY-SA-4.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "blog, social, reviews, email, web"
+  },
+  {
+   "treebank": "UD_English-GENTLE",
+   "repository": "https://github.com/UniversalDependencies/UD_English-GENTLE",
+   "licence_stated": "CC BY-NC-SA 4.0",
+   "licence": "CC-BY-NC-SA-4.0",
+   "allowed": false,
+   "text_included": true,
+   "genre": "academic, grammar-examples, legal, medical, nonfiction, poetry, social, spoken"
+  },
+  {
+   "treebank": "UD_English-GUM",
+   "repository": "https://github.com/UniversalDependencies/UD_English-GUM",
+   "licence_stated": "CC BY-NC-SA 4.0",
+   "licence": "CC-BY-NC-SA-4.0",
+   "allowed": false,
+   "text_included": true,
+   "genre": "academic, blog, email, fiction, government, legal, news, nonfiction, social, spoken, web, wiki"
+  },
+  {
+   "treebank": "UD_English-GUMReddit",
+   "repository": "https://github.com/UniversalDependencies/UD_English-GUMReddit",
+   "licence_stated": "CC BY 4.0. The underlying text is not included; the user must obtain it separately and then merge with the UD annotation using a script distributed with UD",
+   "licence": "CC-BY-4.0",
+   "allowed": true,
+   "text_included": false,
+   "genre": "blog, social"
+  },
+  {
+   "treebank": "UD_English-LinES",
+   "repository": "https://github.com/UniversalDependencies/UD_English-LinES",
+   "licence_stated": "CC BY-NC-SA 4.0",
+   "licence": "CC-BY-NC-SA-4.0",
+   "allowed": false,
+   "text_included": true,
+   "genre": "fiction, nonfiction, spoken"
+  },
+  {
+   "treebank": "UD_English-LittlePrince",
+   "repository": "https://github.com/UniversalDependencies/UD_English-LittlePrince",
+   "licence_stated": "CC BY-SA 4.0",
+   "licence": "CC-BY-SA-4.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "fiction"
+  },
+  {
+   "treebank": "UD_English-ParTUT",
+   "repository": "https://github.com/UniversalDependencies/UD_English-ParTUT",
+   "licence_stated": "CC BY-NC-SA 4.0",
+   "licence": "CC-BY-NC-SA-4.0",
+   "allowed": false,
+   "text_included": true,
+   "genre": "legal, news, wiki"
+  },
+  {
+   "treebank": "UD_English-Pronouns",
+   "repository": "https://github.com/UniversalDependencies/UD_English-Pronouns",
+   "licence_stated": "CC BY-SA 4.0",
+   "licence": "CC-BY-SA-4.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "grammar-examples"
+  },
+  {
+   "treebank": "UD_English-PUD",
+   "repository": "https://github.com/UniversalDependencies/UD_English-PUD",
+   "licence_stated": "CC BY-SA 3.0",
+   "licence": "CC-BY-SA-3.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "news, wiki"
+  }
+ ]
+}

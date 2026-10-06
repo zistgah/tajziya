@@ -1,0 +1,315 @@
+{
+ "tool": "AAB",
+ "version": "0.2.0",
+ "exported": "2026-09-27T00:00:00Z",
+ "intent": {
+  "original": "Now for each of the remaining languages, build a package which can be handed over to another AI or human and they can provide a parser etc implementation for that language",
+  "current": "Build one layer of She (shx) at a time, from an openly licensed source, until bash accept.sh passes A1 to A7."
+ },
+ "domain": {},
+ "model": {
+  "nodes": [
+   {
+    "id": 1,
+    "type": "actor",
+    "x": 90,
+    "y": 70,
+    "name": "Builder",
+    "note": "a person or any AI, named by the operator in the record",
+    "oracle": ""
+   },
+   {
+    "id": 2,
+    "type": "actor",
+    "x": 90,
+    "y": 158,
+    "name": "Reviewer",
+    "note": "the author or a maintainer, who types the gate",
+    "oracle": ""
+   },
+   {
+    "id": 3,
+    "type": "iface",
+    "x": 280,
+    "y": 70,
+    "name": "tajziya.api v1",
+    "note": "the only surface a module may import",
+    "oracle": ""
+   },
+   {
+    "id": 4,
+    "type": "env",
+    "x": 280,
+    "y": 158,
+    "name": "Python 3.10 and tajziya",
+    "note": "accept.sh clones tajziya into .deps/ inside the package",
+    "oracle": ""
+   },
+   {
+    "id": 5,
+    "type": "comp",
+    "x": 480,
+    "y": 70,
+    "name": "L0 phonology",
+    "note": "L0 phonology: not_built; engines none named; packages P-L0-01, P-PROF-01",
+    "oracle": ""
+   },
+   {
+    "id": 6,
+    "type": "comp",
+    "x": 480,
+    "y": 158,
+    "name": "L1 script pivot",
+    "note": "L1 script pivot: not_built; engines none named; packages P-L1-01",
+    "oracle": ""
+   },
+   {
+    "id": 7,
+    "type": "comp",
+    "x": 480,
+    "y": 246,
+    "name": "L2 orthography",
+    "note": "L2 orthography: wired_unproven; engines sign_sequence; packages P-ENG-11, P-PROF-01",
+    "oracle": ""
+   },
+   {
+    "id": 8,
+    "type": "comp",
+    "x": 480,
+    "y": 334,
+    "name": "L3s segmentation",
+    "note": "L3s segmentation: not_built; engines none named; packages P-PROF-01",
+    "oracle": ""
+   },
+   {
+    "id": 9,
+    "type": "comp",
+    "x": 480,
+    "y": 422,
+    "name": "L3m morphology",
+    "note": "L3m morphology: not_built; engines none named; packages P-PROF-01",
+    "oracle": ""
+   },
+   {
+    "id": 10,
+    "type": "comp",
+    "x": 480,
+    "y": 510,
+    "name": "L4 syntax",
+    "note": "L4 syntax: not_built; engines none named; packages P-L4-01, P-PROF-01",
+    "oracle": ""
+   },
+   {
+    "id": 11,
+    "type": "store",
+    "x": 680,
+    "y": 70,
+    "name": "data/SOURCES.json",
+    "note": "every source: URL, date, sha256, licence; candidates listed",
+    "oracle": ""
+   },
+   {
+    "id": 12,
+    "type": "store",
+    "x": 680,
+    "y": 158,
+    "name": "reference/examples.json",
+    "note": "attested examples, every reading, with locators",
+    "oracle": ""
+   },
+   {
+    "id": 13,
+    "type": "store",
+    "x": 680,
+    "y": 246,
+    "name": "runs/ledger.jsonl",
+    "note": "step 3: every prompt, response, decision and artifact version",
+    "oracle": ""
+   },
+   {
+    "id": 14,
+    "type": "gate",
+    "x": 880,
+    "y": 70,
+    "name": "A1 the manifest names a real node, versioned implem",
+    "note": "the manifest names a real node, versioned implementation and API 1",
+    "oracle": "bash accept.sh (check A1)"
+   },
+   {
+    "id": 15,
+    "type": "gate",
+    "x": 880,
+    "y": 158,
+    "name": "A2 only expected entries",
+    "note": "only expected entries; no build artefacts; no path outside the package",
+    "oracle": "bash accept.sh (check A2)"
+   },
+   {
+    "id": 16,
+    "type": "gate",
+    "x": 880,
+    "y": 246,
+    "name": "A3 every data file listed with URL, date, sha256 an",
+    "note": "every data file listed with URL, date, sha256 and an allowed licence",
+    "oracle": "bash accept.sh (check A3)"
+   },
+   {
+    "id": 17,
+    "type": "gate",
+    "x": 880,
+    "y": 334,
+    "name": "A4 every built layer cites attested examples with l",
+    "note": "every built layer cites attested examples with locators",
+    "oracle": "bash accept.sh (check A4)"
+   },
+   {
+    "id": 18,
+    "type": "gate",
+    "x": 880,
+    "y": 422,
+    "name": "A5 the module loads alone and conforms",
+    "note": "the module loads alone and conforms: refusals name packages",
+    "oracle": "bash accept.sh (check A5)"
+   },
+   {
+    "id": 19,
+    "type": "gate",
+    "x": 880,
+    "y": 510,
+    "name": "A6 bound into a scratch copy of tajziya, doctor and",
+    "note": "bound into a scratch copy of tajziya, doctor and full conformance pass",
+    "oracle": "bash accept.sh (check A6)"
+   },
+   {
+    "id": 20,
+    "type": "gate",
+    "x": 880,
+    "y": 598,
+    "name": "A7 this painting is valid and the configuration rec",
+    "note": "this painting is valid and the configuration record's chain is intact",
+    "oracle": "bash accept.sh (check A7)"
+   }
+  ],
+  "wires": [
+   [
+    1,
+    5
+   ],
+   [
+    3,
+    5
+   ],
+   [
+    5,
+    18
+   ],
+   [
+    5,
+    13
+   ],
+   [
+    1,
+    6
+   ],
+   [
+    3,
+    6
+   ],
+   [
+    6,
+    18
+   ],
+   [
+    6,
+    13
+   ],
+   [
+    1,
+    7
+   ],
+   [
+    3,
+    7
+   ],
+   [
+    7,
+    18
+   ],
+   [
+    7,
+    13
+   ],
+   [
+    1,
+    8
+   ],
+   [
+    3,
+    8
+   ],
+   [
+    8,
+    18
+   ],
+   [
+    8,
+    13
+   ],
+   [
+    1,
+    9
+   ],
+   [
+    3,
+    9
+   ],
+   [
+    9,
+    18
+   ],
+   [
+    9,
+    13
+   ],
+   [
+    1,
+    10
+   ],
+   [
+    3,
+    10
+   ],
+   [
+    10,
+    18
+   ],
+   [
+    10,
+    13
+   ],
+   [
+    11,
+    16
+   ],
+   [
+    12,
+    17
+   ],
+   [
+    13,
+    20
+   ],
+   [
+    4,
+    19
+   ],
+   [
+    2,
+    19
+   ]
+  ],
+  "xp": 0,
+  "stages": {},
+  "nextId": 21
+ }
+}

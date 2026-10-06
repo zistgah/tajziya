@@ -1,0 +1,97 @@
+{
+ "schema": "tajziya.sources/1",
+ "rule": "Every data file is listed here with its URL, retrieval date, SHA-256 and an allowed licence. Restricted material is local_only and sits in data/local/.",
+ "sources": [],
+ "candidates": [
+  {
+   "treebank": "UD_Turkish-Atis",
+   "repository": "https://github.com/UniversalDependencies/UD_Turkish-Atis",
+   "licence_stated": "CC BY-SA 4.0",
+   "licence": "CC-BY-SA-4.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "nonfiction, news"
+  },
+  {
+   "treebank": "UD_Turkish-BOUN",
+   "repository": "https://github.com/UniversalDependencies/UD_Turkish-BOUN",
+   "licence_stated": "CC BY-SA 4.0",
+   "licence": "CC-BY-SA-4.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "nonfiction, news"
+  },
+  {
+   "treebank": "UD_Turkish-FrameNet",
+   "repository": "https://github.com/UniversalDependencies/UD_Turkish-FrameNet",
+   "licence_stated": "CC BY-SA 4.0",
+   "licence": "CC-BY-SA-4.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "grammar-examples"
+  },
+  {
+   "treebank": "UD_Turkish-GB",
+   "repository": "https://github.com/UniversalDependencies/UD_Turkish-GB",
+   "licence_stated": "CC BY-SA 4.0",
+   "licence": "CC-BY-SA-4.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "grammar-examples"
+  },
+  {
+   "treebank": "UD_Turkish-IMST",
+   "repository": "https://github.com/UniversalDependencies/UD_Turkish-IMST",
+   "licence_stated": "CC BY-NC-SA 4.0",
+   "licence": "CC-BY-NC-SA-4.0",
+   "allowed": false,
+   "text_included": true,
+   "genre": "nonfiction, news"
+  },
+  {
+   "treebank": "UD_Turkish-Kenet",
+   "repository": "https://github.com/UniversalDependencies/UD_Turkish-Kenet",
+   "licence_stated": "CC BY-SA 4.0",
+   "licence": "CC-BY-SA-4.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "grammar-examples"
+  },
+  {
+   "treebank": "UD_Turkish-Penn",
+   "repository": "https://github.com/UniversalDependencies/UD_Turkish-Penn",
+   "licence_stated": "CC BY-SA 4.0",
+   "licence": "CC-BY-SA-4.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "nonfiction, news"
+  },
+  {
+   "treebank": "UD_Turkish-PUD",
+   "repository": "https://github.com/UniversalDependencies/UD_Turkish-PUD",
+   "licence_stated": "CC BY-SA 3.0",
+   "licence": "CC-BY-SA-3.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "news, wiki"
+  },
+  {
+   "treebank": "UD_Turkish-Tourism",
+   "repository": "https://github.com/UniversalDependencies/UD_Turkish-Tourism",
+   "licence_stated": "CC BY-SA 4.0",
+   "licence": "CC-BY-SA-4.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "reviews"
+  },
+  {
+   "treebank": "UD_Turkish-TueCL",
+   "repository": "https://github.com/UniversalDependencies/UD_Turkish-TueCL",
+   "licence_stated": "CC BY-SA 4.0",
+   "licence": "CC-BY-SA-4.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "grammar-examples"
+  }
+ ]
+}

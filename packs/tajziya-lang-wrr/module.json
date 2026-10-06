@@ -1,0 +1,25 @@
+{
+ "schema": "tajziya.module/1",
+ "node": "wrr",
+ "implementation": "wrr_v0",
+ "api": "1",
+ "version": "0.0.0",
+ "layers": {
+  "L0": "not_built",
+  "L1": "not_built",
+  "L2": "wired_unproven",
+  "L3s": "not_built",
+  "L3m": "not_built",
+  "L4": "not_built"
+ },
+ "scope_excludes": [],
+ "accepts": [],
+ "engines": [],
+ "entry": "python/wrr_v0/__init__.py",
+ "sources": "data/SOURCES.json",
+ "reference": "reference/examples.json",
+ "requires": [],
+ "licence": {
+  "code": "GPL-3.0-or-later"
+ }
+}

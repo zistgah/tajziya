@@ -1,0 +1,20 @@
+{
+ "schema": "tajziya.module/1",
+ "kind": "script",
+ "script": "Roro",
+ "implementation": "script_roro_v0",
+ "api": "1",
+ "version": "0.0.0",
+ "layers": {
+  "L1": "not_built",
+  "L2": "not_built"
+ },
+ "scope_excludes": [],
+ "entry": "python/script_roro_v0/__init__.py",
+ "sources": "data/SOURCES.json",
+ "reference": "reference/examples.json",
+ "requires": [],
+ "licence": {
+  "code": "GPL-3.0-or-later"
+ }
+}

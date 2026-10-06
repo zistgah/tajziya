@@ -1,0 +1,52 @@
+{
+ "schema": "tajziya.sources/1",
+ "rule": "Every data file is listed here with its URL, retrieval date, SHA-256 and an allowed licence. Restricted material is local_only and sits in data/local/.",
+ "sources": [],
+ "candidates": [
+  {
+   "treebank": "UD_Russian-GSD",
+   "repository": "https://github.com/UniversalDependencies/UD_Russian-GSD",
+   "licence_stated": "CC BY-SA 4.0",
+   "licence": "CC-BY-SA-4.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "wiki"
+  },
+  {
+   "treebank": "UD_Russian-Poetry",
+   "repository": "https://github.com/UniversalDependencies/UD_Russian-Poetry",
+   "licence_stated": "CC BY-SA 4.0",
+   "licence": "CC-BY-SA-4.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "poetry"
+  },
+  {
+   "treebank": "UD_Russian-PUD",
+   "repository": "https://github.com/UniversalDependencies/UD_Russian-PUD",
+   "licence_stated": "CC BY-SA 3.0",
+   "licence": "CC-BY-SA-3.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "news, wiki"
+  },
+  {
+   "treebank": "UD_Russian-SynTagRus",
+   "repository": "https://github.com/UniversalDependencies/UD_Russian-SynTagRus",
+   "licence_stated": "CC BY-NC-SA 4.0",
+   "licence": "CC-BY-NC-SA-4.0",
+   "allowed": false,
+   "text_included": true,
+   "genre": "news, nonfiction, fiction"
+  },
+  {
+   "treebank": "UD_Russian-Taiga",
+   "repository": "https://github.com/UniversalDependencies/UD_Russian-Taiga",
+   "licence_stated": "CC BY-SA 4.0",
+   "licence": "CC-BY-SA-4.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "blog, fiction, news, poetry, social, wiki"
+  }
+ ]
+}

@@ -1,0 +1,34 @@
+{
+ "schema": "tajziya.sources/1",
+ "rule": "Every data file is listed here with its URL, retrieval date, SHA-256 and an allowed licence. Restricted material is local_only and sits in data/local/.",
+ "sources": [],
+ "candidates": [
+  {
+   "treebank": "UD_Classical_Armenian-CAVaL",
+   "repository": "https://github.com/UniversalDependencies/UD_Classical_Armenian-CAVaL",
+   "licence_stated": "CC BY-NC-SA 4.0",
+   "licence": "CC-BY-NC-SA-4.0",
+   "allowed": false,
+   "text_included": true,
+   "genre": "bible, fiction"
+  },
+  {
+   "treebank": "UD_Armenian-ArmTDP",
+   "repository": "https://github.com/UniversalDependencies/UD_Armenian-ArmTDP",
+   "licence_stated": "CC BY-SA 4.0",
+   "licence": "CC-BY-SA-4.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "academic, blog, fiction, government, grammar-examples, legal, medical, news, nonfiction, reviews, social"
+  },
+  {
+   "treebank": "UD_Armenian-BSUT",
+   "repository": "https://github.com/UniversalDependencies/UD_Armenian-BSUT",
+   "licence_stated": "CC BY-SA 4.0",
+   "licence": "CC-BY-SA-4.0",
+   "allowed": true,
+   "text_included": true,
+   "genre": "blog, fiction, government, legal, news, nonfiction, web, wiki"
+  }
+ ]
+}
