@@ -21,9 +21,12 @@ class Registry(unittest.TestCase):
             self.assertEqual(packets.problems(p), [], pid)
             self.assertEqual(p["acceptance"]["command"], f"python3 -m tajziya packet check {pid}")
 
-    def test_every_area_has_open_work(self):
-        areas = {p["area"] for p in packets.all_packets().values() if p["status"] == "open"}
-        self.assertEqual(areas, set(packets.AREAS))
+    def test_every_area_has_packets_and_done_ones_pass(self):
+        ps = packets.all_packets()
+        self.assertEqual({p["area"] for p in ps.values()}, set(packets.AREAS))
+        for pid, p in ps.items():
+            if p["status"] == "done":
+                self.assertEqual(packets.check(pid, ps)[0], "PASS", pid)
 
 
 class Checks(unittest.TestCase):
@@ -40,7 +43,7 @@ class Checks(unittest.TestCase):
         self.assertTrue(any("does not pin" in p for p in probs))
 
     def test_a_missing_output_fails(self):
-        self.assertEqual(packets.check("PKT-TRN-01")[0], "FAIL")
+        self.assertEqual(packets.check("PKT-INT-02")[0], "FAIL")
 
     def test_a_corpus_without_its_count_fails_and_with_it_passes(self):
         d = os.path.join(ROOT, "corpus", "zz-test")

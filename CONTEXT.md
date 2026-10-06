@@ -94,6 +94,7 @@ alternative wherever a licence stood in the way.
 
 `modules/cls/data/ashtadhyayi/sutraani.tsv` holds the 3,983 sutras derived by
 `tools/sutra_import.py` from github.com/ashtadhyayi-com/data at 5744762, credited, pinned.
+`tools/translations_import.py` derives the translations into `modules/cls/data/translation/`.
 `tools/review_gen.py` builds `docs/review.html` from it, from vidyut's MIT text and from
 `modules/cls/data/review/flags.json`. The flags record sutra and field only where the
 restricted compilation differs.

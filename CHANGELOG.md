@@ -2,6 +2,22 @@
 
 © 1993–2026 Abhishek Choudhary. All rights reserved. AyeAI.
 
+## 0.6.2
+
+- Translations on the review page. Śrīśa Chandra Vasu's English translation (1891 to 1898, public
+  domain by age) for all 3,983 sutras, the short English meaning for the 838 sutras the data gives
+  one, and the Sanskrit artha for 1,674, all from ashtadhyayi.com's data, credited and pinned.
+  `tools/translations_import.py` derives them. The page fetches them one pāda at a time, only
+  when that pāda's cards appear; Vasu's notes and the Sanskrit explanation load only when opened.
+- Packets PKT-TRN-01, -02 and -03 are done and pass their own checks. PKT-TRN-03 asks for the
+  1,674 sutras the data gives an artha; it said 3,983, which was wrong.
+- The packages are in the repository. Abhishek Choudhary checked in all 8,091 packages and their
+  bundles (commit 305e4c0, recorded under the placeholder identity t <t@t>; `.mailmap` restores
+  his name). `packs/` is no longer ignored; V28 regenerates every package and requires the
+  checked-in tree to match byte for byte; V09 leaves `packs/dist/`'s archives alone. The landing
+  page links the packages and the three bundles.
+- V27 now also requires that translations reach the review page's cards.
+
 ## 0.6.1
 
 - The review page renders again. 0.6.0's page carried a line break inside a JavaScript string,

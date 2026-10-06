@@ -5,7 +5,7 @@
  "area": "translation",
  "wave": 1,
  "size": "S",
- "status": "open",
+ "status": "done",
  "summary": "Import the English meaning (sutrartha) for the 838 sutras the source covers, keyed by sutra number.",
  "inputs": [
   {

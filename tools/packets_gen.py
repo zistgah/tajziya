@@ -22,7 +22,7 @@ ASH_TERMS = ("ashtadhyayi.com's terms: use with credit (LicenseRef-ashtadhyayi-c
 COVERS = {"bhashya": 1702, "kashika": 3983, "nyaas": 3432, "padamanjari": 3368, "kaumudi": 3949,
           "praudhamanorama": 462, "balamanorama": 2912, "tattvabodhini": 2477, "laghukaumudi": 1254,
           "laghushabdendushekhar": 82, "prakriyasarvasvam": 3634, "sarala": 215, "sudha": 375,
-          "sutrartha": 3983, "sutrartha_english": 838, "vasu_english": 3983}
+          "sutrartha": 1674, "sutrartha_english": 838, "vasu_english": 3983}
 
 
 def packet(pid, title, area, size, summary, inputs, outputs, licence, kind, args, how, depends=(), wave=1):

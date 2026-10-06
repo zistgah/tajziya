@@ -106,6 +106,73 @@
    ],
    "local_only": false,
    "attribution": "Sutra text: ashtadhyayi.com. Transliteration: Romenagri, by Abhishek Choudhary (hindawiai/chintamani)."
+  },
+  {
+   "id": "ashtadhyayi-com-vasu-english",
+   "title": "Srisa Chandra Vasu's English translation of the Ashtadhyayi, with his notes",
+   "url": "https://github.com/ashtadhyayi-com/data/tree/5744762f010d677cfb43f347a42d02796cf615d6/sutraani",
+   "commit": "5744762f010d677cfb43f347a42d02796cf615d6",
+   "retrieved": "2026-10-06",
+   "licence": "LicenseRef-ashtadhyayi-com",
+   "licence_file": "data/LICENSES/ashtadhyayi-com.txt",
+   "terms": "You are free to use this data in your own projects provided that appropriate credits are mentioned wherever applicable. (the repository's README)",
+   "attribution": "ashtadhyayi.com; Vasu, Srisa Chandra (1861 to 1918), translator. The Ashtadhyayi of Panini. Allahabad: Indian Press, 1891 to 1898 (books 4 to 8: Benares, Panini Office). HathiTrust record 100325742. Public domain by age; the transcription is ashtadhyayi.com's, used on its terms with credit.",
+   "upstream_path": "sutraani/vasu_english.txt",
+   "upstream_sha256": "4ec4f9519581d508fa2e341ba8c8403b4fff852cec48ae306c4fdadbb47912e1",
+   "derived_by": "tools/translations_import.py",
+   "entries": 3983,
+   "files": [
+    {
+     "path": "data/translation/vasu.tsv",
+     "sha256": "5f3ffd257b05c0ba0fee02aff3e39b8c8a85c18463a7f17a37dca97355474c9d"
+    }
+   ],
+   "local_only": false,
+   "citation": "Vasu, Srisa Chandra (1861 to 1918), translator. The Ashtadhyayi of Panini. Allahabad: Indian Press, 1891 to 1898 (books 4 to 8: Benares, Panini Office). HathiTrust record 100325742. Public domain by age; the transcription is ashtadhyayi.com's, used on its terms with credit."
+  },
+  {
+   "id": "ashtadhyayi-com-sutrartha-english",
+   "title": "The short English meaning of the sutras, where ashtadhyayi.com's data gives one",
+   "url": "https://github.com/ashtadhyayi-com/data/tree/5744762f010d677cfb43f347a42d02796cf615d6/sutraani",
+   "commit": "5744762f010d677cfb43f347a42d02796cf615d6",
+   "retrieved": "2026-10-06",
+   "licence": "LicenseRef-ashtadhyayi-com",
+   "licence_file": "data/LICENSES/ashtadhyayi-com.txt",
+   "terms": "You are free to use this data in your own projects provided that appropriate credits are mentioned wherever applicable. (the repository's README)",
+   "attribution": "ashtadhyayi.com",
+   "upstream_path": "sutraani/sutrartha_english.txt",
+   "upstream_sha256": "2134792ab774a41a6b00d2694bf388a20a20085d14b6156718d8412cb8a5f3bf",
+   "derived_by": "tools/translations_import.py",
+   "entries": 838,
+   "files": [
+    {
+     "path": "data/translation/english.tsv",
+     "sha256": "e17b251e495ac6f3aad8f0d546bbc0aeb91204238b3f218d19f48971443cba00"
+    }
+   ],
+   "local_only": false
+  },
+  {
+   "id": "ashtadhyayi-com-sutrartha",
+   "title": "The Sanskrit meaning (artha) of each sutra and its explanation",
+   "url": "https://github.com/ashtadhyayi-com/data/tree/5744762f010d677cfb43f347a42d02796cf615d6/sutraani",
+   "commit": "5744762f010d677cfb43f347a42d02796cf615d6",
+   "retrieved": "2026-10-06",
+   "licence": "LicenseRef-ashtadhyayi-com",
+   "licence_file": "data/LICENSES/ashtadhyayi-com.txt",
+   "terms": "You are free to use this data in your own projects provided that appropriate credits are mentioned wherever applicable. (the repository's README)",
+   "attribution": "ashtadhyayi.com",
+   "upstream_path": "sutraani/sutrartha.txt",
+   "upstream_sha256": "cb6229b3e91c8c1a2dd65f8dfaace1a6d44fcdcb65d900d507bfbda20921b35b",
+   "derived_by": "tools/translations_import.py",
+   "entries": 1674,
+   "files": [
+    {
+     "path": "data/translation/sanskrit-artha.tsv",
+     "sha256": "7844d403f999ba35abd5bc797d06e0e8b405318d5974bef40e25a34314e4589d"
+    }
+   ],
+   "local_only": false
   }
  ]
 }

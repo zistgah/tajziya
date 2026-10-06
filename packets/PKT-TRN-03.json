@@ -5,8 +5,8 @@
  "area": "translation",
  "wave": 1,
  "size": "S",
- "status": "open",
- "summary": "Import the Sanskrit meaning (artha) for the 3983 sutras the source covers, keyed by sutra number.",
+ "status": "done",
+ "summary": "Import the Sanskrit meaning (artha) for the 1674 sutras the source covers, keyed by sutra number.",
  "inputs": [
   {
    "what": "sutrartha.txt",
@@ -26,7 +26,7 @@
     "id",
     "text"
    ],
-   "min_rows": 3983,
+   "min_rows": 1674,
    "source_id": "ashtadhyayi-com-sutrartha"
   },
   "command": "python3 -m tajziya packet check PKT-TRN-03"

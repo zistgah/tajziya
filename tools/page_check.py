@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # © 1993–2026 Abhishek Choudhary. All rights reserved. AyeAI.
 # SPDX-License-Identifier: GPL-3.0-or-later
-"""Every page's scripts parse, and the review and packets pages render their content.
+"""Every page's scripts parse, and the review and packets pages render their content, translations included.
 
     python3 tools/page_check.py
 
@@ -36,8 +36,9 @@ global.fetch = async u => { const f = path.join(path.dirname(page), u);
 let err = null;
 try { eval(code); } catch (e) { err = e.message; }
 setTimeout(() => { const lead = (els.lead || els["pk-lead"] || {}).innerHTML || "";
+  const trs = Object.keys(els).filter(k => k.startsWith("tr-") && /class="who"/.test(els[k].innerHTML)).length;
   console.log(JSON.stringify({error: err, rendered: (els[listId] || {}).innerHTML ? els[listId].innerHTML.length : 0,
-                              failed: /class="err"/.test(lead)})); }, 400);
+                              failed: /class="err"/.test(lead), translations: trs})); }, 600);
 """
 
 
@@ -78,6 +79,8 @@ def main():
             continue
         if out["error"] or out["failed"] or not out["rendered"]:
             bad.append(f"{name}: renders nothing (error {out['error']}, data failed {out['failed']})")
+        elif name == "review.html" and not out["translations"]:
+            bad.append("review.html: the cards render but no translation reaches them")
     shutil.rmtree(SCRATCH, ignore_errors=True)
     for b in bad:
         print(b)

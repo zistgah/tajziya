@@ -25,7 +25,7 @@ chk() {
 files() {
   if git rev-parse --is-inside-work-tree >/dev/null 2>&1; then git ls-files --cached --others --exclude-standard
   else find . -type f -not -path './.git/*' -not -path './.deps/*' -not -path './tests/.scratch/*' | sed 's|^\./||'
-  fi
+  fi | grep -v '^packs/'
 }
 authored() { files | grep -v -e '^LICENSES/' -e '^ops/verify.sh$'; }
 
@@ -41,7 +41,7 @@ v07() { python3 -m tajziya conformance; }
 v08() { local pin hit; pin=$(python3 -c 'import json;print(json.load(open("vendor/sanskrit_parser/data/SOURCE.json"))["sha256"])')
   hit=$(files | while read -r f; do [ -f "$f" ] && [ "$(sha256sum "$f" | cut -c1-64)" = "$pin" ] && echo "$f"; done)
   [ -z "$hit" ] || { echo "the withheld compilation would be committed: $hit"; return 1; }; }
-v09() { local hit; hit=$(files | grep -E '(^|/)__pycache__/|\.pyc$|\.tar\.gz$')
+v09() { local hit; hit=$(files | grep -v '^packs/dist/' | grep -E '(^|/)__pycache__/|\.pyc$|\.tar\.gz$')
   [ -z "$hit" ] || { echo "build artefacts: $hit"; return 1; }; }
 v10() { local pat="/ho""me/|/tm""p/" hit; hit=$(authored | xargs -d '\n' grep -IlE "$pat" 2>/dev/null)
   [ -z "$hit" ] || { echo "an absolute home or temp path in: $hit"; return 1; }; }
@@ -80,7 +80,8 @@ v14() { [ -d .deps/dhancha/tools ] || { echo "no .deps/dhancha checkout; make de
   # shellcheck disable=SC2086
   python3 .deps/dhancha/tools/spine_leak.py descriptor.json $others; }
 v15() { local pat="we c""laim|the inv""ention|inventive s""tep|novel meth""od for|apparatus c""omprising" hit
-  hit=$(authored | xargs -d '\n' grep -IilE "$pat" 2>/dev/null)
+  # our own writing only: imported source texts, such as Vasu's 1890s translation, are data, not our claims
+  hit=$(authored | grep -v -e '^modules/[^/]*/data/' -e '^docs/data/' | xargs -d '\n' grep -IilE "$pat" 2>/dev/null)
   [ -z "$hit" ] || { echo "the language of an unfiled claim in: $hit"; return 1; }; }
 v16() { local pat='10\.5281/zen''odo\.([^0-9]|$)|DOI-PEN''DING|ZENODO-D''OI' hit
   hit=$(authored | xargs -d '\n' grep -IlE "$pat" 2>/dev/null)
@@ -129,6 +130,11 @@ v26() { PYTHONPATH=src python3 -m tajziya packet check --all >/dev/null || { PYT
 
 v27() { python3 tools/page_check.py; }
 
+v28() { [ -d packs ] || { echo "no packs are checked in here"; return 3; }
+        rm -rf tests/.scratch/packs-check
+        python3 tools/langpack.py --everything --tar --bundle --quiet --out tests/.scratch/packs-check >/dev/null || return 1
+        python3 tools/packs_compare.py packs tests/.scratch/packs-check; local rc=$?; rm -rf tests/.scratch/packs-check; return $rc; }
+
 chk V01 "every source file carries the copyright line"            v01
 chk V02 "no affiliation other than AyeAI is claimed"              v02
 chk V03 "the test suite passes"                                    v03
@@ -155,7 +161,8 @@ chk V23 "the sutra data matches its pins and the review page is generated from i
 chk V24 "Romenagri, built from its pin, gives the committed forms of every sutra" v24
 chk V25 "every page in docs/ is linked from the landing page"      v25
 chk V26 "every work packet is well formed; every packet marked done passes" v26
-chk V27 "every page's scripts parse, and the review and packets pages render" v27
+chk V27 "every page's scripts parse; the review and packets pages render, translations included" v27
+chk V28 "the packages checked into packs/ are exactly what the generator makes" v28
 
 if [ "$JSON" = 1 ]; then
   printf '{"element":"tajziya","failures":%d,"unjudged":%d,"checks":[' "$FAILS" "$UNJ"; sep=""

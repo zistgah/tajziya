@@ -94,6 +94,49 @@ def romenagri_forms():
         return {a: (b, c) for a, b, c in (l.rstrip("\n").split("\t") for l in fh)}
 
 
+TRANS = os.path.join(DATA, "translation")
+SHARDS = os.path.join(ROOT, "docs", "data", "translations")
+
+
+def _tsv(name):
+    p = os.path.join(TRANS, name)
+    if not os.path.exists(p):
+        return {}
+    un = lambda t: t.replace("\\n", "\n").replace("\\\\", "\\")
+    with open(p, encoding="utf-8") as fh:
+        cols = next(fh).rstrip("\n").split("\t")
+        return {r[0]: dict(zip(cols[1:], (un(x) for x in r[1:]))) for r in (l.rstrip("\n").split("\t") for l in fh)}
+
+
+def translation_shards(sutras):
+    """Per pada, two JSON files the page fetches only when it needs them: the translations shown on each
+    card, and the longer notes and explanations, fetched when a reader opens them."""
+    vasu, eng, artha = _tsv("vasu.tsv"), _tsv("english.tsv"), _tsv("sanskrit-artha.tsv")
+    short, more = {}, {}
+    for r in sutras:
+        sid, k = r["id"], ".".join(r["id"].split(".")[:2])
+        t, m = {}, {}
+        if sid in vasu:
+            first, _, rest = vasu[sid]["text"].partition("\n")
+            t["v"] = first
+            if rest.strip():
+                m["vn"] = rest
+        if sid in eng:
+            t["e"] = eng[sid]["text"]
+        if sid in artha:
+            t["sa"] = artha[sid]["text"]
+            if artha[sid].get("detail"):
+                m["sd"] = artha[sid]["detail"]
+        if m:
+            t["m"] = " and ".join(x for x, y in (("Vasu's notes", "vn"), ("the Sanskrit explanation", "sd")) if y in m)
+            more.setdefault(k, {})[sid] = m
+        short.setdefault(k, {})[sid] = t
+    dump = lambda v: json.dumps(v, ensure_ascii=False, separators=(",", ":")) + "\n"
+    out = {os.path.join(SHARDS, f"{k}.json"): dump(v) for k, v in short.items()}
+    out.update({os.path.join(SHARDS, f"{k}.more.json"): dump(v) for k, v in more.items()})
+    return out
+
+
 def rows_for(sutras, flags, local=None):
     rows, rom = [], romenagri_forms()
     for r in sutras:
@@ -109,7 +152,9 @@ def rows_for(sutras, flags, local=None):
 
 def data_json(rows, repo, local=False):
     meta = {"repo": repo, "sutras": len(rows), "flagged": sum(1 for r in rows if r["f"]),
-            "romenagri_same": sum(1 for r in rows if r.get("rt")), "local": local}
+            "romenagri_same": sum(1 for r in rows if r.get("rt")), "local": local,
+            "translations": {"vasu": len(_tsv("vasu.tsv")), "english": len(_tsv("english.tsv")),
+                             "artha": len(_tsv("sanskrit-artha.tsv"))}}
     return json.dumps({"schema": "tajziya.review/1", "meta": meta, "rows": rows}, ensure_ascii=False,
                       separators=(",", ":")) + "\n"
 
@@ -147,6 +192,8 @@ button.on{border-color:var(--acc);color:var(--acc)}
 .card{border-top:1px solid var(--line);padding:.7rem .3rem}.card.flag{background:var(--flag)}
 .id{font-weight:600}.meta{color:var(--mut);font-size:.9rem}.s{font-size:1.25rem}
 .f{font-size:.9rem;margin-top:.3rem}.f a{color:var(--acc)}
+.tr{margin:.4rem 0 .2rem;padding:.4rem .6rem;border-left:3px solid var(--line)}.tr p{margin:.2rem 0}
+.tr .who{color:var(--mut);font-size:.85rem}details{margin:.2rem 0}summary{cursor:pointer;color:var(--acc);font-size:.9rem}
 #more{padding:1rem 0;color:var(--mut)}.err{color:#b00020}
 </style></head><body><div class="wrap">
 <p class="meta"><a href="index.html">tajziya</a> · <a href="packets.html">work packets</a></p>
@@ -183,9 +230,53 @@ button.on{border-color:var(--acc);color:var(--acc)}
       '<div class="s">' + esc(r.s) + '</div><div class="meta">' + esc(r.pc) + "</div>";
     if (r.r) h += '<div class="meta">Romenagri: ' + esc(r.r) + (r.rt ? "" : " · does not yet come back the same (packet PKT-ROM-01)") + "</div>";
     if (r.l) h += '<div class="meta">local: ' + esc(r.l.sutra) + " · " + esc(r.l.padaccheda) + "</div>";
+    h += '<div class="tr" id="tr-' + esc(r.id) + '"><span class="meta">Loading the translation.</span></div>';
     fl.forEach(function (f) { h += '<div class="f">' + esc(f.field) + " differs from " + esc(f.against) +
       ' · <a href="' + flagIssue(r, f) + '" target="_blank" rel="noopener">Open issue</a></div>'; });
     return h + '<div class="f"><a href="' + reviewIssue(r) + '" target="_blank" rel="noopener">Open an issue on this sutra</a></div></div>';
+  }
+  var shards = {}, more_ = {};
+  function fmt(t) { return esc(t).replace(/&lt;(\\/?)i&gt;/g, "<$1i>").replace(/\\n/g, "<br>"); }
+  function key(id) { return id.split(".").slice(0, 2).join("."); }
+  function get(cache, file) {
+    if (!cache[file]) cache[file] = fetch("data/translations/" + file).then(function (x) {
+      if (!x.ok) throw new Error("HTTP " + x.status); return x.json(); });
+    return cache[file];
+  }
+  function trHtml(id, t) {
+    if (!t || (!t.v && !t.e && !t.sa)) return '<span class="meta">No translation in the data yet: a work packet adds more.</span>';
+    var h = "";
+    if (t.v) h += '<p><span class="who">Vasu (1891 to 1898):</span> ' + fmt(t.v) + "</p>";
+    if (t.e) h += '<p><span class="who">Meaning:</span> ' + fmt(t.e) + "</p>";
+    if (t.sa) h += '<p><span class="who">अर्थः</span> ' + fmt(t.sa) + "</p>";
+    if (t.m) h += '<details data-id="' + esc(id) + '"><summary>' + esc(t.m) + "</summary><div>Loading.</div></details>";
+    return h;
+  }
+  function translations(rows) {
+    var want = {};
+    rows.forEach(function (r) { want[key(r.id)] = true; });
+    Object.keys(want).forEach(function (k) {
+      get(shards, k + ".json").then(function (d) {
+        rows.forEach(function (r) { if (key(r.id) !== k) return;
+          var el = document.getElementById("tr-" + r.id); if (!el) return;
+          el.innerHTML = trHtml(r.id, d[r.id]);
+          var det = el.querySelector ? el.querySelector("details") : null;
+          if (det) det.addEventListener("toggle", function () {
+            if (!det.open || det.getAttribute("data-done")) return;
+            get(more_, k + ".more.json").then(function (m) {
+              var x = m[r.id] || {}, b = "";
+              if (x.vn) b += '<p><span class="who">Vasu&#39;s notes:</span><br>' + fmt(x.vn) + "</p>";
+              if (x.sd) b += '<p><span class="who">विवरणम्:</span><br>' + fmt(x.sd) + "</p>";
+              det.lastChild.innerHTML = b || '<span class="meta">Nothing more in the data.</span>';
+              det.setAttribute("data-done", "1");
+            }).catch(function (e) { det.lastChild.innerHTML = '<span class="err">Could not load (' + esc(e.message) + ").</span>"; });
+          });
+        });
+      }).catch(function (e) {
+        rows.forEach(function (r) { var el = document.getElementById("tr-" + r.id);
+          if (el) el.innerHTML = '<span class="err">The translation could not be loaded (' + esc(e.message) + ").</span>"; });
+      });
+    });
   }
   function select() {
     var q = $("q").value.trim().toLowerCase();
@@ -196,10 +287,11 @@ button.on{border-color:var(--acc);color:var(--acc)}
     shown = PAGE; $("list").innerHTML = ""; $("n").textContent = current.length + " shown"; more();
   }
   function more() {
-    var start = $("list").children ? $("list").children.length : 0, html = "";
-    current.slice(start, shown).forEach(function (r) { html += card(r); });
+    var start = $("list").children ? $("list").children.length : 0, html = "", batch = current.slice(start, shown);
+    batch.forEach(function (r) { html += card(r); });
     $("list").insertAdjacentHTML ? $("list").insertAdjacentHTML("beforeend", html) : ($("list").innerHTML += html);
     $("more").textContent = shown < current.length ? "Scroll for more (" + (current.length - shown) + " left)" : "";
+    translations(batch);
   }
   function tab(m) { mode = m; $("tf").className = m === "flag" ? "on" : ""; $("ta").className = m === "all" ? "on" : ""; select(); }
   $("q").oninput = select;
@@ -214,7 +306,9 @@ button.on{border-color:var(--acc);color:var(--acc)}
       ROWS = d.rows; REPO = d.meta.repo;
       $("lead").textContent = "All " + d.meta.sutras.toLocaleString() + " sutras, from ashtadhyayi.com's data (credited). " +
         d.meta.flagged + " carry a flag: a field where another source differs. " + d.meta.romenagri_same.toLocaleString() +
-        " come back from Romenagri the same. Every sutra has an issue link to " + REPO + ".";
+        " come back from Romenagri the same. Translations: Vasu's English for " + d.meta.translations.vasu.toLocaleString() +
+        ", a short English meaning for " + d.meta.translations.english.toLocaleString() + ", the Sanskrit artha for " +
+        d.meta.translations.artha.toLocaleString() + ". Every sutra has an issue link to " + REPO + ".";
       select();
     })
     .catch(function (e) { $("lead").innerHTML = '<span class="err">The sutras could not be loaded (' + esc(e.message) +
@@ -241,11 +335,13 @@ def main(argv=None):
         print(f"review_gen: wrote {os.path.relpath(LOCAL_OUT, ROOT)} and its data; git ignores both")
         return 0
     want = {OUT: page("review.json"), DATA_OUT: data_json(rows_for(sutras, flags), a.repo)}
+    want.update(translation_shards(sutras))
     if a.check:
         stale = [os.path.relpath(p, ROOT) for p, t in want.items()
                  if not os.path.exists(p) or open(p, encoding="utf-8").read() != t]
         print("review_gen: the review page and its data are current" if not stale else f"review_gen: STALE: {', '.join(stale)}")
         return 0 if not stale else 1
+    os.makedirs(SHARDS, exist_ok=True)
     for p, t in want.items():
         with open(p, "w", encoding="utf-8") as fh:
             fh.write(t)
