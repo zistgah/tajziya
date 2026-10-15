@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tajziya: learn the Aṣṭādhyāyī</title>
+<!-- © 1993–2026 Abhishek Choudhary. All rights reserved. AyeAI. -->
+<style>
+:root{--bg:#fbfaf7;--fg:#1d1d1b;--mut:#6b675f;--line:#e4e0d6;--card:#fff;--acc:#8a4b08}
+@media (prefers-color-scheme:dark){:root{--bg:#171614;--fg:#ecebe6;--mut:#a29d93;--line:#34312c;--card:#211f1c;--acc:#e3a35a}}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,sans-serif}
+.wrap{max-width:980px;margin:0 auto;padding:1.2rem}.meta{color:var(--mut);font-size:.9rem}
+h1{font-size:1.5rem;margin:.2rem 0}.tabs{display:flex;flex-wrap:wrap;gap:.4rem;margin:.8rem 0}
+button,input[type=text]{font:inherit;padding:.4rem .7rem;border:1px solid var(--line);border-radius:6px;background:var(--card);color:inherit}
+button{cursor:pointer}button.on{border-color:var(--acc);color:var(--acc)}
+.item{border-top:1px solid var(--line);padding:.5rem 0}.s{font-size:1.15rem}.card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:1rem;margin:.6rem 0}
+table{border-collapse:collapse;width:100%;font-size:.92rem}td,th{border-bottom:1px solid var(--line);padding:.3rem;text-align:left}
+.err{color:#b00020}#more{padding:.8rem 0;color:var(--mut)}
+</style></head><body><div class="wrap">
+<p class="meta"><a href="index.html">tajziya</a> · <a href="review.html">the sutra review</a> · <a href="categories.html">arrange by category</a></p>
+<h1>Learn the Aṣṭādhyāyī</h1>
+<p id="learn-lead">Loading the sutras.</p>
+<div class="tabs" id="tabs"></div>
+<p class="meta" id="how"></p>
+<div id="tool"></div>
+<div id="learn-list"></div><div id="more"></div>
+</div><script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var esc = function (s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) {
+    return {"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]; }); };
+  var COLS = [], ROWS = [], mode = "order", shown = 80, PAGE = 80, current = [], shards = {}, IDX = null;
+  var TYPES = {samjna: "A definition. The first-case words name the term; learn the term and what it covers.",
+    paribhasha: "An interpretive rule. It tells how other rules are read; learn where it applies.",
+    vidhi: "An operation. Sixth-case words are what is replaced (1.1.49); first-case words what comes in; a seventh-case context is what follows (1.1.66), a fifth-case context what precedes (1.1.67).",
+    atidesha: "An extension. It treats one thing as another; learn what is extended to what.",
+    adhikara: "A heading. It carries into the rules after it until its scope ends; learn its scope."};
+  var MODES = {
+    order: ["In order", "Read pāda by pāda, as Pāṇini arranged them. Headings (adhikāra) and the words they carry forward make sense only in this order."],
+    kaumudi: ["Siddhānta Kaumudī order", "Read in the order Bhaṭṭoji Dīkṣita arranged them by topic, so each rule meets the forms it builds."],
+    type: ["By type", "Learn one kind of rule at a time: definitions, interpretive rules, operations, extensions, headings. Each kind is read differently."],
+    derive: ["Derivations", "Start from a word: see every rule vidyut-prakriya applies to build it, step by step, and open each rule."],
+    cards: ["Flashcards", "See a sutra, recall its meaning, then reveal Vasu's translation. Mark what you knew."]};
+  function v(r, c) { return r[COLS.indexOf(c)]; }
+  function item(r) { return '<div class="item"><a href="review.html?q=' + esc(v(r, "id")) + '">' + esc(v(r, "id")) + "</a> " +
+    '<span class="meta">' + esc(v(r, "type")) + (v(r, "term") ? " · " + esc(v(r, "term")) : "") + (v(r, "kaumudi") ? " · SK " + esc(v(r, "kaumudi")) : "") +
+    '</span><div class="s">' + esc(v(r, "sutra")) + '</div><div class="meta">' + esc(v(r, "padaccheda")) + "</div></div>"; }
+  function list(rows) { current = rows; shown = PAGE; drawList(); }
+  function drawList() { $("learn-list").innerHTML = current.slice(0, shown).map(item).join("");
+    $("more").textContent = shown < current.length ? "Scroll for more (" + (current.length - shown) + " left)" : ""; }
+  function tab(m) {
+    mode = m; $("how").textContent = MODES[m][1]; $("tool").innerHTML = ""; $("learn-list").innerHTML = ""; $("more").textContent = "";
+    var bs = document.querySelectorAll("#tabs button"); for (var i = 0; i < bs.length; i++) bs[i].className = bs[i].getAttribute("data-m") === m ? "on" : "";
+    if (m === "order") list(ROWS.slice());
+    if (m === "kaumudi") list(ROWS.filter(function (r) { return v(r, "kaumudi"); }).sort(function (a, b) { return v(a, "kaumudi") - v(b, "kaumudi"); }));
+    if (m === "type") { $("tool").innerHTML = Object.keys(TYPES).map(function (t) { return '<button data-type="' + t + '">' + t + "</button>"; }).join(" ") + '<p class="meta" id="tdesc"></p>'; list([]); }
+    if (m === "derive") { $("tool").innerHTML = '<input id="w" type="text" placeholder="A word in Devanagari or SLP1, for example भवति or Bavati"> <button id="go">Find</button><div id="dres"></div>'; }
+    if (m === "cards") card();
+  }
+  function bucket(word) { return crypto.subtle.digest("SHA-256", new TextEncoder().encode(word)).then(function (h) {
+    var b = new Uint8Array(h)[0] % 64; return (b < 10 ? "0" : "") + b; }); }
+  function find() {
+    var w = $("w").value.trim(); if (!w) return;
+    (IDX || (IDX = fetch("data/generation/index.json").then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })))
+      .then(function (d) {
+        var hits = d.words.filter(function (x) { return x[0] === w || x[1] === w; });
+        if (!hits.length) hits = d.words.filter(function (x) { return x[0].indexOf(w) === 0 || x[1].indexOf(w) === 0; }).slice(0, 30);
+        $("dres").innerHTML = hits.length ? hits.slice(0, 50).map(function (x, i) { return '<div class="item"><button data-h="' + i + '">' + esc(x[0]) + "</button> " +
+          '<span class="meta">' + esc(x[1]) + " · " + esc(x[2]) + "</span></div>"; }).join("") :
+          '<p class="meta">Not in the sample of ' + d.meta.viewable.toLocaleString() + " derivations shown here.</p>";
+        $("dres").onclick = function (e) { var i = e.target.getAttribute && e.target.getAttribute("data-h"); if (i !== null && i !== undefined) show(hits[+i]); };
+      }).catch(function (e) { $("dres").innerHTML = '<p class="err">The derivations could not be loaded (' + esc(e.message) + ").</p>"; });
+  }
+  function show(x) {
+    bucket(x[0]).then(function (b) { return fetch("data/generation/words/" + b + ".json").then(function (r) { return r.json(); }); })
+      .then(function (ds) { var d = ds.filter(function (y) { return y.recipe === x[2] && y.slp === x[1]; })[0];
+        if (!d) { $("learn-list").innerHTML = '<p class="err">That derivation is not in its bucket.</p>'; return; }
+        $("learn-list").innerHTML = '<div class="card"><div class="s">' + esc(d.w) + '</div><div class="meta">' + esc(d.recipe) +
+          '</div><table><tr><th>Step</th><th>Rule</th><th>Result (vidyut&#39;s SLP1)</th></tr>' + d.steps.map(function (s, i) {
+            return "<tr><td>" + (i + 1) + '</td><td><a href="review.html?q=' + esc(s[0]) + '">' + esc(s[0]) + "</a></td><td>" + esc(s[1]) + "</td></tr>"; }).join("") +
+          "</table></div>"; });
+  }
+  var deck = [], at = 0, knew = 0, seen = 0;
+  function card() {
+    if (!deck.length) { deck = ROWS.slice(); for (var i = deck.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = deck[i]; deck[i] = deck[j]; deck[j] = t; } }
+    var r = deck[at % deck.length];
+    $("tool").innerHTML = '<div class="card"><div class="meta">' + esc(v(r, "id")) + " · " + esc(v(r, "type")) + '</div><div class="s">' + esc(v(r, "sutra")) +
+      '</div><div class="meta">Romenagri: ' + esc(v(r, "romenagri")) + '</div><div id="ans" class="meta"></div>' +
+      '<p><button id="rev">Reveal</button> <button id="yes">I knew it</button> <button id="no">Again</button> <span class="meta">' + knew + " of " + seen + " known</span></p></div>";
+    $("rev").onclick = function () { var k = v(r, "id").split(".").slice(0, 2).join(".");
+      (shards[k] || (shards[k] = fetch("data/translations/" + k + ".json").then(function (x) { return x.json(); })))
+        .then(function (d) { var t = d[v(r, "id")] || {}; $("ans").innerHTML = esc(t.v || t.e || t.sa || "No translation in the data yet."); })
+        .catch(function () { $("ans").textContent = "The translation could not be loaded."; }); };
+    $("yes").onclick = function () { knew++; seen++; at++; card(); };
+    $("no").onclick = function () { seen++; deck.push(r); at++; card(); };
+  }
+  document.addEventListener("click", function (e) { var t = e.target;
+    if (t.getAttribute && t.getAttribute("data-m")) tab(t.getAttribute("data-m"));
+    if (t.getAttribute && t.getAttribute("data-type")) { var ty = t.getAttribute("data-type"); $("tdesc").textContent = TYPES[ty];
+      list(ROWS.filter(function (r) { return v(r, "type") === ty; })); }
+    if (t.id === "go") find(); });
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (e) { if (e[0].isIntersecting && shown < current.length) { shown += PAGE; drawList(); } }).observe($("more"));
+  } else { $("more").onclick = function () { shown += PAGE; drawList(); }; }
+  fetch("data/sutras.json").then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+    .then(function (d) { COLS = d.columns; ROWS = d.rows;
+      $("learn-lead").textContent = ROWS.length + " sutras. Five ways in; each sutra opens on the review page with its translation and how it generates.";
+      $("tabs").innerHTML = Object.keys(MODES).map(function (m) { return '<button data-m="' + m + '">' + MODES[m][0] + "</button>"; }).join("");
+      tab("order"); })
+    .catch(function (e) { $("learn-lead").innerHTML = '<span class="err">The sutras could not be loaded (' + esc(e.message) + ").</span>"; });
+})();
+</script></body></html>

@@ -2,6 +2,30 @@
 
 © 1993–2026 Abhishek Choudhary. All rights reserved. AyeAI.
 
+## 0.7.0
+
+- **Arrange the sutras by category**, on a page of its own, `docs/categories.html`. Start from their
+  type, adhyāya or pāda, or from nothing; add categories; tick checkboxes to place sutras; see them
+  grouped in Pāṇini's or the Siddhānta Kaumudī's order. Download every sutra
+  (`docs/data/sutras.csv`), download an arrangement as CSV or JSON, or upload one as `id,category`
+  rows. The data sits in its own files (`docs/data/sutras.json`, `categories.default.json`) from
+  `tools/sutras_export.py`; the existing pages and data are untouched.
+- **How each sutra generates.** `tools/derivations.py` runs a fixed sample of 63,665 derivations with
+  vidyut-prakriya (MIT) and records, for each of the 597 sutras that act in them, how often it acts
+  and three of the shortest examples with every step. The review page shows them on each card.
+- **How to read each sutra**, on each card: its type's method, and each word of its padaccheda by
+  case, read as Pāṇini's own rules ask (1.1.49, 1.1.66, 1.1.67).
+- **The issues come back to the page.** The review page reads the issues opened on zistgah/tajziya,
+  parses the sutra each names, lists them on its card, and has a view of the sutras with issues.
+  If GitHub cannot be reached, the page says so and works without them. `review.html?q=<id>`
+  opens on a sutra.
+- **Learn the Aṣṭādhyāyī**, `docs/learn.html`:
+  - in Pāṇini's order, in the Siddhānta Kaumudī's, or by type;
+  - through derivations, a word found and every rule that built it shown in turn;
+  - with flashcards against Vasu's translation.
+- V29 checks the generation examples against vidyut (unjudged without vidyut), V30 the exported data;
+  V27 now renders the categories and learning pages too.
+
 ## 0.6.2
 
 - Translations on the review page. Śrīśa Chandra Vasu's English translation (1891 to 1898, public

@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tajziya: arrange the sutras by category</title>
+<!-- © 1993–2026 Abhishek Choudhary. All rights reserved. AyeAI. -->
+<style>
+:root{--bg:#fbfaf7;--fg:#1d1d1b;--mut:#6b675f;--line:#e4e0d6;--card:#fff;--acc:#8a4b08}
+@media (prefers-color-scheme:dark){:root{--bg:#171614;--fg:#ecebe6;--mut:#a29d93;--line:#34312c;--card:#211f1c;--acc:#e3a35a}}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,sans-serif}
+.wrap{max-width:1100px;margin:0 auto;padding:1.2rem}.meta{color:var(--mut);font-size:.9rem}
+h1{font-size:1.5rem;margin:.2rem 0}h2{font-size:1.1rem;margin:1.2rem 0 .4rem}
+.bar{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin:.6rem 0}
+button,select,input[type=text]{font:inherit;padding:.4rem .7rem;border:1px solid var(--line);border-radius:6px;background:var(--card);color:inherit}
+button{cursor:pointer}a.btn{display:inline-block;padding:.4rem .7rem;border:1px solid var(--line);border-radius:6px;color:inherit;text-decoration:none;background:var(--card)}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem}.chip{border:1px solid var(--line);border-radius:14px;padding:.2rem .6rem;background:var(--card);font-size:.9rem}
+.chip button{border:0;padding:0 0 0 .3rem;background:transparent;color:var(--mut)}
+.tbl{width:100%;border-collapse:collapse;font-size:.95rem}.tbl th,.tbl td{border-bottom:1px solid var(--line);padding:.35rem .3rem;text-align:left;vertical-align:top}
+.tbl th.c,.tbl td.c{text-align:center}.s{font-size:1.05rem}
+.group{border-top:1px solid var(--line);padding:.6rem 0}.group h3{margin:.2rem 0;font-size:1rem}
+.err{color:#b00020}#more{padding:.8rem 0;color:var(--mut)}
+</style></head><body><div class="wrap">
+<p class="meta"><a href="index.html">tajziya</a> · <a href="review.html">the sutra review</a> · <a href="learn.html">learn the Aṣṭādhyāyī</a></p>
+<h1>Arrange the sutras by category</h1>
+<p id="cat-lead">Loading the sutras.</p>
+<p class="meta">The Aṣṭādhyāyī's order is not a topical order. Here you choose the categories and which sutras go in them, with the
+checkboxes, or by uploading a CSV. Nothing here changes the review page or the data; your arrangement stays in this browser
+until you download it.</p>
+<div class="bar">
+  <a class="btn" href="data/sutras.csv" download>Download every sutra (CSV)</a>
+  <button id="dl-csv">Download this arrangement (CSV)</button>
+  <button id="dl-json">Download this arrangement (JSON)</button>
+  <label class="btn">Upload an arrangement (CSV)<input id="up" type="file" accept=".csv,text/csv" hidden></label>
+</div>
+<p class="meta">An arrangement CSV has one row per sutra and category: <code>id,category</code>, for example <code>6.1.77,vowel sandhi</code>.
+A sutra may be in several categories. A first row of <code>id,category</code> is read as a header.</p>
+<div class="bar">Start from <select id="start"><option value="">your saved arrangement</option><option value="type">type</option>
+<option value="adhyaya">adhyāya</option><option value="pada">pāda</option><option value="empty">nothing</option></select>
+<input id="newcat" type="text" placeholder="New category"><button id="add">Add</button></div>
+<h2>Categories <span class="meta">(tick to show as a column of checkboxes)</span></h2>
+<div class="chips" id="cats"></div>
+<div class="bar"><input id="q" type="text" placeholder="Search by number, text, term or Romenagri" style="flex:1 1 18rem">
+<label><input id="grouped" type="checkbox"> Show grouped by category</label>
+<select id="order"><option value="krama">Aṣṭādhyāyī order</option><option value="kaumudi">Siddhānta Kaumudī order</option></select>
+<span id="n" class="meta"></span></div>
+<div id="cat-list"></div><div id="more"></div>
+<p id="msg" class="meta"></p>
+</div><script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var esc = function (s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) {
+    return {"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]; }); };
+  var COLS = [], ROWS = [], BYID = {}, DEF = null, cats = [], shown = 100, PAGE = 100, current = [];
+  function save() { try { localStorage.setItem("tajziya.categories", JSON.stringify(cats.map(function (c) {
+    return {name: c.name, show: c.show, sutras: Array.from(c.set)}; }))); } catch (e) {} }
+  function load(list) { cats = list.map(function (c) { return {name: c.name, show: c.show !== false, set: new Set(c.sutras)}; }); }
+  function fromDefault(setName) {
+    if (setName === "empty") { cats = []; return; }
+    var s = DEF.sets.filter(function (x) { return x.name === setName; })[0];
+    load(s.categories.map(function (c, i) { return {name: c.name, show: i < 6, sutras: c.sutras}; }));
+  }
+  function v(r, c) { return r[COLS.indexOf(c)]; }
+  function drawCats() {
+    $("cats").innerHTML = cats.map(function (c, i) {
+      return '<span class="chip"><label><input type="checkbox" data-show="' + i + '"' + (c.show ? " checked" : "") + "> " +
+        esc(c.name) + " (" + c.set.size + ")</label><button data-del=\"" + i + '" title="Remove">×</button></span>'; }).join("") ||
+      '<span class="meta">No categories yet: add one.</span>';
+  }
+  function order(list) {
+    var k = $("order").value;
+    return list.slice().sort(function (a, b) {
+      var x = Number(v(a, k)) || 1e9, y = Number(v(b, k)) || 1e9; return x - y || Number(v(a, "krama")) - Number(v(b, "krama")); });
+  }
+  function select() {
+    var q = $("q").value.trim().toLowerCase();
+    current = order(ROWS.filter(function (r) { return !q || v(r, "id").indexOf(q) >= 0 || v(r, "sutra").indexOf(q) >= 0 ||
+      (v(r, "term") || "").indexOf(q) >= 0 || (v(r, "romenagri") || "").toLowerCase().indexOf(q) >= 0; }));
+    shown = PAGE; draw();
+  }
+  function draw() {
+    var vis = cats.filter(function (c) { return c.show; });
+    $("n").textContent = current.length + " sutras";
+    if ($("grouped").checked) {
+      var html = "", seen = new Set();
+      cats.forEach(function (c) {
+        var mem = current.filter(function (r) { return c.set.has(v(r, "id")); });
+        mem.forEach(function (r) { seen.add(v(r, "id")); });
+        html += '<div class="group"><h3>' + esc(c.name) + ' <span class="meta">' + mem.length + "</span></h3>" +
+          mem.map(function (r) { return '<div><a href="review.html?q=' + esc(v(r, "id")) + '">' + esc(v(r, "id")) + "</a> " +
+            '<span class="s">' + esc(v(r, "sutra")) + "</span></div>"; }).join("") + "</div>";
+      });
+      var rest = current.filter(function (r) { return !seen.has(v(r, "id")); });
+      html += '<div class="group"><h3>In no category <span class="meta">' + rest.length + "</span></h3>" +
+        rest.slice(0, 200).map(function (r) { return "<div>" + esc(v(r, "id")) + ' <span class="s">' + esc(v(r, "sutra")) + "</span></div>"; }).join("") +
+        (rest.length > 200 ? '<div class="meta">and ' + (rest.length - 200) + " more</div>" : "") + "</div>";
+      $("cat-list").innerHTML = html; $("more").textContent = ""; return;
+    }
+    var head = "<tr><th>Sutra</th><th>Text</th><th>Type</th>" + vis.map(function (c) { return '<th class="c">' + esc(c.name) + "</th>"; }).join("") + "</tr>";
+    var body = current.slice(0, shown).map(function (r) {
+      var id = v(r, "id");
+      return "<tr><td><a href=\"review.html?q=" + esc(id) + "\">" + esc(id) + '</a></td><td class="s">' + esc(v(r, "sutra")) +
+        "</td><td>" + esc(v(r, "type")) + "</td>" + vis.map(function (c) {
+          return '<td class="c"><input type="checkbox" data-id="' + esc(id) + '" data-cat="' + cats.indexOf(c) + '"' + (c.set.has(id) ? " checked" : "") + "></td>"; }).join("") + "</tr>";
+    }).join("");
+    $("cat-list").innerHTML = '<table class="tbl">' + head + body + "</table>";
+    $("more").textContent = shown < current.length ? "Scroll for more (" + (current.length - shown) + " left)" : "";
+  }
+  function dl(name, text, type) {
+    var a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([text], {type: type})); a.download = name; a.click();
+  }
+  function csvCell(s) { s = String(s); return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s; }
+  function parseCsv(text) {
+    var out = [], row = [], cell = "", q = false;
+    for (var i = 0; i < text.length; i++) { var ch = text[i];
+      if (q) { if (ch === '"' && text[i + 1] === '"') { cell += '"'; i++; } else if (ch === '"') q = false; else cell += ch; }
+      else if (ch === '"') q = true; else if (ch === ",") { row.push(cell); cell = ""; }
+      else if (ch === "\n" || ch === "\r") { if (ch === "\r" && text[i + 1] === "\n") i++; row.push(cell); out.push(row); row = []; cell = ""; }
+      else cell += ch; }
+    if (cell || row.length) { row.push(cell); out.push(row); }
+    return out.filter(function (r) { return r.length && r.join("").trim(); });
+  }
+  document.addEventListener("change", function (e) {
+    var t = e.target;
+    if (t.dataset && t.dataset.show !== undefined) { cats[+t.dataset.show].show = t.checked; save(); draw(); }
+    else if (t.dataset && t.dataset.cat !== undefined) { var c = cats[+t.dataset.cat];
+      if (t.checked) c.set.add(t.dataset.id); else c.set.delete(t.dataset.id); save(); drawCats(); }
+  });
+  document.addEventListener("click", function (e) {
+    var t = e.target;
+    if (t.dataset && t.dataset.del !== undefined) { cats.splice(+t.dataset.del, 1); save(); drawCats(); draw(); }
+  });
+  function init() {
+    $("q").oninput = select; $("order").onchange = select; $("grouped").onchange = draw;
+    $("add").onclick = function () { var n = $("newcat").value.trim(); if (!n) return;
+      if (cats.some(function (c) { return c.name === n; })) { $("msg").textContent = "A category of that name exists."; return; }
+      cats.push({name: n, show: true, set: new Set()}); $("newcat").value = ""; save(); drawCats(); draw(); };
+    $("start").onchange = function () { if ($("start").value) { fromDefault($("start").value); save(); drawCats(); draw(); } };
+    $("dl-csv").onclick = function () { var lines = ["id,category"];
+      cats.forEach(function (c) { order(ROWS).forEach(function (r) { if (c.set.has(v(r, "id"))) lines.push(v(r, "id") + "," + csvCell(c.name)); }); });
+      dl("tajziya-sutra-categories.csv", lines.join("\n") + "\n", "text/csv"); };
+    $("dl-json").onclick = function () { dl("tajziya-sutra-categories.json", JSON.stringify({schema: "tajziya.categories/1",
+      sets: [{name: "custom", categories: cats.map(function (c) { return {name: c.name, sutras: order(ROWS).map(function (r) { return v(r, "id"); }).filter(function (id) { return c.set.has(id); })}; })}]}, null, 1), "application/json"); };
+    $("up").onchange = function () { var f = $("up").files[0]; if (!f) return; f.text().then(function (text) {
+      var rows = parseCsv(text), added = 0, unknown = 0, made = {};
+      if (rows.length && rows[0][0].trim().toLowerCase() === "id") rows.shift();
+      rows.forEach(function (r) { var id = (r[0] || "").trim(); if (!BYID[id]) { unknown++; return; }
+        r.slice(1).join(";").split(";").map(function (x) { return x.trim(); }).filter(Boolean).forEach(function (name) {
+          var c = cats.filter(function (x) { return x.name === name; })[0];
+          if (!c) { c = {name: name, show: true, set: new Set()}; cats.push(c); made[name] = 1; }
+          if (!c.set.has(id)) { c.set.add(id); added++; } }); });
+      $("msg").textContent = "Uploaded: " + added + " placements, " + Object.keys(made).length + " new categories, " + unknown + " rows naming no sutra.";
+      save(); drawCats(); draw(); }); };
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(function (e) { if (e[0].isIntersecting && shown < current.length) { shown += PAGE; draw(); } }).observe($("more"));
+    } else { $("more").onclick = function () { shown += PAGE; draw(); }; }
+  }
+  Promise.all([fetch("data/sutras.json").then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
+               fetch("data/categories.default.json").then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })])
+    .then(function (d) {
+      COLS = d[0].columns; ROWS = d[0].rows; DEF = d[1]; ROWS.forEach(function (r) { BYID[v(r, "id")] = r; });
+      var saved = null; try { saved = JSON.parse(localStorage.getItem("tajziya.categories") || "null"); } catch (e) {}
+      if (saved && saved.length) load(saved); else fromDefault("type");
+      $("cat-lead").textContent = ROWS.length + " sutras. Categories start from their type; choose another start, add your own, or upload yours.";
+      init(); drawCats(); select();
+    })
+    .catch(function (e) { $("cat-lead").innerHTML = '<span class="err">The sutras could not be loaded (' + esc(e.message) + ").</span>"; });
+})();
+</script></body></html>

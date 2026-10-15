@@ -135,6 +135,11 @@ v28() { [ -d packs ] || { echo "no packs are checked in here"; return 3; }
         python3 tools/langpack.py --everything --tar --bundle --quiet --out tests/.scratch/packs-check >/dev/null || return 1
         python3 tools/packs_compare.py packs tests/.scratch/packs-check; local rc=$?; rm -rf tests/.scratch/packs-check; return $rc; }
 
+v29() { python3 -c "import vidyut" 2>/dev/null || { echo "vidyut is not installed here (pip install vidyut==0.4.0)"; return 3; }
+        [ -n "${VIDYUT_DATA:-}" ] || { echo "VIDYUT_DATA names no vidyut data directory"; return 3; }
+        python3 tools/derivations.py --data "$VIDYUT_DATA" --check; }
+v30() { python3 tools/sutras_export.py --check; }
+
 chk V01 "every source file carries the copyright line"            v01
 chk V02 "no affiliation other than AyeAI is claimed"              v02
 chk V03 "the test suite passes"                                    v03
@@ -163,6 +168,8 @@ chk V25 "every page in docs/ is linked from the landing page"      v25
 chk V26 "every work packet is well formed; every packet marked done passes" v26
 chk V27 "every page's scripts parse; the review and packets pages render, translations included" v27
 chk V28 "the packages checked into packs/ are exactly what the generator makes" v28
+chk V29 "the generation examples are what vidyut-prakriya derives from the fixed sample" v29
+chk V30 "the downloadable sutras and default categories are current" v30
 
 if [ "$JSON" = 1 ]; then
   printf '{"element":"tajziya","failures":%d,"unjudged":%d,"checks":[' "$FAILS" "$UNJ"; sep=""

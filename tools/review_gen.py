@@ -196,13 +196,14 @@ button.on{border-color:var(--acc);color:var(--acc)}
 .tr .who{color:var(--mut);font-size:.85rem}details{margin:.2rem 0}summary{cursor:pointer;color:var(--acc);font-size:.9rem}
 #more{padding:1rem 0;color:var(--mut)}.err{color:#b00020}
 </style></head><body><div class="wrap">
-<p class="meta"><a href="index.html">tajziya</a> · <a href="packets.html">work packets</a></p>
+<p class="meta"><a href="index.html">tajziya</a> · <a href="packets.html">work packets</a> · <a href="categories.html">arrange by category</a> · <a href="learn.html">learn the Aṣṭādhyāyī</a></p>
 <h1>@@TITLE@@</h1>
 <p class="sub" id="lead">Loading the sutras.</p>
 <p class="sub">@@LOCALNOTE@@ Translations, interpretations, the implementing code and more scripts arrive as
 <a href="packets.html">work packets</a>.</p>
 <div class="controls"><input id="q" placeholder="Search by number (2.3.17), text, term or Romenagri">
-<button id="tf" class="on">Flagged</button><button id="ta">All</button><span id="n" class="meta"></span></div>
+<button id="tf" class="on">Flagged</button><button id="ta">All</button><button id="ti">With issues</button><span id="n" class="meta"></span></div>
+<p class="meta" id="iss-status"></p>
 <div id="list"></div><div id="more"></div>
 </div><script>
 (function () {
@@ -231,6 +232,9 @@ button.on{border-color:var(--acc);color:var(--acc)}
     if (r.r) h += '<div class="meta">Romenagri: ' + esc(r.r) + (r.rt ? "" : " · does not yet come back the same (packet PKT-ROM-01)") + "</div>";
     if (r.l) h += '<div class="meta">local: ' + esc(r.l.sutra) + " · " + esc(r.l.padaccheda) + "</div>";
     h += '<div class="tr" id="tr-' + esc(r.id) + '"><span class="meta">Loading the translation.</span></div>';
+    h += reading(r);
+    h += '<div class="tr" id="gen-' + esc(r.id) + '"><span class="meta">Loading how it generates.</span></div>';
+    h += '<div class="f" id="is-' + esc(r.id) + '"></div>';
     fl.forEach(function (f) { h += '<div class="f">' + esc(f.field) + " differs from " + esc(f.against) +
       ' · <a href="' + flagIssue(r, f) + '" target="_blank" rel="noopener">Open issue</a></div>'; });
     return h + '<div class="f"><a href="' + reviewIssue(r) + '" target="_blank" rel="noopener">Open an issue on this sutra</a></div></div>';
@@ -278,9 +282,64 @@ button.on{border-color:var(--acc);color:var(--acc)}
       });
     });
   }
+  var ROLE = {"1": "first case: what is named, or what comes in", "2": "second case: the object",
+    "3": "third case: by or with what", "4": "fourth case: for what", "5": "fifth case: after what, the left context (1.1.67)",
+    "6": "sixth case: in place of what, what is replaced (1.1.49)", "7": "seventh case: before what, the right context (1.1.66)",
+    "0": "indeclinable"};
+  var HOW = {samjna: "A definition: learn the term and what it covers.", paribhasha: "An interpretive rule: learn where it governs how other rules are read.",
+    vidhi: "An operation: read it by its cases, below.", atidesha: "An extension: learn what is treated as what.",
+    adhikara: "A heading: it carries into the rules after it until its scope ends."};
+  function digit(t) { var d = "०१२३४५६७८९", out = ""; for (var i = 0; i < t.length; i++) { var k = d.indexOf(t[i]); out += k >= 0 ? k : t[i]; } return out; }
+  function reading(r) {
+    var toks = (r.pc || "").split(" "), parts = [];
+    for (var i = 1; i < toks.length; i++) { var c = digit(toks[i]).split("/");
+      if (c.length === 2 && /^[0-9]+$/.test(c[0])) parts.push("<b>" + esc(toks[i - 1]) + "</b> " + esc(ROLE[c[0]] || c[0])); }
+    return '<details class="f"><summary>How to read it</summary><div class="meta">' + esc(HOW[r.t] || "") + "</div>" +
+      (parts.length ? '<div class="meta">' + parts.join("; ") + "</div>" : "") + "</details>";
+  }
+  var gshards = {};
+  function generation(rows) {
+    var want = {};
+    rows.forEach(function (r) { want[key(r.id)] = true; });
+    Object.keys(want).forEach(function (k) {
+      (gshards[k] || (gshards[k] = fetch("data/generation/" + k + ".json").then(function (x) { return x.ok ? x.json() : {}; })))
+        .then(function (d) { rows.forEach(function (r) { if (key(r.id) !== k) return;
+          var el = document.getElementById("gen-" + r.id); if (!el) return; var g = d[r.id];
+          if (!g) { el.innerHTML = '<span class="meta">How it generates: no derivation in the sample of vidyut-prakriya derivations uses this rule yet.</span>'; return; }
+          el.innerHTML = '<p><span class="who">How it generates:</span> it acts in ' + g.n.toLocaleString() + " sample derivations by vidyut-prakriya. For example:</p>" +
+            g.ex.map(function (x) { return "<details><summary>" + esc(x.w) + " · " + esc(x.recipe) + " · step " + (x.at + 1) + " of " + x.steps.length + '</summary><div class="meta">' +
+              x.steps.map(function (s, i) { return (i === x.at ? "<b>" : "") + esc(s[0]) + " → " + esc(s[1]) + (i === x.at ? "</b>" : ""); }).join("<br>") +
+              "</div></details>"; }).join(""); }); })
+        .catch(function () {});
+    });
+  }
+  var ISS = null, IMAP = {};
+  function issues() {
+    if (ISS) return ISS;
+    ISS = (async function () {
+      for (var page = 1; page <= 5; page++) {
+        var r = await fetch("https://api.github.com/repos/" + REPO + "/issues?state=all&per_page=100&page=" + page);
+        if (!r.ok) throw new Error("GitHub answered " + r.status);
+        var a = await r.json();
+        a.forEach(function (it) { var m = /^Sutra ([0-9]+[.][0-9]+[.][0-9]+)/.exec(it.title || "");
+          if (m) (IMAP[m[1]] = IMAP[m[1]] || []).push({n: it.number, s: it.state, t: it.title, u: it.html_url}); });
+        if (a.length < 100) break;
+      }
+      var n = 0; Object.keys(IMAP).forEach(function (k) { n += IMAP[k].length; });
+      $("iss-status").textContent = n + " issues on " + Object.keys(IMAP).length + " sutras, read from " + REPO + " on GitHub.";
+      return IMAP;
+    })();
+    ISS.catch(function (e) { $("iss-status").textContent = "The issues could not be read from GitHub (" + e.message + "); the pages work without them."; });
+    return ISS;
+  }
+  function decorate(rows) {
+    issues().then(function (map) { rows.forEach(function (r) { var el = document.getElementById("is-" + r.id); var list = map[r.id];
+      if (el && list) el.innerHTML = "Issues: " + list.map(function (i) { return '<a href="' + esc(i.u) + '" target="_blank" rel="noopener">#' + i.n + "</a> " + esc(i.s) +
+        " · " + esc(i.t.replace(/^Sutra [0-9.]+: */, "")); }).join("; "); }); }).catch(function () {});
+  }
   function select() {
     var q = $("q").value.trim().toLowerCase();
-    current = ROWS.filter(function (r) { return mode === "all" || r.f; });
+    current = ROWS.filter(function (r) { return mode === "all" || (mode === "issues" ? IMAP[r.id] : r.f); });
     if (q) current = current.filter(function (r) {
       return r.id.indexOf(q) >= 0 || r.s.indexOf(q) >= 0 || (r.tm || "").indexOf(q) >= 0 || r.pc.indexOf(q) >= 0 ||
         (r.r || "").toLowerCase().indexOf(q) >= 0; });
@@ -292,8 +351,12 @@ button.on{border-color:var(--acc);color:var(--acc)}
     $("list").insertAdjacentHTML ? $("list").insertAdjacentHTML("beforeend", html) : ($("list").innerHTML += html);
     $("more").textContent = shown < current.length ? "Scroll for more (" + (current.length - shown) + " left)" : "";
     translations(batch);
+    generation(batch);
+    decorate(batch);
   }
-  function tab(m) { mode = m; $("tf").className = m === "flag" ? "on" : ""; $("ta").className = m === "all" ? "on" : ""; select(); }
+  function tab(m) { mode = m; $("tf").className = m === "flag" ? "on" : ""; $("ta").className = m === "all" ? "on" : "";
+    $("ti").className = m === "issues" ? "on" : ""; if (m === "issues") { issues().then(select, select); } else select(); }
+  $("ti").onclick = function () { tab("issues"); };
   $("q").oninput = select;
   $("tf").onclick = function () { tab("flag"); };
   $("ta").onclick = function () { tab("all"); };
@@ -309,7 +372,8 @@ button.on{border-color:var(--acc);color:var(--acc)}
         " come back from Romenagri the same. Translations: Vasu's English for " + d.meta.translations.vasu.toLocaleString() +
         ", a short English meaning for " + d.meta.translations.english.toLocaleString() + ", the Sanskrit artha for " +
         d.meta.translations.artha.toLocaleString() + ". Every sutra has an issue link to " + REPO + ".";
-      select();
+      var q = (typeof location !== "undefined" && typeof URLSearchParams !== "undefined") ? new URLSearchParams(location.search || "").get("q") : null;
+      if (q) { $("q").value = q; tab("all"); } else select();
     })
     .catch(function (e) { $("lead").innerHTML = '<span class="err">The sutras could not be loaded (' + esc(e.message) +
       '). The data is <a href="data/@@DATA@@">data/@@DATA@@</a>.</span>'; });

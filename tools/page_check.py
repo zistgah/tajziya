@@ -19,7 +19,7 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOCS = os.path.join(ROOT, "docs")
 SCRATCH = os.path.join(ROOT, "tests", ".scratch", "page_check")
-RENDER = {"review.html": "list", "packets.html": "pk-list"}
+RENDER = {"review.html": "list", "packets.html": "pk-list", "categories.html": "cat-list", "learn.html": "learn-list"}
 HARNESS = r"""
 const fs = require("fs"), path = require("path");
 const [page, listId] = process.argv.slice(2);
